@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # validators and run records use git history
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install pinned environment
+        run: uv sync --locked
+
+      - name: Unit tests (LAW enforcement points)
+        run: uv run pytest -q
+
+      - name: Repo validators (claims ledger, language, tier discipline)
+        run: uv run python -m jtvec.validators

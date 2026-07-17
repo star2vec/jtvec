@@ -1,0 +1,12 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# model / dataset caches (raw results are NOT ignored: LAW retains them)
+cache/
+hf_cache/
+
+# os
+.DS_Store
