@@ -85,4 +85,41 @@ Foreseeable blockers carried forward from planning: M1 tolerance spec
 HF availability of pythia-410m@9879c9b + pile-10k (cache early),
 public-repo visibility (Ecaterina to confirm).
 
-- sign-off: M0 — pending (Ecaterina)
+- sign-off: M0 — Ecaterina, 2026-07-18, via session instruction ("go ahead
+  with M1"). Recorded by Claude.
+
+---
+
+## 2026-07-18 — M1: lens port + gate on Pythia-410M (Claude)
+
+Vendored the v1 lens pipeline per D-001 — byte-identical from
+`jvec-outdated @ 3bb6d2a` via `git show` <!-- lint-ok: git command name -->,
+verified by diff; inventory in
+VENDORING.md. v1's model-free unit tests (test_skeleton, test_evals) run in
+CI alongside the M0 enforcement tests (51 total).
+
+Decisions:
+
+- D-004 (vendoring mechanics): `third_party/jacobian-lens` is a git
+  submodule pinned at `581d398` (github.com/anthropics/jacobian-lens, the
+  exact commit in v1's lens manifests) rather than a file copy, because
+  `jvec.utils.jlens_commit()` reads the checkout and the hash is a
+  lens-identity key in every manifest. CI checks out submodules.
+- D-005 (proposed, awaiting Ecaterina): M1 tolerances are preregistered in
+  `harness/preregs/EXP-M1-lens-gate.md` as rules R1-R6 (9/9 gate PASS;
+  swap dp within ±0.05 of v1; sham |dp| <= 0.03; flip rate >= 75%;
+  capital-recall band contrast within x2 with >= 5x logit separation; exact
+  calibration-hash match; baselines within ±3 pp; draws at seeds 1,2 also
+  PASS). Proposed, not silently adopted: the M1 verdict is re-evaluated if
+  Ecaterina amends any tolerance at sign-off.
+- D-006: task baselines are computed once (draw 0) and shared across draws —
+  greedy argmax scoring has no RNG; the lens-draw LAW applies to the lens,
+  not to the deterministic baseline stage. Stated in the prereg.
+
+Plan: 3 lens draws (seeds 0/1/2, re-sampled calibration prompts, separate
+caches), vendored scripts 01-04 per draw, orchestrated by
+`scripts/m1_gate.py` behind `start_run` (prereg + clean-tree enforced).
+Resource estimate (prereg): ~2-3.5 h local, peak ~2.6-4 GB — under the 12 h
+ceiling; script 01's timing probe re-checks before fitting.
+
+- sign-off: M1 — pending (Ecaterina)

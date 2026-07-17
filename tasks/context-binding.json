@@ -1,0 +1,246 @@
+{
+ "task": "context-binding",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "bind-0-John",
+   "prompt": "John lives in London. Mary lives in Paris. Tom lives in Berlin. John lives in London. Mary lives in Paris. Tom lives in Berlin. John lives in",
+   "target": "London",
+   "intermediates": [
+    "London"
+   ]
+  },
+  {
+   "name": "bind-1-Tom",
+   "prompt": "Mary lives in Berlin. Tom lives in Tokyo. Anna lives in Moscow. Mary lives in Berlin. Tom lives in Tokyo. Anna lives in Moscow. Tom lives in",
+   "target": "Tokyo",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "bind-2-Peter",
+   "prompt": "Tom lives in Moscow. Anna lives in Madrid. Peter lives in Rome. Tom lives in Moscow. Anna lives in Madrid. Peter lives in Rome. Peter lives in",
+   "target": "Rome",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "bind-3-Anna",
+   "prompt": "Anna lives in Rome. Peter lives in Vienna. Sarah lives in Dublin. Anna lives in Rome. Peter lives in Vienna. Sarah lives in Dublin. Anna lives in",
+   "target": "Rome",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "bind-4-Sarah",
+   "prompt": "Peter lives in Dublin. Sarah lives in Oslo. James lives in Athens. Peter lives in Dublin. Sarah lives in Oslo. James lives in Athens. Sarah lives in",
+   "target": "Oslo",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "bind-5-Emma",
+   "prompt": "Sarah lives in Athens. James lives in Cairo. Emma lives in Warsaw. Sarah lives in Athens. James lives in Cairo. Emma lives in Warsaw. Emma lives in",
+   "target": "Warsaw",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "bind-6-James",
+   "prompt": "James lives in Warsaw. Emma lives in Lisbon. David lives in Havana. James lives in Warsaw. Emma lives in Lisbon. David lives in Havana. James lives in",
+   "target": "Warsaw",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "bind-7-David",
+   "prompt": "Emma lives in Havana. David lives in London. Laura lives in Paris. Emma lives in Havana. David lives in London. Laura lives in Paris. David lives in",
+   "target": "London",
+   "intermediates": [
+    "London"
+   ]
+  },
+  {
+   "name": "bind-8-Paul",
+   "prompt": "David lives in Paris. Laura lives in Berlin. Paul lives in Tokyo. David lives in Paris. Laura lives in Berlin. Paul lives in Tokyo. Paul lives in",
+   "target": "Tokyo",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "bind-9-Laura",
+   "prompt": "Laura lives in Tokyo. Paul lives in Moscow. Alice lives in Madrid. Laura lives in Tokyo. Paul lives in Moscow. Alice lives in Madrid. Laura lives in",
+   "target": "Tokyo",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "bind-10-Alice",
+   "prompt": "Paul lives in Madrid. Alice lives in Rome. Mark lives in Vienna. Paul lives in Madrid. Alice lives in Rome. Mark lives in Vienna. Alice lives in",
+   "target": "Rome",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "bind-11-Julia",
+   "prompt": "Alice lives in Vienna. Mark lives in Dublin. Julia lives in Oslo. Alice lives in Vienna. Mark lives in Dublin. Julia lives in Oslo. Julia lives in",
+   "target": "Oslo",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "bind-12-Mark",
+   "prompt": "Mark lives in Oslo. Julia lives in Athens. Simon lives in Cairo. Mark lives in Oslo. Julia lives in Athens. Simon lives in Cairo. Mark lives in",
+   "target": "Oslo",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "bind-13-Simon",
+   "prompt": "Julia lives in Cairo. Simon lives in Warsaw. John lives in Lisbon. Julia lives in Cairo. Simon lives in Warsaw. John lives in Lisbon. Simon lives in",
+   "target": "Warsaw",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "bind-14-Mary",
+   "prompt": "Simon lives in Lisbon. John lives in Havana. Mary lives in London. Simon lives in Lisbon. John lives in Havana. Mary lives in London. Mary lives in",
+   "target": "London",
+   "intermediates": [
+    "London"
+   ]
+  },
+  {
+   "name": "bind-15-John",
+   "prompt": "John lives in London. Mary lives in Paris. Tom lives in Berlin. John lives in London. Mary lives in Paris. Tom lives in Berlin. John lives in",
+   "target": "London",
+   "intermediates": [
+    "London"
+   ]
+  },
+  {
+   "name": "bind-16-Tom",
+   "prompt": "Mary lives in Berlin. Tom lives in Tokyo. Anna lives in Moscow. Mary lives in Berlin. Tom lives in Tokyo. Anna lives in Moscow. Tom lives in",
+   "target": "Tokyo",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "bind-17-Peter",
+   "prompt": "Tom lives in Moscow. Anna lives in Madrid. Peter lives in Rome. Tom lives in Moscow. Anna lives in Madrid. Peter lives in Rome. Peter lives in",
+   "target": "Rome",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "bind-18-Anna",
+   "prompt": "Anna lives in Rome. Peter lives in Vienna. Sarah lives in Dublin. Anna lives in Rome. Peter lives in Vienna. Sarah lives in Dublin. Anna lives in",
+   "target": "Rome",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "bind-19-Sarah",
+   "prompt": "Peter lives in Dublin. Sarah lives in Oslo. James lives in Athens. Peter lives in Dublin. Sarah lives in Oslo. James lives in Athens. Sarah lives in",
+   "target": "Oslo",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "bind-20-Emma",
+   "prompt": "Sarah lives in Athens. James lives in Cairo. Emma lives in Warsaw. Sarah lives in Athens. James lives in Cairo. Emma lives in Warsaw. Emma lives in",
+   "target": "Warsaw",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "bind-21-James",
+   "prompt": "James lives in Warsaw. Emma lives in Lisbon. David lives in Havana. James lives in Warsaw. Emma lives in Lisbon. David lives in Havana. James lives in",
+   "target": "Warsaw",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "bind-22-David",
+   "prompt": "Emma lives in Havana. David lives in London. Laura lives in Paris. Emma lives in Havana. David lives in London. Laura lives in Paris. David lives in",
+   "target": "London",
+   "intermediates": [
+    "London"
+   ]
+  },
+  {
+   "name": "bind-23-Paul",
+   "prompt": "David lives in Paris. Laura lives in Berlin. Paul lives in Tokyo. David lives in Paris. Laura lives in Berlin. Paul lives in Tokyo. Paul lives in",
+   "target": "Tokyo",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "bind-24-Laura",
+   "prompt": "Laura lives in Tokyo. Paul lives in Moscow. Alice lives in Madrid. Laura lives in Tokyo. Paul lives in Moscow. Alice lives in Madrid. Laura lives in",
+   "target": "Tokyo",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "bind-25-Alice",
+   "prompt": "Paul lives in Madrid. Alice lives in Rome. Mark lives in Vienna. Paul lives in Madrid. Alice lives in Rome. Mark lives in Vienna. Alice lives in",
+   "target": "Rome",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "bind-26-Julia",
+   "prompt": "Alice lives in Vienna. Mark lives in Dublin. Julia lives in Oslo. Alice lives in Vienna. Mark lives in Dublin. Julia lives in Oslo. Julia lives in",
+   "target": "Oslo",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "bind-27-Mark",
+   "prompt": "Mark lives in Oslo. Julia lives in Athens. Simon lives in Cairo. Mark lives in Oslo. Julia lives in Athens. Simon lives in Cairo. Mark lives in",
+   "target": "Oslo",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "bind-28-Simon",
+   "prompt": "Julia lives in Cairo. Simon lives in Warsaw. John lives in Lisbon. Julia lives in Cairo. Simon lives in Warsaw. John lives in Lisbon. Simon lives in",
+   "target": "Warsaw",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "bind-29-Mary",
+   "prompt": "Simon lives in Lisbon. John lives in Havana. Mary lives in London. Simon lives in Lisbon. John lives in Havana. Mary lives in London. Mary lives in",
+   "target": "London",
+   "intermediates": [
+    "London"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,198 @@
+{
+ "task": "word-pairs",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "pair-pepper",
+   "prompt": "Bread and butter. Thunder and lightning. Knife and fork. Salt and",
+   "target": "pepper",
+   "intermediates": [
+    "pepper"
+   ]
+  },
+  {
+   "name": "pair-butter",
+   "prompt": "Thunder and lightning. Knife and fork. Fish and chips. Bread and",
+   "target": "butter",
+   "intermediates": [
+    "butter"
+   ]
+  },
+  {
+   "name": "pair-lightning",
+   "prompt": "Knife and fork. Fish and chips. Bacon and eggs. Thunder and",
+   "target": "lightning",
+   "intermediates": [
+    "lightning"
+   ]
+  },
+  {
+   "name": "pair-fork",
+   "prompt": "Fish and chips. Bacon and eggs. Cats and dogs. Knife and",
+   "target": "fork",
+   "intermediates": [
+    "fork"
+   ]
+  },
+  {
+   "name": "pair-chips",
+   "prompt": "Bacon and eggs. Cats and dogs. Back and forth. Fish and",
+   "target": "chips",
+   "intermediates": [
+    "chips"
+   ]
+  },
+  {
+   "name": "pair-eggs",
+   "prompt": "Cats and dogs. Back and forth. Now and then. Bacon and",
+   "target": "eggs",
+   "intermediates": [
+    "eggs"
+   ]
+  },
+  {
+   "name": "pair-dogs",
+   "prompt": "Back and forth. Now and then. Ladies and gentlemen. Cats and",
+   "target": "dogs",
+   "intermediates": [
+    "dogs"
+   ]
+  },
+  {
+   "name": "pair-forth",
+   "prompt": "Now and then. Ladies and gentlemen. Pros and cons. Back and",
+   "target": "forth",
+   "intermediates": [
+    "forth"
+   ]
+  },
+  {
+   "name": "pair-then",
+   "prompt": "Ladies and gentlemen. Pros and cons. Trial and error. Now and",
+   "target": "then",
+   "intermediates": [
+    "then"
+   ]
+  },
+  {
+   "name": "pair-gentlemen",
+   "prompt": "Pros and cons. Trial and error. Supply and demand. Ladies and",
+   "target": "gentlemen",
+   "intermediates": [
+    "gentlemen"
+   ]
+  },
+  {
+   "name": "pair-cons",
+   "prompt": "Trial and error. Supply and demand. Law and order. Pros and",
+   "target": "cons",
+   "intermediates": [
+    "cons"
+   ]
+  },
+  {
+   "name": "pair-error",
+   "prompt": "Supply and demand. Law and order. Flesh and blood. Trial and",
+   "target": "error",
+   "intermediates": [
+    "error"
+   ]
+  },
+  {
+   "name": "pair-demand",
+   "prompt": "Law and order. Flesh and blood. Peace and quiet. Supply and",
+   "target": "demand",
+   "intermediates": [
+    "demand"
+   ]
+  },
+  {
+   "name": "pair-order",
+   "prompt": "Flesh and blood. Peace and quiet. Life and death. Law and",
+   "target": "order",
+   "intermediates": [
+    "order"
+   ]
+  },
+  {
+   "name": "pair-blood",
+   "prompt": "Peace and quiet. Life and death. Black and white. Flesh and",
+   "target": "blood",
+   "intermediates": [
+    "blood"
+   ]
+  },
+  {
+   "name": "pair-quiet",
+   "prompt": "Life and death. Black and white. Night and day. Peace and",
+   "target": "quiet",
+   "intermediates": [
+    "quiet"
+   ]
+  },
+  {
+   "name": "pair-death",
+   "prompt": "Black and white. Night and day. Heaven and hell. Life and",
+   "target": "death",
+   "intermediates": [
+    "death"
+   ]
+  },
+  {
+   "name": "pair-white",
+   "prompt": "Night and day. Heaven and hell. Body and soul. Black and",
+   "target": "white",
+   "intermediates": [
+    "white"
+   ]
+  },
+  {
+   "name": "pair-day",
+   "prompt": "Heaven and hell. Body and soul. Bricks and mortar. Night and",
+   "target": "day",
+   "intermediates": [
+    "day"
+   ]
+  },
+  {
+   "name": "pair-hell",
+   "prompt": "Body and soul. Bricks and mortar. Lock and key. Heaven and",
+   "target": "hell",
+   "intermediates": [
+    "hell"
+   ]
+  },
+  {
+   "name": "pair-soul",
+   "prompt": "Bricks and mortar. Lock and key. Sooner or later. Body and",
+   "target": "soul",
+   "intermediates": [
+    "soul"
+   ]
+  },
+  {
+   "name": "pair-mortar",
+   "prompt": "Lock and key. Sooner or later. Salt and pepper. Bricks and",
+   "target": "mortar",
+   "intermediates": [
+    "mortar"
+   ]
+  },
+  {
+   "name": "pair-key",
+   "prompt": "Sooner or later. Salt and pepper. Bread and butter. Lock and",
+   "target": "key",
+   "intermediates": [
+    "key"
+   ]
+  },
+  {
+   "name": "pair-later",
+   "prompt": "Salt and pepper. Bread and butter. Thunder and lightning. Sooner or",
+   "target": "later",
+   "intermediates": [
+    "later"
+   ]
+  }
+ ]
+}

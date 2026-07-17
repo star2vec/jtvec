@@ -1,0 +1,134 @@
+{
+ "task": "opposites",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "opp-hot",
+   "prompt": "The opposite of big is small. The opposite of day is night. The opposite of up is down. The opposite of hot is",
+   "target": "cold",
+   "intermediates": [
+    "cold"
+   ]
+  },
+  {
+   "name": "opp-big",
+   "prompt": "The opposite of day is night. The opposite of up is down. The opposite of black is white. The opposite of big is",
+   "target": "small",
+   "intermediates": [
+    "small"
+   ]
+  },
+  {
+   "name": "opp-day",
+   "prompt": "The opposite of up is down. The opposite of black is white. The opposite of old is new. The opposite of day is",
+   "target": "night",
+   "intermediates": [
+    "night"
+   ]
+  },
+  {
+   "name": "opp-up",
+   "prompt": "The opposite of black is white. The opposite of old is new. The opposite of good is bad. The opposite of up is",
+   "target": "down",
+   "intermediates": [
+    "down"
+   ]
+  },
+  {
+   "name": "opp-black",
+   "prompt": "The opposite of old is new. The opposite of good is bad. The opposite of fast is slow. The opposite of black is",
+   "target": "white",
+   "intermediates": [
+    "white"
+   ]
+  },
+  {
+   "name": "opp-old",
+   "prompt": "The opposite of good is bad. The opposite of fast is slow. The opposite of open is closed. The opposite of old is",
+   "target": "new",
+   "intermediates": [
+    "new"
+   ]
+  },
+  {
+   "name": "opp-good",
+   "prompt": "The opposite of fast is slow. The opposite of open is closed. The opposite of left is right. The opposite of good is",
+   "target": "bad",
+   "intermediates": [
+    "bad"
+   ]
+  },
+  {
+   "name": "opp-fast",
+   "prompt": "The opposite of open is closed. The opposite of left is right. The opposite of light is dark. The opposite of fast is",
+   "target": "slow",
+   "intermediates": [
+    "slow"
+   ]
+  },
+  {
+   "name": "opp-open",
+   "prompt": "The opposite of left is right. The opposite of light is dark. The opposite of high is low. The opposite of open is",
+   "target": "closed",
+   "intermediates": [
+    "closed"
+   ]
+  },
+  {
+   "name": "opp-left",
+   "prompt": "The opposite of light is dark. The opposite of high is low. The opposite of hard is soft. The opposite of left is",
+   "target": "right",
+   "intermediates": [
+    "right"
+   ]
+  },
+  {
+   "name": "opp-light",
+   "prompt": "The opposite of high is low. The opposite of hard is soft. The opposite of rich is poor. The opposite of light is",
+   "target": "dark",
+   "intermediates": [
+    "dark"
+   ]
+  },
+  {
+   "name": "opp-high",
+   "prompt": "The opposite of hard is soft. The opposite of rich is poor. The opposite of strong is weak. The opposite of high is",
+   "target": "low",
+   "intermediates": [
+    "low"
+   ]
+  },
+  {
+   "name": "opp-hard",
+   "prompt": "The opposite of rich is poor. The opposite of strong is weak. The opposite of wet is dry. The opposite of hard is",
+   "target": "soft",
+   "intermediates": [
+    "soft"
+   ]
+  },
+  {
+   "name": "opp-rich",
+   "prompt": "The opposite of strong is weak. The opposite of wet is dry. The opposite of hot is cold. The opposite of rich is",
+   "target": "poor",
+   "intermediates": [
+    "poor"
+   ]
+  },
+  {
+   "name": "opp-strong",
+   "prompt": "The opposite of wet is dry. The opposite of hot is cold. The opposite of big is small. The opposite of strong is",
+   "target": "weak",
+   "intermediates": [
+    "weak"
+   ]
+  },
+  {
+   "name": "opp-wet",
+   "prompt": "The opposite of hot is cold. The opposite of big is small. The opposite of day is night. The opposite of wet is",
+   "target": "dry",
+   "intermediates": [
+    "dry"
+   ]
+  }
+ ]
+}

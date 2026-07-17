@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # validators and run records use git history
+          submodules: true # third_party/jacobian-lens @ 581d398
 
       - uses: astral-sh/setup-uv@v5
         with:

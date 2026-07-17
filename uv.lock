@@ -335,12 +335,37 @@ wheels = [
 ]
 
 [[package]]
+name = "jlens"
+version = "0.1.0"
+source = { editable = "third_party/jacobian-lens" }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "numpy" },
+    { name = "torch", version = "2.13.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux'" },
+    { name = "torch", version = "2.13.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'linux'" },
+    { name = "transformers" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "datasets", marker = "extra == 'dev'" },
+    { name = "huggingface-hub" },
+    { name = "numpy" },
+    { name = "pytest", marker = "extra == 'dev'" },
+    { name = "ruff", marker = "extra == 'dev'" },
+    { name = "torch" },
+    { name = "transformers", specifier = ">=5.5" },
+]
+provides-extras = ["dev"]
+
+[[package]]
 name = "jtvec"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "datasets" },
     { name = "huggingface-hub" },
+    { name = "jlens" },
     { name = "numpy" },
     { name = "pyyaml" },
     { name = "torch", version = "2.13.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux'" },
@@ -357,6 +382,7 @@ dev = [
 requires-dist = [
     { name = "datasets", specifier = "==5.0.0" },
     { name = "huggingface-hub", specifier = "==1.23.0" },
+    { name = "jlens", editable = "third_party/jacobian-lens" },
     { name = "numpy", specifier = "==2.4.6" },
     { name = "pyyaml", specifier = "==6.0.3" },
     { name = "torch", marker = "sys_platform != 'linux'", specifier = "==2.13.0" },

@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "v2: execution vs. verbalization of task representations - measurement stack"
 requires-python = ">=3.11,<3.12"
 dependencies = [
+    "jlens",
     "torch==2.13.0",
     "transformers==5.13.1",
     "huggingface_hub==1.23.0",
@@ -23,6 +24,7 @@ dev = ["pytest==9.1.1"]
 # Same pinned version everywhere.
 [tool.uv.sources]
 torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+jlens = { path = "third_party/jacobian-lens", editable = true }
 
 [[tool.uv.index]]
 name = "pytorch-cpu"
@@ -30,7 +32,7 @@ url = "https://download.pytorch.org/whl/cpu"
 explicit = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["jtvec"]
+packages = ["jtvec", "jvec"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

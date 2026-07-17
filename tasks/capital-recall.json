@@ -1,0 +1,294 @@
+{
+ "task": "capital-recall",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "cap-France",
+   "prompt": "The capital of England is London. The capital of Italy is Rome. The capital of Spain is Madrid. The capital of France is",
+   "target": "Paris",
+   "intermediates": [
+    "Paris"
+   ]
+  },
+  {
+   "name": "cap-England",
+   "prompt": "The capital of Italy is Rome. The capital of Spain is Madrid. The capital of Germany is Berlin. The capital of England is",
+   "target": "London",
+   "intermediates": [
+    "London"
+   ]
+  },
+  {
+   "name": "cap-Italy",
+   "prompt": "The capital of Spain is Madrid. The capital of Germany is Berlin. The capital of Russia is Moscow. The capital of Italy is",
+   "target": "Rome",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "cap-Spain",
+   "prompt": "The capital of Germany is Berlin. The capital of Russia is Moscow. The capital of Japan is Tokyo. The capital of Spain is",
+   "target": "Madrid",
+   "intermediates": [
+    "Madrid"
+   ]
+  },
+  {
+   "name": "cap-Germany",
+   "prompt": "The capital of Russia is Moscow. The capital of Japan is Tokyo. The capital of China is Beijing. The capital of Germany is",
+   "target": "Berlin",
+   "intermediates": [
+    "Berlin"
+   ]
+  },
+  {
+   "name": "cap-Russia",
+   "prompt": "The capital of Japan is Tokyo. The capital of China is Beijing. The capital of Greece is Athens. The capital of Russia is",
+   "target": "Moscow",
+   "intermediates": [
+    "Moscow"
+   ]
+  },
+  {
+   "name": "cap-Japan",
+   "prompt": "The capital of China is Beijing. The capital of Greece is Athens. The capital of Egypt is Cairo. The capital of Japan is",
+   "target": "Tokyo",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "cap-China",
+   "prompt": "The capital of Greece is Athens. The capital of Egypt is Cairo. The capital of Poland is Warsaw. The capital of China is",
+   "target": "Beijing",
+   "intermediates": [
+    "Beijing"
+   ]
+  },
+  {
+   "name": "cap-Greece",
+   "prompt": "The capital of Egypt is Cairo. The capital of Poland is Warsaw. The capital of Austria is Vienna. The capital of Greece is",
+   "target": "Athens",
+   "intermediates": [
+    "Athens"
+   ]
+  },
+  {
+   "name": "cap-Egypt",
+   "prompt": "The capital of Poland is Warsaw. The capital of Austria is Vienna. The capital of Ireland is Dublin. The capital of Egypt is",
+   "target": "Cairo",
+   "intermediates": [
+    "Cairo"
+   ]
+  },
+  {
+   "name": "cap-Poland",
+   "prompt": "The capital of Austria is Vienna. The capital of Ireland is Dublin. The capital of Portugal is Lisbon. The capital of Poland is",
+   "target": "Warsaw",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "cap-Austria",
+   "prompt": "The capital of Ireland is Dublin. The capital of Portugal is Lisbon. The capital of Norway is Oslo. The capital of Austria is",
+   "target": "Vienna",
+   "intermediates": [
+    "Vienna"
+   ]
+  },
+  {
+   "name": "cap-Ireland",
+   "prompt": "The capital of Portugal is Lisbon. The capital of Norway is Oslo. The capital of Sweden is Stockholm. The capital of Ireland is",
+   "target": "Dublin",
+   "intermediates": [
+    "Dublin"
+   ]
+  },
+  {
+   "name": "cap-Portugal",
+   "prompt": "The capital of Norway is Oslo. The capital of Sweden is Stockholm. The capital of Cuba is Havana. The capital of Portugal is",
+   "target": "Lisbon",
+   "intermediates": [
+    "Lisbon"
+   ]
+  },
+  {
+   "name": "cap-Norway",
+   "prompt": "The capital of Sweden is Stockholm. The capital of Cuba is Havana. The capital of Iran is Tehran. The capital of Norway is",
+   "target": "Oslo",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "cap-Sweden",
+   "prompt": "The capital of Cuba is Havana. The capital of Iran is Tehran. The capital of Iraq is Baghdad. The capital of Sweden is",
+   "target": "Stockholm",
+   "intermediates": [
+    "Stockholm"
+   ]
+  },
+  {
+   "name": "cap-Cuba",
+   "prompt": "The capital of Iran is Tehran. The capital of Iraq is Baghdad. The capital of Scotland is Edinburgh. The capital of Cuba is",
+   "target": "Havana",
+   "intermediates": [
+    "Havana"
+   ]
+  },
+  {
+   "name": "cap-Iran",
+   "prompt": "The capital of Iraq is Baghdad. The capital of Scotland is Edinburgh. The capital of Hungary is Budapest. The capital of Iran is",
+   "target": "Tehran",
+   "intermediates": [
+    "Tehran"
+   ]
+  },
+  {
+   "name": "cap-Iraq",
+   "prompt": "The capital of Scotland is Edinburgh. The capital of Hungary is Budapest. The capital of Finland is Helsinki. The capital of Iraq is",
+   "target": "Baghdad",
+   "intermediates": [
+    "Baghdad"
+   ]
+  },
+  {
+   "name": "cap-Scotland",
+   "prompt": "The capital of Hungary is Budapest. The capital of Finland is Helsinki. The capital of Denmark is Copenhagen. The capital of Scotland is",
+   "target": "Edinburgh",
+   "intermediates": [
+    "Edinburgh"
+   ]
+  },
+  {
+   "name": "cap-Hungary",
+   "prompt": "The capital of Finland is Helsinki. The capital of Denmark is Copenhagen. The capital of Belgium is Brussels. The capital of Hungary is",
+   "target": "Budapest",
+   "intermediates": [
+    "Budapest"
+   ]
+  },
+  {
+   "name": "cap-Finland",
+   "prompt": "The capital of Denmark is Copenhagen. The capital of Belgium is Brussels. The capital of Ukraine is Kiev. The capital of Finland is",
+   "target": "Helsinki",
+   "intermediates": [
+    "Helsinki"
+   ]
+  },
+  {
+   "name": "cap-Denmark",
+   "prompt": "The capital of Belgium is Brussels. The capital of Ukraine is Kiev. The capital of Syria is Damascus. The capital of Denmark is",
+   "target": "Copenhagen",
+   "intermediates": [
+    "Copenhagen"
+   ]
+  },
+  {
+   "name": "cap-Belgium",
+   "prompt": "The capital of Ukraine is Kiev. The capital of Syria is Damascus. The capital of Afghanistan is Kabul. The capital of Belgium is",
+   "target": "Brussels",
+   "intermediates": [
+    "Brussels"
+   ]
+  },
+  {
+   "name": "cap-Ukraine",
+   "prompt": "The capital of Syria is Damascus. The capital of Afghanistan is Kabul. The capital of Thailand is Bangkok. The capital of Ukraine is",
+   "target": "Kiev",
+   "intermediates": [
+    "Kiev"
+   ]
+  },
+  {
+   "name": "cap-Syria",
+   "prompt": "The capital of Afghanistan is Kabul. The capital of Thailand is Bangkok. The capital of India is Delhi. The capital of Syria is",
+   "target": "Damascus",
+   "intermediates": [
+    "Damascus"
+   ]
+  },
+  {
+   "name": "cap-Afghanistan",
+   "prompt": "The capital of Thailand is Bangkok. The capital of India is Delhi. The capital of Canada is Ottawa. The capital of Afghanistan is",
+   "target": "Kabul",
+   "intermediates": [
+    "Kabul"
+   ]
+  },
+  {
+   "name": "cap-Thailand",
+   "prompt": "The capital of India is Delhi. The capital of Canada is Ottawa. The capital of Australia is Canberra. The capital of Thailand is",
+   "target": "Bangkok",
+   "intermediates": [
+    "Bangkok"
+   ]
+  },
+  {
+   "name": "cap-India",
+   "prompt": "The capital of Canada is Ottawa. The capital of Australia is Canberra. The capital of Turkey is Ankara. The capital of India is",
+   "target": "Delhi",
+   "intermediates": [
+    "Delhi"
+   ]
+  },
+  {
+   "name": "cap-Canada",
+   "prompt": "The capital of Australia is Canberra. The capital of Turkey is Ankara. The capital of Switzerland is Bern. The capital of Canada is",
+   "target": "Ottawa",
+   "intermediates": [
+    "Ottawa"
+   ]
+  },
+  {
+   "name": "cap-Australia",
+   "prompt": "The capital of Turkey is Ankara. The capital of Switzerland is Bern. The capital of Netherlands is Amsterdam. The capital of Australia is",
+   "target": "Canberra",
+   "intermediates": [
+    "Canberra"
+   ]
+  },
+  {
+   "name": "cap-Turkey",
+   "prompt": "The capital of Switzerland is Bern. The capital of Netherlands is Amsterdam. The capital of Israel is Jerusalem. The capital of Turkey is",
+   "target": "Ankara",
+   "intermediates": [
+    "Ankara"
+   ]
+  },
+  {
+   "name": "cap-Switzerland",
+   "prompt": "The capital of Netherlands is Amsterdam. The capital of Israel is Jerusalem. The capital of Lebanon is Beirut. The capital of Switzerland is",
+   "target": "Bern",
+   "intermediates": [
+    "Bern"
+   ]
+  },
+  {
+   "name": "cap-Netherlands",
+   "prompt": "The capital of Israel is Jerusalem. The capital of Lebanon is Beirut. The capital of France is Paris. The capital of Netherlands is",
+   "target": "Amsterdam",
+   "intermediates": [
+    "Amsterdam"
+   ]
+  },
+  {
+   "name": "cap-Israel",
+   "prompt": "The capital of Lebanon is Beirut. The capital of France is Paris. The capital of England is London. The capital of Israel is",
+   "target": "Jerusalem",
+   "intermediates": [
+    "Jerusalem"
+   ]
+  },
+  {
+   "name": "cap-Lebanon",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Lebanon is",
+   "target": "Beirut",
+   "intermediates": [
+    "Beirut"
+   ]
+  }
+ ]
+}

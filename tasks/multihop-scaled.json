@@ -1,0 +1,198 @@
+{
+ "task": "multihop-scaled",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "hop-the-Eiffel-Tower",
+   "prompt": "Fact: The capital of the country famous for sushi is Tokyo. Fact: The capital of the country famous for pizza and pasta is Rome. Fact: The capital of the country famous for the Eiffel Tower is",
+   "target": "Paris",
+   "intermediates": [
+    "France"
+   ]
+  },
+  {
+   "name": "hop-sushi",
+   "prompt": "Fact: The capital of the country famous for pizza and pasta is Rome. Fact: The capital of the country famous for the pyramids is Cairo. Fact: The capital of the country famous for sushi is",
+   "target": "Tokyo",
+   "intermediates": [
+    "Japan"
+   ]
+  },
+  {
+   "name": "hop-pizza-and-pasta",
+   "prompt": "Fact: The capital of the country famous for the pyramids is Cairo. Fact: The capital of the country famous for the Great Wall is Beijing. Fact: The capital of the country famous for pizza and pasta is",
+   "target": "Rome",
+   "intermediates": [
+    "Italy"
+   ]
+  },
+  {
+   "name": "hop-the-pyramids",
+   "prompt": "Fact: The capital of the country famous for the Great Wall is Beijing. Fact: The capital of the country famous for vodka is Moscow. Fact: The capital of the country famous for the pyramids is",
+   "target": "Cairo",
+   "intermediates": [
+    "Egypt"
+   ]
+  },
+  {
+   "name": "hop-the-Great-Wall",
+   "prompt": "Fact: The capital of the country famous for vodka is Moscow. Fact: The capital of the country famous for flamenco dancing is Madrid. Fact: The capital of the country famous for the Great Wall is",
+   "target": "Beijing",
+   "intermediates": [
+    "China"
+   ]
+  },
+  {
+   "name": "hop-vodka",
+   "prompt": "Fact: The capital of the country famous for flamenco dancing is Madrid. Fact: The capital of the country famous for tulips and windmills is Amsterdam. Fact: The capital of the country famous for vodka is",
+   "target": "Moscow",
+   "intermediates": [
+    "Russia"
+   ]
+  },
+  {
+   "name": "hop-flamenco-dancing",
+   "prompt": "Fact: The capital of the country famous for tulips and windmills is Amsterdam. Fact: The capital of the country famous for the fjords is Oslo. Fact: The capital of the country famous for flamenco dancing is",
+   "target": "Madrid",
+   "intermediates": [
+    "Spain"
+   ]
+  },
+  {
+   "name": "hop-tulips-and-windmills",
+   "prompt": "Fact: The capital of the country famous for the fjords is Oslo. Fact: The capital of the country famous for feta cheese is Athens. Fact: The capital of the country famous for tulips and windmills is",
+   "target": "Amsterdam",
+   "intermediates": [
+    "Netherlands"
+   ]
+  },
+  {
+   "name": "hop-the-fjords",
+   "prompt": "Fact: The capital of the country famous for feta cheese is Athens. Fact: The capital of the country famous for Oktoberfest is Berlin. Fact: The capital of the country famous for the fjords is",
+   "target": "Oslo",
+   "intermediates": [
+    "Norway"
+   ]
+  },
+  {
+   "name": "hop-feta-cheese",
+   "prompt": "Fact: The capital of the country famous for Oktoberfest is Berlin. Fact: The capital of the country famous for whisky and kilts is Edinburgh. Fact: The capital of the country famous for feta cheese is",
+   "target": "Athens",
+   "intermediates": [
+    "Greece"
+   ]
+  },
+  {
+   "name": "hop-Oktoberfest",
+   "prompt": "Fact: The capital of the country famous for whisky and kilts is Edinburgh. Fact: The capital of the country famous for leprechauns is Dublin. Fact: The capital of the country famous for Oktoberfest is",
+   "target": "Berlin",
+   "intermediates": [
+    "Germany"
+   ]
+  },
+  {
+   "name": "hop-whisky-and-kilts",
+   "prompt": "Fact: The capital of the country famous for leprechauns is Dublin. Fact: The capital of the country famous for the Colosseum is Rome. Fact: The capital of the country famous for whisky and kilts is",
+   "target": "Edinburgh",
+   "intermediates": [
+    "Scotland"
+   ]
+  },
+  {
+   "name": "hop-leprechauns",
+   "prompt": "Fact: The capital of the country famous for the Colosseum is Rome. Fact: The capital of the country famous for Mount Fuji is Tokyo. Fact: The capital of the country famous for leprechauns is",
+   "target": "Dublin",
+   "intermediates": [
+    "Ireland"
+   ]
+  },
+  {
+   "name": "hop-the-Colosseum",
+   "prompt": "Fact: The capital of the country famous for Mount Fuji is Tokyo. Fact: The capital of the country famous for croissants is Paris. Fact: The capital of the country famous for the Colosseum is",
+   "target": "Rome",
+   "intermediates": [
+    "Italy"
+   ]
+  },
+  {
+   "name": "hop-Mount-Fuji",
+   "prompt": "Fact: The capital of the country famous for croissants is Paris. Fact: The capital of the country famous for the Acropolis is Athens. Fact: The capital of the country famous for Mount Fuji is",
+   "target": "Tokyo",
+   "intermediates": [
+    "Japan"
+   ]
+  },
+  {
+   "name": "hop-croissants",
+   "prompt": "Fact: The capital of the country famous for the Acropolis is Athens. Fact: The capital of the country famous for bullfighting is Madrid. Fact: The capital of the country famous for croissants is",
+   "target": "Paris",
+   "intermediates": [
+    "France"
+   ]
+  },
+  {
+   "name": "hop-the-Acropolis",
+   "prompt": "Fact: The capital of the country famous for bullfighting is Madrid. Fact: The capital of the country famous for the Nile is Cairo. Fact: The capital of the country famous for the Acropolis is",
+   "target": "Athens",
+   "intermediates": [
+    "Greece"
+   ]
+  },
+  {
+   "name": "hop-bullfighting",
+   "prompt": "Fact: The capital of the country famous for the Nile is Cairo. Fact: The capital of the country famous for maple syrup is Ottawa. Fact: The capital of the country famous for bullfighting is",
+   "target": "Madrid",
+   "intermediates": [
+    "Spain"
+   ]
+  },
+  {
+   "name": "hop-the-Nile",
+   "prompt": "Fact: The capital of the country famous for maple syrup is Ottawa. Fact: The capital of the country famous for kangaroos is Canberra. Fact: The capital of the country famous for the Nile is",
+   "target": "Cairo",
+   "intermediates": [
+    "Egypt"
+   ]
+  },
+  {
+   "name": "hop-maple-syrup",
+   "prompt": "Fact: The capital of the country famous for kangaroos is Canberra. Fact: The capital of the country famous for IKEA is Stockholm. Fact: The capital of the country famous for maple syrup is",
+   "target": "Ottawa",
+   "intermediates": [
+    "Canada"
+   ]
+  },
+  {
+   "name": "hop-kangaroos",
+   "prompt": "Fact: The capital of the country famous for IKEA is Stockholm. Fact: The capital of the country famous for LEGO is Copenhagen. Fact: The capital of the country famous for kangaroos is",
+   "target": "Canberra",
+   "intermediates": [
+    "Australia"
+   ]
+  },
+  {
+   "name": "hop-IKEA",
+   "prompt": "Fact: The capital of the country famous for LEGO is Copenhagen. Fact: The capital of the country famous for the Taj Mahal is Delhi. Fact: The capital of the country famous for IKEA is",
+   "target": "Stockholm",
+   "intermediates": [
+    "Sweden"
+   ]
+  },
+  {
+   "name": "hop-LEGO",
+   "prompt": "Fact: The capital of the country famous for the Taj Mahal is Delhi. Fact: The capital of the country famous for the Eiffel Tower is Paris. Fact: The capital of the country famous for LEGO is",
+   "target": "Copenhagen",
+   "intermediates": [
+    "Denmark"
+   ]
+  },
+  {
+   "name": "hop-the-Taj-Mahal",
+   "prompt": "Fact: The capital of the country famous for the Eiffel Tower is Paris. Fact: The capital of the country famous for sushi is Tokyo. Fact: The capital of the country famous for the Taj Mahal is",
+   "target": "Delhi",
+   "intermediates": [
+    "India"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "task": "swap-capitals",
+ "protocol": "swap",
+ "items": [
+  {
+   "name": "swap-France-to-Italy",
+   "prompt": "The capital of England is London. The capital of Spain is Madrid. The capital of Germany is Berlin. The capital of France is",
+   "intermediate": "France",
+   "answer": "Paris",
+   "swap_to": "Italy",
+   "swap_answer": "Rome",
+   "intermediates": [
+    "Paris"
+   ]
+  },
+  {
+   "name": "swap-Italy-to-France",
+   "prompt": "The capital of England is London. The capital of Spain is Madrid. The capital of Germany is Berlin. The capital of Italy is",
+   "intermediate": "Italy",
+   "answer": "Rome",
+   "swap_to": "France",
+   "swap_answer": "Paris",
+   "intermediates": [
+    "Rome"
+   ]
+  },
+  {
+   "name": "swap-England-to-Spain",
+   "prompt": "The capital of France is Paris. The capital of Italy is Rome. The capital of Germany is Berlin. The capital of England is",
+   "intermediate": "England",
+   "answer": "London",
+   "swap_to": "Spain",
+   "swap_answer": "Madrid",
+   "intermediates": [
+    "London"
+   ]
+  },
+  {
+   "name": "swap-Spain-to-England",
+   "prompt": "The capital of France is Paris. The capital of Italy is Rome. The capital of Germany is Berlin. The capital of Spain is",
+   "intermediate": "Spain",
+   "answer": "Madrid",
+   "swap_to": "England",
+   "swap_answer": "London",
+   "intermediates": [
+    "Madrid"
+   ]
+  },
+  {
+   "name": "swap-Germany-to-Russia",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Germany is",
+   "intermediate": "Germany",
+   "answer": "Berlin",
+   "swap_to": "Russia",
+   "swap_answer": "Moscow",
+   "intermediates": [
+    "Berlin"
+   ]
+  },
+  {
+   "name": "swap-Russia-to-Germany",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Russia is",
+   "intermediate": "Russia",
+   "answer": "Moscow",
+   "swap_to": "Germany",
+   "swap_answer": "Berlin",
+   "intermediates": [
+    "Moscow"
+   ]
+  },
+  {
+   "name": "swap-Japan-to-China",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Japan is",
+   "intermediate": "Japan",
+   "answer": "Tokyo",
+   "swap_to": "China",
+   "swap_answer": "Beijing",
+   "intermediates": [
+    "Tokyo"
+   ]
+  },
+  {
+   "name": "swap-China-to-Japan",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of China is",
+   "intermediate": "China",
+   "answer": "Beijing",
+   "swap_to": "Japan",
+   "swap_answer": "Tokyo",
+   "intermediates": [
+    "Beijing"
+   ]
+  },
+  {
+   "name": "swap-Greece-to-Egypt",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Greece is",
+   "intermediate": "Greece",
+   "answer": "Athens",
+   "swap_to": "Egypt",
+   "swap_answer": "Cairo",
+   "intermediates": [
+    "Athens"
+   ]
+  },
+  {
+   "name": "swap-Egypt-to-Greece",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Egypt is",
+   "intermediate": "Egypt",
+   "answer": "Cairo",
+   "swap_to": "Greece",
+   "swap_answer": "Athens",
+   "intermediates": [
+    "Cairo"
+   ]
+  },
+  {
+   "name": "swap-Ireland-to-Poland",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Ireland is",
+   "intermediate": "Ireland",
+   "answer": "Dublin",
+   "swap_to": "Poland",
+   "swap_answer": "Warsaw",
+   "intermediates": [
+    "Dublin"
+   ]
+  },
+  {
+   "name": "swap-Poland-to-Ireland",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Poland is",
+   "intermediate": "Poland",
+   "answer": "Warsaw",
+   "swap_to": "Ireland",
+   "swap_answer": "Dublin",
+   "intermediates": [
+    "Warsaw"
+   ]
+  },
+  {
+   "name": "swap-Sweden-to-Norway",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Sweden is",
+   "intermediate": "Sweden",
+   "answer": "Stockholm",
+   "swap_to": "Norway",
+   "swap_answer": "Oslo",
+   "intermediates": [
+    "Stockholm"
+   ]
+  },
+  {
+   "name": "swap-Norway-to-Sweden",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Norway is",
+   "intermediate": "Norway",
+   "answer": "Oslo",
+   "swap_to": "Sweden",
+   "swap_answer": "Stockholm",
+   "intermediates": [
+    "Oslo"
+   ]
+  },
+  {
+   "name": "swap-Cuba-to-Iran",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Cuba is",
+   "intermediate": "Cuba",
+   "answer": "Havana",
+   "swap_to": "Iran",
+   "swap_answer": "Tehran",
+   "intermediates": [
+    "Havana"
+   ]
+  },
+  {
+   "name": "swap-Iran-to-Cuba",
+   "prompt": "The capital of France is Paris. The capital of England is London. The capital of Italy is Rome. The capital of Iran is",
+   "intermediate": "Iran",
+   "answer": "Tehran",
+   "swap_to": "Cuba",
+   "swap_answer": "Havana",
+   "intermediates": [
+    "Tehran"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,246 @@
+{
+ "task": "typo-robustness",
+ "protocol": "typo",
+ "items": [
+  {
+   "name": "typo-language",
+   "prompt": "Every student was required to learn a second langauge",
+   "clean_prompt": "Every student was required to learn a second language",
+   "intermediates": [
+    "language"
+   ]
+  },
+  {
+   "name": "typo-tomorrow",
+   "prompt": "He promised to finish the report by tomorow",
+   "clean_prompt": "He promised to finish the report by tomorrow",
+   "intermediates": [
+    "tomorrow"
+   ]
+  },
+  {
+   "name": "typo-beautiful",
+   "prompt": "The sunset over the ocean was absolutely beutiful",
+   "clean_prompt": "The sunset over the ocean was absolutely beautiful",
+   "intermediates": [
+    "beautiful"
+   ]
+  },
+  {
+   "name": "typo-business",
+   "prompt": "After college she started her own bussiness",
+   "clean_prompt": "After college she started her own business",
+   "intermediates": [
+    "business"
+   ]
+  },
+  {
+   "name": "typo-government",
+   "prompt": "The senator criticized the federal goverment",
+   "clean_prompt": "The senator criticized the federal government",
+   "intermediates": [
+    "government"
+   ]
+  },
+  {
+   "name": "typo-restaurant",
+   "prompt": "They had dinner at an expensive Italian restaraunt",
+   "clean_prompt": "They had dinner at an expensive Italian restaurant",
+   "intermediates": [
+    "restaurant"
+   ]
+  },
+  {
+   "name": "typo-beginning",
+   "prompt": "The story was confusing right from the begining",
+   "clean_prompt": "The story was confusing right from the beginning",
+   "intermediates": [
+    "beginning"
+   ]
+  },
+  {
+   "name": "typo-believe",
+   "prompt": "He said it was hard to beleive",
+   "clean_prompt": "He said it was hard to believe",
+   "intermediates": [
+    "believe"
+   ]
+  },
+  {
+   "name": "typo-friend",
+   "prompt": "She has been my closest freind",
+   "clean_prompt": "She has been my closest friend",
+   "intermediates": [
+    "friend"
+   ]
+  },
+  {
+   "name": "typo-weather",
+   "prompt": "The forecast promised warm and sunny wether",
+   "clean_prompt": "The forecast promised warm and sunny weather",
+   "intermediates": [
+    "weather"
+   ]
+  },
+  {
+   "name": "typo-arrive",
+   "prompt": "He waited three weeks for the package to arive",
+   "clean_prompt": "He waited three weeks for the package to arrive",
+   "intermediates": [
+    "arrive"
+   ]
+  },
+  {
+   "name": "typo-address",
+   "prompt": "Please write down your name and adress",
+   "clean_prompt": "Please write down your name and address",
+   "intermediates": [
+    "address"
+   ]
+  },
+  {
+   "name": "typo-library",
+   "prompt": "The books were due back at the libary",
+   "clean_prompt": "The books were due back at the library",
+   "intermediates": [
+    "library"
+   ]
+  },
+  {
+   "name": "typo-separate",
+   "prompt": "The twins were raised in two seperate homes",
+   "clean_prompt": "The twins were raised in two separate homes",
+   "intermediates": [
+    "separate"
+   ]
+  },
+  {
+   "name": "typo-surprise",
+   "prompt": "The party was planned as a complete suprise",
+   "clean_prompt": "The party was planned as a complete surprise",
+   "intermediates": [
+    "surprise"
+   ]
+  },
+  {
+   "name": "typo-chocolate",
+   "prompt": "The cake was covered in dark chocolat",
+   "clean_prompt": "The cake was covered in dark chocolate",
+   "intermediates": [
+    "chocolate"
+   ]
+  },
+  {
+   "name": "typo-exercise",
+   "prompt": "The doctor recommended thirty minutes of daily excercise",
+   "clean_prompt": "The doctor recommended thirty minutes of daily exercise",
+   "intermediates": [
+    "exercise"
+   ]
+  },
+  {
+   "name": "typo-familiar",
+   "prompt": "Her face looked strangely familliar",
+   "clean_prompt": "Her face looked strangely familiar",
+   "intermediates": [
+    "familiar"
+   ]
+  },
+  {
+   "name": "typo-foreign",
+   "prompt": "He struggled to pronounce words in a foriegn",
+   "clean_prompt": "He struggled to pronounce words in a foreign",
+   "intermediates": [
+    "foreign"
+   ]
+  },
+  {
+   "name": "typo-grammar",
+   "prompt": "The teacher corrected the student's grammer",
+   "clean_prompt": "The teacher corrected the student's grammar",
+   "intermediates": [
+    "grammar"
+   ]
+  },
+  {
+   "name": "typo-immediately",
+   "prompt": "The nurse said the doctor would come immediatly",
+   "clean_prompt": "The nurse said the doctor would come immediately",
+   "intermediates": [
+    "immediately"
+   ]
+  },
+  {
+   "name": "typo-necessary",
+   "prompt": "They packed only what was strictly neccessary",
+   "clean_prompt": "They packed only what was strictly necessary",
+   "intermediates": [
+    "necessary"
+   ]
+  },
+  {
+   "name": "typo-neighbor",
+   "prompt": "The fence was shared with the next-door nieghbor",
+   "clean_prompt": "The fence was shared with the next-door neighbor",
+   "intermediates": [
+    "neighbor"
+   ]
+  },
+  {
+   "name": "typo-occasion",
+   "prompt": "A wedding is a very special ocassion",
+   "clean_prompt": "A wedding is a very special occasion",
+   "intermediates": [
+    "occasion"
+   ]
+  },
+  {
+   "name": "typo-piece",
+   "prompt": "She offered him the last peice of cake",
+   "clean_prompt": "She offered him the last piece of cake",
+   "intermediates": [
+    "piece"
+   ]
+  },
+  {
+   "name": "typo-pleasant",
+   "prompt": "The evening walk was quiet and plesant",
+   "clean_prompt": "The evening walk was quiet and pleasant",
+   "intermediates": [
+    "pleasant"
+   ]
+  },
+  {
+   "name": "typo-tongue",
+   "prompt": "The hot soup burned the tip of his tounge",
+   "clean_prompt": "The hot soup burned the tip of his tongue",
+   "intermediates": [
+    "tongue"
+   ]
+  },
+  {
+   "name": "typo-Wednesday",
+   "prompt": "The meeting was moved from Monday to Wendsday",
+   "clean_prompt": "The meeting was moved from Monday to Wednesday",
+   "intermediates": [
+    "Wednesday"
+   ]
+  },
+  {
+   "name": "typo-ear",
+   "prompt": "She whispered the answer into his eear",
+   "clean_prompt": "She whispered the answer into his ear",
+   "intermediates": [
+    "ear"
+   ]
+  },
+  {
+   "name": "typo-sugar",
+   "prompt": "The recipe calls for two cups of suggar",
+   "clean_prompt": "The recipe calls for two cups of sugar",
+   "intermediates": [
+    "sugar"
+   ]
+  }
+ ]
+}
