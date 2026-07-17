@@ -1,0 +1,31 @@
+{
+  "run_name": "lens-gate",
+  "started": "2026-07-18T01:05:59",
+  "git_commit": "0065a2a78ffd7e044c15fa41ce499723600ee7bb",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M1-lens-gate.md",
+  "prereg_commit": "0065a2a78ffd7e044c15fa41ce499723600ee7bb",
+  "config_sha256": "9e46085a2a24092ee986c035aa737f6b2424df81a5a4155f141f5b7c91f45451",
+  "post_hoc": false,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "rules": {
+    "R1_draw0_gate_pass": true,
+    "R2_swap": true,
+    "R3_capital_recall_contrast": true,
+    "R4_calibration_hashes_exact": true,
+    "R5_baselines": true,
+    "R6_draws_stable": true
+  },
+  "m1_verdict": "PASS",
+  "draw_gate_verdicts": {
+    "0": true,
+    "1": true,
+    "2": true
+  },
+  "baselines_path": "/Users/ecaterina/Developer/jtvec/results/m1/draw0/task_baselines/20260718-010640/baselines.json",
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "finished": "2026-07-18T01:22:00"
+}

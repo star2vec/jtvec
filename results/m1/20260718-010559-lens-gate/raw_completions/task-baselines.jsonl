@@ -1,0 +1,212 @@
+{"task": "capital-operand", "name": "opd-France", "correct": true, "top1": " Paris", "expected": "Paris"}
+{"task": "capital-operand", "name": "opd-England", "correct": true, "top1": " London", "expected": "London"}
+{"task": "capital-operand", "name": "opd-Italy", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "capital-operand", "name": "opd-Spain", "correct": true, "top1": " Madrid", "expected": "Madrid"}
+{"task": "capital-operand", "name": "opd-Germany", "correct": true, "top1": " Berlin", "expected": "Berlin"}
+{"task": "capital-operand", "name": "opd-Russia", "correct": true, "top1": " Moscow", "expected": "Moscow"}
+{"task": "capital-operand", "name": "opd-Japan", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"task": "capital-operand", "name": "opd-China", "correct": true, "top1": " Beijing", "expected": "Beijing"}
+{"task": "capital-operand", "name": "opd-Greece", "correct": true, "top1": " Athens", "expected": "Athens"}
+{"task": "capital-operand", "name": "opd-Egypt", "correct": true, "top1": " Cairo", "expected": "Cairo"}
+{"task": "capital-operand", "name": "opd-Poland", "correct": true, "top1": " Warsaw", "expected": "Warsaw"}
+{"task": "capital-operand", "name": "opd-Austria", "correct": true, "top1": " Vienna", "expected": "Vienna"}
+{"task": "capital-operand", "name": "opd-Ireland", "correct": true, "top1": " Dublin", "expected": "Dublin"}
+{"task": "capital-operand", "name": "opd-Portugal", "correct": true, "top1": " Lisbon", "expected": "Lisbon"}
+{"task": "capital-operand", "name": "opd-Norway", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"task": "capital-operand", "name": "opd-Sweden", "correct": true, "top1": " Stockholm", "expected": "Stockholm"}
+{"task": "capital-operand", "name": "opd-Cuba", "correct": true, "top1": " Hav", "expected": "Havana"}
+{"task": "capital-operand", "name": "opd-Iran", "correct": true, "top1": " Tehran", "expected": "Tehran"}
+{"task": "capital-operand", "name": "opd-Iraq", "correct": true, "top1": " Baghdad", "expected": "Baghdad"}
+{"task": "capital-operand", "name": "opd-Scotland", "correct": true, "top1": " Edinburgh", "expected": "Edinburgh"}
+{"task": "capital-operand", "name": "opd-Hungary", "correct": true, "top1": " Budapest", "expected": "Budapest"}
+{"task": "capital-operand", "name": "opd-Finland", "correct": true, "top1": " Helsinki", "expected": "Helsinki"}
+{"task": "capital-operand", "name": "opd-Denmark", "correct": true, "top1": " Copenhagen", "expected": "Copenhagen"}
+{"task": "capital-operand", "name": "opd-Belgium", "correct": true, "top1": " Brussels", "expected": "Brussels"}
+{"task": "capital-operand", "name": "opd-Ukraine", "correct": true, "top1": " K", "expected": "Kiev"}
+{"task": "capital-operand", "name": "opd-Syria", "correct": true, "top1": " Damascus", "expected": "Damascus"}
+{"task": "capital-operand", "name": "opd-Afghanistan", "correct": true, "top1": " K", "expected": "Kabul"}
+{"task": "capital-operand", "name": "opd-Thailand", "correct": true, "top1": " Bangkok", "expected": "Bangkok"}
+{"task": "capital-operand", "name": "opd-India", "correct": false, "top1": " New", "expected": "Delhi"}
+{"task": "capital-operand", "name": "opd-Canada", "correct": false, "top1": " Toronto", "expected": "Ottawa"}
+{"task": "capital-operand", "name": "opd-Australia", "correct": true, "top1": " Can", "expected": "Canberra"}
+{"task": "capital-operand", "name": "opd-Turkey", "correct": false, "top1": " Istanbul", "expected": "Ankara"}
+{"task": "capital-operand", "name": "opd-Switzerland", "correct": false, "top1": " Zur", "expected": "Bern"}
+{"task": "capital-operand", "name": "opd-Netherlands", "correct": true, "top1": " Amsterdam", "expected": "Amsterdam"}
+{"task": "capital-operand", "name": "opd-Israel", "correct": false, "top1": " Tel", "expected": "Jerusalem"}
+{"task": "capital-operand", "name": "opd-Lebanon", "correct": true, "top1": " Be", "expected": "Beirut"}
+{"task": "capital-recall", "name": "cap-France", "correct": true, "top1": " Paris", "expected": "Paris"}
+{"task": "capital-recall", "name": "cap-England", "correct": true, "top1": " London", "expected": "London"}
+{"task": "capital-recall", "name": "cap-Italy", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "capital-recall", "name": "cap-Spain", "correct": true, "top1": " Madrid", "expected": "Madrid"}
+{"task": "capital-recall", "name": "cap-Germany", "correct": true, "top1": " Berlin", "expected": "Berlin"}
+{"task": "capital-recall", "name": "cap-Russia", "correct": true, "top1": " Moscow", "expected": "Moscow"}
+{"task": "capital-recall", "name": "cap-Japan", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"task": "capital-recall", "name": "cap-China", "correct": true, "top1": " Beijing", "expected": "Beijing"}
+{"task": "capital-recall", "name": "cap-Greece", "correct": true, "top1": " Athens", "expected": "Athens"}
+{"task": "capital-recall", "name": "cap-Egypt", "correct": true, "top1": " Cairo", "expected": "Cairo"}
+{"task": "capital-recall", "name": "cap-Poland", "correct": true, "top1": " Warsaw", "expected": "Warsaw"}
+{"task": "capital-recall", "name": "cap-Austria", "correct": true, "top1": " Vienna", "expected": "Vienna"}
+{"task": "capital-recall", "name": "cap-Ireland", "correct": true, "top1": " Dublin", "expected": "Dublin"}
+{"task": "capital-recall", "name": "cap-Portugal", "correct": true, "top1": " Lisbon", "expected": "Lisbon"}
+{"task": "capital-recall", "name": "cap-Norway", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"task": "capital-recall", "name": "cap-Sweden", "correct": true, "top1": " Stockholm", "expected": "Stockholm"}
+{"task": "capital-recall", "name": "cap-Cuba", "correct": true, "top1": " Hav", "expected": "Havana"}
+{"task": "capital-recall", "name": "cap-Iran", "correct": true, "top1": " Tehran", "expected": "Tehran"}
+{"task": "capital-recall", "name": "cap-Iraq", "correct": true, "top1": " Baghdad", "expected": "Baghdad"}
+{"task": "capital-recall", "name": "cap-Scotland", "correct": true, "top1": " Edinburgh", "expected": "Edinburgh"}
+{"task": "capital-recall", "name": "cap-Hungary", "correct": true, "top1": " Budapest", "expected": "Budapest"}
+{"task": "capital-recall", "name": "cap-Finland", "correct": true, "top1": " Helsinki", "expected": "Helsinki"}
+{"task": "capital-recall", "name": "cap-Denmark", "correct": true, "top1": " Copenhagen", "expected": "Copenhagen"}
+{"task": "capital-recall", "name": "cap-Belgium", "correct": true, "top1": " Brussels", "expected": "Brussels"}
+{"task": "capital-recall", "name": "cap-Ukraine", "correct": true, "top1": " K", "expected": "Kiev"}
+{"task": "capital-recall", "name": "cap-Syria", "correct": true, "top1": " Damascus", "expected": "Damascus"}
+{"task": "capital-recall", "name": "cap-Afghanistan", "correct": true, "top1": " K", "expected": "Kabul"}
+{"task": "capital-recall", "name": "cap-Thailand", "correct": true, "top1": " Bangkok", "expected": "Bangkok"}
+{"task": "capital-recall", "name": "cap-India", "correct": false, "top1": " New", "expected": "Delhi"}
+{"task": "capital-recall", "name": "cap-Canada", "correct": false, "top1": " Toronto", "expected": "Ottawa"}
+{"task": "capital-recall", "name": "cap-Australia", "correct": true, "top1": " Can", "expected": "Canberra"}
+{"task": "capital-recall", "name": "cap-Turkey", "correct": false, "top1": " Istanbul", "expected": "Ankara"}
+{"task": "capital-recall", "name": "cap-Switzerland", "correct": false, "top1": " Zur", "expected": "Bern"}
+{"task": "capital-recall", "name": "cap-Netherlands", "correct": true, "top1": " Amsterdam", "expected": "Amsterdam"}
+{"task": "capital-recall", "name": "cap-Israel", "correct": false, "top1": " Tel", "expected": "Jerusalem"}
+{"task": "capital-recall", "name": "cap-Lebanon", "correct": true, "top1": " Be", "expected": "Beirut"}
+{"task": "context-binding", "name": "bind-0-John", "correct": true, "top1": " London", "expected": "London"}
+{"task": "context-binding", "name": "bind-1-Tom", "correct": false, "top1": " Berlin", "expected": "Tokyo"}
+{"task": "context-binding", "name": "bind-2-Peter", "correct": false, "top1": " Moscow", "expected": "Rome"}
+{"task": "context-binding", "name": "bind-3-Anna", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "context-binding", "name": "bind-4-Sarah", "correct": false, "top1": " Dublin", "expected": "Oslo"}
+{"task": "context-binding", "name": "bind-5-Emma", "correct": false, "top1": " Athens", "expected": "Warsaw"}
+{"task": "context-binding", "name": "bind-6-James", "correct": true, "top1": " Warsaw", "expected": "Warsaw"}
+{"task": "context-binding", "name": "bind-7-David", "correct": true, "top1": " London", "expected": "London"}
+{"task": "context-binding", "name": "bind-8-Paul", "correct": false, "top1": " Paris", "expected": "Tokyo"}
+{"task": "context-binding", "name": "bind-9-Laura", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"task": "context-binding", "name": "bind-10-Alice", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "context-binding", "name": "bind-11-Julia", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"task": "context-binding", "name": "bind-12-Mark", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"task": "context-binding", "name": "bind-13-Simon", "correct": false, "top1": " Cairo", "expected": "Warsaw"}
+{"task": "context-binding", "name": "bind-14-Mary", "correct": false, "top1": " Lisbon", "expected": "London"}
+{"task": "context-binding", "name": "bind-15-John", "correct": true, "top1": " London", "expected": "London"}
+{"task": "context-binding", "name": "bind-16-Tom", "correct": false, "top1": " Berlin", "expected": "Tokyo"}
+{"task": "context-binding", "name": "bind-17-Peter", "correct": false, "top1": " Moscow", "expected": "Rome"}
+{"task": "context-binding", "name": "bind-18-Anna", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "context-binding", "name": "bind-19-Sarah", "correct": false, "top1": " Dublin", "expected": "Oslo"}
+{"task": "context-binding", "name": "bind-20-Emma", "correct": false, "top1": " Athens", "expected": "Warsaw"}
+{"task": "context-binding", "name": "bind-21-James", "correct": true, "top1": " Warsaw", "expected": "Warsaw"}
+{"task": "context-binding", "name": "bind-22-David", "correct": true, "top1": " London", "expected": "London"}
+{"task": "context-binding", "name": "bind-23-Paul", "correct": false, "top1": " Paris", "expected": "Tokyo"}
+{"task": "context-binding", "name": "bind-24-Laura", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"task": "context-binding", "name": "bind-25-Alice", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "context-binding", "name": "bind-26-Julia", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"task": "context-binding", "name": "bind-27-Mark", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"task": "context-binding", "name": "bind-28-Simon", "correct": false, "top1": " Cairo", "expected": "Warsaw"}
+{"task": "context-binding", "name": "bind-29-Mary", "correct": false, "top1": " Lisbon", "expected": "London"}
+{"task": "multihop-scaled", "name": "hop-the-Eiffel-Tower", "correct": true, "top1": " Paris", "expected": "Paris"}
+{"task": "multihop-scaled", "name": "hop-sushi", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"task": "multihop-scaled", "name": "hop-pizza-and-pasta", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "multihop-scaled", "name": "hop-the-pyramids", "correct": true, "top1": " Cairo", "expected": "Cairo"}
+{"task": "multihop-scaled", "name": "hop-the-Great-Wall", "correct": true, "top1": " Beijing", "expected": "Beijing"}
+{"task": "multihop-scaled", "name": "hop-vodka", "correct": true, "top1": " Moscow", "expected": "Moscow"}
+{"task": "multihop-scaled", "name": "hop-flamenco-dancing", "correct": true, "top1": " Madrid", "expected": "Madrid"}
+{"task": "multihop-scaled", "name": "hop-tulips-and-windmills", "correct": false, "top1": " Rome", "expected": "Amsterdam"}
+{"task": "multihop-scaled", "name": "hop-the-fjords", "correct": false, "top1": " Iceland", "expected": "Oslo"}
+{"task": "multihop-scaled", "name": "hop-feta-cheese", "correct": false, "top1": " Nice", "expected": "Athens"}
+{"task": "multihop-scaled", "name": "hop-Oktoberfest", "correct": false, "top1": " Munich", "expected": "Berlin"}
+{"task": "multihop-scaled", "name": "hop-whisky-and-kilts", "correct": false, "top1": " London", "expected": "Edinburgh"}
+{"task": "multihop-scaled", "name": "hop-leprechauns", "correct": false, "top1": " Paris", "expected": "Dublin"}
+{"task": "multihop-scaled", "name": "hop-the-Colosseum", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "multihop-scaled", "name": "hop-Mount-Fuji", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"task": "multihop-scaled", "name": "hop-croissants", "correct": true, "top1": " Paris", "expected": "Paris"}
+{"task": "multihop-scaled", "name": "hop-the-Acropolis", "correct": true, "top1": " Athens", "expected": "Athens"}
+{"task": "multihop-scaled", "name": "hop-bullfighting", "correct": false, "top1": " Ottawa", "expected": "Madrid"}
+{"task": "multihop-scaled", "name": "hop-the-Nile", "correct": true, "top1": " Cairo", "expected": "Cairo"}
+{"task": "multihop-scaled", "name": "hop-maple-syrup", "correct": false, "top1": " Toronto", "expected": "Ottawa"}
+{"task": "multihop-scaled", "name": "hop-kangaroos", "correct": false, "top1": " Sydney", "expected": "Canberra"}
+{"task": "multihop-scaled", "name": "hop-IKEA", "correct": false, "top1": " Copenhagen", "expected": "Stockholm"}
+{"task": "multihop-scaled", "name": "hop-LEGO", "correct": false, "top1": " London", "expected": "Copenhagen"}
+{"task": "multihop-scaled", "name": "hop-the-Taj-Mahal", "correct": false, "top1": " New", "expected": "Delhi"}
+{"task": "opposites", "name": "opp-hot", "correct": true, "top1": " cold", "expected": "cold"}
+{"task": "opposites", "name": "opp-big", "correct": true, "top1": " small", "expected": "small"}
+{"task": "opposites", "name": "opp-day", "correct": true, "top1": " night", "expected": "night"}
+{"task": "opposites", "name": "opp-up", "correct": true, "top1": " down", "expected": "down"}
+{"task": "opposites", "name": "opp-black", "correct": true, "top1": " white", "expected": "white"}
+{"task": "opposites", "name": "opp-old", "correct": true, "top1": " new", "expected": "new"}
+{"task": "opposites", "name": "opp-good", "correct": true, "top1": " bad", "expected": "bad"}
+{"task": "opposites", "name": "opp-fast", "correct": true, "top1": " slow", "expected": "slow"}
+{"task": "opposites", "name": "opp-open", "correct": true, "top1": " closed", "expected": "closed"}
+{"task": "opposites", "name": "opp-left", "correct": true, "top1": " right", "expected": "right"}
+{"task": "opposites", "name": "opp-light", "correct": true, "top1": " dark", "expected": "dark"}
+{"task": "opposites", "name": "opp-high", "correct": true, "top1": " low", "expected": "low"}
+{"task": "opposites", "name": "opp-hard", "correct": true, "top1": " soft", "expected": "soft"}
+{"task": "opposites", "name": "opp-rich", "correct": true, "top1": " poor", "expected": "poor"}
+{"task": "opposites", "name": "opp-strong", "correct": true, "top1": " weak", "expected": "weak"}
+{"task": "opposites", "name": "opp-wet", "correct": true, "top1": " dry", "expected": "dry"}
+{"task": "swap-capitals", "name": "swap-France-to-Italy", "correct": true, "top1": " Paris", "expected": "Paris"}
+{"task": "swap-capitals", "name": "swap-Italy-to-France", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"task": "swap-capitals", "name": "swap-England-to-Spain", "correct": true, "top1": " London", "expected": "London"}
+{"task": "swap-capitals", "name": "swap-Spain-to-England", "correct": true, "top1": " Madrid", "expected": "Madrid"}
+{"task": "swap-capitals", "name": "swap-Germany-to-Russia", "correct": true, "top1": " Berlin", "expected": "Berlin"}
+{"task": "swap-capitals", "name": "swap-Russia-to-Germany", "correct": false, "top1": " St", "expected": "Moscow"}
+{"task": "swap-capitals", "name": "swap-Japan-to-China", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"task": "swap-capitals", "name": "swap-China-to-Japan", "correct": true, "top1": " Beijing", "expected": "Beijing"}
+{"task": "swap-capitals", "name": "swap-Greece-to-Egypt", "correct": true, "top1": " Athens", "expected": "Athens"}
+{"task": "swap-capitals", "name": "swap-Egypt-to-Greece", "correct": true, "top1": " Cairo", "expected": "Cairo"}
+{"task": "swap-capitals", "name": "swap-Ireland-to-Poland", "correct": true, "top1": " Dublin", "expected": "Dublin"}
+{"task": "swap-capitals", "name": "swap-Poland-to-Ireland", "correct": true, "top1": " Warsaw", "expected": "Warsaw"}
+{"task": "swap-capitals", "name": "swap-Sweden-to-Norway", "correct": true, "top1": " Stockholm", "expected": "Stockholm"}
+{"task": "swap-capitals", "name": "swap-Norway-to-Sweden", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"task": "swap-capitals", "name": "swap-Cuba-to-Iran", "correct": true, "top1": " Hav", "expected": "Havana"}
+{"task": "swap-capitals", "name": "swap-Iran-to-Cuba", "correct": true, "top1": " Tehran", "expected": "Tehran"}
+{"task": "typo-robustness", "name": "typo-language", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-tomorrow", "correct": false, "top1": ".", "expected": ","}
+{"task": "typo-robustness", "name": "typo-beautiful", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-business", "correct": true, "top1": ",", "expected": ","}
+{"task": "typo-robustness", "name": "typo-government", "correct": true, "top1": " for", "expected": " for"}
+{"task": "typo-robustness", "name": "typo-restaurant", "correct": true, "top1": ",", "expected": ","}
+{"task": "typo-robustness", "name": "typo-beginning", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-believe", "correct": true, "top1": " that", "expected": " that"}
+{"task": "typo-robustness", "name": "typo-friend", "correct": true, "top1": " since", "expected": " since"}
+{"task": "typo-robustness", "name": "typo-weather", "correct": false, "top1": " weather", "expected": ","}
+{"task": "typo-robustness", "name": "typo-arrive", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-address", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-library", "correct": false, "top1": " in", "expected": " on"}
+{"task": "typo-robustness", "name": "typo-separate", "correct": true, "top1": ",", "expected": ","}
+{"task": "typo-robustness", "name": "typo-surprise", "correct": false, "top1": " to", "expected": ","}
+{"task": "typo-robustness", "name": "typo-chocolate", "correct": false, "top1": ",", "expected": " and"}
+{"task": "typo-robustness", "name": "typo-exercise", "correct": true, "top1": ",", "expected": ","}
+{"task": "typo-robustness", "name": "typo-familiar", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-foreign", "correct": false, "top1": " accent", "expected": " language"}
+{"task": "typo-robustness", "name": "typo-grammar", "correct": false, "top1": ",", "expected": " and"}
+{"task": "typo-robustness", "name": "typo-immediately", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-necessary", "correct": true, "top1": ",", "expected": ","}
+{"task": "typo-robustness", "name": "typo-neighbor", "correct": false, "top1": "hood", "expected": ","}
+{"task": "typo-robustness", "name": "typo-occasion", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-piece", "correct": true, "top1": ",", "expected": ","}
+{"task": "typo-robustness", "name": "typo-pleasant", "correct": false, "top1": ",", "expected": "."}
+{"task": "typo-robustness", "name": "typo-tongue", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-Wednesday", "correct": true, "top1": ",", "expected": ","}
+{"task": "typo-robustness", "name": "typo-ear", "correct": true, "top1": ".", "expected": "."}
+{"task": "typo-robustness", "name": "typo-sugar", "correct": true, "top1": ",", "expected": ","}
+{"task": "word-pairs", "name": "pair-pepper", "correct": true, "top1": " pepper", "expected": "pepper"}
+{"task": "word-pairs", "name": "pair-butter", "correct": true, "top1": " butter", "expected": "butter"}
+{"task": "word-pairs", "name": "pair-lightning", "correct": true, "top1": " lightning", "expected": "lightning"}
+{"task": "word-pairs", "name": "pair-fork", "correct": true, "top1": " fork", "expected": "fork"}
+{"task": "word-pairs", "name": "pair-chips", "correct": false, "top1": " fro", "expected": "chips"}
+{"task": "word-pairs", "name": "pair-eggs", "correct": true, "top1": " eggs", "expected": "eggs"}
+{"task": "word-pairs", "name": "pair-dogs", "correct": true, "top1": " dogs", "expected": "dogs"}
+{"task": "word-pairs", "name": "pair-forth", "correct": true, "top1": " forth", "expected": "forth"}
+{"task": "word-pairs", "name": "pair-then", "correct": true, "top1": " then", "expected": "then"}
+{"task": "word-pairs", "name": "pair-gentlemen", "correct": true, "top1": " gentlemen", "expected": "gentlemen"}
+{"task": "word-pairs", "name": "pair-cons", "correct": true, "top1": " cons", "expected": "cons"}
+{"task": "word-pairs", "name": "pair-error", "correct": true, "top1": " error", "expected": "error"}
+{"task": "word-pairs", "name": "pair-demand", "correct": true, "top1": " demand", "expected": "demand"}
+{"task": "word-pairs", "name": "pair-order", "correct": true, "top1": " order", "expected": "order"}
+{"task": "word-pairs", "name": "pair-blood", "correct": true, "top1": " blood", "expected": "blood"}
+{"task": "word-pairs", "name": "pair-quiet", "correct": false, "top1": " war", "expected": "quiet"}
+{"task": "word-pairs", "name": "pair-death", "correct": true, "top1": " death", "expected": "death"}
+{"task": "word-pairs", "name": "pair-white", "correct": true, "top1": " white", "expected": "white"}
+{"task": "word-pairs", "name": "pair-day", "correct": true, "top1": " day", "expected": "day"}
+{"task": "word-pairs", "name": "pair-hell", "correct": true, "top1": " hell", "expected": "hell"}
+{"task": "word-pairs", "name": "pair-soul", "correct": true, "top1": " soul", "expected": "soul"}
+{"task": "word-pairs", "name": "pair-mortar", "correct": true, "top1": " mortar", "expected": "mortar"}
+{"task": "word-pairs", "name": "pair-key", "correct": true, "top1": " key", "expected": "key"}
+{"task": "word-pairs", "name": "pair-later", "correct": true, "top1": " later", "expected": "later"}

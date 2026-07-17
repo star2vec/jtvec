@@ -1,0 +1,1338 @@
+{
+ "capital-operand": {
+  "task": "capital-operand",
+  "protocol": "completion",
+  "accuracy": 0.8611111111111112,
+  "per_item": [
+   {
+    "name": "opd-France",
+    "correct": true,
+    "top1": " Paris",
+    "expected": "Paris"
+   },
+   {
+    "name": "opd-England",
+    "correct": true,
+    "top1": " London",
+    "expected": "London"
+   },
+   {
+    "name": "opd-Italy",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "opd-Spain",
+    "correct": true,
+    "top1": " Madrid",
+    "expected": "Madrid"
+   },
+   {
+    "name": "opd-Germany",
+    "correct": true,
+    "top1": " Berlin",
+    "expected": "Berlin"
+   },
+   {
+    "name": "opd-Russia",
+    "correct": true,
+    "top1": " Moscow",
+    "expected": "Moscow"
+   },
+   {
+    "name": "opd-Japan",
+    "correct": true,
+    "top1": " Tokyo",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "opd-China",
+    "correct": true,
+    "top1": " Beijing",
+    "expected": "Beijing"
+   },
+   {
+    "name": "opd-Greece",
+    "correct": true,
+    "top1": " Athens",
+    "expected": "Athens"
+   },
+   {
+    "name": "opd-Egypt",
+    "correct": true,
+    "top1": " Cairo",
+    "expected": "Cairo"
+   },
+   {
+    "name": "opd-Poland",
+    "correct": true,
+    "top1": " Warsaw",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "opd-Austria",
+    "correct": true,
+    "top1": " Vienna",
+    "expected": "Vienna"
+   },
+   {
+    "name": "opd-Ireland",
+    "correct": true,
+    "top1": " Dublin",
+    "expected": "Dublin"
+   },
+   {
+    "name": "opd-Portugal",
+    "correct": true,
+    "top1": " Lisbon",
+    "expected": "Lisbon"
+   },
+   {
+    "name": "opd-Norway",
+    "correct": true,
+    "top1": " Oslo",
+    "expected": "Oslo"
+   },
+   {
+    "name": "opd-Sweden",
+    "correct": true,
+    "top1": " Stockholm",
+    "expected": "Stockholm"
+   },
+   {
+    "name": "opd-Cuba",
+    "correct": true,
+    "top1": " Hav",
+    "expected": "Havana"
+   },
+   {
+    "name": "opd-Iran",
+    "correct": true,
+    "top1": " Tehran",
+    "expected": "Tehran"
+   },
+   {
+    "name": "opd-Iraq",
+    "correct": true,
+    "top1": " Baghdad",
+    "expected": "Baghdad"
+   },
+   {
+    "name": "opd-Scotland",
+    "correct": true,
+    "top1": " Edinburgh",
+    "expected": "Edinburgh"
+   },
+   {
+    "name": "opd-Hungary",
+    "correct": true,
+    "top1": " Budapest",
+    "expected": "Budapest"
+   },
+   {
+    "name": "opd-Finland",
+    "correct": true,
+    "top1": " Helsinki",
+    "expected": "Helsinki"
+   },
+   {
+    "name": "opd-Denmark",
+    "correct": true,
+    "top1": " Copenhagen",
+    "expected": "Copenhagen"
+   },
+   {
+    "name": "opd-Belgium",
+    "correct": true,
+    "top1": " Brussels",
+    "expected": "Brussels"
+   },
+   {
+    "name": "opd-Ukraine",
+    "correct": true,
+    "top1": " K",
+    "expected": "Kiev"
+   },
+   {
+    "name": "opd-Syria",
+    "correct": true,
+    "top1": " Damascus",
+    "expected": "Damascus"
+   },
+   {
+    "name": "opd-Afghanistan",
+    "correct": true,
+    "top1": " K",
+    "expected": "Kabul"
+   },
+   {
+    "name": "opd-Thailand",
+    "correct": true,
+    "top1": " Bangkok",
+    "expected": "Bangkok"
+   },
+   {
+    "name": "opd-India",
+    "correct": false,
+    "top1": " New",
+    "expected": "Delhi"
+   },
+   {
+    "name": "opd-Canada",
+    "correct": false,
+    "top1": " Toronto",
+    "expected": "Ottawa"
+   },
+   {
+    "name": "opd-Australia",
+    "correct": true,
+    "top1": " Can",
+    "expected": "Canberra"
+   },
+   {
+    "name": "opd-Turkey",
+    "correct": false,
+    "top1": " Istanbul",
+    "expected": "Ankara"
+   },
+   {
+    "name": "opd-Switzerland",
+    "correct": false,
+    "top1": " Zur",
+    "expected": "Bern"
+   },
+   {
+    "name": "opd-Netherlands",
+    "correct": true,
+    "top1": " Amsterdam",
+    "expected": "Amsterdam"
+   },
+   {
+    "name": "opd-Israel",
+    "correct": false,
+    "top1": " Tel",
+    "expected": "Jerusalem"
+   },
+   {
+    "name": "opd-Lebanon",
+    "correct": true,
+    "top1": " Be",
+    "expected": "Beirut"
+   }
+  ],
+  "included": true
+ },
+ "capital-recall": {
+  "task": "capital-recall",
+  "protocol": "completion",
+  "accuracy": 0.8611111111111112,
+  "per_item": [
+   {
+    "name": "cap-France",
+    "correct": true,
+    "top1": " Paris",
+    "expected": "Paris"
+   },
+   {
+    "name": "cap-England",
+    "correct": true,
+    "top1": " London",
+    "expected": "London"
+   },
+   {
+    "name": "cap-Italy",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "cap-Spain",
+    "correct": true,
+    "top1": " Madrid",
+    "expected": "Madrid"
+   },
+   {
+    "name": "cap-Germany",
+    "correct": true,
+    "top1": " Berlin",
+    "expected": "Berlin"
+   },
+   {
+    "name": "cap-Russia",
+    "correct": true,
+    "top1": " Moscow",
+    "expected": "Moscow"
+   },
+   {
+    "name": "cap-Japan",
+    "correct": true,
+    "top1": " Tokyo",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "cap-China",
+    "correct": true,
+    "top1": " Beijing",
+    "expected": "Beijing"
+   },
+   {
+    "name": "cap-Greece",
+    "correct": true,
+    "top1": " Athens",
+    "expected": "Athens"
+   },
+   {
+    "name": "cap-Egypt",
+    "correct": true,
+    "top1": " Cairo",
+    "expected": "Cairo"
+   },
+   {
+    "name": "cap-Poland",
+    "correct": true,
+    "top1": " Warsaw",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "cap-Austria",
+    "correct": true,
+    "top1": " Vienna",
+    "expected": "Vienna"
+   },
+   {
+    "name": "cap-Ireland",
+    "correct": true,
+    "top1": " Dublin",
+    "expected": "Dublin"
+   },
+   {
+    "name": "cap-Portugal",
+    "correct": true,
+    "top1": " Lisbon",
+    "expected": "Lisbon"
+   },
+   {
+    "name": "cap-Norway",
+    "correct": true,
+    "top1": " Oslo",
+    "expected": "Oslo"
+   },
+   {
+    "name": "cap-Sweden",
+    "correct": true,
+    "top1": " Stockholm",
+    "expected": "Stockholm"
+   },
+   {
+    "name": "cap-Cuba",
+    "correct": true,
+    "top1": " Hav",
+    "expected": "Havana"
+   },
+   {
+    "name": "cap-Iran",
+    "correct": true,
+    "top1": " Tehran",
+    "expected": "Tehran"
+   },
+   {
+    "name": "cap-Iraq",
+    "correct": true,
+    "top1": " Baghdad",
+    "expected": "Baghdad"
+   },
+   {
+    "name": "cap-Scotland",
+    "correct": true,
+    "top1": " Edinburgh",
+    "expected": "Edinburgh"
+   },
+   {
+    "name": "cap-Hungary",
+    "correct": true,
+    "top1": " Budapest",
+    "expected": "Budapest"
+   },
+   {
+    "name": "cap-Finland",
+    "correct": true,
+    "top1": " Helsinki",
+    "expected": "Helsinki"
+   },
+   {
+    "name": "cap-Denmark",
+    "correct": true,
+    "top1": " Copenhagen",
+    "expected": "Copenhagen"
+   },
+   {
+    "name": "cap-Belgium",
+    "correct": true,
+    "top1": " Brussels",
+    "expected": "Brussels"
+   },
+   {
+    "name": "cap-Ukraine",
+    "correct": true,
+    "top1": " K",
+    "expected": "Kiev"
+   },
+   {
+    "name": "cap-Syria",
+    "correct": true,
+    "top1": " Damascus",
+    "expected": "Damascus"
+   },
+   {
+    "name": "cap-Afghanistan",
+    "correct": true,
+    "top1": " K",
+    "expected": "Kabul"
+   },
+   {
+    "name": "cap-Thailand",
+    "correct": true,
+    "top1": " Bangkok",
+    "expected": "Bangkok"
+   },
+   {
+    "name": "cap-India",
+    "correct": false,
+    "top1": " New",
+    "expected": "Delhi"
+   },
+   {
+    "name": "cap-Canada",
+    "correct": false,
+    "top1": " Toronto",
+    "expected": "Ottawa"
+   },
+   {
+    "name": "cap-Australia",
+    "correct": true,
+    "top1": " Can",
+    "expected": "Canberra"
+   },
+   {
+    "name": "cap-Turkey",
+    "correct": false,
+    "top1": " Istanbul",
+    "expected": "Ankara"
+   },
+   {
+    "name": "cap-Switzerland",
+    "correct": false,
+    "top1": " Zur",
+    "expected": "Bern"
+   },
+   {
+    "name": "cap-Netherlands",
+    "correct": true,
+    "top1": " Amsterdam",
+    "expected": "Amsterdam"
+   },
+   {
+    "name": "cap-Israel",
+    "correct": false,
+    "top1": " Tel",
+    "expected": "Jerusalem"
+   },
+   {
+    "name": "cap-Lebanon",
+    "correct": true,
+    "top1": " Be",
+    "expected": "Beirut"
+   }
+  ],
+  "included": true
+ },
+ "context-binding": {
+  "task": "context-binding",
+  "protocol": "completion",
+  "accuracy": 0.5333333333333333,
+  "per_item": [
+   {
+    "name": "bind-0-John",
+    "correct": true,
+    "top1": " London",
+    "expected": "London"
+   },
+   {
+    "name": "bind-1-Tom",
+    "correct": false,
+    "top1": " Berlin",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "bind-2-Peter",
+    "correct": false,
+    "top1": " Moscow",
+    "expected": "Rome"
+   },
+   {
+    "name": "bind-3-Anna",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "bind-4-Sarah",
+    "correct": false,
+    "top1": " Dublin",
+    "expected": "Oslo"
+   },
+   {
+    "name": "bind-5-Emma",
+    "correct": false,
+    "top1": " Athens",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "bind-6-James",
+    "correct": true,
+    "top1": " Warsaw",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "bind-7-David",
+    "correct": true,
+    "top1": " London",
+    "expected": "London"
+   },
+   {
+    "name": "bind-8-Paul",
+    "correct": false,
+    "top1": " Paris",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "bind-9-Laura",
+    "correct": true,
+    "top1": " Tokyo",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "bind-10-Alice",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "bind-11-Julia",
+    "correct": true,
+    "top1": " Oslo",
+    "expected": "Oslo"
+   },
+   {
+    "name": "bind-12-Mark",
+    "correct": true,
+    "top1": " Oslo",
+    "expected": "Oslo"
+   },
+   {
+    "name": "bind-13-Simon",
+    "correct": false,
+    "top1": " Cairo",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "bind-14-Mary",
+    "correct": false,
+    "top1": " Lisbon",
+    "expected": "London"
+   },
+   {
+    "name": "bind-15-John",
+    "correct": true,
+    "top1": " London",
+    "expected": "London"
+   },
+   {
+    "name": "bind-16-Tom",
+    "correct": false,
+    "top1": " Berlin",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "bind-17-Peter",
+    "correct": false,
+    "top1": " Moscow",
+    "expected": "Rome"
+   },
+   {
+    "name": "bind-18-Anna",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "bind-19-Sarah",
+    "correct": false,
+    "top1": " Dublin",
+    "expected": "Oslo"
+   },
+   {
+    "name": "bind-20-Emma",
+    "correct": false,
+    "top1": " Athens",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "bind-21-James",
+    "correct": true,
+    "top1": " Warsaw",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "bind-22-David",
+    "correct": true,
+    "top1": " London",
+    "expected": "London"
+   },
+   {
+    "name": "bind-23-Paul",
+    "correct": false,
+    "top1": " Paris",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "bind-24-Laura",
+    "correct": true,
+    "top1": " Tokyo",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "bind-25-Alice",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "bind-26-Julia",
+    "correct": true,
+    "top1": " Oslo",
+    "expected": "Oslo"
+   },
+   {
+    "name": "bind-27-Mark",
+    "correct": true,
+    "top1": " Oslo",
+    "expected": "Oslo"
+   },
+   {
+    "name": "bind-28-Simon",
+    "correct": false,
+    "top1": " Cairo",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "bind-29-Mary",
+    "correct": false,
+    "top1": " Lisbon",
+    "expected": "London"
+   }
+  ],
+  "included": false
+ },
+ "multihop-scaled": {
+  "task": "multihop-scaled",
+  "protocol": "completion",
+  "accuracy": 0.5,
+  "per_item": [
+   {
+    "name": "hop-the-Eiffel-Tower",
+    "correct": true,
+    "top1": " Paris",
+    "expected": "Paris"
+   },
+   {
+    "name": "hop-sushi",
+    "correct": true,
+    "top1": " Tokyo",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "hop-pizza-and-pasta",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "hop-the-pyramids",
+    "correct": true,
+    "top1": " Cairo",
+    "expected": "Cairo"
+   },
+   {
+    "name": "hop-the-Great-Wall",
+    "correct": true,
+    "top1": " Beijing",
+    "expected": "Beijing"
+   },
+   {
+    "name": "hop-vodka",
+    "correct": true,
+    "top1": " Moscow",
+    "expected": "Moscow"
+   },
+   {
+    "name": "hop-flamenco-dancing",
+    "correct": true,
+    "top1": " Madrid",
+    "expected": "Madrid"
+   },
+   {
+    "name": "hop-tulips-and-windmills",
+    "correct": false,
+    "top1": " Rome",
+    "expected": "Amsterdam"
+   },
+   {
+    "name": "hop-the-fjords",
+    "correct": false,
+    "top1": " Iceland",
+    "expected": "Oslo"
+   },
+   {
+    "name": "hop-feta-cheese",
+    "correct": false,
+    "top1": " Nice",
+    "expected": "Athens"
+   },
+   {
+    "name": "hop-Oktoberfest",
+    "correct": false,
+    "top1": " Munich",
+    "expected": "Berlin"
+   },
+   {
+    "name": "hop-whisky-and-kilts",
+    "correct": false,
+    "top1": " London",
+    "expected": "Edinburgh"
+   },
+   {
+    "name": "hop-leprechauns",
+    "correct": false,
+    "top1": " Paris",
+    "expected": "Dublin"
+   },
+   {
+    "name": "hop-the-Colosseum",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "hop-Mount-Fuji",
+    "correct": true,
+    "top1": " Tokyo",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "hop-croissants",
+    "correct": true,
+    "top1": " Paris",
+    "expected": "Paris"
+   },
+   {
+    "name": "hop-the-Acropolis",
+    "correct": true,
+    "top1": " Athens",
+    "expected": "Athens"
+   },
+   {
+    "name": "hop-bullfighting",
+    "correct": false,
+    "top1": " Ottawa",
+    "expected": "Madrid"
+   },
+   {
+    "name": "hop-the-Nile",
+    "correct": true,
+    "top1": " Cairo",
+    "expected": "Cairo"
+   },
+   {
+    "name": "hop-maple-syrup",
+    "correct": false,
+    "top1": " Toronto",
+    "expected": "Ottawa"
+   },
+   {
+    "name": "hop-kangaroos",
+    "correct": false,
+    "top1": " Sydney",
+    "expected": "Canberra"
+   },
+   {
+    "name": "hop-IKEA",
+    "correct": false,
+    "top1": " Copenhagen",
+    "expected": "Stockholm"
+   },
+   {
+    "name": "hop-LEGO",
+    "correct": false,
+    "top1": " London",
+    "expected": "Copenhagen"
+   },
+   {
+    "name": "hop-the-Taj-Mahal",
+    "correct": false,
+    "top1": " New",
+    "expected": "Delhi"
+   }
+  ],
+  "included": false
+ },
+ "opposites": {
+  "task": "opposites",
+  "protocol": "completion",
+  "accuracy": 1.0,
+  "per_item": [
+   {
+    "name": "opp-hot",
+    "correct": true,
+    "top1": " cold",
+    "expected": "cold"
+   },
+   {
+    "name": "opp-big",
+    "correct": true,
+    "top1": " small",
+    "expected": "small"
+   },
+   {
+    "name": "opp-day",
+    "correct": true,
+    "top1": " night",
+    "expected": "night"
+   },
+   {
+    "name": "opp-up",
+    "correct": true,
+    "top1": " down",
+    "expected": "down"
+   },
+   {
+    "name": "opp-black",
+    "correct": true,
+    "top1": " white",
+    "expected": "white"
+   },
+   {
+    "name": "opp-old",
+    "correct": true,
+    "top1": " new",
+    "expected": "new"
+   },
+   {
+    "name": "opp-good",
+    "correct": true,
+    "top1": " bad",
+    "expected": "bad"
+   },
+   {
+    "name": "opp-fast",
+    "correct": true,
+    "top1": " slow",
+    "expected": "slow"
+   },
+   {
+    "name": "opp-open",
+    "correct": true,
+    "top1": " closed",
+    "expected": "closed"
+   },
+   {
+    "name": "opp-left",
+    "correct": true,
+    "top1": " right",
+    "expected": "right"
+   },
+   {
+    "name": "opp-light",
+    "correct": true,
+    "top1": " dark",
+    "expected": "dark"
+   },
+   {
+    "name": "opp-high",
+    "correct": true,
+    "top1": " low",
+    "expected": "low"
+   },
+   {
+    "name": "opp-hard",
+    "correct": true,
+    "top1": " soft",
+    "expected": "soft"
+   },
+   {
+    "name": "opp-rich",
+    "correct": true,
+    "top1": " poor",
+    "expected": "poor"
+   },
+   {
+    "name": "opp-strong",
+    "correct": true,
+    "top1": " weak",
+    "expected": "weak"
+   },
+   {
+    "name": "opp-wet",
+    "correct": true,
+    "top1": " dry",
+    "expected": "dry"
+   }
+  ],
+  "included": true
+ },
+ "swap-capitals": {
+  "task": "swap-capitals",
+  "protocol": "swap",
+  "accuracy": 0.9375,
+  "per_item": [
+   {
+    "name": "swap-France-to-Italy",
+    "correct": true,
+    "top1": " Paris",
+    "expected": "Paris"
+   },
+   {
+    "name": "swap-Italy-to-France",
+    "correct": true,
+    "top1": " Rome",
+    "expected": "Rome"
+   },
+   {
+    "name": "swap-England-to-Spain",
+    "correct": true,
+    "top1": " London",
+    "expected": "London"
+   },
+   {
+    "name": "swap-Spain-to-England",
+    "correct": true,
+    "top1": " Madrid",
+    "expected": "Madrid"
+   },
+   {
+    "name": "swap-Germany-to-Russia",
+    "correct": true,
+    "top1": " Berlin",
+    "expected": "Berlin"
+   },
+   {
+    "name": "swap-Russia-to-Germany",
+    "correct": false,
+    "top1": " St",
+    "expected": "Moscow"
+   },
+   {
+    "name": "swap-Japan-to-China",
+    "correct": true,
+    "top1": " Tokyo",
+    "expected": "Tokyo"
+   },
+   {
+    "name": "swap-China-to-Japan",
+    "correct": true,
+    "top1": " Beijing",
+    "expected": "Beijing"
+   },
+   {
+    "name": "swap-Greece-to-Egypt",
+    "correct": true,
+    "top1": " Athens",
+    "expected": "Athens"
+   },
+   {
+    "name": "swap-Egypt-to-Greece",
+    "correct": true,
+    "top1": " Cairo",
+    "expected": "Cairo"
+   },
+   {
+    "name": "swap-Ireland-to-Poland",
+    "correct": true,
+    "top1": " Dublin",
+    "expected": "Dublin"
+   },
+   {
+    "name": "swap-Poland-to-Ireland",
+    "correct": true,
+    "top1": " Warsaw",
+    "expected": "Warsaw"
+   },
+   {
+    "name": "swap-Sweden-to-Norway",
+    "correct": true,
+    "top1": " Stockholm",
+    "expected": "Stockholm"
+   },
+   {
+    "name": "swap-Norway-to-Sweden",
+    "correct": true,
+    "top1": " Oslo",
+    "expected": "Oslo"
+   },
+   {
+    "name": "swap-Cuba-to-Iran",
+    "correct": true,
+    "top1": " Hav",
+    "expected": "Havana"
+   },
+   {
+    "name": "swap-Iran-to-Cuba",
+    "correct": true,
+    "top1": " Tehran",
+    "expected": "Tehran"
+   }
+  ],
+  "included": true
+ },
+ "typo-robustness": {
+  "task": "typo-robustness",
+  "protocol": "typo",
+  "accuracy": 0.7,
+  "per_item": [
+   {
+    "name": "typo-language",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-tomorrow",
+    "correct": false,
+    "top1": ".",
+    "expected": ","
+   },
+   {
+    "name": "typo-beautiful",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-business",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   },
+   {
+    "name": "typo-government",
+    "correct": true,
+    "top1": " for",
+    "expected": " for"
+   },
+   {
+    "name": "typo-restaurant",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   },
+   {
+    "name": "typo-beginning",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-believe",
+    "correct": true,
+    "top1": " that",
+    "expected": " that"
+   },
+   {
+    "name": "typo-friend",
+    "correct": true,
+    "top1": " since",
+    "expected": " since"
+   },
+   {
+    "name": "typo-weather",
+    "correct": false,
+    "top1": " weather",
+    "expected": ","
+   },
+   {
+    "name": "typo-arrive",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-address",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-library",
+    "correct": false,
+    "top1": " in",
+    "expected": " on"
+   },
+   {
+    "name": "typo-separate",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   },
+   {
+    "name": "typo-surprise",
+    "correct": false,
+    "top1": " to",
+    "expected": ","
+   },
+   {
+    "name": "typo-chocolate",
+    "correct": false,
+    "top1": ",",
+    "expected": " and"
+   },
+   {
+    "name": "typo-exercise",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   },
+   {
+    "name": "typo-familiar",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-foreign",
+    "correct": false,
+    "top1": " accent",
+    "expected": " language"
+   },
+   {
+    "name": "typo-grammar",
+    "correct": false,
+    "top1": ",",
+    "expected": " and"
+   },
+   {
+    "name": "typo-immediately",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-necessary",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   },
+   {
+    "name": "typo-neighbor",
+    "correct": false,
+    "top1": "hood",
+    "expected": ","
+   },
+   {
+    "name": "typo-occasion",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-piece",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   },
+   {
+    "name": "typo-pleasant",
+    "correct": false,
+    "top1": ",",
+    "expected": "."
+   },
+   {
+    "name": "typo-tongue",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-Wednesday",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   },
+   {
+    "name": "typo-ear",
+    "correct": true,
+    "top1": ".",
+    "expected": "."
+   },
+   {
+    "name": "typo-sugar",
+    "correct": true,
+    "top1": ",",
+    "expected": ","
+   }
+  ],
+  "included": false
+ },
+ "word-pairs": {
+  "task": "word-pairs",
+  "protocol": "completion",
+  "accuracy": 0.9166666666666666,
+  "per_item": [
+   {
+    "name": "pair-pepper",
+    "correct": true,
+    "top1": " pepper",
+    "expected": "pepper"
+   },
+   {
+    "name": "pair-butter",
+    "correct": true,
+    "top1": " butter",
+    "expected": "butter"
+   },
+   {
+    "name": "pair-lightning",
+    "correct": true,
+    "top1": " lightning",
+    "expected": "lightning"
+   },
+   {
+    "name": "pair-fork",
+    "correct": true,
+    "top1": " fork",
+    "expected": "fork"
+   },
+   {
+    "name": "pair-chips",
+    "correct": false,
+    "top1": " fro",
+    "expected": "chips"
+   },
+   {
+    "name": "pair-eggs",
+    "correct": true,
+    "top1": " eggs",
+    "expected": "eggs"
+   },
+   {
+    "name": "pair-dogs",
+    "correct": true,
+    "top1": " dogs",
+    "expected": "dogs"
+   },
+   {
+    "name": "pair-forth",
+    "correct": true,
+    "top1": " forth",
+    "expected": "forth"
+   },
+   {
+    "name": "pair-then",
+    "correct": true,
+    "top1": " then",
+    "expected": "then"
+   },
+   {
+    "name": "pair-gentlemen",
+    "correct": true,
+    "top1": " gentlemen",
+    "expected": "gentlemen"
+   },
+   {
+    "name": "pair-cons",
+    "correct": true,
+    "top1": " cons",
+    "expected": "cons"
+   },
+   {
+    "name": "pair-error",
+    "correct": true,
+    "top1": " error",
+    "expected": "error"
+   },
+   {
+    "name": "pair-demand",
+    "correct": true,
+    "top1": " demand",
+    "expected": "demand"
+   },
+   {
+    "name": "pair-order",
+    "correct": true,
+    "top1": " order",
+    "expected": "order"
+   },
+   {
+    "name": "pair-blood",
+    "correct": true,
+    "top1": " blood",
+    "expected": "blood"
+   },
+   {
+    "name": "pair-quiet",
+    "correct": false,
+    "top1": " war",
+    "expected": "quiet"
+   },
+   {
+    "name": "pair-death",
+    "correct": true,
+    "top1": " death",
+    "expected": "death"
+   },
+   {
+    "name": "pair-white",
+    "correct": true,
+    "top1": " white",
+    "expected": "white"
+   },
+   {
+    "name": "pair-day",
+    "correct": true,
+    "top1": " day",
+    "expected": "day"
+   },
+   {
+    "name": "pair-hell",
+    "correct": true,
+    "top1": " hell",
+    "expected": "hell"
+   },
+   {
+    "name": "pair-soul",
+    "correct": true,
+    "top1": " soul",
+    "expected": "soul"
+   },
+   {
+    "name": "pair-mortar",
+    "correct": true,
+    "top1": " mortar",
+    "expected": "mortar"
+   },
+   {
+    "name": "pair-key",
+    "correct": true,
+    "top1": " key",
+    "expected": "key"
+   },
+   {
+    "name": "pair-later",
+    "correct": true,
+    "top1": " later",
+    "expected": "later"
+   }
+  ],
+  "included": true
+ }
+}

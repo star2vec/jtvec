@@ -1,0 +1,41 @@
+experiment: pythia410m_m1_draw0
+seed: 0
+device: mps
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants:
+  - 4
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band:
+  - 4
+  - 16
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+fv:
+  tasks: []
+  n_shots: 10
+  n_trials_mean: 100
+  n_trials_aie: 25
+  n_top_heads: 10
+  edit_layer: 8
+  min_accuracy: 0.2
+  min_correct_valid: 50
+  baseline_threshold: 0.8
+cache_dir: cache/draw0
+results_dir: results/m1/draw0

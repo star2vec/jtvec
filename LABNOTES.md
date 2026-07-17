@@ -122,4 +122,33 @@ caches), vendored scripts 01-04 per draw, orchestrated by
 Resource estimate (prereg): ~2-3.5 h local, peak ~2.6-4 GB — under the 12 h
 ceiling; script 01's timing probe re-checks before fitting.
 
-- sign-off: M1 — pending (Ecaterina)
+### 2026-07-18 — M1 run complete: PASS on R1-R6
+
+Run: `results/m1/20260718-010559-lens-gate` (prereg + experiment commit
+`0065a2a`). Verdict PASS on all six preregistered rules.
+
+- Draw 0 (seed 0) reproduced v1 bit-for-bit: dp(swap_answer) +0.6046 vs
+  sham +0.0086, flip 87.5%, capital-recall band contrast 2.49 vs 61.48 at
+  L16, calibration sha256 identical to the v1 manifest, all 8 baselines
+  equal to the v1 table, gate 9/9.
+- Draws 1-2 (fresh calibration prompts): gate PASS each. On
+  EleutherAI/pythia-410m@9879c9b, skip4_n10, N=16: dp(swap_answer)
+  median +0.6046, IQR 0.025, n_draws=3 (sham: median +0.0086, IQR 0.005).
+  Band-min J-lens HMR medians 2.57/2.64/1.32/2.69 (IQR <= 0.47) for
+  capital-operand/capital-recall/opposites/word-pairs. The skip4/n10
+  defaults are hereby re-derived with draw evidence, not assumed; they
+  stay PROVISIONAL pending a second model.
+- Instrument control record established for the J-lens readout: positive
+  control = 4 known-signal tasks (criterion A/B), negative controls =
+  10-seed random-matrix arm + random-direction swap arm. This is the
+  ControlRecord pair required by the instruments LAW for M4 use.
+- Incident: the first launch was killed externally after ~57 min (harness
+  background-task stop; three fits + baselines already done, no scientific
+  output lost — fits are manifest-verified in cache). Partial stage records
+  preserved under `cache/interrupted-run-1/`; relaunched detached, fits
+  loaded as cache hits. No prereg deviation: same configs, same pipeline.
+- Wall-clock ~70 min total (3 x ~940 s fits + evals); peak RSS 2.85 GB —
+  within the prereg estimate.
+
+- sign-off: M1 — pending (Ecaterina). Note D-005: the tolerances R1-R6
+  were proposed by Claude; ratifying this sign-off also ratifies them.
