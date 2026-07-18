@@ -35,7 +35,7 @@ def check_language(repo_root: Path) -> list[str]:
     """Return violations (empty list = pass)."""
     violations: list[str] = []
     for path in prose_files(repo_root):
-        for lineno, line in enumerate(path.read_text().splitlines(), 1):
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
             match = BANNED.search(line)
             if match and not ALLOWED.search(line):
                 violations.append(

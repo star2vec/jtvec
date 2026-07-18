@@ -174,3 +174,40 @@ Run: `results/m1/20260718-010559-lens-gate` (prereg + experiment commit
   extra compute). Options put to Ecaterina: A100 (~3-4 h), local with
   explicit 12h-rule waiver, or trimmed ladder. Awaiting her ruling; M2
   build proceeds, no long run launches until then.
+
+---
+
+## 2026-07-18 — M1->M2: new machine (win32), platform compat D-008 (Claude)
+
+Project moved to the new laptop per D-007. First non-POSIX machine in the
+project: Windows 11, NVIDIA RTX 2000 Ada Laptop GPU (8 GB VRAM, driver
+595.95), uv 0.11.27, CPython 3.11.15. Setup per the session brief:
+submodules initialized at the pinned SHAs (581d398, fb9eac7), `uv sync`
+clean. Both verification gates then failed for platform reasons; per
+instruction the failures were reported before any fix, and Ecaterina ruled
+on each part (session Q&A):
+
+- F1: `import resource` in vendored `jvec/utils.py` is POSIX-only; on
+  win32 every `jvec` import died (pytest: 2 collection errors, 0 tests
+  collected). F2: eight `read_text()`/`open()` sites in v2-original
+  `jtvec/` lacked `encoding="utf-8"`; the win32 locale default (cp1252)
+  crashed `check_language` on a UTF-8 curly quote and mis-decodes
+  non-ASCII prose where it does not crash. F3: the locked win32 torch
+  resolved to `2.13.0+cpu` (default PyPI wheel); CUDA unavailable — win32
+  was outside D-003's platform matrix.
+- D-008 (ruled by Ecaterina, 2026-07-18): (a) first post-vendor
+  modification of a vendored file — try/except ImportError guard plus a
+  psapi peak-working-set branch in `jvec/utils.py:peak_rss_gb`, exact
+  deviation recorded in VENDORING.md, guard test `tests/test_platform.py`;
+  the POSIX code path is unchanged. (b) `encoding="utf-8"` at the eight
+  jtvec sites (no behavior change on macOS/Linux/CI, where UTF-8 is
+  already the locale default). (c) torch stays pinned at 2.13.0; pyproject
+  gains a win32-marker cu130 index (symmetric with D-003's linux-cpu
+  index); macOS/Linux resolution unchanged in the regenerated lock.
+- Gates after D-008 on this machine: pytest 57 passed (55 prior + 2 guard
+  tests), validators 3/3 PASS; `torch.cuda.is_available()` True
+  (torch 2.13.0+cu130).
+
+M2 build proceeds next (study code + unit tests, incl. the FV-injection
+landing test per CONSTRAINTS). The compute ruling for the full ladder is
+still OPEN; a <=10-min timing probe on this machine comes first.

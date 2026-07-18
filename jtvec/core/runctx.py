@@ -80,7 +80,7 @@ def prereg_commit(repo: Path, prereg: Path) -> str:
 
 
 def check_prereg_sections(prereg: Path) -> None:
-    text = prereg.read_text()
+    text = prereg.read_text(encoding="utf-8")
     missing = [s for s in REQUIRED_PREREG_SECTIONS if s not in text]
     if missing:
         raise PreregError(f"prereg '{prereg}' is missing required sections: {missing}")
@@ -96,7 +96,7 @@ class RunContext:
         raw_dir = self.results_dir / "raw_completions"
         raw_dir.mkdir(exist_ok=True)
         path = raw_dir / f"{cell}.jsonl"
-        with path.open("a") as f:
+        with path.open("a", encoding="utf-8") as f:
             for item in completions:
                 f.write(json.dumps(item) + "\n")
         return path

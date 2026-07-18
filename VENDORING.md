@@ -51,6 +51,18 @@ control). It is vendored for provenance and its unit tests, but
 `jtvec.core.instruments.BANNED_INSTRUMENTS` blocks its use as evidence
 unless rebuilt and re-controlled.
 
+## Post-vendor deviations (each requires a ruled decision; keep this list short)
+
+- `jvec/utils.py` (D-008, ruled by Ecaterina 2026-07-18): the byte-identity
+  exception for win32. v1's `import resource` is POSIX-only, so every import
+  of `jvec` aborted on Windows (pytest collection error before a single test
+  ran). Change, in full: the import is wrapped in try/except ImportError
+  (binding `resource = None`), and `peak_rss_gb()` gained a win32 branch
+  reading the psapi peak working set via ctypes (new module-level helper
+  `_win32_peak_working_set_bytes`). POSIX takes the identical code path v1
+  took. No other vendored file is modified. Guard test:
+  `tests/test_platform.py`.
+
 ## v2-original files (not from v1)
 
 `jtvec/` (all of it), `scripts/m1_gate.py`, `configs/m1_pythia410m_draw*.yaml`,

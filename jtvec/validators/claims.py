@@ -40,7 +40,7 @@ def parse_claims(claims_md: Path) -> dict[str, dict[str, str]]:
     """Parse `### CLM-xxx` entries with `- field: value` lines."""
     entries: dict[str, dict[str, str]] = {}
     current: dict[str, str] | None = None
-    for line in claims_md.read_text().splitlines():
+    for line in claims_md.read_text(encoding="utf-8").splitlines():
         heading = re.match(r"^### (\S+)", line)
         if heading:
             current = {}
@@ -71,7 +71,7 @@ def check_claims(repo_root: Path) -> list[str]:
         return ["LABNOTES.md missing"]
 
     violations: list[str] = []
-    labnotes_text = labnotes.read_text()
+    labnotes_text = labnotes.read_text(encoding="utf-8")
 
     for claim_id, fields in parse_claims(claims_md).items():
         where = f"CLAIMS.md {claim_id}"

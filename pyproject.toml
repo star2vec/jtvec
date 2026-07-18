@@ -25,16 +25,25 @@ dependencies = [
 [dependency-groups]
 dev = ["pytest==9.1.1"]
 
-# Linux CI gets CPU-only torch wheels; macOS keeps the default (MPS) wheels.
+# Linux CI gets CPU-only torch wheels; macOS keeps the default (MPS) wheels;
+# win32 gets the cu130 wheels (D-008: RTX 2000 Ada laptop, driver 595.95).
 # Same pinned version everywhere.
 [tool.uv.sources]
-torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+torch = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'linux'" },
+    { index = "pytorch-cu130", marker = "sys_platform == 'win32'" },
+]
 jlens = { path = "third_party/jacobian-lens", editable = true }
 baukit = { git = "https://github.com/davidbau/baukit" }
 
 [[tool.uv.index]]
 name = "pytorch-cpu"
 url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
 explicit = true
 
 [tool.hatch.build.targets.wheel]

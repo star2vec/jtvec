@@ -36,7 +36,7 @@ def check_hypotheses(repo_root: Path) -> list[str]:
     """Return violations (empty list = pass)."""
     violations: list[str] = []
     for path in prose_files(repo_root) + _source_files(repo_root):
-        for lineno, line in enumerate(path.read_text().splitlines(), 1):
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
             match = HYPOTHESIS_PHRASES.search(line)
             if match and TAG not in line:
                 violations.append(

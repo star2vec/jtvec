@@ -29,7 +29,7 @@ def check_results_dir(path: Path) -> list[str]:
         violations.append(f"{path}: run.json missing")
     else:
         try:
-            record = json.loads(run_json.read_text())
+            record = json.loads(run_json.read_text(encoding="utf-8"))
             missing = [k for k in RUN_RECORD_REQUIRED_KEYS if k not in record]
             if missing:
                 violations.append(f"{path}: run.json missing keys {missing}")
@@ -49,6 +49,6 @@ def count_raw_per_cell(path: Path) -> dict[str, int]:
     if not raw.is_dir():
         return {}
     return {
-        f.stem: sum(1 for line in f.read_text().splitlines() if line.strip())
+        f.stem: sum(1 for line in f.read_text(encoding="utf-8").splitlines() if line.strip())
         for f in sorted(raw.glob("*.jsonl"))
     }
