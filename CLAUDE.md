@@ -60,5 +60,8 @@ count (or a documented non-convergence).
 
 M0, M1 complete and signed off (M1 gate PASS R1-R6, bit-for-bit v1
 reproduction + 3-draw stability; `results/m1/20260718-010559-lens-gate`).
-M2 is next; its compute decision is OPEN in LABNOTES (~26-28 h full ladder
-on the M1 MacBook vs ~3-4 h A100) — no long run until Ecaterina rules.
+M2 build complete; platform is now a win32 laptop with an RTX 2000 Ada
+(D-008: vendored `resource` guard, UTF-8 reads, cu130 torch). Compute
+ruled by D-009: full ladder ~5.5 h on this GPU; prereg EXP-M2 committed;
+run launched detached 2026-07-18. Next: M2 verdicts -> Ecaterina's
+`sign-off: M2` before anything FV-dependent proceeds.

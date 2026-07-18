@@ -211,3 +211,46 @@ on each part (session Q&A):
 M2 build proceeds next (study code + unit tests, incl. the FV-injection
 landing test per CONSTRAINTS). The compute ruling for the full ladder is
 still OPEN; a <=10-min timing probe on this machine comes first.
+
+---
+
+## 2026-07-18 — M2: build done, probe done, compute ruled D-009 (Claude)
+
+M2 study code committed at 60b2728: jtvec/fv_stability.py (rung derivation
+from stored per-trial AIE tensors, cross-draw agreement stats, witnessed
+convergence rule, sham twins, per-task certificate payloads,
+StabilityGatedFV), scripts/m2_gate.py (orchestrator behind start_run:
+3 tasks x 3 draws, seeds 1/2/3 vary only the extraction stream, fixed eval
+contexts, sham arm per (task, draw, rung), in-run instrument controls gate
+the verdicts), scripts/m2_probe.py (budget-capped timing probe), and the
+landing test required by the CONSTRAINTS VERIFIED entry — the patched
+transformers-5 hook lands, unit-tested end to end on a tiny random
+GPT-NeoX through the real function_vector_intervention path (zero-vector
+identity, logits move, edit-layer delta equals the injected vector).
+Gates at commit: pytest 80 passed, validators 3/3 PASS.
+
+Probe (2026-07-18, 81 s GPU + 222 s CPU, inside the 10-min cap), AIE
+s/trial for capitalize / singular-plural / english-french:
+
+- win32 GPU (RTX 2000 Ada, D-008 stack): 8.77 / 8.97 / 9.09 — vs the M1
+  MacBook's 36 / 77 / 38 (4.1x / 8.6x / 4.2x). Full ladder ~5.5 h
+  (extraction 3x5,410 s + eval grid ~1,122 s, x1.15 slack; eval grid
+  corrected for per-task test sizes 170/43/987). Peak RSS 3.35 GB at probe
+  scale; VRAM 1.8/8.2 GB.
+- CPU reference: 69.8 / 72.2 -> ~42 h ladder, out (over the 12 h LAW).
+- Probe also surfaced: singular-plural is small — N_test=43 (2.3 pp gain
+  granularity) and n_correct_valid=17; the min_correct_valid=50 floor of
+  scripts/05 was never applied to the D-007 ladder set.
+
+- D-009 (ruled by Ecaterina, 2026-07-18, session Q&A): (a) the full ladder
+  runs on this laptop's GPU (~5.5 h, under the 12 h LAW, no waiver); the
+  A100 stays the escalation path if the ladder must extend (>= 400
+  trials). (b) EXP-M2 thresholds ratified as drafted (min pairwise cosine
+  >= 0.95 AND gain IQR <= 0.05 at T and every larger rung; largest rung
+  alone is not convergence; sham |median| <= 0.02; ICL-vs-0-shot
+  separation >= 0.10). (c) singular-plural stays, kept-and-flagged in
+  prereg and report. (d) commits pushed to origin (public repo per D-002).
+
+Launch: prereg harness/preregs/EXP-M2-fv-stability.md committed in this
+commit (the prereg act); run started detached with a log monitor (M1
+incident precedent). ETA ~5.5-7 h from launch.

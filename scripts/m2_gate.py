@@ -330,6 +330,11 @@ def main() -> None:
             f"{cfg.fv.n_trials_mean}): flat cosines {t['hendel']['flat_cosines']}, "
             f"edit-layer cosines {t['hendel']['edit_layer_cosines']}"
         )
+        if t["n_test"] < 100:  # D-009: small-task caveat travels with the numbers
+            lines.append(
+                f"Caveat (D-009): N={t['n_test']} makes the gain criterion coarse "
+                f"(top-1 granularity {1 / t['n_test']:.3f}); ruled kept-and-flagged."
+            )
         lines.append("")
 
     lines += ["## Headline numbers (median/IQR over draws; sham in the same line)", ""]
