@@ -47,7 +47,7 @@ from jvec.evals.exp3 import (
 from jvec.evals.fvswap import final_logits, make_swap_hooks
 from jvec.evals.probe import probe_task
 from jvec.evals.swap import pinv_jacobians
-from jvec.evals.tasks import load_tasks, surface_token_ids
+from jvec.evals.tasks import load_tasks
 from jvec.fv import FV_REPO, load_fv_model
 from jvec.lens_cache import load_lens
 from jvec.utils import peak_rss_gb, set_seed
@@ -58,9 +58,11 @@ from jtvec.m3_instruments import (
     AblationControlRule,
     ReportProbeControlRule,
     SwapControlRule,
+    answer_first_tokens,
     execution_answer,
     explicit_rule_context,
     load_certified_fv,
+    random_word_null_context,
     shared_query_map,
     verify_lens_manifest,
 )
@@ -76,14 +78,16 @@ N_SWAP = 30
 M_TOP = 10
 SWAP_PAIR = ("capitalize", "singular-plural")  # D-011: both certified
 ABLATION_TASKS = ("capitalize", "singular-plural")
-JSPACE_TASK = "swap-capitals"  # M1-anchored lens task (baseline 0.938 committed)
+# D-012: jspace anchored on capital-recall (36 items, the M1-VERIFIED probing
+# task) with exact-match scoring, replacing swap-capitals (16 items, coarse).
+JSPACE_TASK = "capital-recall"
 
 # Tolerances live in the prereg (EXP-M3, Decision rule); mirrored here.
 LENS_HMR_FACTOR = 1.5  # refit band-min jlens HMR <= factor x committed M1 value
 LENS_LOGIT_SEP = 5.0  # logit HMR at that layer >= sep x refit jlens HMR
 ABLATION_RULE = AblationControlRule(min_exec_drop=0.15, max_sham_dev=0.05)
-REPORT_RULE = ReportProbeControlRule(min_detection=0.8, max_shuffled_above_prior=0.15)
-SWAP_RULE = SwapControlRule(min_b_gain=0.2, max_random_dev=0.05)
+REPORT_RULE = ReportProbeControlRule(min_detection=0.8, max_null_above_prior=0.15)
+SWAP_RULE = SwapControlRule(min_b_gain=0.2, max_random_elevation=0.05)
 
 
 def bandmin_hmr(per_item: list[dict], arm: str, band: range) -> tuple[int, float]:
@@ -202,6 +206,12 @@ def main() -> None:
     def build_context(pairs) -> str:
         return bos + "".join(f"Q: {x}\nA: {y}\n\n" for x, y in pairs)
 
+    def hit_exact(top1: int, answer: str) -> bool:
+        # D-012: exact-match (case-sensitive) scoring uniformly across the
+        # execution controls; surface_token_ids retained only where the M1
+        # probing protocol requires it (lens spot-check).
+        return top1 in answer_first_tokens(tokenizer, str(answer), case_sensitive=True)
+
     def exec_accuracy(task: str, hooks, cell: str) -> float:
         hits, rows = 0, []
         for _ in range(N_EXEC):
@@ -209,7 +219,7 @@ def main() -> None:
             qx, qy = sample_pairs(task, "test", 1)[0]
             logits = final_logits_under(model_j, build_context(pairs) + f"Q: {qx}\nA:", hooks)
             top1 = int(logits.argmax())
-            hit = top1 in surface_token_ids(tokenizer, str(qy))
+            hit = hit_exact(top1, qy)
             hits += hit
             rows.append({"query": str(qx), "target": str(qy),
                          "top1": tokenizer.decode([top1]), "hit": bool(hit)})
@@ -245,7 +255,7 @@ def main() -> None:
             logits = final_logits_under(model_j, item["prompt"], hooks)
             top1 = int(logits.argmax())
             answer = execution_answer(item)
-            hit = top1 in surface_token_ids(tokenizer, answer)
+            hit = hit_exact(top1, answer)
             hits += hit
             rows.append({"name": item["name"], "target": answer,
                          "top1": tokenizer.decode([top1]), "hit": bool(hit)})
@@ -258,6 +268,13 @@ def main() -> None:
     print(f"[jspace-ablation] {JSPACE_TASK}: {jspace}", flush=True)
 
     # --- Stage 3c: report-probe controls ------------------------------------------
+    # D-012 null pool per task: the OTHER tasks' train outputs (real words, no
+    # coherent class), so the negative arm removes the task signal even for
+    # morphological-output tasks (which the v1 shuffled baseline did not).
+    task_outputs = {t: sorted({str(y) for y in datasets[t]["train"][:]["output"]})
+                    for t in cfg.fv.tasks}
+    null_pool = {t: sorted(set().union(*(task_outputs[o] for o in cfg.fv.tasks if o != t)))
+                 for t in cfg.fv.tasks}
     report_ctrl = {}
     for task in cfg.fv.tasks:
         detection = {}
@@ -275,23 +292,22 @@ def main() -> None:
                 rows.append({"phrasing": pname, "correct": bool(ok)})
             ctx.save_raw_completions(f"report_{task}_{pname}_explicit-rule", rows)
             detection[pname] = det / N_REPORT_CTRL
-        # negative arm: shuffled context, no rule, best phrasing measured on all
-        shuf, rows = 0, []
+        # negative arm (D-012): random-word-output context, no coherent task
+        nul, rows = 0, []
         for pname, probe in REPORT_PROBES.items():
             for _ in range(N_REPORT_CTRL):
                 pairs = sample_pairs(task, "train", cfg.fv.n_shots)
-                ys = [y for _, y in pairs]
-                rng.shuffle(ys)
-                shuffled = [(x, y) for (x, _), y in zip(pairs, ys)]
-                logits = final_logits_under(model_j, build_context(shuffled) + probe, {})
+                inputs = [x for x, _ in pairs]
+                context = random_word_null_context(bos, inputs, null_pool[task], rng)
+                logits = final_logits_under(model_j, context + probe, {})
                 ok = report_correct(logits, task)
-                shuf += ok
+                nul += ok
                 rows.append({"phrasing": pname, "correct": bool(ok)})
-        ctx.save_raw_completions(f"report_{task}_shuffled", rows)
-        n_shuf = N_REPORT_CTRL * len(REPORT_PROBES)
+        ctx.save_raw_completions(f"report_{task}_null", rows)
+        n_null = N_REPORT_CTRL * len(REPORT_PROBES)
         report_ctrl[task] = REPORT_RULE.verdict(
-            detection_by_phrasing=detection, shuffled_acc=shuf / n_shuf,
-            prior=prior, n=n_shuf,
+            detection_by_phrasing=detection, null_acc=nul / n_null,
+            prior=prior, n=n_null,
         )
         print(f"[report-probe] {task}: {report_ctrl[task]}", flush=True)
 
@@ -312,7 +328,7 @@ def main() -> None:
             logits = final_logits(model_j, build_context(pairs) + f"Q: {q}\nA:", hooks)
             top1 = int(logits.argmax())
             y_a, y_b = shared[q]
-            b_hit = top1 in surface_token_ids(tokenizer, y_b)
+            b_hit = hit_exact(top1, y_b)  # D-012: case-sensitive, no A/B collision
             hits += b_hit
             rows.append({"query": q, "target_a": y_a, "target_b": y_b,
                          "top1": tokenizer.decode([top1]), "b_hit": bool(b_hit)})
@@ -415,9 +431,9 @@ def main() -> None:
     for task, v in report_ctrl.items():
         det = ", ".join(f"{p} {a:.2f}" for p, a in v["detection_by_phrasing"].items())
         lines.append("- " + scoped(
-            f"report-probe {task}: explicit-rule detection [{det}], shuffled "
-            f"{v['shuffled_acc']:.3f} vs prior {v['prior']:.3f} "
-            f"(margin {v['shuffled_margin']:.3f})",
+            f"report-probe {task}: explicit-rule detection [{det}], random-word "
+            f"null {v['null_acc']:.3f} vs prior {v['prior']:.3f} "
+            f"(margin {v['null_margin']:.3f})",
             float(v["best_detection"]), model=model_scope, config=config_scope,
             n=v["n"],
         ))

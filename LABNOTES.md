@@ -467,3 +467,31 @@ criterion; case-collision scoring across the swap pair) BEFORE M4 built on
 any of them. The fv-swap and report-probe fixes both change preregistered
 control CRITERIA, so they are deviations for Ecaterina to rule, not adopt.
 Run 2 evidence committed; options put to Ecaterina next.
+
+### 2026-07-18 — D-012: four ruled fixes, re-run (Claude)
+
+Ecaterina ruled all four (session Q&A); applied as one deviation commit
+with tests (prereg Deviations D-012 has the full spec):
+
+1. Exact-match, case-sensitive execution scoring
+   (m3_instruments.answer_first_tokens) across the three execution
+   controls, replacing the vendored surface_token_ids relaxation that
+   caused the jspace "Te"/"Tehran" edge and the swap " K"/" Kettles"
+   cross-task collision; surface scoring kept only for the M1 lens
+   spot-check.
+2. jspace anchored on capital-recall (36 items) not swap-capitals (16).
+3. report-probe negative arm is a random-word-output null
+   (m3_instruments.random_word_null_context) drawing from the other tasks'
+   outputs, replacing the shuffled baseline that did not null
+   morphological-output tasks.
+4. fv-swap negative control is one-sided (random must not ELEVATE the
+   task-B rate); a random swap that destroys computation no longer counts
+   as a failure.
+
+Gates: pytest 97 passed (+ answer_first_tokens / random_word_null_context /
+one-sided-swap / null-not-removed tests), validators 3/3. Re-run is
+evals-only on the cached lens. Expected on the run-2 raw evidence: swap
+gates (with the collision removed the none B-rate should fall and the
+one-sided negative should pass), report-probe gates (random-word null
+should read ~prior), jspace re-measured cleanly on 36 items decides on its
+own numbers — no thumb on the scale.

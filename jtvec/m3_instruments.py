@@ -87,6 +87,44 @@ def explicit_rule_context(bos: str, label_word: str, shuffled_pairs) -> str:
     return bos + rule + body
 
 
+def answer_first_tokens(tokenizer, answer: str, *, case_sensitive: bool = True) -> set[int]:
+    """First-token ids of an answer's canonical completion form (D-012).
+
+    Exact-match scoring for execution controls: the leading-space form plus
+    the bare form, in the answer's OWN case only (case_sensitive=True). This
+    is deliberately narrower than jvec.evals.tasks.surface_token_ids, whose
+    case-expansion made an uppercase capitalize output (" K" for "Kettle")
+    collide with a plural target's capitalized variant (" Kettles") in the
+    cross-task swap, and whose leading-space relaxation let a jspace-broken
+    "Te" still count as a hit for " Tehran". add_special_tokens=False because
+    the jlens tokenizer prepends BOS by default.
+    """
+    forms = [f" {answer}", answer]
+    if not case_sensitive:
+        forms += [f" {answer.capitalize()}", f" {answer.lower()}",
+                  answer.capitalize(), answer.lower()]
+    ids = set()
+    for form in forms:
+        toks = tokenizer(form, add_special_tokens=False).input_ids
+        if toks:
+            ids.add(toks[0])
+    return ids
+
+
+def random_word_null_context(bos: str, input_words, pool, rng) -> str:
+    """Report-probe negative-control context with random-word outputs (D-012).
+
+    Replaces the v1 shuffled-context baseline, which did not null a task whose
+    outputs are all one morphological class (shuffling plurals among plurals
+    still exemplifies "plural"; observed report-probe null = 1.0 on
+    singular-plural). Here each input is paired with a word drawn from `pool`
+    (the union of the OTHER tasks' outputs — no coherent class), so no task
+    label is systematically exemplified.
+    """
+    outs = [pool[int(i)] for i in rng.integers(0, len(pool), size=len(input_words))]
+    return bos + "".join(f"Q: {x}\nA: {y}\n\n" for x, y in zip(input_words, outs))
+
+
 def execution_answer(item: dict) -> str:
     """The clean-execution answer token of a lens task item, across schemas.
 
@@ -134,41 +172,45 @@ class AblationControlRule:
 @dataclass(frozen=True)
 class ReportProbeControlRule:
     """Positive: best phrasing reads the explicitly stated label >= min_detection.
-    Negative: shuffled-context accuracy sits within a quantized margin of the
-    label prior (1/n_candidates)."""
+    Negative: random-word-null accuracy sits within a quantized margin of the
+    label prior (1/n_candidates). (D-012: the null is the random-word context,
+    not the v1 shuffled context.)"""
 
     min_detection: float
-    max_shuffled_above_prior: float
+    max_null_above_prior: float
 
     def verdict(
-        self, *, detection_by_phrasing: dict[str, float], shuffled_acc: float,
+        self, *, detection_by_phrasing: dict[str, float], null_acc: float,
         prior: float, n: int,
     ) -> dict:
-        margin = quantized_bound(self.max_shuffled_above_prior, n)
+        margin = quantized_bound(self.max_null_above_prior, n)
         best = max(detection_by_phrasing.values())
         return {
             "detection_by_phrasing": dict(detection_by_phrasing),
             "best_detection": best,
-            "shuffled_acc": shuffled_acc,
+            "null_acc": null_acc,
             "prior": prior,
             "n": n,
-            "shuffled_margin": margin,
+            "null_margin": margin,
             "positive_pass": best >= self.min_detection,
-            "negative_pass": (shuffled_acc - prior) <= margin,
+            "negative_pass": (null_acc - prior) <= margin,
         }
 
 
 @dataclass(frozen=True)
 class SwapControlRule:
     """Positive: either swap kind lifts the task-B-correct rate over clean by
-    >= min_b_gain. Negative: the norm-matched random-target arm stays within a
-    quantized bound of clean."""
+    >= min_b_gain. Negative (D-012, one-sided): the norm-matched random-target
+    arm does not ELEVATE the task-B rate over clean by more than a quantized
+    bound. A random swap that destroys computation (drives B to 0) is expected
+    per CONSTRAINTS and must not count as a control failure — only a random
+    swap that itself produces the task-B effect does."""
 
     min_b_gain: float
-    max_random_dev: float
+    max_random_elevation: float
 
     def verdict(self, *, b_rates: dict[str, float], n: int) -> dict:
-        bound = quantized_bound(self.max_random_dev, n)
+        bound = quantized_bound(self.max_random_elevation, n)
         gain = max(
             b_rates["direct_swap"] - b_rates["none"],
             b_rates["lens_swap"] - b_rates["none"],
@@ -178,8 +220,9 @@ class SwapControlRule:
             "n": n,
             "best_gain": gain,
             "random_bound": bound,
+            "random_elevation": b_rates["random_target"] - b_rates["none"],
             "positive_pass": gain >= self.min_b_gain,
-            "negative_pass": abs(b_rates["random_target"] - b_rates["none"]) <= bound,
+            "negative_pass": (b_rates["random_target"] - b_rates["none"]) <= bound,
         }
 
 

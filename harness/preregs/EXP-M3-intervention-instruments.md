@@ -129,4 +129,34 @@ fit time:
 
 ## Deviations
 
-(none at commit time)
+- D-012 (Ecaterina, 2026-07-18; after run 2,
+  results/m3/20260718-141523-instrument-gate). Run 2 gated only
+  fv-direction-ablation; the other three failed for distinct reasons found
+  by raw-output replay (LABNOTES). Four ruled changes, all applied in one
+  commit with tests:
+  1. Execution scoring: exact-match, case-sensitive first-token scoring
+     (jtvec.m3_instruments.answer_first_tokens) replaces the vendored
+     surface_token_ids case+space relaxation for the three execution
+     controls (fv-ablation, jspace, swap). The relaxation had (a) let a
+     jspace-broken "Te" still count as a hit for " Tehran" and (b) made an
+     uppercase capitalize output (" K") collide with a plural target's
+     capitalized variant (" Kettles") in the cross-task swap. The vendored
+     surface scoring is retained for the M1 lens spot-check only (it mirrors
+     the M1 probing protocol there).
+  2. jspace-ablation anchor task: capital-recall (36 items, the M1-VERIFIED
+     probing task) replaces swap-capitals (16 items), for finer-than-1/16
+     granularity and a cleaner anchor. Positive/negative criteria unchanged.
+  3. report-probe negative control: the null is now a random-word-output
+     context (jtvec.m3_instruments.random_word_null_context; outputs drawn
+     from the union of the OTHER tasks' outputs) instead of the v1
+     shuffled-context baseline, which did not null morphological-output
+     tasks (singular-plural null was 1.0). Threshold unchanged
+     (null_acc − prior ≤ max(0.15, 1/N)).
+  4. fv-swap negative control: one-sided — random_target must not ELEVATE
+     the task-B rate over clean (b_rate[random] − b_rate[none] ≤
+     max(0.05, 1/N)); a random swap that destroys computation (B → 0,
+     observed) is expected per CONSTRAINTS and no longer counts as a
+     failure. The two-sided |random − none| criterion is withdrawn.
+  scripts/m3_gate.py constants and tests/test_m3_instruments.py updated in
+  the same commit; re-run is evals-only on the cached lens. No change to
+  the M1/M2 gate outputs this run consumes.

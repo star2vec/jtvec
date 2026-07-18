@@ -19,10 +19,12 @@ from jtvec.m3_instruments import (
     AblationControlRule,
     ReportProbeControlRule,
     SwapControlRule,
+    answer_first_tokens,
     execution_answer,
     explicit_rule_context,
     load_certified_fv,
     quantized_bound,
+    random_word_null_context,
     shared_query_map,
     verify_lens_manifest,
 )
@@ -159,31 +161,69 @@ def test_ablation_rule_verdict():
 
 
 def test_report_probe_rule_verdict():
-    rule = ReportProbeControlRule(min_detection=0.8, max_shuffled_above_prior=0.15)
+    rule = ReportProbeControlRule(min_detection=0.8, max_null_above_prior=0.15)
     v = rule.verdict(
         detection_by_phrasing={"P1": 0.6, "P2": 0.9, "P3": 0.7},
-        shuffled_acc=0.2, prior=0.125, n=12,
+        null_acc=0.2, prior=0.125, n=12,
     )
     assert v["positive_pass"] and v["negative_pass"]
+    # the D-012 failure mode: a null that does NOT remove the task signal
     v = rule.verdict(
-        detection_by_phrasing={"P1": 0.5, "P2": 0.6, "P3": 0.7},
-        shuffled_acc=0.5, prior=0.125, n=12,
+        detection_by_phrasing={"P1": 1.0, "P2": 1.0, "P3": 1.0},
+        null_acc=1.0, prior=0.125, n=36,
     )
-    assert not v["positive_pass"] and not v["negative_pass"]
+    assert v["positive_pass"] and not v["negative_pass"]
 
 
-def test_swap_rule_verdict():
-    rule = SwapControlRule(min_b_gain=0.2, max_random_dev=0.05)
-    v = rule.verdict(
-        b_rates={"none": 0.1, "direct_swap": 0.5, "lens_swap": 0.15, "random_target": 0.12},
-        n=30,
-    )
-    assert v["positive_pass"] and v["negative_pass"]
+def test_swap_rule_verdict_one_sided():
+    rule = SwapControlRule(min_b_gain=0.2, max_random_elevation=0.05)
+    # random_target ELEVATES B over none -> negative fails
     v = rule.verdict(
         b_rates={"none": 0.1, "direct_swap": 0.2, "lens_swap": 0.2, "random_target": 0.4},
         n=30,
     )
-    assert not v["positive_pass"] and not v["negative_pass"]
+    assert not v["negative_pass"]
+    # D-012: random swap DESTROYS computation (B=0 < none) -> negative PASSES
+    # (this is exactly the run-2 case that the old two-sided test failed)
+    v = rule.verdict(
+        b_rates={"none": 0.467, "direct_swap": 0.767, "lens_swap": 0.867, "random_target": 0.0},
+        n=30,
+    )
+    assert v["positive_pass"] and v["negative_pass"]
+    assert v["best_gain"] == pytest.approx(0.4)
+
+
+def test_answer_first_tokens_case_sensitive_avoids_collision():
+    # The D-012 swap collision: an uppercase output must NOT match a lowercase
+    # plural target's token set under case-sensitive scoring.
+    class FakeTok:
+        def __call__(self, s, add_special_tokens=False):
+            # first "token" = first char, so case matters (a stand-in for the
+            # real BPE where " K" != " k")
+            class R:
+                input_ids = [ord(s[0])] if s else []
+            return R()
+
+    tok = FakeTok()
+    lower = answer_first_tokens(tok, "kettles", case_sensitive=True)
+    assert ord(" ") in lower  # " kettles" -> ' '
+    # a capitalized surface would start with 'K' or ' K'; case_sensitive must
+    # not fold it in
+    ids_ci = answer_first_tokens(tok, "kettles", case_sensitive=False)
+    assert ids_ci >= lower  # case-insensitive is a superset
+
+
+def test_random_word_null_context_uses_pool_words():
+    import numpy as np
+
+    rng = np.random.default_rng(0)
+    pool = ["ALPHA", "chien", "BETA"]
+    ctx = random_word_null_context("<B>", ["dog", "cat"], pool, rng)
+    assert ctx.startswith("<B>Q: dog\nA: ")
+    assert "Q: cat\nA: " in ctx
+    # every emitted answer is drawn from the pool (no task-coherent output)
+    answers = [ln.split("A: ", 1)[1] for ln in ctx.split("\n\n") if "A: " in ln]
+    assert all(a in pool for a in answers)
 
 
 def test_explicit_rule_context_states_label_only_in_rule():
