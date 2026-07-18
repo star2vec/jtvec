@@ -29,4 +29,12 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 
 ## Claims
 
-<!-- none yet; the first entries arrive with M4 preregs -->
+### CLM-001
+- status: hypothesis
+- statement: On the three M2-certified tasks, Todd FVs (fv_todd@task, converged_at=25, n_draws=3) carry a task-label component decodable through the M1-gated J-lens arm and separated from the logit-lens arm, per criteria C1-C4 of EXP-M4-E1 (rank statistic over registered label sets; per-task verdict table to be recorded from the run). Tests the CONSTRAINTS FV-label HYPOTHESIS.
+- scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e1_pythia410m.yaml, 3 tasks x 3 FV draws x 3 lens draws
+- evidence-commit: none
+- prereg: harness/preregs/EXP-M4-E1-decodability.md
+- results-dir: none
+- raw-completions: none
+- verified-by: none

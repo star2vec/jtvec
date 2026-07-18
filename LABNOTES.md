@@ -567,3 +567,45 @@ re-derivable by counting exact-match hits per line), then ruled:
 Next per build order: M4 confirmatory experiments, E1 (decodability)
 first. No E1 run before its own prereg is committed and its resource
 estimate ruled.
+
+---
+
+## 2026-07-19 — M4-E1: scope ruled (D-014), build, prereg, launch (Claude)
+
+E1 re-tests the FV-label HYPOTHESIS (v1 Exp-1, contaminated single-draw)
+on M2-certified FVs: decode fv_todd through the M1-gated J-lens transport
+vs the logit lens, task-label full-vocab rank over v1's registered label
+sets, 3 certified tasks x 3 FV draws x 3 lens draws (+ v1's two robustness
+variants at lens draw 0). Claim ledger entry CLM-001 (hypothesis) opened;
+prereg harness/preregs/EXP-M4-E1-decodability.md.
+
+- D-014 (ruled by Ecaterina, 2026-07-18/19, session Q&A): (a) decision
+  constants ratified as drafted — C1 jlens median rank <= 20, C2
+  jlens<logit ordering in every grid cell, C3 logit median rank >= 200,
+  C4 >= 95/100 norm-matched random vectors beaten per draw; readout
+  positive control (pinv-constructed label vector) rank <= 10, negative
+  control random median >= 100. (b) Hendel vectors excluded entirely (no
+  M2 certificate; estimator LAW). (c) Standing launch go once gates are
+  green on the build and the prereg is committed (~25-50 min projected,
+  bounded 75). (d) skip16_n10 kept with a proportional inclusion rule
+  (>= ceil(0.75 x n) of an instance's band-overlap layers; identical to
+  the ratified 10/13 for the primary instances; a variant failing its
+  control voids only its own C2 cells) — ruled after the build surfaced
+  that skip16's source layers overlap the M1-gated band at L16 only,
+  where v1 read that variant over ungated layers 16-22.
+- Build: jtvec/e1_decodability.py (registered label sets pinned to the
+  vendored v1 definitions by test, rank statistics, control rules,
+  C1-C4 decision rule), scripts/m4_e1_gate.py (orchestrator behind
+  start_run; lens draws identity-checked per draw against M1's committed
+  manifests; in-run readout controls run before any FV is read),
+  configs/m4_e1_pythia410m.yaml (calibration/fit mirror M1 draw 0; lens
+  draws get per-draw cache_dirs — the lens cache key excludes the seed),
+  tests/test_e1_decodability.py. New instrument surface named
+  jlens-label-rank-readout@<task> (the M1 gate covers the lens on
+  residual streams; E1's rank readout of static vectors carries its own
+  in-run ControlRecord pair).
+- E1 is read-only: no interventions, hence no sham twins; the
+  norm-matched random-vector arm is the reading-level null (and rank
+  statistics are provably invariant to the norm rescaling — pinned by a
+  unit test; the companion norm cells are recorded anyway per the
+  prereg's sample plan).
