@@ -1,0 +1,112 @@
+{
+  "fv-direction-ablation": {
+    "positive": true,
+    "negative": true,
+    "run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m3\\20260718-141523-instrument-gate",
+    "date": "2026-07-18",
+    "detail": {
+      "capitalize": {
+        "none": 0.9333333333333333,
+        "ablated": 0.0,
+        "sham": 0.9,
+        "n": 30,
+        "sham_bound": 0.05,
+        "positive_pass": true,
+        "negative_pass": true
+      },
+      "singular-plural": {
+        "none": 0.9333333333333333,
+        "ablated": 0.0,
+        "sham": 0.9333333333333333,
+        "n": 30,
+        "sham_bound": 0.05,
+        "positive_pass": true,
+        "negative_pass": true
+      }
+    }
+  },
+  "jspace-ablation": {
+    "positive": false,
+    "negative": true,
+    "run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m3\\20260718-141523-instrument-gate",
+    "date": "2026-07-18",
+    "detail": {
+      "none": 0.9375,
+      "ablated": 0.8125,
+      "sham": 0.9375,
+      "n": 16,
+      "sham_bound": 0.0625,
+      "positive_pass": false,
+      "negative_pass": true
+    }
+  },
+  "report-probe-forced-choice": {
+    "positive": true,
+    "negative": false,
+    "run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m3\\20260718-141523-instrument-gate",
+    "date": "2026-07-18",
+    "detail": {
+      "capitalize": {
+        "detection_by_phrasing": {
+          "P1": 1.0,
+          "P2": 1.0,
+          "P3": 1.0
+        },
+        "best_detection": 1.0,
+        "shuffled_acc": 0.0,
+        "prior": 0.125,
+        "n": 36,
+        "shuffled_margin": 0.15,
+        "positive_pass": true,
+        "negative_pass": true
+      },
+      "singular-plural": {
+        "detection_by_phrasing": {
+          "P1": 1.0,
+          "P2": 1.0,
+          "P3": 1.0
+        },
+        "best_detection": 1.0,
+        "shuffled_acc": 1.0,
+        "prior": 0.125,
+        "n": 36,
+        "shuffled_margin": 0.15,
+        "positive_pass": true,
+        "negative_pass": false
+      },
+      "english-french": {
+        "detection_by_phrasing": {
+          "P1": 1.0,
+          "P2": 1.0,
+          "P3": 1.0
+        },
+        "best_detection": 1.0,
+        "shuffled_acc": 0.25,
+        "prior": 0.125,
+        "n": 36,
+        "shuffled_margin": 0.15,
+        "positive_pass": true,
+        "negative_pass": true
+      }
+    }
+  },
+  "fv-swap": {
+    "positive": true,
+    "negative": false,
+    "run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m3\\20260718-141523-instrument-gate",
+    "date": "2026-07-18",
+    "detail": {
+      "b_rates": {
+        "none": 0.4666666666666667,
+        "lens_swap": 0.8666666666666667,
+        "direct_swap": 0.7666666666666667,
+        "random_target": 0.0
+      },
+      "n": 30,
+      "best_gain": 0.4,
+      "random_bound": 0.05,
+      "positive_pass": true,
+      "negative_pass": false
+    }
+  }
+}

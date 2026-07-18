@@ -418,3 +418,52 @@ content and every number in it is reproduced bit-for-bit by the relaunch
 (context rng 9090 seeded once; the fix touches only a later stage). No
 prereg change — the fix implements the committed jspace-on-swap-capitals
 rule as written. Relaunch on the cached lens.
+
+### 2026-07-18 — M3 run 2 complete: 1/4 instruments gated; replayed
+
+Run results/m3/20260718-141523-instrument-gate finalized (report.md,
+controls.json, run.json). Prerequisites reproduced run 1 (lens identity +
+spot-check HMR 2.50@L16). Verdict: fv-direction-ablation GATED; the other
+three not gated, for three distinct reasons. Raw-output replay of each
+(read-only) before any interpretation, facts only:
+
+1. fv-direction-ablation GATED: exec 0.933 -> 0.000 under FV projection,
+   sham_fv 0.900/0.933 within bound 0.05, both certified tasks. Clean.
+2. jspace-ablation NOT gated (positive arm): top-10-atom J-space projection
+   on swap-capitals moved exec 15/16 -> 13/16 (drop 0.125 < 0.15). Replay:
+   two items broke cleanly (Oslo -> " Tr", Havana -> " San"); a third
+   (Tehran) changed token " Tehran" -> "Te" but still scored a hit under the
+   first-token surface relaxation. The measured drop is sensitive to that
+   relaxation at N=16. Real, directional, but below the preregistered bar;
+   substantive, not a code error.
+3. report-probe NOT gated (negative arm): explicit-rule detection 1.0 on all
+   three tasks x three phrasings (positive strong). Negative fails on
+   singular-plural: shuffled-context accuracy 1.0 (capitalize 0.0,
+   english-french 0.25). Replay confirms the shuffled-context baseline does
+   not null a task whose outputs are all one morphological class: shuffling
+   plural outputs among inputs still yields (singular -> plural) pairs, so a
+   "plural" readout survives. The label-vs-output-vocabulary separability
+   this touches is a CONSTRAINTS HYPOTHESIS and is NOT asserted here; the
+   operational fact is that the v1 shuffled baseline is not a valid null for
+   morphological-output tasks.
+4. fv-swap NOT gated (negative arm): positive strong — lens_swap moved the
+   task-B (plural) rate 0.467 -> 0.867, direct_swap -> 0.767 (gain 0.40).
+   Two artifacts drive the negative failure, both mine, not the swap:
+   (a) random_target output was newline on all 30 trials (B=0) — a
+   norm-matched random swap destroys computation, which CONSTRAINTS already
+   records for random directions; my |random - none| <= bound criterion is
+   the wrong (two-sided) test, since "random breaks the model" is expected.
+   (b) the none B-rate 0.467 is inflated by a scoring collision:
+   surface_token_ids case-expansion makes some clean capitalize outputs
+   (e.g. " K" for "Kettle") share a first token with the plural target's
+   capitalized variant (" Kettles"), so task-A outputs count as task-B hits
+   for case-ambiguous words. The swap itself produces genuine plural
+   outputs; the control criterion and the cross-task scoring are what fail.
+
+Net: the gate did its job — it caught two substantive instrument weaknesses
+(jspace power at the chosen config/N; the report-probe null for
+morphological tasks) and two of my own design defects (swap negative-control
+criterion; case-collision scoring across the swap pair) BEFORE M4 built on
+any of them. The fv-swap and report-probe fixes both change preregistered
+control CRITERIA, so they are deviations for Ecaterina to rule, not adopt.
+Run 2 evidence committed; options put to Ecaterina next.

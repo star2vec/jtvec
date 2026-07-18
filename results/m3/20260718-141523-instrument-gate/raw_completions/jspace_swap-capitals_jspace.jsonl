@@ -1,0 +1,16 @@
+{"name": "swap-France-to-Italy", "target": "Paris", "top1": " Paris", "hit": true}
+{"name": "swap-Italy-to-France", "target": "Rome", "top1": " Rome", "hit": true}
+{"name": "swap-England-to-Spain", "target": "London", "top1": " London", "hit": true}
+{"name": "swap-Spain-to-England", "target": "Madrid", "top1": " Madrid", "hit": true}
+{"name": "swap-Germany-to-Russia", "target": "Berlin", "top1": " Berlin", "hit": true}
+{"name": "swap-Russia-to-Germany", "target": "Moscow", "top1": " St", "hit": false}
+{"name": "swap-Japan-to-China", "target": "Tokyo", "top1": " Tokyo", "hit": true}
+{"name": "swap-China-to-Japan", "target": "Beijing", "top1": " Beijing", "hit": true}
+{"name": "swap-Greece-to-Egypt", "target": "Athens", "top1": " Athens", "hit": true}
+{"name": "swap-Egypt-to-Greece", "target": "Cairo", "top1": " Cairo", "hit": true}
+{"name": "swap-Ireland-to-Poland", "target": "Dublin", "top1": " Dublin", "hit": true}
+{"name": "swap-Poland-to-Ireland", "target": "Warsaw", "top1": " Warsaw", "hit": true}
+{"name": "swap-Sweden-to-Norway", "target": "Stockholm", "top1": " Stockholm", "hit": true}
+{"name": "swap-Norway-to-Sweden", "target": "Oslo", "top1": " Tr", "hit": false}
+{"name": "swap-Cuba-to-Iran", "target": "Havana", "top1": " San", "hit": false}
+{"name": "swap-Iran-to-Cuba", "target": "Tehran", "top1": "Te", "hit": true}
