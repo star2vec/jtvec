@@ -14,10 +14,12 @@ import torch
 
 from jvec.evals.exp3 import JSpaceAblateHook, MatchedNoiseHook, ProjectOutHook
 from jvec.evals.fvswap import _FVSwapHook
+from jvec.evals.tasks import load_tasks
 from jtvec.m3_instruments import (
     AblationControlRule,
     ReportProbeControlRule,
     SwapControlRule,
+    execution_answer,
     explicit_rule_context,
     load_certified_fv,
     quantized_bound,
@@ -194,6 +196,19 @@ def test_explicit_rule_context_states_label_only_in_rule():
 def test_load_certified_fv_requires_certificate():
     with pytest.raises(KeyError):
         load_certified_fv(None, "capitalize", "rev", certificates={})
+
+
+def test_execution_answer_resolves_across_task_schemas():
+    # Against the real task files: completion tasks carry 'target', swap tasks
+    # carry 'answer'. execution_answer must resolve both (the M3 run-1 crash).
+    by_name = {t.name: t for t in load_tasks()}
+    cr = by_name["capital-recall"].items[0]
+    sc = by_name["swap-capitals"].items[0]
+    assert "target" in cr and "target" not in sc
+    assert execution_answer(cr) == cr["target"]
+    assert execution_answer(sc) == sc["answer"]  # not 'target' -> would KeyError
+    with pytest.raises(KeyError):
+        execution_answer({"name": "x", "intermediates": ["y"]})
 
 
 def test_shared_query_map_intersects_with_distinct_targets():

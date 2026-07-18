@@ -390,3 +390,31 @@ tree clean; gates green.
   (EXP-M3-intervention-instruments.md); committing it is the prereg act
   and waits for Ecaterina's ruling on the resource estimate
   (~10-25 min projected: lens refit 2-15 min + ~700 control forwards).
+
+### 2026-07-18 — M3 run 1 aborted on a code bug (not a gate); fixed, relaunch
+
+Prereg committed a5b87dc; gate launched. Prerequisites PASSED and are worth
+recording as the cross-machine reproduction result they are: the lens
+refit on this win32/CUDA machine reproduced M1 draw 0's identity exactly
+(calibration sha256 + all fit hyperparameters equal the committed
+manifest), and the capital-recall functional spot-check gave band-min
+J-lens HMR 2.50 at L16 vs M1's 2.49 at L16 (logit 61.5, 24.6x separation)
+— the MPS->CUDA move left the lens numerically the same instrument.
+fv-direction-ablation controls PASSED on both tasks (exec 0.933 -> 0.000
+under FV ablation; sham 0.900 / 0.933; bound 0.05).
+
+Then a KeyError('target') aborted the jspace stage: the swap-capitals task
+uses the swap schema (keys answer/swap_to/swap_answer), not the completion
+schema's target, and m3_gate scored jspace execution against item["target"].
+Pure code bug, not a preregistered event: no verdict, no certificates
+issued, deterministic crash. Fix: jtvec/m3_instruments.execution_answer()
+resolves target|answer across schemas (raises if neither), used by the
+jspace stage; pinned by tests/test_m3_instruments against the real task
+files. The aborted partial dir (results/m3/20260718-140704-instrument-gate,
+fv-ablation + spot-check cells + unfinalized run.json) is removed rather
+than committed: unlike M2 run 1 (which aborted at a *preregistered gate* —
+a scientific event worth retaining), this abort carries no scientific
+content and every number in it is reproduced bit-for-bit by the relaunch
+(context rng 9090 seeded once; the fix touches only a later stage). No
+prereg change — the fix implements the committed jspace-on-swap-capitals
+rule as written. Relaunch on the cached lens.

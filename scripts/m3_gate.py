@@ -58,6 +58,7 @@ from jtvec.m3_instruments import (
     AblationControlRule,
     ReportProbeControlRule,
     SwapControlRule,
+    execution_answer,
     explicit_rule_context,
     load_certified_fv,
     shared_query_map,
@@ -243,9 +244,10 @@ def main() -> None:
         for item in sc_task.items:
             logits = final_logits_under(model_j, item["prompt"], hooks)
             top1 = int(logits.argmax())
-            hit = top1 in surface_token_ids(tokenizer, item["target"])
+            answer = execution_answer(item)
+            hit = top1 in surface_token_ids(tokenizer, answer)
             hits += hit
-            rows.append({"name": item["name"], "target": item["target"],
+            rows.append({"name": item["name"], "target": answer,
                          "top1": tokenizer.decode([top1]), "hit": bool(hit)})
         ctx.save_raw_completions(f"jspace_{JSPACE_TASK}_{cond}", rows)
         jspace_accs[cond] = hits / len(sc_task.items)

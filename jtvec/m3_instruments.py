@@ -87,6 +87,22 @@ def explicit_rule_context(bos: str, label_word: str, shuffled_pairs) -> str:
     return bos + rule + body
 
 
+def execution_answer(item: dict) -> str:
+    """The clean-execution answer token of a lens task item, across schemas.
+
+    completion tasks (capital-recall) carry ``target``; swap tasks
+    (swap-capitals) carry ``answer`` (the clean answer; swap_* fields are for
+    the M1 causal-swap eval, not execution). Raises if neither is present so a
+    schema drift fails loudly rather than scoring against nothing.
+    """
+    for key in ("target", "answer"):
+        if item.get(key):
+            return item[key]
+    raise KeyError(
+        f"task item '{item.get('name', '?')}' has neither 'target' nor 'answer'"
+    )
+
+
 def quantized_bound(base: float, n: int) -> float:
     """A deviation bound that can never sit below one readout quantum (D-010)."""
     if n <= 0:
