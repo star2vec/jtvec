@@ -160,7 +160,9 @@ def main() -> None:
                 norms[k] = float(fv.norm())
 
                 top1, ranks = eval_with_vector(dataset, fv)
-                gains[k] = round(top1 - zs_top1, 4)
+                # unrounded: the D-010 bound is exact (1/N_test); rounding
+                # belongs in display only (run 2 lesson, LABNOTES)
+                gains[k] = top1 - zs_top1
                 ctx.save_raw_completions(
                     f"{task}_rung{T}_induction",
                     [
@@ -171,7 +173,7 @@ def main() -> None:
 
                 sham = sham_twin(fv, SHAM_SEED_BASE + 10 * k + rung_idx)
                 sham_top1, sham_ranks = eval_with_vector(dataset, sham)
-                sham_gains[k] = round(sham_top1 - zs_top1, 4)
+                sham_gains[k] = sham_top1 - zs_top1
                 ctx.save_raw_completions(
                     f"{task}_rung{T}_sham",
                     [

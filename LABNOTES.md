@@ -294,3 +294,22 @@ voided, no certificates, no report.md.
   is why it was put to Ecaterina rather than adopted silently. Run 1's raw
   evidence is committed as-is (unfinalized run.json documents the abort);
   run 2 relaunches on run 1's cached extractions (evals only, ~30 min).
+
+---
+
+## 2026-07-18 — M2 run 2: same cell, rounding artifact; conformance fix (Claude)
+
+Run 2 (results/m2/20260718-113005-fv-stability-gate) cache-hit all nine
+extractions, reproduced run 1's eval numbers cell-for-cell (deterministic
+0-shot contexts + cached draws), and terminated at the same instruments
+gate — this time by 4.4e-5. Cause, verified against the exact arithmetic:
+gains were stored as round(x, 4), so the singular-plural T=50 sham median
+of exactly -1/43 (= -0.0232558..., one flipped item — precisely the D-010
+quantum) was stored as -0.0233, which exceeds the D-010 bound
+max(0.02, 1/43) = 0.0232558... The data satisfy D-010's ruled semantics
+exactly; the comparison used a decimal-rounded value. Fix: gains and sham
+gains are stored unrounded (rounding remains in display formatting only) —
+an implementation-fidelity fix to the already-ruled rule, no semantic
+change, every reported number unchanged at display precision. Run 2's raw
+cells committed as evidence like run 1's. Run 3 relaunches on the same
+caches.

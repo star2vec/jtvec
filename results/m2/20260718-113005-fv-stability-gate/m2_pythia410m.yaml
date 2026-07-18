@@ -1,0 +1,26 @@
+# M2: FV extraction-stability gate on Pythia-410M (EXP-M2).
+# Extraction once per (task, draw) at the max rung (fv.n_trials_aie: 200);
+# rungs 25/50/100/200 derive from the stored per-trial AIE tensor
+# (jtvec/fv_stability.py RUNGS). Draw seeds derive as seed*1000 + k, k=1..3;
+# eval contexts are held fixed (scripts/m2_gate.py EVAL_SEED).
+# device: cuda targets the win32 laptop GPU (D-008). The compute placement
+# for the full ladder is Ecaterina's OPEN ruling — this file is not it.
+experiment: pythia410m_m2_fv_stability
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+fv:
+  tasks: [capitalize, singular-plural, english-french]
+  n_shots: 10
+  n_trials_mean: 100
+  n_trials_aie: 200
+  n_top_heads: 10
+  edit_layer: 8
+  min_accuracy: 0.2
+  min_correct_valid: 50
+  baseline_threshold: 0.8
+cache_dir: cache/m2
+results_dir: results/m2
