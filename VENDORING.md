@@ -24,14 +24,32 @@ unchanged).
   manifests; kept as a git checkout because `jvec.utils.jlens_commit()`
   reads it and the hash is a lens-identity key (decision D-004).
 
-## Deliberately NOT vendored yet (build order)
+## Vendored at the M1->M2 boundary (D-007: portability for laptop switch)
 
-- `jvec/fv.py`, `jvec/evals/fvprobe.py`, `jvec/evals/fvswap.py`,
-  `third_party/function_vectors` — M2, behind the stability gate
-- `jvec/decompose.py`, `jvec/evals/exp3.py`, `tests/test_decompose.py`,
-  scripts 05-15 — M2/M3 material
-- v1's untracked `scripts/15_fv_stability.py` — design input for M2 only,
-  never vendored (D-001)
+All remaining v1 sources were vendored byte-identical from `3bb6d2a` so v2
+is self-contained and the v1 checkout is no longer needed on any machine.
+**Vendored does not mean in use**: each item below stays inert until its
+milestone is signed off (build-order rule unchanged).
+
+- `jvec/fv.py` (Todd wrapper + transformers-5 hook patch),
+  `jvec/decompose.py`, `jvec/evals/{fvprobe,fvswap,exp3}.py` — M2/M3/M4
+- `scripts/05`-`14` (incl. `11b`) — M2/M3/M4
+- `tests/test_decompose.py` — runs in CI now (model-free)
+- `configs/*_v1reference.yaml` — v1 configs kept for reference
+- `third_party/function_vectors`: git **submodule** pinned at `fb9eac7`
+  (github.com/ericwtodd/function_vectors, clean public checkout —
+  `jvec.fv.todd_commit()` reads it, same rationale as D-004)
+- `design_input/15_fv_stability_v1_untracked.py`: v1's UNTRACKED stability
+  script, preserved verbatim as M2 design reference per D-001 — NOT
+  vendored code, never imported (sha256 prefix 70b140d003a15981)
+
+## Caveat on the withdrawn instrument
+
+`jvec/decompose.py` (k=25 gradient-pursuit J-space-fraction) is the
+instrument CONSTRAINTS bans (VERIFIED negative: failed its positive
+control). It is vendored for provenance and its unit tests, but
+`jtvec.core.instruments.BANNED_INSTRUMENTS` blocks its use as evidence
+unless rebuilt and re-controlled.
 
 ## v2-original files (not from v1)
 

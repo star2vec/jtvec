@@ -1,0 +1,54 @@
+# Phase 2 on Pythia-410M: FV extraction (Todd AIE + Hendel) and Experiments 1-2.
+# calibration/fit sections must stay identical to pythia410m_phase1.yaml so the
+# cached skip4_n10 lens manifest matches.
+experiment: pythia410m_phase2
+seed: 0
+device: mps
+
+model:
+  name: EleutherAI/pythia-410m
+  revision: null
+  dtype: float32
+
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+
+evals:
+  pass_k: 10
+  band: [4, 16]
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+
+fv:
+  tasks:
+    [antonym, synonym, country-capital, country-currency, english-french,
+     english-spanish, present-past, singular-plural, capitalize,
+     landmark-country, person-sport]
+  n_shots: 10
+  n_trials_mean: 100
+  n_trials_aie: 25
+  n_top_heads: 10
+  edit_layer: 8 # ~1/3 of 24 layers, per Todd
+  # Extraction floors (LABNOTES 2026-07-14, amended): several proposal tasks
+  # have tiny valid splits (present-past 27, singular-plural 19), so the floor
+  # is structural only — enough distinct correct queries to sample trials.
+  # Induction strength is the real quality gate per the ruling.
+  min_accuracy: 0.2
+  min_correct_valid: 10
+  baseline_threshold: 0.8 # reporting stratum only
+
+cache_dir: cache
+results_dir: results

@@ -1,3 +1,6 @@
 [submodule "third_party/jacobian-lens"]
 	path = third_party/jacobian-lens
 	url = https://github.com/anthropics/jacobian-lens
+[submodule "third_party/function_vectors"]
+	path = third_party/function_vectors
+	url = https://github.com/ericwtodd/function_vectors

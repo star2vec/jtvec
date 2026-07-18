@@ -1,0 +1,36 @@
+# Pythia-410M cross-check: does the J-lens beat the logit lens once the
+# unembedding is untied? (GPT-2's tied embeddings make the logit lens an
+# unusually strong baseline — see results/phase1_report/20260714-*.)
+experiment: pythia410m_lens_n5
+seed: 0
+device: mps
+
+model:
+  name: EleutherAI/pythia-410m
+  revision: null
+  dtype: float32
+
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 5
+  n_heldout: 3
+
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4] # cross-check only needs one variant; skip4 edged skip16 on GPT-2
+  source_layers: null # jlens default: layers 0..22
+  target_layer: null # jlens default: final layer (23)
+
+evals:
+  pass_k: 10
+  band: [4, 16] # (2,8) on 12 layers, scaled to 24 layers
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05 # tuned on GPT-2; may need a sweep on Pythia
+
+cache_dir: cache
+results_dir: results

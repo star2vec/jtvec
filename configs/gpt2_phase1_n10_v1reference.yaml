@@ -1,0 +1,34 @@
+# Phase 1: J-lens on GPT-2-small, validated. See task_vectors_in_jspace_proposal.md.
+experiment: gpt2_phase1_n10
+seed: 0
+device: mps # mps | cuda | cpu; hard error if unavailable (no silent fallback)
+
+model:
+  name: gpt2
+  revision: null # resolved HF commit sha is recorded in the lens manifest
+  dtype: float32 # fp32 everywhere on MPS
+
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10 # per brief; Nanda: n=10 ~ n=1000
+  n_heldout: 3 # held-out prompts for the layer-by-layer top-k report
+
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4, 16] # brief/Nanda vs. repo/paper default — evals arbitrate
+  source_layers: null # jlens default: layers 0..10
+  target_layer: null # jlens default: final layer (11)
+
+evals:
+  pass_k: 10
+  band: [2, 8] # layer band for gate comparisons (where FVs act)
+  baseline_threshold: 0.8 # tasks below this in-context accuracy are dropped
+  topk_report: 10
+  n_random_seeds: 3 # replicates of the random-matrix control
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+
+cache_dir: cache
+results_dir: results

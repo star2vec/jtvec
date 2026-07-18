@@ -150,5 +150,27 @@ Run: `results/m1/20260718-010559-lens-gate` (prereg + experiment commit
 - Wall-clock ~70 min total (3 x ~940 s fits + evals); peak RSS 2.85 GB —
   within the prereg estimate.
 
-- sign-off: M1 — pending (Ecaterina). Note D-005: the tolerances R1-R6
-  were proposed by Claude; ratifying this sign-off also ratifies them.
+- sign-off: M1 — Ecaterina, 2026-07-18, via session instruction ("run m2"),
+  ratifying the D-005 tolerances per the note above. Recorded by Claude.
+
+---
+
+## 2026-07-18 — M1->M2 boundary: repo made self-contained (Claude)
+
+- D-007 (ruled by Ecaterina, 2026-07-18: project may move to another
+  laptop): all remaining v1 sources vendored byte-identical from `3bb6d2a`
+  (fv wrapper, decompose, fv evals, scripts 05-14, phase-2 configs);
+  `third_party/function_vectors` added as a submodule pinned at `fb9eac7`
+  (clean public checkout). The v1 checkout is no longer required on any
+  machine. Vendored != in use: build-order rule unchanged; nothing
+  FV-dependent runs before the M2 gate exists. v1's untracked
+  `15_fv_stability.py` preserved verbatim under `design_input/` as M2
+  design reference per D-001 (not code).
+- M2 compute decision is OPEN (flagged per the >12h rule): full ladder
+  3 draws x 200 AIE trials x 3 tasks projects ~26-28 h on this MacBook
+  (v1 measured 36/38/77 s/trial for capitalize/english-french/
+  singular-plural at 25 trials, cost linear in trials; per-trial AIE
+  storage confirmed, so lower rungs derive from stored prefixes at no
+  extra compute). Options put to Ecaterina: A100 (~3-4 h), local with
+  explicit 12h-rule waiver, or trimmed ladder. Awaiting her ruling; M2
+  build proceeds, no long run launches until then.

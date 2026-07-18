@@ -15,6 +15,11 @@ dependencies = [
     "datasets==5.0.0",
     "numpy==2.4.6",
     "pyyaml==6.0.3",
+    # Todd function_vectors runtime deps (mirrors v1 pins)
+    "baukit",
+    "scikit-learn>=1.9.0",
+    "pandas>=3.0.3",
+    "bitsandbytes>=0.49.2",
 ]
 
 [dependency-groups]
@@ -25,6 +30,7 @@ dev = ["pytest==9.1.1"]
 [tool.uv.sources]
 torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
 jlens = { path = "third_party/jacobian-lens", editable = true }
+baukit = { git = "https://github.com/davidbau/baukit" }
 
 [[tool.uv.index]]
 name = "pytorch-cpu"
