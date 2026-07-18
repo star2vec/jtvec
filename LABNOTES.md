@@ -354,3 +354,39 @@ material: report.md, stability.json, and 30 raw per-item cells in the run
 - sign-off: M2 — Ecaterina, 2026-07-18, via session instruction ("do m3"),
   ratifying the gate outcome including the D-010 deviation and the run-2
   conformance fix. Recorded by Claude, per the M0/M1 precedent.
+
+---
+
+## 2026-07-18 — M3: scope ruled (D-011), build (Claude)
+
+Repo state at M3 start: local == origin at 6a3a00b (+ sign-off record);
+tree clean; gates green.
+
+- D-011 (ruled by Ecaterina, 2026-07-18, session Q&A): (a) M3 = the
+  intervention-instrument gate, mirroring M1 (lens readout) and M2 (FV
+  estimator): landing tests + positive/negative ControlRecord pairs for
+  fv-direction-ablation, jspace-ablation, the forced-choice report probe,
+  and the fv-swap, all on M2-certified FVs; the lens is re-materialized on
+  this machine first and verified against M1 draw 0's committed manifest
+  (identity keys incl. exact calibration sha256) plus a capital-recall
+  band-min HMR spot-check — E1-E4 stay in M4. (b) The report-probe
+  positive control is the explicit-rule context (rule sentence naming the
+  label + label-shuffled pairs): a detection-ceiling control that does not
+  presuppose what ICL contexts carry; negative stays the shuffled-context
+  prior baseline; all three phrasings P1-P3 reported. (c) The swap
+  control pair is capitalize->singular-plural (both certified; the same
+  query is valid under both tasks). The v1 translation pair waits for
+  M4-E3's own prereg, where certifying english-spanish belongs.
+- Build: jtvec/m3_instruments.py (control rules with quantization-aware
+  bounds max(base, 1/N) built in from the start — D-010 lesson; certified-
+  FV loading through the manifest-checked vendored loader; lens-manifest
+  verification on the vendored IDENTITY_KEYS; explicit-rule context
+  builder), scripts/m3_gate.py (orchestrator behind start_run), config
+  configs/m3_pythia410m.yaml (calibration/fit mirror M1 draw 0 exactly),
+  tests/test_m3_instruments.py (landing/property contracts for the four
+  vendored hook classes — plain-tensor AND tuple outputs, final-position-
+  only, idempotence/orthogonality, norm preservation, swap component move
+  — plus rule/verdict logic). Prereg drafted UNCOMMITTED
+  (EXP-M3-intervention-instruments.md); committing it is the prereg act
+  and waits for Ecaterina's ruling on the resource estimate
+  (~10-25 min projected: lens refit 2-15 min + ~700 control forwards).
