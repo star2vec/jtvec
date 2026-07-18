@@ -1,0 +1,45 @@
+# M4-E1: FV label decodability on Pythia-410M (EXP-M4-E1).
+# calibration/fit mirror configs/m1_pythia410m_draw0.yaml EXACTLY (as m3 did)
+# so lens draw 0 reproduces M1 draw 0's identity; the orchestrator derives
+# lens draws 1-2 (seed replace, per-draw cache_dir — the lens cache key does
+# not include the seed) and the two robustness variants (skip16_n10,
+# skip4_n5) in-process, each identity- or control-checked per the prereg.
+# fv section matches the M2 cache identity so certified FVs load unmodified.
+experiment: pythia410m_m4_e1_decodability
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+fv:
+  tasks: [capitalize, singular-plural, english-french]
+  n_shots: 10
+  n_trials_mean: 100
+  n_trials_aie: 200
+  n_top_heads: 10
+  edit_layer: 8
+  min_accuracy: 0.2
+  min_correct_valid: 50
+  baseline_threshold: 0.8
+cache_dir: cache/m4e1
+results_dir: results/m4
