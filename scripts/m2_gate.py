@@ -62,7 +62,9 @@ SHAM_SEED_BASE = 9000  # sham seed = base + 10*draw_k + rung_index (preregistere
 # Tolerances live in the prereg (EXP-M2, Decision rule); mirrored here.
 RULE = ConvergenceRule(min_pairwise_cosine=0.95, max_gain_iqr=0.05)
 POSITIVE_CONTROL_MIN_SEPARATION = 0.10  # icl10 top1 - zeroshot top1, per task
-NEGATIVE_CONTROL_MAX_ABS_SHAM = 0.02  # |median sham gain| at every rung, per task
+# D-010: per-task bound max(0.02, 1/N_test) — the sham may move the median by
+# at most one readout quantum (prereg Deviations; amended after run 1).
+NEGATIVE_CONTROL_MAX_ABS_SHAM = 0.02
 
 
 def draw_seed(cfg: Config, k: int) -> int:
@@ -240,7 +242,7 @@ def main() -> None:
         for t in tasks_out.values()
     )
     negative_pass = all(
-        abs(rung["sham_median"]) <= NEGATIVE_CONTROL_MAX_ABS_SHAM
+        abs(rung["sham_median"]) <= max(NEGATIVE_CONTROL_MAX_ABS_SHAM, 1.0 / t["n_test"])
         for t in tasks_out.values()
         for rung in t["rungs"].values()
     )
@@ -290,7 +292,7 @@ def main() -> None:
         "- instrument controls (fv-induction-readout): positive = 10-shot ICL vs "
         f"0-shot separation >= {POSITIVE_CONTROL_MIN_SEPARATION} per task -> "
         f"{'PASS' if positive_pass else 'FAIL'}; negative = |median sham gain| <= "
-        f"{NEGATIVE_CONTROL_MAX_ABS_SHAM} at every rung -> "
+        f"max({NEGATIVE_CONTROL_MAX_ABS_SHAM}, 1/N_test) at every rung (D-010) -> "
         f"{'PASS' if negative_pass else 'FAIL'}",
         "",
         "## Verdicts (rule: min pairwise cosine >= "

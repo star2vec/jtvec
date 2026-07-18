@@ -254,3 +254,43 @@ s/trial for capitalize / singular-plural / english-french:
 Launch: prereg harness/preregs/EXP-M2-fv-stability.md committed in this
 commit (the prereg act); run started detached with a log monitor (M1
 incident precedent). ETA ~5.5-7 h from launch.
+
+---
+
+## 2026-07-18 — M2 run 1: preregistered control gate fired; D-010 (Claude)
+
+Run results/m2/20260718-051327-fv-stability-gate (prereg e67310a) executed
+~5.4 h on the win32 GPU (D-009), probe-accurate throughout (28.4–29.5 min
+per extraction, 9 extractions). All 12 (task x rung) agreement cells pass
+the ratified convergence rule — min pairwise cosine .959–.997, gain IQR
+.000–.023, at every rung including T=25, on all three tasks. The run then
+terminated at the instruments gate, exactly as preregistered: verdicts
+voided, no certificates, no report.md.
+
+- Control reconstruction from the retained raw cells (the process died
+  before writing aggregates; every number here re-derived from
+  raw_completions/*.jsonl): positive control PASS on all tasks
+  (ICL-vs-0-shot separation +0.9235 / +0.8372 / +0.4671 vs bound 0.10);
+  negative control FAIL at exactly one cell — singular-plural T=50, sham
+  gains [-0.0233, -0.0233, 0.0], median -0.0233 vs bound 0.02. One flipped
+  item out of N_test=43 equals 0.0233: the flat bound sits below the
+  readout's own quantum at this N, so any single flip breaches it. Every
+  other sham median is <= 0.006 in magnitude.
+- Raw-output replay (surprise rule; read-only over cache/m2 and the run
+  dir): the three draws differ genuinely and substantially at trial level
+  — per-trial indirect_effect tensors correlate 0.31–0.52 across draws
+  (max element diff ~0.5), mean_head_activations differ by up to ~0.5 —
+  yet the FVs built from them agree at cosine >= 0.959 at every rung. On
+  this model/config, same-pipeline re-extraction at 25 AIE trials is
+  draw-stable under this protocol. This sits in tension with v1's
+  cross-code-path cosines of 0.43–0.61 (VERIFIED, scoped to the
+  endpoint-vs-phase-2 comparison); why the two protocols disagree is an
+  open question, not resolved here, and v1's entry stands as scoped.
+- D-010 (ruled by Ecaterina, 2026-07-18, session Q&A): negative-control
+  bound amended post-hoc to |median sham gain| <= max(0.02, 1/N_test) per
+  task — the sham may move the median by at most one readout quantum;
+  N >= 170 tasks keep the 0.02 bound unchanged. Recorded in the prereg
+  Deviations section. The amendment admits run 1's observed value, which
+  is why it was put to Ecaterina rather than adopted silently. Run 1's raw
+  evidence is committed as-is (unfinalized run.json documents the abort);
+  run 2 relaunches on run 1's cached extractions (evals only, ~30 min).

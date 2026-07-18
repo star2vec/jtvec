@@ -121,4 +121,15 @@ the win32 laptop GPU; 69.8/72.2 s/trial CPU reference.
 
 ## Deviations
 
-(none at commit time)
+- D-010 (Ecaterina, 2026-07-18; after run 1,
+  results/m2/20260718-051327-fv-stability-gate): negative-control bound
+  amended from a flat |median sham gain| ≤ 0.02 to max(0.02, 1/N_test) per
+  task. Reason: at N_test=43 (singular-plural) one flipped item = 0.0233 >
+  0.02 — the flat bound sits below the readout's own quantum, so a single
+  flipped item in 2 of 3 sham draws voided run 1 (sham gains
+  [−0.0233, −0.0233, 0.0] at T=50; every other criterion passing, positive
+  controls at +0.92/+0.84/+0.47). Post-hoc by definition and recorded as
+  such: the amended bound admits run 1's observed value, which is why it
+  was ruled by Ecaterina rather than adopted. scripts/m2_gate.py updated
+  in the same commit; run 2 is an evals-only relaunch on run 1's cached
+  extractions.
