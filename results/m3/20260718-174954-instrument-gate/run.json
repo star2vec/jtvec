@@ -1,0 +1,38 @@
+{
+  "run_name": "instrument-gate",
+  "started": "2026-07-18T17:49:54",
+  "git_commit": "f07d55e8ee75f23014cb25f3d3819a7dd5049dc4",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M3-intervention-instruments.md",
+  "prereg_commit": "f07d55e8ee75f23014cb25f3d3819a7dd5049dc4",
+  "config_sha256": "407d46d3f8b2a36d6d125a251feb50aba60b8e2232e0451680f68d6e894cfb23",
+  "post_hoc": false,
+  "lens_spotcheck": {
+    "refit_hmr": 2.4959171464805245,
+    "layer": 16,
+    "m1_hmr": 2.491189536188971,
+    "logit_hmr": 61.48216597932451
+  },
+  "instruments": {
+    "fv-direction-ablation": {
+      "positive": true,
+      "negative": true
+    },
+    "jspace-ablation": {
+      "positive": true,
+      "negative": true
+    },
+    "report-probe-forced-choice": {
+      "positive": true,
+      "negative": false
+    },
+    "fv-swap": {
+      "positive": true,
+      "negative": true
+    }
+  },
+  "m3_all_gated": false,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 31.0,
+  "peak_rss_gb": 3.37,
+  "finished": "2026-07-18T17:50:25"
+}

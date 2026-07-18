@@ -1,0 +1,36 @@
+{"name": "cap-France", "target": "Paris", "top1": " Paris", "hit": true}
+{"name": "cap-England", "target": "London", "top1": " London", "hit": true}
+{"name": "cap-Italy", "target": "Rome", "top1": " Rome", "hit": true}
+{"name": "cap-Spain", "target": "Madrid", "top1": " Madrid", "hit": true}
+{"name": "cap-Germany", "target": "Berlin", "top1": " C", "hit": false}
+{"name": "cap-Russia", "target": "Moscow", "top1": " St", "hit": false}
+{"name": "cap-Japan", "target": "Tokyo", "top1": " Tokyo", "hit": true}
+{"name": "cap-China", "target": "Beijing", "top1": " Beijing", "hit": true}
+{"name": "cap-Greece", "target": "Athens", "top1": " The", "hit": false}
+{"name": "cap-Egypt", "target": "Cairo", "top1": " Cairo", "hit": true}
+{"name": "cap-Poland", "target": "Warsaw", "top1": " K", "hit": false}
+{"name": "cap-Austria", "target": "Vienna", "top1": " Vienna", "hit": true}
+{"name": "cap-Ireland", "target": "Dublin", "top1": " D", "hit": false}
+{"name": "cap-Portugal", "target": "Lisbon", "top1": " Port", "hit": false}
+{"name": "cap-Norway", "target": "Oslo", "top1": " Tr", "hit": false}
+{"name": "cap-Sweden", "target": "Stockholm", "top1": "Stock", "hit": true}
+{"name": "cap-Cuba", "target": "Havana", "top1": " San", "hit": false}
+{"name": "cap-Iran", "target": "Tehran", "top1": "Te", "hit": true}
+{"name": "cap-Iraq", "target": "Baghdad", "top1": " Baghdad", "hit": true}
+{"name": "cap-Scotland", "target": "Edinburgh", "top1": " Edinburgh", "hit": true}
+{"name": "cap-Hungary", "target": "Budapest", "top1": " Budapest", "hit": true}
+{"name": "cap-Finland", "target": "Helsinki", "top1": " Helsinki", "hit": true}
+{"name": "cap-Denmark", "target": "Copenhagen", "top1": " Copenhagen", "hit": true}
+{"name": "cap-Belgium", "target": "Brussels", "top1": " An", "hit": false}
+{"name": "cap-Ukraine", "target": "Kiev", "top1": " K", "hit": true}
+{"name": "cap-Syria", "target": "Damascus", "top1": " Damascus", "hit": true}
+{"name": "cap-Afghanistan", "target": "Kabul", "top1": " K", "hit": true}
+{"name": "cap-Thailand", "target": "Bangkok", "top1": " Chi", "hit": false}
+{"name": "cap-India", "target": "Delhi", "top1": " New", "hit": false}
+{"name": "cap-Canada", "target": "Ottawa", "top1": " Ottawa", "hit": true}
+{"name": "cap-Australia", "target": "Canberra", "top1": " Can", "hit": true}
+{"name": "cap-Turkey", "target": "Ankara", "top1": " Ank", "hit": true}
+{"name": "cap-Switzerland", "target": "Bern", "top1": " Zur", "hit": false}
+{"name": "cap-Netherlands", "target": "Amsterdam", "top1": " Rot", "hit": false}
+{"name": "cap-Israel", "target": "Jerusalem", "top1": " Tel", "hit": false}
+{"name": "cap-Lebanon", "target": "Beirut", "top1": " Tri", "hit": false}

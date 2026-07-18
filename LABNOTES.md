@@ -495,3 +495,43 @@ gates (with the collision removed the none B-rate should fall and the
 one-sided negative should pass), report-probe gates (random-word null
 should read ~prior), jspace re-measured cleanly on 36 items decides on its
 own numbers — no thumb on the scale.
+
+### 2026-07-18 — M3 run 3 (D-012): 3/4 instruments gated
+
+Run results/m3/20260718-174954-instrument-gate finalized. Lens reproduced
+(identity + HMR 2.50@L16). Verdicts:
+
+- fv-direction-ablation: GATED. exec 0.933 -> 0.000 under exact scoring,
+  sham 0.900/0.933; unchanged by the D-012 scoring switch (within-task, no
+  collision to fix).
+- jspace-ablation: GATED. On capital-recall (36 items, exact scoring), the
+  top-10-atom J-space projection moved exec 0.861 -> 0.583 (drop 0.278 >=
+  0.15); sham 0.833 within bound. The run-2 sub-threshold reading (0.125 at
+  N=16 on swap-capitals with relaxed scoring) was under-powered and
+  scoring-fragile, not a weak instrument: re-measured on the anchored task
+  at finer granularity it clears the bar. The ruling was to measure cleanly
+  and let the numbers decide; they did.
+- fv-swap: GATED. With case-sensitive scoring the clean none B-rate fell
+  0.467 -> 0.000 (confirming the run-2 0.467 was entirely the " K"/
+  " Kettles" first-token collision); lens_swap 0.900, direct_swap 0.933,
+  random_target 0.000; one-sided negative passes. gain 0.933.
+- report-probe: GATED for capitalize (null 0.000) and english-french (null
+  0.000); NOT gated for singular-plural (null 0.722). Replay (read-only):
+  the random-word null pool for singular-plural (3546 words = capitalize +
+  english-french outputs) contains zero plural outputs, yet the
+  forced-choice probe reads the singular-plural label 26/36 in the null.
+  The readout is therefore not coming from the in-context output mapping;
+  it is consistent with the label being readable from the singular-noun
+  inputs/query independent of the task examples. Stated operationally
+  only: WHY the label is readable without the task is a research question,
+  adjacent to a CONSTRAINTS HYPOTHESIS (label vs output-vocabulary
+  decodability), and is NOT asserted here.
+
+Net: three instruments fully gated (fv-direction-ablation, jspace-ablation,
+fv-swap); the report probe gated for 2 of 3 tasks. The negative control
+correctly refused to certify the report probe on singular-plural, where on
+this model it cannot separate task-present from task-absent. This bears
+directly on E2 (double dissociation, HYPOTHESIS, specified on
+singular-plural), which needs a report measure on that task — flagged for
+the E2 design. Disposition + M3 sign-off put to Ecaterina. Run 3 evidence
+committed.
