@@ -350,3 +350,7 @@ cache/m2/draw*/ are the certified artifacts' backing store.
 M3 does not start before Ecaterina's `sign-off: M2` line. Verification
 material: report.md, stability.json, and 30 raw per-item cells in the run
 3 dir, plus the runs 1-2 evidence dirs.
+
+- sign-off: M2 — Ecaterina, 2026-07-18, via session instruction ("do m3"),
+  ratifying the gate outcome including the D-010 deviation and the run-2
+  conformance fix. Recorded by Claude, per the M0/M1 precedent.
