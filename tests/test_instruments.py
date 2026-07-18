@@ -52,3 +52,22 @@ def test_withdrawn_instrument_banned_even_with_controls():
                 negative_control=PASSING,
             )
         )
+
+
+def test_report_probe_banned_on_singular_plural_only():
+    # D-013: withdrawn per-task; the same probe on the gated tasks admits.
+    with pytest.raises(BannedInstrumentError):
+        require_controlled(
+            Instrument(
+                name="report-probe-forced-choice@singular-plural",
+                positive_control=PASSING,
+                negative_control=PASSING,
+            )
+        )
+    require_controlled(
+        Instrument(
+            name="report-probe-forced-choice@capitalize",
+            positive_control=PASSING,
+            negative_control=PASSING,
+        )
+    )

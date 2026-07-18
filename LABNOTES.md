@@ -535,3 +535,35 @@ directly on E2 (double dissociation, HYPOTHESIS, specified on
 singular-plural), which needs a report measure on that task — flagged for
 the E2 design. Disposition + M3 sign-off put to Ecaterina. Run 3 evidence
 committed.
+
+### 2026-07-18 — D-013: M3 disposition ruled; M3 signed off (Claude)
+
+Ecaterina held to read the run 3 evidence (review map: the five headline
+cells in results/m3/20260718-174954-instrument-gate/raw_completions, each
+re-derivable by counting exact-match hits per line), then ruled:
+
+- D-013 (ruled by Ecaterina, 2026-07-18, session instruction after the
+  evidence hold): the report probe is certified per task — gated for
+  capitalize and english-french; on singular-plural it is WITHDRAWN per
+  the instruments LAW unless rebuilt and re-controlled. Mechanical
+  enforcement: BANNED_INSTRUMENTS entry
+  `report-probe-forced-choice@singular-plural` in
+  jtvec/core/instruments.py (the @task scoping follows the M2
+  fv_todd@<task> certificate convention), pinned by a test that the same
+  probe name on the gated tasks still admits. The E2 prereg must resolve
+  the singular-plural report measure explicitly — a redesigned probe/null
+  re-controlled on that task, or a respecified task pair. Carried as an
+  E2 design requirement.
+- M3 deliverable stands: ControlRecord pairs (controls.json) for
+  fv-direction-ablation, jspace-ablation, fv-swap, and
+  report-probe-forced-choice@{capitalize,english-french}; lens
+  re-materialized on this machine with M1-identical identity; evidence
+  run results/m3/20260718-174954-instrument-gate (+ runs 1-2 history).
+
+- sign-off: M3 — Ecaterina, 2026-07-18, via session instruction
+  ("sign off") after the evidence hold, ratifying the D-013 disposition.
+  Recorded by Claude, per the M0/M1 precedent.
+
+Next per build order: M4 confirmatory experiments, E1 (decodability)
+first. No E1 run before its own prereg is committed and its resource
+estimate ruled.

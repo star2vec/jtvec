@@ -21,12 +21,21 @@ class BannedInstrumentError(RuntimeError):
     """Raised when a withdrawn instrument is used."""
 
 
-# Withdrawn in v1; banned here unless rebuilt and re-controlled under a new name
-# with a fresh ControlRecord pair (per CONSTRAINTS.md VERIFIED (negative) entry).
+# Withdrawn instruments; banned unless rebuilt and re-controlled under a new
+# name with a fresh ControlRecord pair. First entry per the CONSTRAINTS.md
+# VERIFIED (negative) entry (v1); the @task-scoped entry per D-013 (M3 run 3:
+# results/m3/20260718-174954-instrument-gate). The @task naming follows the
+# M2 certificate convention (fv_todd@<task>).
 BANNED_INSTRUMENTS = {
     "jspace-fraction-k25-gradient-pursuit": (
         "v1 positive control failed: cannot separate lens-readable residuals "
         "from arbitrary directions on Pythia-410M"
+    ),
+    "report-probe-forced-choice@singular-plural": (
+        "M3 negative control failed (D-013): random-word null with zero "
+        "plural outputs still reads the singular-plural label 26/36 on "
+        "Pythia-410M; the probe cannot separate task-present from "
+        "task-absent on this task"
     ),
 }
 

@@ -58,20 +58,20 @@ count (or a documented non-convergence).
 
 ## Current state (update this line at each milestone boundary)
 
-M0-M2 complete and signed off (M1: lens gate PASS R1-R6, bit-for-bit v1
+M0-M3 complete and signed off (M1: lens gate PASS R1-R6, bit-for-bit v1
 reproduction; M2: FV stability gate PASS, converged_at=25 on all three
-tasks, certificates in `results/m2/20260718-114950-fv-stability-gate`).
+tasks, certificates in `results/m2/20260718-114950-fv-stability-gate`;
+M3: intervention-instrument gate, D-011/D-012 — fv-direction-ablation,
+jspace-ablation, fv-swap GATED, report-probe gated for capitalize and
+english-french, evidence `results/m3/20260718-174954-instrument-gate`).
 Platform is a win32 laptop with an RTX 2000 Ada (D-008 compat ruling,
-cu130 torch; D-009 compute ruling). M3 = intervention-instrument gate
-(scope D-011): run 1 aborted on a code bug; run 2 gated 1/4 and exposed
-two instrument weaknesses plus two control-design defects; D-012 ruled
-four criteria fixes; run 3 completed 2026-07-18
-(`results/m3/20260718-174954-instrument-gate`): fv-direction-ablation,
-jspace-ablation, fv-swap GATED; report-probe gated for capitalize and
-english-french only — its negative control fails on singular-plural
-(random-word null still reads the label 26/36), which bears on E2's
-design (E2 is specified on singular-plural). Awaiting Ecaterina's
-disposition ruling + `sign-off: M3`; M4 does not start before it. Open
-notes: v1 cross-code-path FV instability vs same-pipeline stability here
-(LABNOTES M2 run-1 entry); why the singular-plural label is readable
-without task examples (M3 run-3 entry — research question, not asserted).
+cu130 torch; D-009 compute ruling). D-013: the report probe on
+singular-plural is WITHDRAWN per the instruments LAW
+(`BANNED_INSTRUMENTS` enforces, `@task`-scoped); the E2 prereg must
+resolve that task's report measure (redesigned probe/null re-controlled
+there, or a respecified task pair). Next: M4 confirmatory experiments,
+E1 (decodability) first — no E1 run before its prereg is committed and
+its resource estimate ruled. Open notes: v1 cross-code-path FV
+instability vs same-pipeline stability (LABNOTES M2 run-1 entry); why
+the singular-plural label is readable without task examples (M3 run-3
+entry — research question, not asserted).
