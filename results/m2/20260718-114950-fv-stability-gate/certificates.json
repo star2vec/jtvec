@@ -1,0 +1,26 @@
+{
+  "capitalize": {
+    "estimator": "fv_todd@capitalize",
+    "model": "EleutherAI/pythia-410m@9879c9b",
+    "converged_at": 25,
+    "n_draws": 3,
+    "evidence_run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m2\\20260718-114950-fv-stability-gate",
+    "issued": "2026-07-18"
+  },
+  "singular-plural": {
+    "estimator": "fv_todd@singular-plural",
+    "model": "EleutherAI/pythia-410m@9879c9b",
+    "converged_at": 25,
+    "n_draws": 3,
+    "evidence_run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m2\\20260718-114950-fv-stability-gate",
+    "issued": "2026-07-18"
+  },
+  "english-french": {
+    "estimator": "fv_todd@english-french",
+    "model": "EleutherAI/pythia-410m@9879c9b",
+    "converged_at": 25,
+    "n_draws": 3,
+    "evidence_run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m2\\20260718-114950-fv-stability-gate",
+    "issued": "2026-07-18"
+  }
+}

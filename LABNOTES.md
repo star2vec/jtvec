@@ -313,3 +313,40 @@ an implementation-fidelity fix to the already-ruled rule, no semantic
 change, every reported number unchanged at display precision. Run 2's raw
 cells committed as evidence like run 1's. Run 3 relaunches on the same
 caches.
+
+---
+
+## 2026-07-18 — M2 run 3: gate PASS; certificates issued; awaiting sign-off (Claude)
+
+Run 3 (results/m2/20260718-114950-fv-stability-gate; prereg e67310a with
+the D-010 deviation; code at e3cc606) completed end to end: 9/9 extraction
+cache hits from run 1, eval grid reproduced runs 1-2 cell-for-cell,
+instrument controls PASS (positive: ICL-vs-0-shot separation
++0.92/+0.84/+0.47 vs bound 0.10; negative: every |median sham gain| within
+max(0.02, 1/N_test) — the singular-plural T=50 cell now compared unrounded
+at exactly one quantum). Wall-clock 1,072 s (evals only; extraction hours
+live in run 1), peak RSS 3.34 GB, device cuda.
+
+Verdicts under the ratified rule (min pairwise cosine >= 0.95 AND gain IQR
+<= 0.05 at T and every larger rung; largest rung alone is not
+convergence): capitalize converged_at=25, singular-plural converged_at=25,
+english-french converged_at=25 — M2 gate PASS on all three tasks. On
+EleutherAI/pythia-410m@9879c9b, m2_pythia410m.yaml, n_draws=3, induction
+gain @T=25: +0.394 median (sham +0.000, N=170) / +0.209 (sham +0.000,
+N=43) / +0.125 (sham +0.002, N=987). Certificates issued per task
+(estimator fv_todd@<task>, converged_at=25, n_draws=3, evidence_run = the
+run dir) in certificates.json. The CONSTRAINTS known-unknown — the AIE
+trial count at which FV extraction converges on 410M — has a measured
+answer on this model/config/task-set: 25, with witness rungs to 200.
+
+For the record: (1) the tension with v1's cross-code-path instability
+(cosines 0.43-0.61 there vs same-pipeline >= 0.959 here) is documented in
+the run 1 entry and stays an open question; v1's VERIFIED entry stands as
+scoped. (2) Hendel vectors: descriptive 3-draw flat cosines 0.996-0.998 at
+fixed n_trials_mean=100; no certificate (prereg scope). (3) Raw evidence
+for all three runs is committed; the per-draw FV caches under
+cache/m2/draw*/ are the certified artifacts' backing store.
+
+M3 does not start before Ecaterina's `sign-off: M2` line. Verification
+material: report.md, stability.json, and 30 raw per-item cells in the run
+3 dir, plus the runs 1-2 evidence dirs.

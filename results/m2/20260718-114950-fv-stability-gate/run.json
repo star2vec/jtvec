@@ -1,0 +1,38 @@
+{
+  "run_name": "fv-stability-gate",
+  "started": "2026-07-18T11:49:50",
+  "git_commit": "e3cc6064c88166a8217000ccc24002516db56b8a",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M2-fv-stability.md",
+  "prereg_commit": "0c1c1e3300b4d4ea81b60c49ad5152970b90bfd3",
+  "config_sha256": "c4a2e7d84776edf1672658148719b284b7fd6bf8898f427ef3c898e44b08db13",
+  "post_hoc": false,
+  "draw_seeds": [
+    1,
+    2,
+    3
+  ],
+  "rungs": [
+    25,
+    50,
+    100,
+    200
+  ],
+  "rule": {
+    "min_pairwise_cosine": 0.95,
+    "max_gain_iqr": 0.05
+  },
+  "instrument_controls": {
+    "positive": true,
+    "negative": true
+  },
+  "verdicts": {
+    "capitalize": 25,
+    "singular-plural": 25,
+    "english-french": 25
+  },
+  "m2_all_converged": true,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 1072.4,
+  "peak_rss_gb": 3.34,
+  "finished": "2026-07-18T12:07:42"
+}

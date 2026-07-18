@@ -62,9 +62,10 @@ M0, M1 complete and signed off (M1 gate PASS R1-R6, bit-for-bit v1
 reproduction + 3-draw stability; `results/m1/20260718-010559-lens-gate`).
 M2 build complete; platform is now a win32 laptop with an RTX 2000 Ada
 (D-008: vendored `resource` guard, UTF-8 reads, cu130 torch). Compute
-ruled by D-009 (~5.5 h ladder on this GPU). Run 1 (5.4 h) fired the
-preregistered instrument-control gate (one sham flip at N=43; D-010
-amended the bound to max(0.02, 1/N_test)); run 2 hit the same gate via a
-round(x,4) storage artifact (conformance fix: gains stored unrounded);
-run 3 relaunched on cached extractions 2026-07-18. Next: M2 verdicts ->
-Ecaterina's `sign-off: M2` before anything FV-dependent proceeds.
+ruled by D-009 (~5.5 h ladder on this GPU). After runs 1-2 fired the
+control gate (D-010 bound amendment; then a round(x,4) conformance fix),
+run 3 completed 2026-07-18: M2 gate PASS — converged_at=25 on all three
+tasks, certificates in `results/m2/20260718-114950-fv-stability-gate`.
+Awaiting Ecaterina's `sign-off: M2`; nothing FV-dependent starts before
+it. Open note: v1's cross-code-path instability vs same-pipeline draw
+stability here (LABNOTES run-1 entry) is unresolved.
