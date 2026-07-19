@@ -93,23 +93,56 @@ added. Nothing may be promoted a tier without the evidence line filled in.
 
 - HYPOTHESIS: FVs carry a J-lens-readable task-label component invisible to
   the logit lens. (v1 Exp-1: single FV draw per task → contaminated.)
+  (superseded-by-taxonomy 2026-07-19: E1 counter-evidence — NOT-DECODABLE on
+  3/3 M2-certified tasks, `results/m4/20260719-021823-e1-decodability`;
+  recast as the S2×A1 matrix cell in TAXONOMY_DESIGN.md. Retained, never
+  deleted.)
 - HYPOTHESIS: task execution and task verbalization causally dissociate
   (double dissociation on singular-plural; one-way on landmark-country).
   (v1 Exp-3: single draw, single model, N=60, human verification pass never
   completed.) Highest-priority confirmation target. Include cross-draw
   ablation transfer as the design.
+  (taxonomy recast 2026-07-19: generalized by axes A2/A4 and H1/H3 in
+  TAXONOMY_DESIGN.md; v2 evidence so far = E2 ONE-WAY on singular-plural
+  (CLM-002 stays hypothesis; CLM-003 preliminary). Still the umbrella
+  HYPOTHESIS; not retired.)
 - HYPOTHESIS: label-decodability and output-vocabulary decodability are
   separable FV properties (english-spanish vs english-french contrast).
+  (superseded-by-taxonomy 2026-07-19: english-spanish remains uncertified in
+  v2; the contrast folds into per-species A1 measurement. Retained.)
 - HYPOTHESIS: Nadaf's steerable-but-not-logit-decodable pattern replicates.
   (7/8 in v1, but on contaminated single-draw FVs.)
+  (superseded-by-taxonomy 2026-07-19: the pattern is now the predicted S2
+  row — A1 dark (E1) with A2/A3 potent (E2/E3); measured per-species going
+  forward. Retained.)
 - HYPOTHESIS: ICL execution matures early in training while portable FVs and
   their decodability emerge late. (v1 sweep: confounded by draw instability
   AND fixed head-selection; both must be resolved. Requires per-checkpoint
   AIE recomputation and stability-gated FVs at every checkpoint.)
 - HYPOTHESIS: J-space ablation can *raise* report accuracy on some tasks
   (v1 anomaly, quarantined; unexplained).
+  (absorbed-into-H3 2026-07-19: the rise is now a predicted dark-species
+  signature per TAXONOMY_DESIGN.md H3; still HYPOTHESIS-tier.)
 - HYPOTHESIS: models can be made to report a task they cannot perform
   (confabulation via label injection + FV ablation). Never run in v1.
+
+### Taxonomy phase (H1–H5, added 2026-07-19; construct + matrix in TAXONOMY_DESIGN.md)
+
+- HYPOTHESIS (H1, dichotomy, confirmatory): S1 and S2 occupy opposite poles
+  of the matrix at preregistered bars. Anchor result; both poles already
+  have supporting certified evidence (M1 +0.60 lens-coord swaps; E1/E3
+  negatives).
+- HYPOTHESIS (H2, axis coupling): A1 and A3 agree per species. A
+  dissociation (decodable-but-basis-agnostic or dark-but-basis-mediated) in
+  any species is a headline refinement: verbalizable != workspace-functional.
+- HYPOTHESIS (H3, report specificity): A4 tracks residency; dark-species
+  ablation spares or RAISES report readouts (the E2 fv-report rise becomes
+  a predicted signature, not an anomaly).
+- HYPOTHESIS (H4, relational split): the LRE operator is dark while its
+  outputs are resident; workspace ablation impairs relation NAMING but not
+  relation APPLICATION.
+- HYPOTHESIS (H5, dark boundary): binding vectors are potent and dark on
+  all other axes.
 
 ## Known-unknowns (decide empirically in v2, do not assume)
 
