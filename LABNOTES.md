@@ -820,3 +820,65 @@ capitalize (session Q&A). CLM-002 opened (hypothesis).
   which the prereg pre-commits to reporting rather than engineering around.
   Prereg drafted UNCOMMITTED (EXP-M4-E2-dissociation.md); committing it is
   the prereg act, after threshold ratification.
+
+### 2026-07-19 — E2 dissociation run: ONE-WAY; replayed (Claude)
+
+Thresholds ratified (D-017, session Q&A); prereg + CLM-002 committed
+3ba3903; run results/m4/20260719-142007-e2-dissociation finalized (wall
+86 s, peak RSS 3.37 GB, cuda). All three consumed instruments asserted
+gated before measuring. Clean: execution 0.920 (N=50); report_score
++0.389 (P3, N=80, baseline -4.625). Effects (clean - ablated; median over
+3 draws, vs matched sham):
+
+| ablation x measure | effect med [IQR] | sham med | effect-sham | hurts? |
+|---|---|---|---|---|
+| fv x exec    | +0.920 [0.000] | +0.020 | +0.900 | YES |
+| fv x report  | -0.638 [0.017] | +0.037 | -0.675 | no (report ROSE) |
+| jspace x exec   | +0.440 [0.160] | +0.000 | +0.440 | YES |
+| jspace x report | +0.341 [0.155] | +0.295 | +0.046 | no (~= sham) |
+
+Verdict: ONE-WAY. Direction 1 (fv hurts execution NOT report) holds and
+transfers across all 3 FV draws; Direction 2 (jspace hurts report NOT
+execution) fails on two independent counts — jspace hurts execution, and
+its report effect does not beat its own sham.
+
+Raw-output replay (read-only; surprise rule), facts:
+1. Every effect re-derives by hand from the raw cells (clean exec 0.920,
+   report +0.389; fv-ablated report +1.05/+1.02/+1.03; jspace exec drops
+   0.44/0.36/0.68 by lens draw).
+2. fv-ablation execution: 0.920 -> 0.000 on all 3 FV draws (IQR 0). The
+   outputs collapse from real plural forms (clean top1: "markers",
+   "beaches", "refriger[ators]") to generic function words ("a" 36/50,
+   "the" 4/50). Projecting out the certified FV surgically removes the
+   singular->plural computation; the effect is FV-draw-invariant.
+3. fv-ablation report: the free-running argmax is UNCHANGED ("first"
+   77/80 clean -> 80/80 ablated); yet log p(" plural") rises ~+0.66
+   (report_score +0.389 -> ~+1.03). Removing the FV RAISES the abstract
+   label readout without changing what the model says. Operational
+   reading only: the FV's presence suppresses the " plural" label token
+   relative to the plural-FORM tokens it carries (E1 found the FV's top
+   tokens are the output vocabulary). This is adjacent to the quarantined
+   CONSTRAINTS HYPOTHESIS about ablation raising report accuracy, but is
+   distinct (readout log-prob, not accuracy; fv not jspace) and is NOT
+   asserted.
+4. jspace hurts execution (median 0.44): outputs become truncated/mangled
+   ("h", "beach", "Mix"), a noisier degradation than fv's clean collapse.
+   So jspace is a broad residual-stream perturbation, not an
+   execution-sparing one.
+5. jspace report effect (0.341) does NOT exceed its matched 10-random-
+   direction sham (0.295): the P3 report readout is fragile to ANY 10-dim
+   final-position projection — the sham alone flips the argmax
+   ("first" -> "answer", 53/80) and drops log p(" plural") comparably.
+   This is the weak-signal risk (report-gate: ~+0.22 margin) realized: at
+   10 dimensions the report measure cannot separate a structured jspace
+   ablation from random noise of the same rank.
+
+Net: a ONE-WAY dissociation on singular-plural — fv-direction ablation is
+execution-specific and robust (spares/raises report), while jspace is not
+report-specific (it also degrades execution, and its report effect is
+sham-indistinguishable). This is one direction of the v1 double
+dissociation (HYPOTHESIS), not both; CLM-002 stays hypothesis per the
+prereg (only DOUBLE-DISSOCIATION with both transfer flags promotes it).
+The robust, cross-draw fv execution-specificity is recorded as the
+substantive sub-result. Disposition + next step (E3 per build order) go
+to Ecaterina. Run evidence committed.

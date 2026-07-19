@@ -1,0 +1,50 @@
+{"query": "mixer", "target": "mixers", "top1": " mix", "hit": true}
+{"query": "marker", "target": "markers", "top1": " markers", "hit": true}
+{"query": "hoe", "target": "hoes", "top1": " h", "hit": false}
+{"query": "umbrella", "target": "umbrellas", "top1": " U", "hit": false}
+{"query": "sun", "target": "suns", "top1": " sun", "hit": false}
+{"query": "shoes", "target": "shoes", "top1": " sand", "hit": false}
+{"query": "shirt", "target": "shirts", "top1": "shirts", "hit": true}
+{"query": "key", "target": "keys", "top1": "key", "hit": false}
+{"query": "refrigerator", "target": "refrigerators", "top1": " refriger", "hit": true}
+{"query": "eyeshadow", "target": "eyeshadows", "top1": " eyes", "hit": true}
+{"query": "washer", "target": "washers", "top1": "was", "hit": true}
+{"query": "car", "target": "cars", "top1": "car", "hit": false}
+{"query": "bus", "target": "buses", "top1": "b", "hit": true}
+{"query": "vacuum", "target": "vacuums", "top1": " vacuum", "hit": false}
+{"query": "shirt", "target": "shirts", "top1": " shirts", "hit": true}
+{"query": "mixer", "target": "mixers", "top1": "Mix", "hit": false}
+{"query": "hoe", "target": "hoes", "top1": " h", "hit": false}
+{"query": "pencil", "target": "pencils", "top1": "p", "hit": true}
+{"query": "mixer", "target": "mixers", "top1": " Mix", "hit": false}
+{"query": "glove", "target": "gloves", "top1": " Gl", "hit": false}
+{"query": "beach", "target": "beaches", "top1": "be", "hit": true}
+{"query": "soap", "target": "soaps", "top1": "soap", "hit": false}
+{"query": "refrigerator", "target": "refrigerators", "top1": " Ref", "hit": false}
+{"query": "needle", "target": "needles", "top1": " n", "hit": false}
+{"query": "corkscrew", "target": "corkscrews", "top1": " cor", "hit": true}
+{"query": "sprinkler", "target": "sprinklers", "top1": " spr", "hit": true}
+{"query": "beach", "target": "beaches", "top1": " beach", "hit": false}
+{"query": "watch", "target": "watches", "top1": " watch", "hit": false}
+{"query": "freezer", "target": "freezers", "top1": " freezer", "hit": false}
+{"query": "key", "target": "keys", "top1": " key", "hit": false}
+{"query": "printer", "target": "printers", "top1": "pr", "hit": true}
+{"query": "candle", "target": "candles", "top1": " candles", "hit": true}
+{"query": "calendar", "target": "calendars", "top1": " cal", "hit": true}
+{"query": "blanket", "target": "blankets", "top1": " blanket", "hit": false}
+{"query": "hairdryer", "target": "hairdryers", "top1": " ha", "hit": true}
+{"query": "desk", "target": "desks", "top1": "des", "hit": true}
+{"query": "marker", "target": "markers", "top1": " Mark", "hit": false}
+{"query": "desk", "target": "desks", "top1": " des", "hit": true}
+{"query": "hairdryer", "target": "hairdryers", "top1": " ha", "hit": true}
+{"query": "beach", "target": "beaches", "top1": "be", "hit": true}
+{"query": "marker", "target": "markers", "top1": " m", "hit": false}
+{"query": "game", "target": "games", "top1": "games", "hit": true}
+{"query": "ship", "target": "ships", "top1": " ships", "hit": true}
+{"query": "hoe", "target": "hoes", "top1": " h", "hit": false}
+{"query": "sun", "target": "suns", "top1": " sun", "hit": false}
+{"query": "refrigerator", "target": "refrigerators", "top1": " refriger", "hit": true}
+{"query": "lake", "target": "lakes", "top1": " l", "hit": false}
+{"query": "stove", "target": "stoves", "top1": " stove", "hit": false}
+{"query": "umbrella", "target": "umbrellas", "top1": " umbre", "hit": true}
+{"query": "mascara", "target": "mascaras", "top1": " m", "hit": false}

@@ -41,10 +41,10 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 
 ### CLM-002
 - status: hypothesis
-- statement: On singular-plural, fv-direction ablation and jspace ablation dissociate task execution from task verbalization per EXP-M4-E2-dissociation (fv cuts execution not report; jspace cuts report not execution), each vs its matched sham, cross-draw over the 3 M2-certified FV draws and 3 M1 lens draws. Tests the CONSTRAINTS execution-vs-verbalization HYPOTHESIS; verdict table recorded from the run.
+- statement: On singular-plural, fv-direction ablation and jspace ablation dissociate task execution from task verbalization per EXP-M4-E2-dissociation (fv cuts execution not report; jspace cuts report not execution), each vs its matched sham, cross-draw over the 3 M2-certified FV draws and 3 M1 lens draws. Tests the CONSTRAINTS execution-vs-verbalization HYPOTHESIS. E2 result (2026-07-19, run below): verdict ONE-WAY, NOT the double dissociation. Direction 1 holds and transfers (fv-ablation execution effect +0.920 vs sham +0.020 all 3 draws; report NOT hurt — it rose, effect -0.638 vs sham +0.037). Direction 2 fails: jspace hurts execution (effect +0.440 vs sham +0.000) and its report effect (+0.341) does not beat its sham (+0.295). Status stays hypothesis per the preregistered rule (only DOUBLE-DISSOCIATION promotes).
 - scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e2_dissociation_pythia410m.yaml, singular-plural, 3 FV draws x 3 lens draws, N_exec=50 / N_report=80
 - evidence-commit: none
 - prereg: harness/preregs/EXP-M4-E2-dissociation.md
-- results-dir: none
-- raw-completions: none
+- results-dir: results/m4/20260719-142007-e2-dissociation
+- raw-completions: results/m4/20260719-142007-e2-dissociation/raw_completions
 - verified-by: none

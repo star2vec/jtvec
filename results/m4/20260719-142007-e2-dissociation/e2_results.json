@@ -1,0 +1,88 @@
+{
+  "exec_clean": 0.92,
+  "report_clean": 0.3888431102037426,
+  "baseline_P3": -4.625149658322334,
+  "verdict": {
+    "fv_hurts_exec": true,
+    "fv_hurts_report": false,
+    "jspace_hurts_report": false,
+    "jspace_hurts_exec": true,
+    "direction1_fv_exec_not_report": true,
+    "direction2_jspace_report_not_exec": false,
+    "verdict": "ONE-WAY",
+    "cross_draw_transfer": {
+      "fv_exec": true,
+      "jspace_report": false
+    },
+    "effects": {
+      "fv_exec": {
+        "effect_median": 0.92,
+        "effect_iqr": 0.0,
+        "effect_values": [
+          0.92,
+          0.92,
+          0.92
+        ],
+        "sham_median": 0.020000000000000018,
+        "sham_iqr": 0.020000000000000018,
+        "sham_values": [
+          0.020000000000000018,
+          0.0,
+          0.040000000000000036
+        ],
+        "effect_minus_sham": 0.9
+      },
+      "fv_report": {
+        "effect_median": -0.638068076968193,
+        "effect_iqr": 0.016607457399368197,
+        "effect_values": [
+          -0.6632049024105071,
+          -0.6299899876117707,
+          -0.638068076968193
+        ],
+        "sham_median": 0.03675350844860076,
+        "sham_iqr": 0.13393235355615615,
+        "sham_values": [
+          0.03675350844860076,
+          0.11286037862300874,
+          -0.15500432848930357
+        ],
+        "effect_minus_sham": -0.6748215854167938
+      },
+      "jspace_exec": {
+        "effect_median": 0.44000000000000006,
+        "effect_iqr": 0.16000000000000003,
+        "effect_values": [
+          0.44000000000000006,
+          0.36,
+          0.68
+        ],
+        "sham_median": 0.0,
+        "sham_iqr": 0.010000000000000009,
+        "sham_values": [
+          0.020000000000000018,
+          0.0,
+          0.0
+        ],
+        "effect_minus_sham": 0.44000000000000006
+      },
+      "jspace_report": {
+        "effect_median": 0.3406679004430771,
+        "effect_iqr": 0.15535980910062785,
+        "effect_values": [
+          0.31984866261482237,
+          0.6305682808160782,
+          0.3406679004430771
+        ],
+        "sham_median": 0.29453437924385073,
+        "sham_iqr": 0.18907016813755037,
+        "sham_values": [
+          0.5033186316490174,
+          0.29453437924385073,
+          0.12517829537391661
+        ],
+        "effect_minus_sham": 0.04613352119922637
+      }
+    }
+  }
+}

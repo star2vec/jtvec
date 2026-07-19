@@ -64,20 +64,31 @@ tasks, certificates in `results/m2/20260718-114950-fv-stability-gate`;
 M3: intervention-instrument gate, D-011/D-012 — fv-direction-ablation,
 jspace-ablation, fv-swap GATED, report-probe gated for capitalize and
 english-french, evidence `results/m3/20260718-174954-instrument-gate`).
-Platform is a win32 laptop with an RTX 2000 Ada (D-008 compat ruling,
-cu130 torch; D-009 compute ruling). D-013: the report probe on
-singular-plural is WITHDRAWN per the instruments LAW
-(`BANNED_INSTRUMENTS` enforces, `@task`-scoped); the E2 prereg must
-resolve that task's report measure. M4-E1 (decodability, prereg D-014,
-CLM-001) ran 2026-07-19 (`results/m4/20260719-021823-e1-decodability`):
-NOT-DECODABLE on 3/3 tasks — counter-evidence to the FV-label
-HYPOTHESIS at this model/config; CLM-001 stays hypothesis. Replay notes
-(LABNOTES): variance is lens-draw-dominated (readouts must marginalize
-over lens draws), readout tops are task OUTPUT items not labels
-(post-hoc), all instrument controls passed. Pending: Ecaterina's D-015
-ruling (text-only prereg correction — skip_first is a
-calibration-position parameter, not a layer restriction) and her call
-on the next step (E2 per build order). Open notes: v1 cross-code-path
-FV instability vs same-pipeline stability (M2 run-1 entry); why the
-singular-plural label is readable without task examples (M3 run-3
-entry — research question, not asserted).
+Platform is a win32 laptop with an RTX 2000 Ada (D-008/D-009). M4 in
+progress (E1 decodability -> E2 dissociation -> E3 swap -> E4
+confabulation):
+- E1 (CLM-001, prereg D-014): NOT-DECODABLE 3/3 tasks — counter-evidence
+  to the FV-label HYPOTHESIS; stays hypothesis. Readout variance is
+  lens-draw-dominated (marginalize over lens draws); FV readout tops are
+  task OUTPUT items not labels (post-hoc). D-015: skip_first is a
+  calibration-position parameter, not a layer restriction (text-only
+  prereg fix).
+- E2 report-gate (D-016 Path A): the D-013-withdrawn singular-plural
+  report probe was rebuilt as report-score-prior-corrected@singular-plural
+  (prior-corrected log-prob score) and GATED under P3 only — weak signal
+  (~+0.22 log-prob mapping margin); P2 showed the D-013 input-leakage,
+  caught by the shuffled-arm negative control. landmark-country deferred
+  (uncertified in v2).
+- E2 dissociation (CLM-002, prereg D-017): verdict ONE-WAY
+  (`results/m4/20260719-142007-e2-dissociation`). fv-direction ablation
+  is execution-specific and transfers across 3 FV draws (exec
+  0.92->0.00, report unhurt/raised); jspace ablation is NOT
+  report-specific (hurts execution too; report effect ~= its 10-dim
+  random sham — report readout fragile to any 10-dim perturbation). One
+  direction of the v1 double dissociation, not both; CLM-002 stays
+  hypothesis.
+Pending: Ecaterina's disposition on E2 + next step (E3 swap per build
+order). Open notes: v1 cross-code-path FV instability vs same-pipeline
+stability (M2 run-1 entry); the singular-plural label readable without
+task examples (M3 run-3); the fv-ablation-raises-report-readout
+observation (E2 run — research question, not asserted).
