@@ -48,3 +48,13 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - results-dir: results/m4/20260719-142007-e2-dissociation
 - raw-completions: results/m4/20260719-142007-e2-dissociation/raw_completions
 - verified-by: none
+
+### CLM-003
+- status: preliminary
+- statement: On Pythia-410M, projecting out the M2-certified singular-plural function vector at the final position of band layers 4-16 removes task execution (accuracy 0.920 -> 0.000) while NOT reducing the P3 report readout (report_score rose, effect -0.638 vs sham +0.037), robust and near-identical across all 3 certified FV draws (execution effect +0.920, IQR 0, vs sham +0.020). One direction of the execution-vs-verbalization dissociation (Direction 1 of EXP-M4-E2); the reverse (jspace report-specific) was not established.
+- scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e2_dissociation_pythia410m.yaml, singular-plural, 3 FV draws, N_exec=50 / N_report=80
+- evidence-commit: a1c7cb1
+- prereg: harness/preregs/EXP-M4-E2-dissociation.md
+- results-dir: results/m4/20260719-142007-e2-dissociation
+- raw-completions: results/m4/20260719-142007-e2-dissociation/raw_completions
+- verified-by: none

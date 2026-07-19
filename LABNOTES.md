@@ -882,3 +882,10 @@ prereg (only DOUBLE-DISSOCIATION with both transfer flags promotes it).
 The robust, cross-draw fv execution-specificity is recorded as the
 substantive sub-result. Disposition + next step (E3 per build order) go
 to Ecaterina. Run evidence committed.
+
+- Disposition ruled by Ecaterina, 2026-07-19 (session Q&A): (a) open
+  CLM-003 at preliminary for the robust one-way finding (fv-direction
+  ablation removes singular-plural execution while sparing/raising report,
+  cross-draw), evidence commit a1c7cb1 — promotion to verified still needs
+  her raw-read verify: line; CLM-002 (the double dissociation) stays
+  hypothesis. (b) Proceed to E3 (swap) per build order.
