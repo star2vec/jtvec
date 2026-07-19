@@ -887,5 +887,39 @@ to Ecaterina. Run evidence committed.
   CLM-003 at preliminary for the robust one-way finding (fv-direction
   ablation removes singular-plural execution while sparing/raising report,
   cross-draw), evidence commit a1c7cb1 — promotion to verified still needs
-  her raw-read verify: line; CLM-002 (the double dissociation) stays
-  hypothesis. (b) Proceed to E3 (swap) per build order.
+  her raw-read verify: line; CLM-002 (the double dissociation, HYPOTHESIS)
+  stays at hypothesis tier. (b) Proceed to E3 (swap) per build order.
+
+---
+
+## 2026-07-19 — M4-E3: scope ruled, swap build (D-018) (Claude)
+
+E3 tests whether the FV causally carries transferable task identity: on
+capitalize (task A) prompts, swap the FV_A component onto FV_B
+(singular-plural) and measure the task-B answer rate, vs a random-target
+control; lens_swap vs direct_swap asks whether that identity is specific to
+the J-lens basis or lives in the raw residual direction. Same apparatus
+constraint as E2: v1's headline swap pair was the translation pair
+english-french<->english-spanish, but english-spanish is uncertified in v2.
+
+- Scope ruled by Ecaterina, 2026-07-19 (session Q&A): the gated
+  capitalize->singular-plural pair only (M3 fv-swap ControlRecord),
+  cross-draw over the 3 certified FV draws; the translation pair
+  (english-spanish certification) is deferred to a follow-up, as D-011
+  anticipated. Chosen over certifying english-spanish now (the richer
+  label-vs-output-vocabulary contrast, more prerequisite work) or doing
+  both. CLM-004 opened (hypothesis).
+- Build: jtvec/e3_swap.py (SwapRedirectionRule: redirects iff best-swap
+  B-gain median >= 0.20 and random gain <= 0.05, one-sided; J-specific iff
+  lens-direct median >= 0.15, else basis-agnostic; per-draw B-rate
+  DrawSets + cross-draw transfer flag), scripts/m4_e3_swap.py (orchestrator
+  behind start_run; asserts fv-swap gated; reuses the vendored swap hooks
+  and exact-match D-012 scoring; paired contexts), configs/m4_e3_swap_
+  pythia410m.yaml, tests/test_e3_swap.py. D-018 thresholds await
+  ratification; constants in code match. Prereg drafted UNCOMMITTED
+  (EXP-M4-E3-swap.md).
+- Prior context: the M3 fv-swap control (single draw) already moved the
+  B-rate 0.000 -> 0.900/0.933 (lens/direct) with random 0.000; E3 adds the
+  3-draw discipline, the CI/threshold verdict, and the lens-vs-direct
+  J-specificity result as a registered claim. Given M3's direct_swap ~=
+  lens_swap, a basis-agnostic outcome is plausible — the run decides.
