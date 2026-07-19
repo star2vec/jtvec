@@ -1179,3 +1179,69 @@ Prereg drafts EXP-M5-0-qualification / EXP-M5-1-concept-gate and the five
 m5 configs carry these numbers; all remain UNCOMMITTED awaiting her
 thresholds ruling. The 410M side needs no re-fit: cache/draw{0,1,2} lens
 draws from M1 are intact on this machine.
+
+---
+
+## 2026-07-20 — Taxonomy-phase rulings D-021..D-024; preregs committed (Claude)
+
+Ecaterina ruled the open items (session instruction; attribution confirmed
+for this session's rulings — she types milestone sign-off and verify: lines
+herself from now on):
+
+- D-002 RULED: the repo stays PUBLIC. The four housekeeping commits
+  (fd56653, 9b01ab0, 628b205, 5dec2cc) are pushed to origin. The
+  TAXONOMY_DESIGN.md commit (fd56653) is thereby the publicly timestamped
+  registration of the prediction matrix; the scooping risk of a public
+  prediction registry is accepted knowingly.
+- D-021 RULED: partial M4 closure as proposed — E1, E2, E3 are closed at
+  their recorded verdicts (E1 NOT-DECODABLE 3/3; E2 ONE-WAY, CLM-003
+  preliminary; E3 REDIRECTS-BASIS-AGNOSTIC, CLM-004 preliminary); E4 and
+  the emergence sweep stay deferred with their CONSTRAINTS entries live.
+  This disposition authorizes the taxonomy phase (M5+) to proceed. The
+  formal `sign-off:` line remains Ecaterina's to type (ruling 9); this
+  entry records the disposition, not a sign-off in her name.
+- D-022 RULED: vendor github.com/evandez/relations (Hernandez et al. ICLR
+  2024) as a git submodule pinned at 1b9ec3c, D-004 mechanics; data only,
+  code not imported (VENDORING.md updated). The M5.0 LRE bar reading is
+  RATIFIED: few-shot CAPABILITY >= 0.60 at qualification, with faithfulness
+  >= 0.60 as the M5.2 operator positive-control bar. 12-relation battery
+  pinned in EXP-M5-0 and the qualification configs by dataset path.
+- D-023 RULED: pin EleutherAI/pythia-1.4b@fedc38a16eea3bd36a96b906d78d11d2ce18ed79
+  (main resolved 2026-07-19) as proposed.
+- Compute RULED: the 1.4B lens gate runs on the Mac overnight, skip4-only
+  (the recommended option, ~7-8 h, under the 12 h LAW); the binding battery
+  runs on the Mac; the {2,4,8} skip sweep is NOT purchased now (a later
+  need for it becomes a flagged GPU-tier run).
+- Prereg thresholds RULED: ratified as drafted. Both preregs committed as
+  the prereg act — EXP-M5-0-qualification.md and EXP-M5-1-concept-gate.md,
+  with the five m5 configs and the m5_1 concept config. Neither opens a
+  CLAIMS.md entry (both are gates). EXP-M5-1's RUN still waits on EXP-M5-0
+  to produce the admitted-substrate set and re-derived band; its prereg is
+  committed early to lock predictions.
+- D-024 RULED (new — scout tier authorized): AFTER the M5.0 baselines and
+  the 1.4B lens gate complete, a SCOUT MATRIX runs before any further M5
+  gate. Constraints: single-draw, uncertified, post_hoc-stamped,
+  scratchpad/results-scout only, HARD-BANNED from CLAIMS.md and from
+  LABNOTES findings language. Coverage: LRE extraction for the qualifying
+  relations + quick A1 (decode) and A3 (lens-vs-direct application) reads
+  per species, on whichever substrate qualifies. Purpose: a cheap preview
+  of the prediction matrix to guide investment; wall-clock estimated before
+  starting; target <= 2 sessions. Every scout cell showing signal earns the
+  full gate treatment afterward; no scout number is ever quoted outside the
+  scout report. (Discipline note: the scout report is not a findings
+  document — its language stays at the preview/scan register, never the
+  assertive findings verbs the language validator guards.)
+
+Standing reminders still open (unchanged): CLM-003 and CLM-004 stay at
+preliminary awaiting Ecaterina's verify: lines
+(`results/m4/20260719-142007-e2-dissociation/raw_completions/` and
+`results/m4/20260719-151956-e3-swap/raw_completions/`); she does these
+before any paper text cites them.
+
+Next (this session, no long run without its estimate + detached launch):
+build the M5.0 qualification orchestrator (scripts/m5_0_qualification.py,
+reusing scripts/02 baselines + the emergence exec_top1 patterns + the new
+LRE/binding evals) with landing tests, and a generalized lens-gate
+orchestrator for 1.4B (m1_gate.py is 410M/v1-reproduction-specific); commit
+each before its run (start_run discipline); run the Mac baselines, then
+launch the 1.4B lens gate detached overnight with a Monitor.

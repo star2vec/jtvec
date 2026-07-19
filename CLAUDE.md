@@ -60,18 +60,22 @@ battery; E4 and the emergence sweep follow the adult-model matrix.
 
 ## Current state (update this line at each milestone boundary)
 
-M0-M3 complete and signed off; M4 E1-E3 evidence closed at their recorded
-verdicts (E1 NOT-DECODABLE 3/3 tasks; E2 ONE-WAY, CLM-003 preliminary; E3
-REDIRECTS-BASIS-AGNOSTIC, CLM-004 preliminary — both claims await
-Ecaterina's verify: lines); E4 + the emergence sweep are deferred by the
-2026-07-19 taxonomy pivot (validated sweep pipeline and D-019/D-020 stay
-locked, untouched). Taxonomy phase (M5+) is OPEN per TAXONOMY_DESIGN.md
-(axes A1-A5, species S1-S5, hypotheses H1-H5 in CONSTRAINTS.md) and
-M5_SPEC.md; no `sign-off: M4` line exists yet (D-021 proposed, awaiting
-ruling). Current machine: the original M1 MacBook 16GB (MPS, fp32); heavy
-tiers remain the win32 RTX laptop and an A100. Next: M5.0 substrate
-qualification — preregs EXP-M5-0-qualification / EXP-M5-1-concept-gate
-drafted UNCOMMITTED awaiting ratification (the prereg act is the commit).
-Open rulings: D-021 (M4 disposition), D-022 (LRE relations vendoring),
-D-023 (1.4B revision pin), compute placement for the 1.4B lens gate and
-binding battery, D-002 (public repo, standing).
+M0-M3 signed off; M4 partially closed (D-021, 2026-07-20): E1-E3 evidence
+closed at recorded verdicts (E1 NOT-DECODABLE 3/3; E2 ONE-WAY, CLM-003
+preliminary; E3 REDIRECTS-BASIS-AGNOSTIC, CLM-004 preliminary — both await
+Ecaterina's verify: lines), E4 + emergence sweep deferred with entries live
+(D-019/D-020 locked). Taxonomy phase (M5+) OPEN per TAXONOMY_DESIGN.md (axes
+A1-A5, species S1-S5, H1-H5 in CONSTRAINTS.md) + M5_SPEC.md. Rulings
+2026-07-20: D-002 repo PUBLIC (4 housekeeping commits pushed); D-022
+evandez/relations vendored @1b9ec3c (third_party/relations submodule, LRE
+data); D-023 pythia-1.4b pinned @fedc38a; compute — 1.4B lens gate Mac
+overnight skip4-only, binding on Mac, skip-sweep not purchased; D-024 scout
+tier authorized AFTER M5.0 baselines + 1.4B lens gate (single-draw,
+post_hoc, scratchpad/results-scout only, banned from CLAIMS/findings).
+Preregs EXP-M5-0-qualification + EXP-M5-1-concept-gate COMMITTED (thresholds
+ratified; both are gates, no CLAIMS entry). Current machine: the original M1
+MacBook 16GB (MPS, fp32); heavy tiers remain the win32 RTX laptop and an
+A100. Next: build scripts/m5_0_qualification.py (+ a generalized lens-gate
+orchestrator for 1.4B) with landing tests, commit, run M5.0 Mac baselines,
+then launch the 1.4B lens gate detached overnight. Standing: D-002 accepted
+knowingly; CLM-003/CLM-004 verify: lines still pending.

@@ -1,0 +1,40 @@
+# M5.0 substrate qualification, EleutherAI/pythia-410m (EXP-M5-0; DRAFT,
+# uncommitted until the prereg act). Deterministic greedy exact-match
+# baselines (D-012/D-006): no draw namespacing needed. LRE battery
+# membership + data path finalized with D-022; binding subtasks generated
+# by a scripts/make_tasks.py extension.
+experiment: pythia410m_m5_qualification
+seed: 0
+device: mps
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+batteries:
+  s1_tasks: [capital-operand, capital-recall, context-binding,
+             multihop-scaled, opposites, swap-capitals, typo-robustness,
+             word-pairs]
+  fv_tasks: [capitalize, singular-plural, english-french]
+  lre_relations:  # evandez/relations paths (category/file, no .json); D-022 pin
+    - factual/country_capital_city
+    - factual/landmark_in_country
+    - factual/food_from_country
+    - factual/product_by_company
+    - linguistic/adj_antonym
+    - linguistic/verb_past_tense
+    - linguistic/word_first_letter
+    - linguistic/word_last_letter
+    - commonsense/object_superclass
+    - commonsense/fruit_inside_color
+    - commonsense/task_done_by_tool
+    - commonsense/work_location
+  binding_subtasks: [bind2, bind3, context-binding]
+evals:
+  n_shots: 10
+  admission_bar_s1: 0.8
+  admission_bar_lre: 0.6
+  admission_bar_binding: 0.7
+  lre_n_heldout: 50
+  binding_n: 60
+cache_dir: cache/m5/qual_pythia410m
+results_dir: results/m5
