@@ -782,3 +782,41 @@ prereg, flagged now; (c) the instrument is GATED (ControlRecord in the run
 controls.json); E2's prereg cites it. No BANNED_INSTRUMENTS change — this
 is a pass under a new name, the D-013 forced-choice entry stands. Disposition
 + the E2 dissociation design go to Ecaterina next. Run evidence committed.
+
+### 2026-07-19 — M4-E2 dissociation build (D-017); high-N ruled (Claude)
+
+With the report measure unblocked, the E2 dissociation is designed on
+singular-plural (D-016 Path A). Ecaterina ruled "build as designed,
+high-N" over strengthening the report measure first or hedging with
+capitalize (session Q&A). CLM-002 opened (hypothesis).
+
+- Design: two measures (execution = greedy exact-match accuracy; report =
+  report_score under P3, the gated instrument), two M3-gated ablations
+  (fv-direction, jspace) each vs matched sham, at final position of band
+  layers 4–16. Cross-draw ablation transfer (CONSTRAINTS): the fv ablation
+  re-derived from each of the 3 M2-certified FV draws, jspace from each of
+  the 3 M1 lens draws (jspace reads the lens — the E1 nuisance axis). Every
+  effect is a 3-draw DrawSet (clean − ablated_k). Context sets sampled once
+  and reused across conditions (paired, to fight the weak P3 signal).
+- Decision (D-017, thresholds await ratification): an ablation hurts a
+  measure iff effect_median − sham_median ≥ δ (δ_exec 0.15, δ_report 0.10
+  log-prob). Direction 1 = fv hurts execution not report; Direction 2 =
+  jspace hurts report not execution; DOUBLE-DISSOCIATION (HYPOTHESIS) iff
+  both, with per-arm cross-draw transfer flags (every draw clears
+  sham+δ). N_exec 50, N_report 80.
+- Build: jtvec/e2_dissociation.py (effect DrawSet + DissociationRule),
+  scripts/m4_e2_dissociation.py (orchestrator behind start_run; asserts all
+  three consumed instruments gated via require_controlled against their
+  committed ControlRecords before measuring), configs/m4_e2_dissociation_
+  pythia410m.yaml, tests/test_e2_dissociation.py. Reuses the ablation hooks
+  M3 exercised (exp3.make_hooks / final_logits_under), exact-match scoring
+  (D-012 answer_first_tokens), and the certified-FV / lens loaders.
+- Setup smoke (off-run, not committed): lens draw 0 (cache/m3) identity
+  matches M1 draw 0; FV loads; hooks fire; on one item fv ablation breaks
+  execution (hit True→False) while jspace leaves it (hit True) — wiring
+  validated (M3-run-1 precedent: catch code bugs before the gate).
+- Weak-signal caveat carried from the report-gate: the jspace→report arm
+  must detect a reduction in a ~+0.22 margin; it may return inconclusive,
+  which the prereg pre-commits to reporting rather than engineering around.
+  Prereg drafted UNCOMMITTED (EXP-M4-E2-dissociation.md); committing it is
+  the prereg act, after threshold ratification.
