@@ -58,3 +58,13 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - results-dir: results/m4/20260719-142007-e2-dissociation
 - raw-completions: results/m4/20260719-142007-e2-dissociation/raw_completions
 - verified-by: none
+
+### CLM-004
+- status: hypothesis
+- statement: On capitalize (task A) prompts, swapping the certified FV_A component onto FV_B (singular-plural) at band layers 4-16 redirects the model to produce task-B (plural) outputs above a random-target control, per EXP-M4-E3-swap, cross-draw over the 3 certified FV draws; lens_swap vs direct_swap decides whether the identity is J-basis-specific or basis-agnostic. Verdict table recorded from the run.
+- scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e3_swap_pythia410m.yaml, capitalize->singular-plural, 3 FV draws, N=30 shared queries
+- evidence-commit: none
+- prereg: harness/preregs/EXP-M4-E3-swap.md
+- results-dir: none
+- raw-completions: none
+- verified-by: none
