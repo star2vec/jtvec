@@ -1,0 +1,19 @@
+{
+  "run_name": "e1-decodability",
+  "started": "2026-07-19T02:18:23",
+  "git_commit": "6f9798fcb7d283a7248c49b6fc54cfa04890104d",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M4-E1-decodability.md",
+  "prereg_commit": "6f9798fcb7d283a7248c49b6fc54cfa04890104d",
+  "config_sha256": "58e60bbab56608fd443482549cc1b61579ccf843b1e1fb64a2ee0b48ca896409",
+  "post_hoc": false,
+  "verdicts": {
+    "capitalize": "NOT-DECODABLE",
+    "singular-plural": "NOT-DECODABLE",
+    "english-french": "NOT-DECODABLE"
+  },
+  "clm001_moves_to_preliminary": false,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 2299.3,
+  "peak_rss_gb": 3.34,
+  "finished": "2026-07-19T02:56:42"
+}

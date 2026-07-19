@@ -68,10 +68,16 @@ Platform is a win32 laptop with an RTX 2000 Ada (D-008 compat ruling,
 cu130 torch; D-009 compute ruling). D-013: the report probe on
 singular-plural is WITHDRAWN per the instruments LAW
 (`BANNED_INSTRUMENTS` enforces, `@task`-scoped); the E2 prereg must
-resolve that task's report measure (redesigned probe/null re-controlled
-there, or a respecified task pair). Next: M4 confirmatory experiments,
-E1 (decodability) first — no E1 run before its prereg is committed and
-its resource estimate ruled. Open notes: v1 cross-code-path FV
-instability vs same-pipeline stability (LABNOTES M2 run-1 entry); why
-the singular-plural label is readable without task examples (M3 run-3
+resolve that task's report measure. M4-E1 (decodability, prereg D-014,
+CLM-001) ran 2026-07-19 (`results/m4/20260719-021823-e1-decodability`):
+NOT-DECODABLE on 3/3 tasks — counter-evidence to the FV-label
+HYPOTHESIS at this model/config; CLM-001 stays hypothesis. Replay notes
+(LABNOTES): variance is lens-draw-dominated (readouts must marginalize
+over lens draws), readout tops are task OUTPUT items not labels
+(post-hoc), all instrument controls passed. Pending: Ecaterina's D-015
+ruling (text-only prereg correction — skip_first is a
+calibration-position parameter, not a layer restriction) and her call
+on the next step (E2 per build order). Open notes: v1 cross-code-path
+FV instability vs same-pipeline stability (M2 run-1 entry); why the
+singular-plural label is readable without task examples (M3 run-3
 entry — research question, not asserted).

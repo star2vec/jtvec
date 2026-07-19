@@ -609,3 +609,77 @@ prereg harness/preregs/EXP-M4-E1-decodability.md.
   statistics are provably invariant to the norm rescaling — pinned by a
   unit test; the companion norm cells are recorded anyway per the
   prereg's sample plan).
+
+### 2026-07-19 — E1 run complete: 0/3 tasks decodable at the bar; replayed (Claude)
+
+Run results/m4/20260719-021823-e1-decodability (prereg + code 6f9798f)
+finalized end to end: wall 2,299 s (inside the 25-50 min estimate), peak
+RSS 3.34 GB, device cuda. Prerequisites: lens draws 1-2 refit on this
+machine matched their committed M1 manifests exactly (identity incl.
+calibration sha256; draw 0 cache-hit from the M3-verified fit) — all
+three M1 lens draws now reproduce cross-machine. Readout instrument
+controls all PASS before any FV was read: positive 13/13 band layers on
+every (instance x task); negative random-vector medians 628-1,328 vs
+bound 100. ControlRecord pairs issued for
+jlens-label-rank-readout@{capitalize,singular-plural,english-french}.
+
+Verdicts under the D-014 constants: NOT-DECODABLE on all three tasks —
+0/3 DECODABLE-AND-SEPARATED, zero INSTRUMENT-VOID. Per the preregistered
+rule this is evidence against the FV-label HYPOTHESIS at this
+model/config; CLM-001 stays hypothesis with the counter-evidence recorded
+in its entry.
+
+- capitalize: jlens label-rank median 278 (IQR 485 over the 9-cell grid)
+  vs C1 <= 20; random beaten 79/80/80 vs C4 >= 95; logit median 6,563
+  (C3 pass); jlens < logit ordering 33/33 cells (C2 pass).
+- singular-plural: 436 (IQR 261); beaten 80/79/77; logit 3,203 (C3
+  pass); C2 33/33.
+- english-french: 56 (IQR 31); beaten 96/97/95 (C4 PASS); logit median
+  114 (C3 FAIL, < 200); C1 fail; C2 33/33.
+
+Raw-output replay (read-only; surprise rule) before anything else, facts:
+
+1. Every headline number re-derives by hand from the committed grids
+   (9-cell and 3-draw medians; C4 counts recomputed from the
+   random_*/decode_* raw cells: 79/80/96 for FV draw 1, equal to stored).
+2. Grid variance is lens-draw-dominated, not FV-draw-dominated: within a
+   lens draw the three certified FV draws agree tightly (capitalize at
+   lens draw 2: ranks 66/64/74) while across lens draws the same
+   statistic moves ~10x (capitalize 64-74 / 256-282 / 559-619 by lens
+   draw; english-french 17-30 at lens draw 1 vs 61-65 at draw 2). The
+   M2-certified FVs are draw-stable through this readout; the lens draw
+   is the dominant nuisance at these ranks. Design consequence flagged
+   for E2-E4: any readout-based number must marginalize over lens draws
+   (the 3x3 grid did; v1's single-lens single-FV Exp-1 could not).
+3. v1-parity: under v1's Exp-1 criteria (ordering + random control, no
+   absolute bar) english-french would have counted decodable here
+   (ordering 33/33, random 96/97/95). The v2 absolute bar C1 <= 20 and
+   logit floor C3 >= 200 are what refuse it — the stricter preregistered
+   rule ruling as written, not an instrument failure (all controls
+   passed).
+4. Top-token content of the jlens readouts (decode_* cells; post-hoc
+   replay observation, labeled as such), stated operationally: the top
+   of the readout is dominated by task OUTPUT items, not label words —
+   singular-plural: literal plural nouns ("stations", "names",
+   "objects") and the "s"/"es" morpheme; english-french: French tokens
+   ("é", "de", "que"); capitalize: punctuation/sentence-start tokens.
+   Label words never enter the top-16 except english-french at lens
+   draw 1 (ranks 17-30). The preregistered descriptive arm points the
+   same way: output-cloud mean rank jlens 1.3k/2.9k/11.9k vs logit
+   13.8k/13.3k/20.2k (best layer, lens draw 0). Whether label and
+   output-vocabulary readability are separable FV properties is a
+   CONSTRAINTS HYPOTHESIS; nothing beyond the readings above is asserted.
+
+- D-015 (proposed, awaiting Ecaterina): correction of D-014(d)'s premise.
+  skip_first in the vendored jlens is a calibration-position parameter
+  (leading prompt positions excluded from the Jacobian average;
+  jlens/fitting.py valid_position_mask), NOT a source-layer restriction;
+  every lens variant has all 13 band layers (the run's positive
+  controls: 13/13 on every instance). My "skip16 overlaps the band at
+  L16 only" claim behind the D-014(d) question was wrong. Operational effect nil:
+  ceil(0.75 x n) equals the ratified 10/13 at n=13 for every instance —
+  no criterion or verdict differs. Proposal: (a) this entry stands as
+  the LABNOTES correction; (b) one prereg Deviations note correcting the
+  false parenthetical in the Instruments section ("skip16_n10's single
+  band layer L16 must pass") — text-only, no criterion change.
+  Ecaterina rules on (b).
