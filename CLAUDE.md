@@ -93,8 +93,23 @@ confabulation):
   preliminary. With E2 this is the causal complement: ablation removes
   execution, swap redirects it; E1 found the same FV is not lens-readable
   as a label.
-Pending: Ecaterina's disposition on E3 + next step (E4 confabulation per
-build order). Open notes: v1 cross-code-path FV instability vs
+- Emergence sweep (the main-track bet; E4 confabulation DEFERRED by this
+  pivot): targets the developmental HYPOTHESIS (execution matures early
+  while portable stability-gated FVs emerge late), multi-scale on Pythia
+  to also kill n=1. Built (jtvec/emergence.py + scripts/m4_emergence_sweep.py,
+  reusing the M2 gate at rungs {25,50} per checkpoint) and VALIDATED
+  bit-for-bit on a laptop dry-run vs M2 (converged_at=25) and E1 (outvocab
+  1302) — after the dry-run caught + fixed a tokenizer-BOS mutation bug
+  (build the lens AFTER extraction). Ruled: 3 scales {410M,1B,2.8B};
+  D-019 constants ratified; batched-AIE optimization authorized (D-020).
+Pending, in order: (1) implement + re-validate the batched-AIE (D-020):
+fix the abandoned batched_input addmm->matmul in vendored
+replace_activation_w_avg + batch activation_replacement over heads
+(~16x, 384->24 forwards/trial), gated by a bit-for-bit re-validation vs
+the unbatched AIE; (2) Ecaterina secures the A100 (~4 A100-h/3 scales
+batched); (3) commit prereg EXP-M4-emergence + CLM-005 (drafted, in
+scratchpad) + 1B/2.8B sibling configs, then launch the sweep; (4) E4;
+then writeup. Open notes: v1 cross-code-path FV instability vs
 same-pipeline stability (M2 run-1); singular-plural label readable
 without task examples (M3 run-3); fv-ablation-raises-report-readout (E2
 run) — research questions, not asserted.
