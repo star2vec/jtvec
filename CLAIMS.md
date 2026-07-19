@@ -60,11 +60,11 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - verified-by: none
 
 ### CLM-004
-- status: hypothesis
-- statement: On capitalize (task A) prompts, swapping the certified FV_A component onto FV_B (singular-plural) at band layers 4-16 redirects the model to produce task-B (plural) outputs above a random-target control, per EXP-M4-E3-swap, cross-draw over the 3 certified FV draws; lens_swap vs direct_swap decides whether the identity is J-basis-specific or basis-agnostic. Verdict table recorded from the run.
+- status: preliminary
+- statement: On capitalize (task A) prompts, swapping the certified FV_A component onto FV_B (singular-plural) at band layers 4-16 redirects the model to produce task-B (plural) outputs above a random-target control, per EXP-M4-E3-swap, cross-draw over the 3 certified FV draws. E3 result (2026-07-19): REDIRECTS-BASIS-AGNOSTIC — task-B rate 0.000 -> lens_swap 0.933 / direct_swap 0.800 (random 0.000), task A suppressed to 0.000, transfers across all 3 FV draws; lens-direct gap 0.133 < 0.15 so the identity is carried by the raw residual direction, not specifically the J-lens basis. Promotion to verified needs Ecaterina's raw-read verify line.
 - scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e3_swap_pythia410m.yaml, capitalize->singular-plural, 3 FV draws, N=30 shared queries
-- evidence-commit: none
+- evidence-commit: 0d8b278
 - prereg: harness/preregs/EXP-M4-E3-swap.md
-- results-dir: none
-- raw-completions: none
+- results-dir: results/m4/20260719-151956-e3-swap
+- raw-completions: results/m4/20260719-151956-e3-swap/raw_completions
 - verified-by: none
