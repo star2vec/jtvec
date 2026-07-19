@@ -1099,3 +1099,59 @@ on capitalize. Not shipped unless that passes. Deviation recorded in
 VENDORING.md + D-020 at implementation. Deferred from this session's tail
 to a focused implementation (delicate scientific-core surgery; the
 validated sweep pipeline + all decisions are locked and committed).
+
+---
+
+## 2026-07-19 — Taxonomy phase opened (M5+): residency pivot (Claude)
+
+Ecaterina ruled (session kickoff instruction): the project pivots from the
+"task vectors in the J-space" framing to the workspace-residency taxonomy —
+five axes A1–A5, species S1–S5, hypotheses H1–H5 — per TAXONOMY_DESIGN.md
+and M5_SPEC.md (committed fd56653). The Aug-3 deadline is dropped; the
+target is main-track quality on the science's own schedule. The emergence
+sweep is deferred to after the adult-model matrix; its validated pipeline
+and the D-019/D-020 rulings stay locked, untouched.
+E4 (confabulation, HYPOTHESIS tier) remains deferred on the docket. H1–H5 are
+HYPOTHESIS-tier entries in
+CONSTRAINTS.md (9b01ab0), with superseded-by-taxonomy annotations appended
+to the recast v1-framing entries (append-only; nothing deleted).
+
+Machine + gates: the kickoff described a fresh clone on a third platform;
+in fact this session runs on the original M1 MacBook (the M0/M1 machine),
+existing checkout at origin/main c07f4d1, clean tree, submodules at the
+pinned SHAs (jacobian-lens 581d398, function_vectors fb9eac7), with the
+untracked cache/draw{0,1,2} (three certified 410M lens draws) intact from
+M1. Platform verification on this machine, this date: `uv sync --frozen`
+clean, `uv run pytest -q` 143 passed, validators 3/3 PASS. No platform
+issues to report (D-008 precedent: none needed fixing).
+
+Proposed decisions put to Ecaterina (awaiting her ruling; nothing adopted):
+
+- D-021 (proposed): M4 disposition. No `sign-off: M4` line exists and the
+  build-order protocol conditions M5 start on the previous milestone's
+  sign-off. Proposal: a partial-closure line (E1–E3 evidence closed at
+  their recorded verdicts; E4 + emergence sweep deferred by this pivot) —
+  or her alternative ruling.
+- D-022 (proposed): LRE relation data vendoring. M5.0 needs >= 8 relations
+  from the Hernandez et al. set; no such data exists in the repo or the
+  vendored Todd datasets. Proposal: vendor github.com/evandez/relations at
+  a pinned commit (submodule, mirroring D-004 mechanics) with attribution
+  in VENDORING.md; battery membership specified in EXP-M5-0 at
+  ratification.
+- D-023 (proposed): Pythia-1.4B revision pin for M5 configs — resolve the
+  current EleutherAI/pythia-1.4b main SHA and pin it, mirroring the 410M
+  @9879c9b pattern.
+- Compute placement for the 1.4B lens gate (Mac-overnight vs GPU tier) and
+  the binding battery: held until the pre-prereg probe numbers are in
+  (recorded in a follow-up entry).
+
+Standing open items surfaced at session start, per the kickoff: (i) D-002 —
+the repo is public, still unruled; (ii) CLM-003 and CLM-004 are at
+preliminary awaiting Ecaterina's verify: lines (raw dirs
+`results/m4/20260719-142007-e2-dissociation/raw_completions/` and
+`results/m4/20260719-151956-e3-swap/raw_completions/`).
+
+Session discipline note: preregs EXP-M5-0-qualification and
+EXP-M5-1-concept-gate are being drafted UNCOMMITTED; committing is the
+prereg act and happens only after Ecaterina ratifies thresholds. No
+scientific run starts before that commit and her compute rulings.

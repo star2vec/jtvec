@@ -24,7 +24,9 @@ M4 confirmatory experiments (E1 decodability -> E2 dissociation -> E3 swap
 the M2 gate passing at >= 2 checkpoints). A milestone starts only after
 Ecaterina's `sign-off: M<k>` line exists in LABNOTES for the previous one.
 Nothing FV-dependent runs before the M2 gate produces a converged trial
-count (or a documented non-convergence).
+count (or a documented non-convergence). Taxonomy phase (2026-07-19,
+TAXONOMY_DESIGN.md): M5 species certificates (M5_SPEC.md) -> M6 axis
+battery; E4 and the emergence sweep follow the adult-model matrix.
 
 ## Hard rules beyond the LAWs (from the project brief)
 
@@ -58,58 +60,18 @@ count (or a documented non-convergence).
 
 ## Current state (update this line at each milestone boundary)
 
-M0-M3 complete and signed off (M1: lens gate PASS R1-R6, bit-for-bit v1
-reproduction; M2: FV stability gate PASS, converged_at=25 on all three
-tasks, certificates in `results/m2/20260718-114950-fv-stability-gate`;
-M3: intervention-instrument gate, D-011/D-012 — fv-direction-ablation,
-jspace-ablation, fv-swap GATED, report-probe gated for capitalize and
-english-french, evidence `results/m3/20260718-174954-instrument-gate`).
-Platform is a win32 laptop with an RTX 2000 Ada (D-008/D-009). M4 in
-progress (E1 decodability -> E2 dissociation -> E3 swap -> E4
-confabulation):
-- E1 (CLM-001, prereg D-014): NOT-DECODABLE 3/3 tasks — counter-evidence
-  to the FV-label HYPOTHESIS; stays hypothesis. Readout variance is
-  lens-draw-dominated (marginalize over lens draws); FV readout tops are
-  task OUTPUT items not labels (post-hoc). D-015: skip_first is a
-  calibration-position parameter, not a layer restriction (text-only
-  prereg fix).
-- E2 report-gate (D-016 Path A): the D-013-withdrawn singular-plural
-  report probe was rebuilt as report-score-prior-corrected@singular-plural
-  (prior-corrected log-prob score) and GATED under P3 only — weak signal
-  (~+0.22 log-prob mapping margin); P2 showed the D-013 input-leakage,
-  caught by the shuffled-arm negative control. landmark-country deferred
-  (uncertified in v2).
-- E2 dissociation (CLM-002, prereg D-017): verdict ONE-WAY
-  (`results/m4/20260719-142007-e2-dissociation`). fv-direction ablation
-  is execution-specific and transfers across 3 FV draws (exec
-  0.92->0.00, report unhurt/raised); jspace ablation is NOT
-  report-specific. CLM-002 stays hypothesis; CLM-003 opened (preliminary)
-  for the robust one-way fv execution-specificity.
-- E3 swap (CLM-004, prereg D-018): verdict REDIRECTS-BASIS-AGNOSTIC
-  (`results/m4/20260719-151956-e3-swap`). Swapping the certified FV_A
-  component onto FV_B redirects capitalize->singular-plural (task-B rate
-  0.00->0.93, all 3 FV draws; random ~0; task A suppressed to 0), in the
-  raw residual basis (lens-direct gap 0.133 < 0.15). CLM-004 ->
-  preliminary. With E2 this is the causal complement: ablation removes
-  execution, swap redirects it; E1 found the same FV is not lens-readable
-  as a label.
-- Emergence sweep (the main-track bet; E4 confabulation DEFERRED by this
-  pivot): targets the developmental HYPOTHESIS (execution matures early
-  while portable stability-gated FVs emerge late), multi-scale on Pythia
-  to also kill n=1. Built (jtvec/emergence.py + scripts/m4_emergence_sweep.py,
-  reusing the M2 gate at rungs {25,50} per checkpoint) and VALIDATED
-  bit-for-bit on a laptop dry-run vs M2 (converged_at=25) and E1 (outvocab
-  1302) — after the dry-run caught + fixed a tokenizer-BOS mutation bug
-  (build the lens AFTER extraction). Ruled: 3 scales {410M,1B,2.8B};
-  D-019 constants ratified; batched-AIE optimization authorized (D-020).
-Pending, in order: (1) implement + re-validate the batched-AIE (D-020):
-fix the abandoned batched_input addmm->matmul in vendored
-replace_activation_w_avg + batch activation_replacement over heads
-(~16x, 384->24 forwards/trial), gated by a bit-for-bit re-validation vs
-the unbatched AIE; (2) Ecaterina secures the A100 (~4 A100-h/3 scales
-batched); (3) commit prereg EXP-M4-emergence + CLM-005 (drafted, in
-scratchpad) + 1B/2.8B sibling configs, then launch the sweep; (4) E4;
-then writeup. Open notes: v1 cross-code-path FV instability vs
-same-pipeline stability (M2 run-1); singular-plural label readable
-without task examples (M3 run-3); fv-ablation-raises-report-readout (E2
-run) — research questions, not asserted.
+M0-M3 complete and signed off; M4 E1-E3 evidence closed at their recorded
+verdicts (E1 NOT-DECODABLE 3/3 tasks; E2 ONE-WAY, CLM-003 preliminary; E3
+REDIRECTS-BASIS-AGNOSTIC, CLM-004 preliminary — both claims await
+Ecaterina's verify: lines); E4 + the emergence sweep are deferred by the
+2026-07-19 taxonomy pivot (validated sweep pipeline and D-019/D-020 stay
+locked, untouched). Taxonomy phase (M5+) is OPEN per TAXONOMY_DESIGN.md
+(axes A1-A5, species S1-S5, hypotheses H1-H5 in CONSTRAINTS.md) and
+M5_SPEC.md; no `sign-off: M4` line exists yet (D-021 proposed, awaiting
+ruling). Current machine: the original M1 MacBook 16GB (MPS, fp32); heavy
+tiers remain the win32 RTX laptop and an A100. Next: M5.0 substrate
+qualification — preregs EXP-M5-0-qualification / EXP-M5-1-concept-gate
+drafted UNCOMMITTED awaiting ratification (the prereg act is the commit).
+Open rulings: D-021 (M4 disposition), D-022 (LRE relations vendoring),
+D-023 (1.4B revision pin), compute placement for the 1.4B lens gate and
+binding battery, D-002 (public repo, standing).
