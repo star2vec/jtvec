@@ -1,0 +1,18 @@
+{
+  "run_name": "e3-swap",
+  "started": "2026-07-19T15:19:56",
+  "git_commit": "0c523d27e444ae509f356915d3be77b420688cf2",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M4-E3-swap.md",
+  "prereg_commit": "0c523d27e444ae509f356915d3be77b420688cf2",
+  "config_sha256": "0ba0cf622dd4f900a99a206e9c9767a134556559c16b9a9258e9add1217af725",
+  "post_hoc": false,
+  "verdict": "REDIRECTS-BASIS-AGNOSTIC",
+  "redirects": true,
+  "j_specific": false,
+  "cross_draw_transfer": true,
+  "none_b": 0.0,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 17.5,
+  "peak_rss_gb": 3.37,
+  "finished": "2026-07-19T15:20:13"
+}

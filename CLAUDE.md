@@ -83,12 +83,18 @@ confabulation):
   (`results/m4/20260719-142007-e2-dissociation`). fv-direction ablation
   is execution-specific and transfers across 3 FV draws (exec
   0.92->0.00, report unhurt/raised); jspace ablation is NOT
-  report-specific (hurts execution too; report effect ~= its 10-dim
-  random sham — report readout fragile to any 10-dim perturbation). One
-  direction of the v1 double dissociation, not both; CLM-002 stays
-  hypothesis.
-Pending: Ecaterina's disposition on E2 + next step (E3 swap per build
-order). Open notes: v1 cross-code-path FV instability vs same-pipeline
-stability (M2 run-1 entry); the singular-plural label readable without
-task examples (M3 run-3); the fv-ablation-raises-report-readout
-observation (E2 run — research question, not asserted).
+  report-specific. CLM-002 stays hypothesis; CLM-003 opened (preliminary)
+  for the robust one-way fv execution-specificity.
+- E3 swap (CLM-004, prereg D-018): verdict REDIRECTS-BASIS-AGNOSTIC
+  (`results/m4/20260719-151956-e3-swap`). Swapping the certified FV_A
+  component onto FV_B redirects capitalize->singular-plural (task-B rate
+  0.00->0.93, all 3 FV draws; random ~0; task A suppressed to 0), in the
+  raw residual basis (lens-direct gap 0.133 < 0.15). CLM-004 ->
+  preliminary. With E2 this is the causal complement: ablation removes
+  execution, swap redirects it; E1 found the same FV is not lens-readable
+  as a label.
+Pending: Ecaterina's disposition on E3 + next step (E4 confabulation per
+build order). Open notes: v1 cross-code-path FV instability vs
+same-pipeline stability (M2 run-1); singular-plural label readable
+without task examples (M3 run-3); fv-ablation-raises-report-readout (E2
+run) — research questions, not asserted.

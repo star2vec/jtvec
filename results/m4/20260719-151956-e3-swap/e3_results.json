@@ -1,0 +1,34 @@
+{
+  "verdict": "REDIRECTS-BASIS-AGNOSTIC",
+  "redirects": true,
+  "cross_draw_transfer": true,
+  "j_specific": false,
+  "none_b": 0.0,
+  "best_swap_gain_median": 0.9333333333333333,
+  "best_swap_gain_iqr": 0.0,
+  "best_swap_gain_values": [
+    0.9333333333333333,
+    0.9333333333333333,
+    0.9333333333333333
+  ],
+  "random_gain_median": 0.0,
+  "lens_b_median": 0.9333333333333333,
+  "lens_b_values": [
+    0.9333333333333333,
+    0.9333333333333333,
+    0.9333333333333333
+  ],
+  "direct_b_median": 0.8,
+  "direct_b_values": [
+    0.8,
+    0.7666666666666667,
+    0.8666666666666667
+  ],
+  "random_b_median": 0.0,
+  "random_b_values": [
+    0.03333333333333333,
+    0.0,
+    0.0
+  ],
+  "j_specificity_gap": 0.1333333333333333
+}

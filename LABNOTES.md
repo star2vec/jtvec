@@ -923,3 +923,49 @@ english-french<->english-spanish, but english-spanish is uncertified in v2.
   3-draw discipline, the CI/threshold verdict, and the lens-vs-direct
   J-specificity result as a registered claim. Given M3's direct_swap ~=
   lens_swap, a basis-agnostic outcome is plausible — the run decides.
+
+### 2026-07-19 — E3 swap run: REDIRECTS-BASIS-AGNOSTIC; replayed (Claude)
+
+Thresholds ratified (D-018); prereg + CLM-004 committed 0c523d2; run
+results/m4/20260719-151956-e3-swap finalized (wall 17.5 s, peak RSS 3.37
+GB, cuda). fv-swap asserted gated. Task-B answer rate by condition
+(median over 3 FV draws):
+
+| condition | draw1 | draw2 | draw3 | median |
+|---|---|---|---|---|
+| none | 0.000 | 0.000 | 0.000 | 0.000 |
+| lens_swap | 0.933 | 0.933 | 0.933 | 0.933 |
+| direct_swap | 0.800 | 0.767 | 0.867 | 0.800 |
+| random_target | 0.033 | 0.000 | 0.000 | 0.000 |
+
+Verdict REDIRECTS-BASIS-AGNOSTIC: best-swap B-gain median +0.933 (random
++0.000) clears 0.20 and separates from the control; transfers (every draw
+0.933); lens-direct gap +0.133 is below the 0.15 J-specificity bar, so the
+task identity is carried by the raw residual direction, not specifically
+the J-lens basis. CLM-004 -> preliminary per the prereg (REDIRECTS +
+transfer).
+
+Raw-output replay (read-only), facts:
+1. B-rates re-derive by hand (none B 0.000 / A 0.933; lens_swap B 0.933 /
+   A 0.000; direct_swap B 0.800 / A 0.000; random B 0.033 / A 0.000). Under
+   both swaps task A is fully suppressed (A -> 0.000), so this is a genuine
+   redirection, not additive noise.
+2. Swap outputs are real plural forms ("laptops", "shirts", "airplanes"),
+   including the irregular "mouse" -> " mice" under lens_swap — the swap
+   engages morphological pluralization, not a bare "+s". random_target
+   outputs empty/newline (23/30) — a norm-matched random target destroys
+   computation (as CONSTRAINTS records), scoring B ~ 0.
+3. The lens-direct gap (0.133): on 5/30 queries lens_swap yields the full
+   plural while direct_swap yields a truncated first token ("book" ->
+   " books" vs " b"; "mouse" -> " mice" vs " m"). The lens basis is
+   marginally cleaner but not necessary — direct redirects on 80% and both
+   null task A. Hence basis-agnostic (below the bar), not J-specific.
+
+Net: on capitalize->singular-plural the certified FV carries transferable,
+causal task identity — swapping it redirects execution to task B (0.00 ->
+0.93, all 3 draws) above a random control, in the raw residual basis. With
+E2 (fv ablation removes execution) this is the causal complement:
+ablation removes, swap redirects. E1 found the same FV is not lens-readable
+as a label. All scoped to Pythia-410M; the separability HYPOTHESIS stays at
+tier. Disposition + next step (E4, the confabulation HYPOTHESIS) to
+Ecaterina. Evidence committed.
