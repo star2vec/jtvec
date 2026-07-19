@@ -969,3 +969,66 @@ ablation removes, swap redirects. E1 found the same FV is not lens-readable
 as a label. All scoped to Pythia-410M; the separability HYPOTHESIS stays at
 tier. Disposition + next step (E4, the confabulation HYPOTHESIS) to
 Ecaterina. Evidence committed.
+
+- Disposition ruled by Ecaterina, 2026-07-19: open CLM-004 at preliminary
+  for the REDIRECTS-BASIS-AGNOSTIC result (evidence commit 0d8b278);
+  promotion to verified still needs her raw-read verify: line.
+
+---
+
+## 2026-07-19 — Strategic pivot to the main-track emergence sweep (Claude)
+
+Ecaterina set the target to an **EACL main-track** paper and, after a
+brutally-honest assessment of the current results, ruled the next
+investment (session Q&A). The honest read: E1 (FV not label-decodable,
+counter to v1), E2 (ONE-WAY, not the full double dissociation, HYPOTHESIS),
+E3 (swap redirects — close to known Todd/Hendel function-vector results) are
+a coherent *mechanism foundation* but, on a single model with the headline
+only partly replicated, are workshop-tier, not main-track. The
+main-track-carrying result is developmental: whether ICL execution matures
+early while portable, stability-gated FVs emerge late (HYPOTHESIS) — the
+emergence sweep, uniquely enabled by Pythia's dense checkpoints, with the
+multi-scale axis (kills the n=1 objection) sharing the same infrastructure.
+
+- Rulings: (a) sweep ambition = emergence × MULTIPLE Pythia scales
+  {160M..2.8B} (not single-scale); (b) compute posture = "confirm A100
+  availability first" — produce concrete per-option A100-hour estimates for
+  Ecaterina to secure the allocation before any launch; (c) E4
+  (confabulation, HYPOTHESIS) deferred by this pivot (still on the docket as
+  supporting work). Plan file: .claude/plans/quizzical-floating-emerson.md.
+
+### 2026-07-19 — M4-emergence build (D-019 constants pending ratification)
+
+Two Explore analyses grounded the plan: (1) extraction is inference-only,
+cost = n_trials_aie·(L·H+1)·t_fwd, and head selection is already
+per-checkpoint automatic in compute_function_vector (fixes v1's fixed-head
+confound); the cheapest gate that reproduces converged_at=25 WITH a witness
+rung is n_trials_aie=50 (rungs {25,50}), 1/4 the M2 ladder (~65 min/ckpt on
+the laptop). (2) The extraction/cache/certificate layer is already fully
+revision-keyed — set cfg.model.revision and lens/FV caches, manifests, and
+certificates re-key with no collision — so the sweep is a thin driver +
+reuse, not new gate code, and M2's signed-off code is untouched.
+
+- Compute (A100 ≈ 5× laptop, 50-trial gate, 12 ckpts + 2 full-ladder
+  anchors/scale): ~65 A100-h for 3 scales {410M,1B,2.8B} (2.8B ≈18×/ckpt
+  dominates ~70%), ~90-110 for 5 scales — i.e. ~3-5 days on one A100.
+  Highest-value lever: batching the batch-1 AIE head loop could cut this
+  ~10-50× but edits vendored Todd code (byte-identity deviation → a ruling).
+- Build: jtvec/emergence.py (model-free onset detection + per-scale
+  developmental classification: DISSOCIATION / CO-EMERGENCE /
+  INCONCLUSIVE-FV / NO-EXECUTION; scale-interaction roll-up),
+  tests/test_emergence.py, scripts/m4_emergence_sweep.py (per-revision M2
+  gate at rungs {25,50} reusing jtvec.fv_stability primitives + the
+  scripts/13 loop/teardown/too-weak/jsonl skeleton; records execution,
+  induction, E1 decodability; emergence.json roll-up),
+  configs/m4_emergence_pythia410m.yaml.
+- D-019 (proposed, awaiting ratification): exec onset = first ckpt at 0.8×
+  the scale's max 10-shot accuracy; FV-stability onset = first gate PASS;
+  DISSOCIATION iff log10 gap >= 0.5; FV numbers count only where the gate
+  passes at >= 2 checkpoints (CONSTRAINTS). P-E1/2/3 in the prereg.
+- Next: laptop wiring dry-run (capitalize @ the cached final revision,
+  {25,50} gate — reproduce converged_at=25), then draft
+  EXP-M4-emergence.md + CLM-005 with the A100-hour table, then PAUSE for
+  Ecaterina's A100 allocation + the batching ruling. No scientific run
+  before the prereg commit and her compute ruling (>12 h LAW). Gates at
+  build: pytest 143 passed, validators 3/3.

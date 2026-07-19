@@ -1,0 +1,46 @@
+# M4 emergence sweep, Pythia-410M scale (EXP-M4-emergence). The sweep sets
+# model.revision per checkpoint (--revisions stepN,...), overriding the null
+# below; the orchestrator always sets revision explicitly before any cache
+# use. n_trials_aie=50 is the cheap gate depth (rungs {25,50}: 25 witnessed by
+# 50 -> reproduces converged_at=25 at 1/4 the M2 ladder cost). calibration/fit
+# mirror M1 draw 0 so the per-checkpoint lens fit is comparable across
+# checkpoints. Other scales = sibling configs with a different model.name.
+# device: cuda (laptop dry-run); the multi-scale run targets the A100.
+experiment: pythia410m_m4_emergence
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-410m
+  revision: null
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+fv:
+  tasks: [capitalize, singular-plural, english-french]
+  n_shots: 10
+  n_trials_mean: 100
+  n_trials_aie: 50
+  n_top_heads: 10
+  edit_layer: 8
+  min_accuracy: 0.2
+  min_correct_valid: 50
+  baseline_threshold: 0.8
+cache_dir: cache/m4emerge
+results_dir: results/m4
