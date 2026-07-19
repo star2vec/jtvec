@@ -688,3 +688,54 @@ Raw-output replay (read-only; surprise rule) before anything else, facts:
   session Ecaterina ruled the next step: proceed to E2 design (folding
   in the E1 lens-draw-marginalization lesson and the D-013
   singular-plural report-measure requirement).
+
+---
+
+## 2026-07-19 — M4-E2: scope ruled (D-016), report-gate build (Claude)
+
+E2 design surfaced a hard apparatus constraint: v1's Exp-3 tested a double
+dissociation on singular-plural and a one-way dissociation on
+landmark-country, but v2's certified set is {capitalize, singular-plural,
+english-french} and the M3 instruments do not cover the v1 pair. Per-task
+apparatus after M2/M3: capitalize has both a gated fv-direction-ablation
+(execution) and a gated report probe; singular-plural has the gated
+fv-ablation but its report probe was WITHDRAWN (D-013); english-french has
+the report probe but no controlled fv-ablation; landmark-country has no
+certified FV and no gated instruments at all. The verbalization half of the
+double dissociation (HYPOTHESIS) is thus unmeasurable on singular-plural,
+and the whole landmark-country arm has no v2 apparatus.
+
+- D-016 (ruled by Ecaterina, 2026-07-19, session Q&A): Path A — unblock
+  singular-plural first. Rebuild + control-gate a report instrument on
+  singular-plural, then run the singular-plural
+  double dissociation (HYPOTHESIS) cross-draw over the 3 certified FVs;
+  defer landmark-country's certification (its own FV stability gate +
+  instrument controls) to a separate later decision. Chosen over B
+  (respecify the double dissociation (HYPOTHESIS) to capitalize — the only
+  fully-gated task today, but a different task than CONSTRAINTS specifies)
+  and C (certify the full v1 pair up front — most faithful, hours of
+  prerequisite gated runs).
+
+- Report-gate build (this commit): the rebuild is v1's prior-corrected
+  report SCORE (vendored scripts/11 protocol), NOT the withdrawn
+  forced-choice argmax. jtvec/report_instruments.py (bootstrap-CI control
+  rule; positive = coherent report_score CI-low > 0; negative = coherent
+  CI-low > shuffled CI-high AND > other CI-high), scripts/m4_e2_reportgate.py
+  (model-only orchestrator behind start_run — no lens, no FV),
+  configs/m4_e2_reportgate_pythia410m.yaml, tests/test_report_instruments.py.
+  New instrument name report-score-prior-corrected@singular-plural (the
+  D-013 rebuild-under-a-new-name path; the banned forced-choice name is
+  untouched).
+
+- Why the prior-corrected score can succeed where the forced-choice probe
+  failed: D-013's failure was that " plural" is legible from the
+  singular-noun INPUTS (null read 26/36 with singular-noun inputs kept).
+  The negative control here is the shuffled arm — same singular-noun
+  inputs, scrambled output mapping — so "coherent >> shuffled" is exactly
+  the test that the readout comes from the task mapping, not the inputs.
+  Not assumed to pass: if coherent≈shuffled the gate refuses to certify
+  (measure cleanly, let the numbers decide — D-012 lesson), and that
+  refusal blocks E2's singular-plural verbalization measure, a scope
+  result put back to Ecaterina. Prereg drafted UNCOMMITTED
+  (EXP-M4-E2-reportgate.md); committing it is the prereg act, after the
+  threshold ratification.
