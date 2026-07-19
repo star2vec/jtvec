@@ -1155,3 +1155,27 @@ Session discipline note: preregs EXP-M5-0-qualification and
 EXP-M5-1-concept-gate are being drafted UNCOMMITTED; committing is the
 prereg act and happens only after Ecaterina ratifies thresholds. No
 scientific run starts before that commit and her compute rulings.
+
+### 2026-07-19 — pre-prereg probes: 1.4B on the M1 Mac (non-scientific)
+
+M2-probe/D-009 precedent; outputs in the session scratchpad only, nothing
+scientific. pythia-1.4b@fedc38a (D-023 proposed pin) fp32 on MPS:
+
+- Smoke: load 11.1 s; first forward 1.08 s; greedy 8-token generation
+  1.02 s/gen; capital-recall sample answered correctly.
+- Jacobian lens-fit probe (1 calibration prompt, 23 source layers,
+  d=2048, dim_batch=8, skip4): 661.6 s/prompt probe pass, 621.6 s fit
+  pass; peak RSS 7.39 GB (ru_maxrss floor; MPS-side allocations partly
+  uncounted). The in-fit max_d_mean=nan is definitional at n_prompts=1
+  (running-mean statistic needs n_done > 0), not an anomaly.
+- Projections (this Mac): M5.0 baseline batteries both substrates
+  ≈ 2.5-3.5 h; 1.4B lens gate skip4-only 3 draws ≈ 7-8 h wall, RSS
+  ≈ 7.5-9 GB — under the 12 h LAW, so Mac-overnight-eligible; a {2,4,8}
+  skip sweep on all draws ≈ 16 h (over the LAW → GPU tier if wanted);
+  draw-0-only sweep ≈ 11 h (no margin, not recommended on this Mac).
+  Compute placement awaits Ecaterina with the EXP-M5-0 ratification.
+
+Prereg drafts EXP-M5-0-qualification / EXP-M5-1-concept-gate and the five
+m5 configs carry these numbers; all remain UNCOMMITTED awaiting her
+thresholds ruling. The 410M side needs no re-fit: cache/draw{0,1,2} lens
+draws from M1 are intact on this machine.
