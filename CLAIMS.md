@@ -38,3 +38,13 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - results-dir: results/m4/20260719-021823-e1-decodability
 - raw-completions: results/m4/20260719-021823-e1-decodability/raw_completions
 - verified-by: none
+
+### CLM-002
+- status: hypothesis
+- statement: On singular-plural, fv-direction ablation and jspace ablation dissociate task execution from task verbalization per EXP-M4-E2-dissociation (fv cuts execution not report; jspace cuts report not execution), each vs its matched sham, cross-draw over the 3 M2-certified FV draws and 3 M1 lens draws. Tests the CONSTRAINTS execution-vs-verbalization HYPOTHESIS; verdict table recorded from the run.
+- scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e2_dissociation_pythia410m.yaml, singular-plural, 3 FV draws x 3 lens draws, N_exec=50 / N_report=80
+- evidence-commit: none
+- prereg: harness/preregs/EXP-M4-E2-dissociation.md
+- results-dir: none
+- raw-completions: none
+- verified-by: none
