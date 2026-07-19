@@ -1067,3 +1067,35 @@ artifact); the fix is committed at d795c48. PAUSE: the multi-scale A100
 sweep awaits Ecaterina's allocation, the scale-set choice, D-019
 ratification, and the batched-AIE optimization ruling; prereg
 EXP-M4-emergence + CLM-005 commit and launch follow her go.
+
+### 2026-07-19 — emergence-sweep decisions ruled; batched-AIE scoped (Claude)
+
+Ecaterina ruled (session Q&A): (a) scale set = 3 {410M, 1B, 2.8B}; (b)
+D-019 emergence constants ratified as drafted (exec onset 0.8x-max, FV
+onset first gate PASS, DISSOCIATION iff log10 gap >= 0.5, >= 2 gate passes
+required); (c) implement + re-validate the batched-AIE optimization BEFORE
+the A100 run. Prereg EXP-M4-emergence + CLM-005 remain drafted (scratchpad)
+pending the prereg act at launch.
+
+Batched-AIE spec (D-020, to record at implementation): the AIE inner loop
+(third_party/function_vectors/src/compute_indirect_effect.py:71-88) does
+384 batch-1 forwards/trial (one per layer x head), each patching one head's
+final-position activation. The vendored replace_activation_w_avg
+(intervention_utils.py:50-54) already has a batched_input (batch-by-head)
+path but it is abandoned/broken for pythia: the projection
+`torch.addmm(bias, inputs.squeeze(), W.T)` (intervention_utils.py:79)
+requires 2-D and fails on a batched (n_heads, tokens, resid) input. Fix:
+(1) in the pythia/gpt-neox branch, use a batched `torch.matmul(inputs,
+W.T) + bias` when the input is 3-D/batched (keep the exact addmm path for
+the unbatched case); (2) wire activation_replacement_per_class_intervention
+to build sentences = [prompt]*n_heads, layer_head_token_pairs =
+[(layer, h, last_tok) for h in range(n_heads)], batched_input=True, one
+forward per LAYER (24 instead of 384), extracting per-head logits from the
+batch. ~16x fewer forwards (~65 -> ~4 A100-h for 3 scales). RE-VALIDATION
+GATE (the safety net for this core-computation vendored edit): a test that
+the batched AIE reproduces the unbatched AIE fp-close (allclose atol ~1e-4)
+AND that the resulting FV reproduces M2's converged_at=25 / cosine / gain
+on capitalize. Not shipped unless that passes. Deviation recorded in
+VENDORING.md + D-020 at implementation. Deferred from this session's tail
+to a focused implementation (delicate scientific-core surgery; the
+validated sweep pipeline + all decisions are locked and committed).
