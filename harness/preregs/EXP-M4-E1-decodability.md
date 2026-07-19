@@ -170,4 +170,14 @@ matmuls (d=1024, V=50k).
 
 ## Deviations
 
-(none at commit time)
+- D-015 (Ecaterina, 2026-07-19; text-only, after the run): the
+  Instruments-section parenthetical "skip16_n10's single band layer L16
+  must pass" rested on a false premise — skip_first in the vendored jlens
+  excludes leading PROMPT POSITIONS from the Jacobian average
+  (jlens/fitting.py valid_position_mask); it does not restrict source
+  layers. Every lens instance has all 13 band layers (run evidence:
+  positive controls 13/13 on every instance,
+  results/m4/20260719-021823-e1-decodability/controls.json). The
+  operative rule — >= ceil(0.75 x n_layers) — is unchanged and equals
+  the ratified 10/13 at n=13 for every instance; no criterion, code, or
+  verdict is affected. Full record: LABNOTES D-015.

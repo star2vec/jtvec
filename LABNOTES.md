@@ -683,3 +683,8 @@ Raw-output replay (read-only; surprise rule) before anything else, facts:
   false parenthetical in the Instruments section ("skip16_n10's single
   band layer L16 must pass") — text-only, no criterion change.
   Ecaterina rules on (b).
+- D-015 ruled by Ecaterina, 2026-07-19 (session Q&A): correction
+  ratified; the Deviations note is recorded in the prereg. In the same
+  session Ecaterina ruled the next step: proceed to E2 design (folding
+  in the E1 lens-draw-marginalization lesson and the D-013
+  singular-plural report-measure requirement).
