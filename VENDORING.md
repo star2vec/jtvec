@@ -43,7 +43,19 @@ milestone is signed off (build-order rule unchanged).
   script, preserved verbatim as M2 design reference per D-001 — NOT
   vendored code, never imported (sha256 prefix 70b140d003a15981)
 
-## Caveat on the withdrawn instrument
+## Vendored at the taxonomy phase (D-022: LRE relation data)
+
+- `third_party/relations`: git **submodule** pinned at `1b9ec3c`
+  (github.com/evandez/relations, Hernandez et al. ICLR 2024; MIT, © 2022
+  Evan Hernandez). Ruled by Ecaterina 2026-07-20 (D-022, session
+  instruction). Supplies the LRE relation battery for EXP-M5-0
+  qualification and the S3 operator extractor (M5.2). Data only
+  (`data/{factual,linguistic,commonsense,bias}/*.json`: name,
+  prompt_templates, samples of subject/object pairs); the repo's own code
+  (`src/`, `experiments.py`) is NOT imported — v2 reads the JSON directly,
+  same posture as the Todd dataset files. Same pin rationale as D-004: a
+  submodule so the data provenance is a recorded commit hash. Never
+  advanced.
 
 `jvec/decompose.py` (k=25 gradient-pursuit J-space-fraction) is the
 instrument CONSTRAINTS bans (VERIFIED negative: failed its positive

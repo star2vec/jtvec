@@ -4,3 +4,6 @@
 [submodule "third_party/function_vectors"]
 	path = third_party/function_vectors
 	url = https://github.com/ericwtodd/function_vectors
+[submodule "third_party/relations"]
+	path = third_party/relations
+	url = https://github.com/evandez/relations
