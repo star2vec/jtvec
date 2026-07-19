@@ -1055,5 +1055,15 @@ add_special_tokens=False, so BOS-independent — consistent with E1, which
 also used from_hf). The BOS-corrupted cache/m4emerge and the buggy post_hoc
 dry-run dir were deleted (non-scientific artifacts; M3-run-1 precedent).
 This is exactly the M3-run-1 lesson: a cheap laptop dry-run caught a bug
-that would have silently poisoned the entire (expensive) A100 sweep. Re-run
-of the dry-run validates the fix before the PAUSE.
+that would have silently poisoned the entire (expensive) A100 sweep.
+
+Re-run after the fix (capitalize @ 9879c9b, {25,50} gate) reproduces the
+ground truth BIT-FOR-BIT: T=25 min_cos 0.9910 / gain +0.3941, T=50 min_cos
+0.9971 / gain +0.3882, converged_at=25, gate PASS — identical to M2's
+stability.json; and decodability outvocab 1302 / label 282 — identical to
+E1. The cheap {25,50} revision-keyed sweep pipeline is validated against
+both prior gates. The post_hoc dry-run dir is removed (reproducible wiring
+artifact); the fix is committed at d795c48. PAUSE: the multi-scale A100
+sweep awaits Ecaterina's allocation, the scale-set choice, D-019
+ratification, and the batched-AIE optimization ruling; prereg
+EXP-M4-emergence + CLM-005 commit and launch follow her go.
