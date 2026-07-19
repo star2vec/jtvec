@@ -1032,3 +1032,28 @@ reuse, not new gate code, and M2's signed-off code is untouched.
   Ecaterina's A100 allocation + the batching ruling. No scientific run
   before the prereg commit and her compute ruling (>12 h LAW). Gates at
   build: pytest 143 passed, validators 3/3.
+
+### 2026-07-19 — dry-run caught a tokenizer-mutation bug; fixed (Claude)
+
+The wiring dry-run (capitalize @ the cached final revision 9879c9b,
+n_trials_aie=50) did NOT reproduce M2: converged_at=None (M2: 25),
+induction gain +0.018 (M2: +0.394), cross-draw cosine 0.879 (M2: 0.991),
+outvocab rank 11002 (E1: ~1302). Raw replay (read-only) traced it: the
+extracted FVs were genuinely weak/different — the stored fv_todd cosine to
+M2's was 0.64, and even the mean_head_activations differed by up to 5.58.
+Root cause: jlens.from_hf(model, tokenizer) sets add_bos_token=True on the
+SHARED tokenizer (verified: tokenize("dog") [21428] -> [0, 21428]). The
+orchestrator built the lens (for decodability) BEFORE FV extraction, so
+every extraction prompt got a spurious leading BOS -> corrupted FVs. M2
+never builds a jlens model, so its extraction is clean.
+
+Fix (this commit): run_checkpoint reordered into two phases — Phase A does
+all raw-model work (execution evals, per-draw AIE extraction, the rung
+gate) on the CLEAN tokenizer, exactly as M2; Phase B then builds the jlens
+model + lens and decodes the decodability arm (the E1 rank statistic is
+add_special_tokens=False, so BOS-independent — consistent with E1, which
+also used from_hf). The BOS-corrupted cache/m4emerge and the buggy post_hoc
+dry-run dir were deleted (non-scientific artifacts; M3-run-1 precedent).
+This is exactly the M3-run-1 lesson: a cheap laptop dry-run caught a bug
+that would have silently poisoned the entire (expensive) A100 sweep. Re-run
+of the dry-run validates the fix before the PAUSE.

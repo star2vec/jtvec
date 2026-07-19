@@ -75,22 +75,25 @@ def parse_step(revision: str) -> int:
     return int(revision[4:]) if revision.startswith("step") and revision[4:].isdigit() else 0
 
 
-def run_checkpoint(cfg, revision, ctx, out) -> dict:
-    """Stability-gated gate + execution/induction/decodability at one checkpoint."""
+def run_checkpoint(cfg, revision, out) -> dict:
+    """Stability-gated gate + execution/induction/decodability at one checkpoint.
+
+    Two phases with a hard ordering: (A) all raw-model work — execution evals,
+    per-draw AIE extraction, the rung gate — runs on the CLEAN tokenizer,
+    exactly as M2 (which never builds a jlens model). Only then (B) is the
+    jlens model built (jlens.from_hf sets tokenizer.add_bos_token=True, a
+    shared-object mutation) and the decodability arm decoded through the lens.
+    Building the lens before extraction prepends a spurious BOS to every FV
+    prompt and yields garbage FVs (caught by the dry-run); the E1 rank
+    statistic in phase B is add_special_tokens=False, so it is BOS-independent.
+    """
     rcfg = dataclasses.replace(
         cfg,
         model=dataclasses.replace(cfg.model, revision=revision),
         fv=dataclasses.replace(cfg.fv, tasks=tuple(SWEEP_TASKS), n_trials_aie=max(SWEEP_RUNGS)),
     )
     set_seed(rcfg.seed)
-    model, tokenizer, model_config, resolved = load_fv_model(rcfg)
-    import jlens as jlens_pkg  # noqa: PLC0415
-    model_j = jlens_pkg.from_hf(model, tokenizer)
-    prompts = select_prompts(rcfg, tokenizer)
-    lens = fit_lens(rcfg, rcfg.fit.skip_first_variants[0], prompts, model_j, resolved)
-    device = model_j.input_device
-    lo, hi = rcfg.evals.band
-    band = [l for l in lens.source_layers if lo <= l <= hi]
+    model, tokenizer, model_config, resolved = load_fv_model(rcfg)  # clean tokenizer
 
     from utils.eval_utils import n_shot_eval, n_shot_eval_no_intervention  # noqa: PLC0415
     from utils.prompt_utils import load_dataset  # noqa: PLC0415
@@ -109,15 +112,17 @@ def run_checkpoint(cfg, revision, ctx, out) -> dict:
 
     step = parse_step(revision)
     record = {"revision": revision, "resolved": resolved, "step": step, "tasks": {}}
+    fv1_by_task, ds_by_task = {}, {}
 
+    # --- PHASE A: raw model, CLEAN tokenizer (M2-faithful) --------------------
     for task in SWEEP_TASKS:
         dataset = load_dataset(task, root_data_dir=str(FV_REPO / "dataset_files"), seed=rcfg.seed)
+        ds_by_task[task] = dataset
         zs_top1, _ = exec_top1(dataset, 0)
         icl_top1, n_test = exec_top1(dataset, rcfg.fv.n_shots)
         entry = {"exec_10shot": icl_top1, "zero_shot": zs_top1, "n_test": n_test}
 
-        # per-checkpoint AIE re-extraction, 3 draws (too-weak guard)
-        try:
+        try:  # per-checkpoint AIE re-extraction, 3 draws (too-weak guard)
             arts = {}
             for k in DRAW_KS:
                 dcfg = dataclasses.replace(rcfg, cache_dir=f"{rcfg.cache_dir}/{revision}/draw{k}")
@@ -151,31 +156,38 @@ def run_checkpoint(cfg, revision, ctx, out) -> dict:
             rung_detail[T] = {"min_cos": min(cosines.values()), "gain_median": gain_ds.median,
                               "gain_iqr": gain_ds.iqr, "sham_median": sham_ds.median}
         verdict = convergence_verdict(per_rung_stats, RULE)
-
-        # per-checkpoint controls: positive = ICL vs 0-shot sep; negative = sham ~ 0
         positive = (icl_top1 - zs_top1) >= POSITIVE_MIN_SEP
         negative = all(abs(rung_detail[T]["sham_median"]) <= max(NEGATIVE_MAX_ABS_SHAM, 1.0 / n_test)
                        for T in SWEEP_RUNGS)
-        gate_passed = bool(verdict["converged"] and positive and negative)
-
-        # decodability through this checkpoint's lens (E1 statistic; draw-1 FV @ top rung)
-        fv1, _ = fv_at_rung(arts[1]["mean_head_activations"], arts[1]["indirect_effect"],
-                            max(SWEEP_RUNGS), model, model_config, rcfg.fv.n_top_heads)
-        v = fv1.float().to(device)
-        readouts = {l: model_j.unembed(lens.transport(v, l)).float().cpu() for l in band}
-        out_ids = output_token_ids(dataset, tokenizer)
-        best_ov = min(float(np.mean([full_vocab_rank(readouts[l], t) for t in out_ids])) for l in band)
-        lab = label_rank(readouts, tokenizer, LABEL_SETS["set1"][task]) if task in LABEL_SETS["set1"] else None
-
         entry.update({
-            "converged_at": verdict["converged_at"], "gate_passed": gate_passed,
+            "converged_at": verdict["converged_at"],
+            "gate_passed": bool(verdict["converged"] and positive and negative),
             "positive_control": positive, "negative_control": negative,
-            "induction_gain_toprung": rung_detail[max(SWEEP_RUNGS)]["gain_median"],
-            "label_rank_jlens": lab, "outvocab_rank_jlens": best_ov, "rungs": rung_detail,
+            "induction_gain_toprung": rung_detail[max(SWEEP_RUNGS)]["gain_median"], "rungs": rung_detail,
         })
+        fv1_by_task[task], _ = fv_at_rung(arts[1]["mean_head_activations"],
+                                          arts[1]["indirect_effect"], max(SWEEP_RUNGS),
+                                          model, model_config, rcfg.fv.n_top_heads)
         record["tasks"][task] = entry
         print(f"  {task}: exec {icl_top1:.1%}, converged_at={verdict['converged_at']}, "
-              f"gate={'PASS' if gate_passed else 'no'}, outvocab {best_ov:.0f}", flush=True)
+              f"gate={'PASS' if entry['gate_passed'] else 'no'}", flush=True)
+
+    # --- PHASE B: build the lens (mutates the tokenizer) and decode -----------
+    import jlens as jlens_pkg  # noqa: PLC0415
+    model_j = jlens_pkg.from_hf(model, tokenizer)  # extraction done; BOS mutation now harmless
+    prompts = select_prompts(rcfg, tokenizer)
+    lens = fit_lens(rcfg, rcfg.fit.skip_first_variants[0], prompts, model_j, resolved)
+    device = model_j.input_device
+    lo, hi = rcfg.evals.band
+    band = [l for l in lens.source_layers if lo <= l <= hi]
+    for task, fv1 in fv1_by_task.items():
+        v = fv1.float().to(device)
+        readouts = {l: model_j.unembed(lens.transport(v, l)).float().cpu() for l in band}
+        out_ids = output_token_ids(ds_by_task[task], tokenizer)
+        best_ov = min(float(np.mean([full_vocab_rank(readouts[l], t) for t in out_ids])) for l in band)
+        lab = label_rank(readouts, tokenizer, LABEL_SETS["set1"][task]) if task in LABEL_SETS["set1"] else None
+        record["tasks"][task].update({"label_rank_jlens": lab, "outvocab_rank_jlens": best_ov})
+        print(f"  {task}: decodability outvocab {best_ov:.0f}, label {lab}", flush=True)
 
     # scale-level CheckpointRecord for the emergence classifier
     task_entries = [e for e in record["tasks"].values() if "exec_10shot" in e]
@@ -227,7 +239,7 @@ def main() -> None:
     records = []
     for rev in revisions:
         print(f"\n=== {cfg.model.name} @ {rev} ===", flush=True)
-        records.append(run_checkpoint(cfg, rev, ctx, out))
+        records.append(run_checkpoint(cfg, rev, out))
     out.close()
 
     crs = [CheckpointRecord(**r["checkpoint_record"]) for r in records if "checkpoint_record" in r]
