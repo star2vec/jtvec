@@ -1245,3 +1245,50 @@ LRE/binding evals) with landing tests, and a generalized lens-gate
 orchestrator for 1.4B (m1_gate.py is 410M/v1-reproduction-specific); commit
 each before its run (start_run discipline); run the Mac baselines, then
 launch the 1.4B lens gate detached overnight with a Monitor.
+
+### 2026-07-20 — M5.0 lens-gate build + two prereg findings (Claude)
+
+Built the 1.4B lens gate (EXP-M5-0 rule 5, ruled Mac-overnight skip4-only):
+scripts/m5_lens_gate.py generalizes scripts/m1_gate.py off the 410M/v1
+anchors (drops R3 capital-recall exact contrast, R4 calibration-hash
+identity, R5 the v1 baseline table — a fresh substrate has no v1 reference)
+and keeps the model-agnostic content as preregistered Q1-Q6. evaluate_gate
+is a pure function with a model-free landing test (tests/test_m5_lens_gate.py,
+10 cases: all-pass + each Q failure mode incl. the quant-aware Q3 bound and
+the Q4 random-arm breach). The fit/eval pipeline (vendored scripts 01-04) is
+unchanged and already validated on this model's one-prompt fit probe. Gates
+at build: pytest 153 passed, validators 3/3.
+
+Prereg conformance fix (text-only, D-015 precedent; FLAGGED for
+acknowledgement): both preregs as first committed (113d04f) omitted the
+`## Estimator plan` heading that start_run's check_prereg_sections requires,
+so neither could run. Added the section to each (describing the estimators
+already specified elsewhere in the file); no threshold or decision rule
+changed. Recorded in-section and here.
+
+Two prereg-vs-data findings surfaced while designing the M5.0 baseline
+orchestrator (these BLOCK the baseline run, not the lens gate; proposed
+decisions for Ecaterina):
+
+- D-025 (proposed) — S1 qualification shot count. EXP-M5-0 rule 1 says
+  "10-shot", but the 8 tasks/*.json are self-contained fixed-shot probes
+  (capital-recall/operand/opposites/word-pairs ~3-shot, multihop ~2-shot,
+  context-binding ~6-shot, typo-robustness 0-shot); the M1 anchor table
+  scored them as-authored via jvec.evals.baseline.score_task. Proposal:
+  score as-authored (built-in exemplars), report the per-task shot count,
+  keep the 0.80 bar — a text-only rule-1 correction that keeps the anchor
+  comparable. Alternative: rebuild the tasks as true 10-shot ICL (breaks
+  anchor comparability, more construction).
+- D-026 (proposed) — binding battery data does not exist. EXP-M5-0 rule 4
+  describes Feng & Steinhardt bind2/bind3 (N=60 each), but tasks/ has only
+  context-binding.json (a ~6-shot repetition-completion probe, not the
+  entity-attribute binding format). Proposal: build a scripts/make_tasks.py
+  extension generating bind2/bind3 from a template Ecaterina approves, run
+  on the Mac; until then S4 admission is unmeasurable and S4 stays
+  un-admitted (the matrix carries the hole explicitly).
+
+Next: launching the 1.4B lens gate detached overnight (nohup + Monitor; the
+~1 h background-kill lesson). Results + Q1-Q6 verdict get their own commit
+(one commit per experiment). The M5.0 baseline orchestrator
+(scripts/m5_0_qualification.py) is deferred pending D-025/D-026 — it needs
+both rulings to fix its S1 and binding batteries before it is built + run.

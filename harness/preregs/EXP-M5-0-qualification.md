@@ -104,6 +104,29 @@ descriptively next to every number.
   instrument failure, not a qualification result.
 - Post-hoc analyses of stored tensors are labeled post-hoc forever.
 
+## Estimator plan
+
+[Conformance section added 2026-07-20 (text-only, D-015 precedent): the
+prereg as first committed (113d04f) omitted this required heading, so
+start_run rejected it; no threshold or decision rule changed. Flagged for
+Ecaterina's acknowledgement.]
+
+Two estimator classes, both deterministic at qualification (no RNG →
+the 3-draw LAW attaches downstream, not here):
+
+- Capability readouts (greedy exact-match, D-012): S1 task, FV task, LRE
+  relation, and binding scores. Single deterministic pass per (battery,
+  regime); ICL context fixed by seed 0. No estimator variance to gate;
+  numbers feed admission only, not any claim.
+- J-lens estimator (1.4B lens gate): the vendored fit → swap → probe
+  pipeline (scripts 01-04) at skip4, run as 3 independent draws
+  (seeds 0/1/2 re-sample the calibration prompts; separate caches). The
+  per-draw lens is the estimator; Q6 gates its cross-draw stability
+  (dp IQR, band-min HMR IQR). Median/IQR over the 3 draws are the only
+  cross-draw summaries. The lens ControlRecord is the Q2 positive arm plus
+  the Q3/Q4 matched-noise arms (swap random-direction control + the 10-seed
+  random-matrix probe arm).
+
 ## Instruments
 
 - Task/relation/binding readout: greedy exact-match (D-012), deterministic;

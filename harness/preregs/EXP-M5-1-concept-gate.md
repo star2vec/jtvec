@@ -59,6 +59,21 @@ convergence (no witness). The S1 species certificate on a substrate is
 issued iff every roster concept has a converged_at <= 64 [proposed: whole
 roster, not majority].
 
+## Estimator plan
+
+[Conformance section added 2026-07-20 (text-only, D-015 precedent): the
+prereg as first committed (113d04f) omitted this required heading, so
+start_run rejected it; no threshold or decision rule changed. Flagged for
+Ecaterina's acknowledgement.]
+
+The estimator is the s1_concept@<concept> mean-difference direction defined
+under "## Extractor under the gate": 3 independent draws (seeds {1,2,3},
+only the context-resampling stream varies), laddered over n_contexts ∈
+{8,16,32,64} by prefix slicing of each draw's context stream (RNG-prefix
+property, unit-tested before the run — M2 precedent). The per-draw direction
+is the estimator; the gate (Decision rule) certifies its cross-draw
+convergence. Median/IQR over the 3 draws are the only cross-draw summaries.
+
 ## Instruments and controls
 
 - Positive control (per concept): the extracted direction moves its own
