@@ -1,0 +1,16 @@
+{
+  "run_name": "e2-reportgate",
+  "started": "2026-07-19T05:39:11",
+  "git_commit": "9dd7ff0e5df386fe4e437211cb1fdf8bebe5fea6",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M4-E2-reportgate.md",
+  "prereg_commit": "9dd7ff0e5df386fe4e437211cb1fdf8bebe5fea6",
+  "config_sha256": "6cc59a10b7699af66dec229a34b68fd770fe6bb7f0cd8eb1e1102f7fe7430303",
+  "post_hoc": false,
+  "instrument": "report-score-prior-corrected@singular-plural",
+  "gated": true,
+  "best_phrasing": "P3",
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 18.4,
+  "peak_rss_gb": 3.32,
+  "finished": "2026-07-19T05:39:30"
+}

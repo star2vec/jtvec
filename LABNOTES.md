@@ -739,3 +739,46 @@ and the whole landmark-country arm has no v2 apparatus.
   result put back to Ecaterina. Prereg drafted UNCOMMITTED
   (EXP-M4-E2-reportgate.md); committing it is the prereg act, after the
   threshold ratification.
+
+### 2026-07-19 — E2 report-gate run: GATED under P3 only; replayed (Claude)
+
+Thresholds ratified (session Q&A); prereg committed 9dd7ff0; run
+results/m4/20260719-053911-e2-reportgate finalized (wall 18.4 s, peak RSS
+3.32 GB, cuda). Verdict: report-score-prior-corrected@singular-plural
+GATED, best_phrasing P3. Per-phrasing (bootstrap 95% CIs, N=40/cell):
+
+- P1: coherent +0.07 [-0.03,+0.17] — CI straddles 0, positive FAILS (no
+  detection); shuffled -0.26.
+- P2: coherent +0.25 [+0.17,+0.33] vs shuffled +0.27 [+0.20,+0.34] —
+  positive passes but negative FAILS: coherent ~ shuffled, the D-013
+  input-leakage exactly (the mapping adds nothing beyond the singular-noun
+  inputs). Caught, not certified.
+- P3: coherent +0.36 [+0.29,+0.44] vs shuffled +0.14 [+0.05,+0.23] vs
+  other -0.06 [-0.21,+0.08] — coherent CI-low +0.29 clears shuffled
+  CI-high +0.23 AND other CI-high +0.08. Positive AND negative PASS.
+
+Raw-output replay (read-only; surprise rule — the phrasing-split was not
+expected), facts:
+1. Every cell mean re-derives by hand from raw report_score (P3 coherent
+   +0.364, shuffled +0.142; P2 coherent +0.248, shuffled +0.271).
+2. The signal is a CONTINUOUS log-prob elevation of " plural", NOT a
+   forced-choice win: the free-running argmax is "first" (P3, 39/40) or
+   "answer" (P2, 34/40) — the probe tail's grammatical completion — and
+   " plural" sits at median full-vocab rank ~9 (P3 coherent) / ~13 (P3
+   shuffled). The gated quantity is the MAPPING-specific margin: under P3
+   the coherent mapping lifts log p(" plural") ~+0.22 above the input-only
+   (shuffled) baseline. So E2's verbalization measure is this continuous
+   report_score under P3, not a report "accuracy".
+3. The >=3-phrasing discipline earned its keep (CONSTRAINTS PROVISIONAL
+   "single phrasing" risk): 2 of 3 phrasings would have misled — P2
+   false-positive on detection while leaking, P1 no detection. Only P3
+   isolates the mapping.
+
+Consequences carried to the E2 dissociation design: (a) the report
+measure is fixed to P3, report_score continuous; (b) the signal is WEAK
+(margin ~+0.22 log-prob, rank ~9), so E2 must have the power to detect an
+ablation-induced REDUCTION in it — an N / effect-size question for the E2
+prereg, flagged now; (c) the instrument is GATED (ControlRecord in the run
+controls.json); E2's prereg cites it. No BANNED_INSTRUMENTS change — this
+is a pass under a new name, the D-013 forced-choice entry stands. Disposition
++ the E2 dissociation design go to Ecaterina next. Run evidence committed.

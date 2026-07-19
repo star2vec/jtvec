@@ -1,0 +1,87 @@
+{
+  "report-score-prior-corrected@singular-plural": {
+    "positive": true,
+    "negative": true,
+    "gated": true,
+    "best_phrasing": "P3",
+    "run": "C:\\Users\\alin\\Desktop\\jtvec\\results\\m4\\20260719-053911-e2-reportgate",
+    "date": "2026-07-19",
+    "per_phrasing": {
+      "P1": {
+        "coherent_ci": [
+          0.0748893022537235,
+          -0.02849094837903941,
+          0.17411367207765616
+        ],
+        "shuffled_ci": [
+          -0.2562978029251095,
+          -0.36086385935544935,
+          -0.14597929716110195
+        ],
+        "other_ci": [
+          0.014537197351456043,
+          -0.1351890824735161,
+          0.16146545484662087
+        ],
+        "n": {
+          "coherent": 40,
+          "shuffled": 40,
+          "other": 40
+        },
+        "positive_pass": false,
+        "negative_pass": false,
+        "gated": false
+      },
+      "P2": {
+        "coherent_ci": [
+          0.24817237854003887,
+          0.17153701901435836,
+          0.32582587778568245
+        ],
+        "shuffled_ci": [
+          0.27100298404693585,
+          0.1963247808814047,
+          0.3436847552657125
+        ],
+        "other_ci": [
+          0.025083434581756416,
+          -0.08391921728849429,
+          0.13823840022087075
+        ],
+        "n": {
+          "coherent": 40,
+          "shuffled": 40,
+          "other": 40
+        },
+        "positive_pass": true,
+        "negative_pass": false,
+        "gated": false
+      },
+      "P3": {
+        "coherent_ci": [
+          0.36377397179603577,
+          0.2876047305762768,
+          0.43934868067502975
+        ],
+        "shuffled_ci": [
+          0.14226335883140565,
+          0.05274509698152543,
+          0.22986956149339674
+        ],
+        "other_ci": [
+          -0.06420271396636963,
+          -0.20712865680456163,
+          0.0772141775488853
+        ],
+        "n": {
+          "coherent": 40,
+          "shuffled": 40,
+          "other": 40
+        },
+        "positive_pass": true,
+        "negative_pass": true,
+        "gated": true
+      }
+    }
+  }
+}
