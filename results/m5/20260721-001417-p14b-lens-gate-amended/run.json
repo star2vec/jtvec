@@ -1,0 +1,16 @@
+{
+  "run_name": "p14b-lens-gate-amended",
+  "started": "2026-07-21T00:14:17",
+  "git_commit": "6f0a01c0595750a791da1b3ac4e11b8bd1238b8b",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-0-qualification.md",
+  "prereg_commit": "cf1da2b9d4f64842527781d26279d82bb0bd4e98",
+  "config_sha256": "dc11fcc9afe3b3874816066bd9a016dea38b0561493a9df7657903a2c36da654",
+  "post_hoc": false,
+  "overall_pass": false,
+  "amended_q5_pass": true,
+  "blockers": [
+    "Q2_positive_control",
+    "Q6_draw_stability"
+  ],
+  "finished": "2026-07-21T01:56:07"
+}

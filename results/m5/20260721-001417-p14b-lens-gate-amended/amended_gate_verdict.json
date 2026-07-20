@@ -1,0 +1,69 @@
+{
+  "rules": {
+    "Q1_all_draws_gate_pass": true,
+    "Q2_positive_control": false,
+    "Q3_sham": true,
+    "Q4_negative_control": true,
+    "Q5_probing_contrast_amended": true,
+    "Q6_draw_stability": false
+  },
+  "overall_pass": false,
+  "blockers": [
+    "Q2_positive_control",
+    "Q6_draw_stability"
+  ],
+  "amended_q5": {
+    "passed": true,
+    "clearing_adequate_n": [
+      "capital-operand",
+      "fresh1hop-operand"
+    ],
+    "n_clearing": 2,
+    "descriptive_low_n": {
+      "fresh2hop-bridge": 6
+    },
+    "adequate_n": 20
+  },
+  "per_task": {
+    "capital-operand": {
+      "shows": true,
+      "N": 33,
+      "jlens_ratio_median": 27.061,
+      "random_ratio_median": 0.0,
+      "n_draws": 3
+    },
+    "fresh1hop-operand": {
+      "shows": true,
+      "N": 28,
+      "jlens_ratio_median": 6.975,
+      "random_ratio_median": 0.0,
+      "n_draws": 3
+    },
+    "fresh2hop-bridge": {
+      "shows": true,
+      "N": 6,
+      "jlens_ratio_median": 15.524,
+      "random_ratio_median": 0.0,
+      "n_draws": 3
+    },
+    "capital-recall": {
+      "shows": true,
+      "N": 33,
+      "role": "output-control",
+      "jlens_ratio_median": 20.35,
+      "random_ratio_median": 0.0,
+      "n_draws": 3
+    },
+    "fresh1hop-answer": {
+      "shows": false,
+      "N": 28,
+      "role": "output-control",
+      "jlens_ratio_median": 0.889,
+      "random_ratio_median": 0.0,
+      "n_draws": 3
+    }
+  },
+  "carried_from": "results/m5/20260720-024819-p14b-lens-gate/lens_gate_verdict.json",
+  "note": "amended Q5 PASSES; overall gate blocked on Q2/Q6 (D-029). 1.4B admission awaits the D-029 ruling.",
+  "peak_rss_gb": 2.65
+}
