@@ -1,0 +1,486 @@
+{
+ "task": "bind3",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "bind3-00",
+   "prompt": "The boat is in Box 1. The rope is in Box 2. The sock is in Box 3. The boat is in Box 1. The kite is in Box 1. The card is in Box 2. The rope is in Box 3. The card is in Box 2. The fork is in Box 1. The apple is in Box 2. The hat is in Box 3. The fork is in Box 1. The boat is in Box 1. The leaf is in Box 2. The kite is in Box 3. The kite is in Box 3. The book is in Box 1. The lamp is in Box 2. The hat is in Box 3. The hat is in Box 3. The leaf is in Box 1. The key is in Box 2. The ring is in Box 3. The ring is in Box 3. The rope is in Box 1. The card is in Box 2. The key is in Box 3. The card is in Box 2. The ring is in Box 1. The rope is in Box 2. The bell is in Box 3. The ring is in Box 1. The ball is in Box 1. The fork is in Box 2. The hat is in Box 3. The ball is in Box 1. The rope is in Box 1. The ring is in Box 2. The fork is in Box 3. The rope is in Box 1. The cake is in Box 1. The fork is in Box 2. The ball is in Box 3. The fork is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-01",
+   "prompt": "The fork is in Box 1. The drum is in Box 2. The pen is in Box 3. The fork is in Box 1. The cake is in Box 1. The kite is in Box 2. The pen is in Box 3. The pen is in Box 3. The ball is in Box 1. The card is in Box 2. The cake is in Box 3. The ball is in Box 1. The apple is in Box 1. The fork is in Box 2. The pen is in Box 3. The pen is in Box 3. The hat is in Box 1. The kite is in Box 2. The sock is in Box 3. The hat is in Box 1. The rope is in Box 1. The leaf is in Box 2. The drum is in Box 3. The leaf is in Box 2. The coin is in Box 1. The pen is in Box 2. The key is in Box 3. The key is in Box 3. The drum is in Box 1. The cup is in Box 2. The leaf is in Box 3. The cup is in Box 2. The leaf is in Box 1. The ring is in Box 2. The book is in Box 3. The ring is in Box 2. The drum is in Box 1. The card is in Box 2. The hat is in Box 3. The hat is in Box 3. The fork is in Box 1. The bell is in Box 2. The ball is in Box 3. The ball is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-02",
+   "prompt": "The apple is in Box 1. The leaf is in Box 2. The kite is in Box 3. The apple is in Box 1. The key is in Box 1. The hat is in Box 2. The cup is in Box 3. The key is in Box 1. The fork is in Box 1. The leaf is in Box 2. The card is in Box 3. The card is in Box 3. The boat is in Box 1. The rope is in Box 2. The apple is in Box 3. The boat is in Box 1. The kite is in Box 1. The bell is in Box 2. The sock is in Box 3. The sock is in Box 3. The drum is in Box 1. The card is in Box 2. The bell is in Box 3. The drum is in Box 1. The lamp is in Box 1. The book is in Box 2. The hat is in Box 3. The hat is in Box 3. The hat is in Box 1. The key is in Box 2. The bell is in Box 3. The key is in Box 2. The apple is in Box 1. The boat is in Box 2. The key is in Box 3. The apple is in Box 1. The leaf is in Box 1. The cup is in Box 2. The bell is in Box 3. The cup is in Box 2. The bell is in Box 1. The book is in Box 2. The lamp is in Box 3. The lamp is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-03",
+   "prompt": "The coin is in Box 1. The boat is in Box 2. The hat is in Box 3. The boat is in Box 2. The lamp is in Box 1. The key is in Box 2. The book is in Box 3. The key is in Box 2. The lamp is in Box 1. The hat is in Box 2. The ball is in Box 3. The hat is in Box 2. The pen is in Box 1. The fork is in Box 2. The lamp is in Box 3. The pen is in Box 1. The leaf is in Box 1. The cup is in Box 2. The boat is in Box 3. The leaf is in Box 1. The fork is in Box 1. The key is in Box 2. The hat is in Box 3. The key is in Box 2. The ring is in Box 1. The hat is in Box 2. The key is in Box 3. The ring is in Box 1. The ring is in Box 1. The boat is in Box 2. The hat is in Box 3. The ring is in Box 1. The cup is in Box 1. The card is in Box 2. The lamp is in Box 3. The cup is in Box 1. The ring is in Box 1. The card is in Box 2. The bell is in Box 3. The ring is in Box 1. The sock is in Box 1. The rope is in Box 2. The boat is in Box 3. The sock is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-04",
+   "prompt": "The pen is in Box 1. The apple is in Box 2. The leaf is in Box 3. The pen is in Box 1. The drum is in Box 1. The hat is in Box 2. The key is in Box 3. The drum is in Box 1. The ball is in Box 1. The fork is in Box 2. The cup is in Box 3. The ball is in Box 1. The rope is in Box 1. The pen is in Box 2. The hat is in Box 3. The pen is in Box 2. The drum is in Box 1. The hat is in Box 2. The cup is in Box 3. The drum is in Box 1. The drum is in Box 1. The rope is in Box 2. The key is in Box 3. The drum is in Box 1. The key is in Box 1. The fork is in Box 2. The kite is in Box 3. The kite is in Box 3. The apple is in Box 1. The ring is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The sock is in Box 1. The pen is in Box 2. The card is in Box 3. The sock is in Box 1. The pen is in Box 1. The ball is in Box 2. The coin is in Box 3. The pen is in Box 1. The ball is in Box 1. The apple is in Box 2. The fork is in Box 3. The apple is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-05",
+   "prompt": "The drum is in Box 1. The kite is in Box 2. The cup is in Box 3. The cup is in Box 3. The leaf is in Box 1. The hat is in Box 2. The cake is in Box 3. The hat is in Box 2. The rope is in Box 1. The lamp is in Box 2. The boat is in Box 3. The lamp is in Box 2. The lamp is in Box 1. The coin is in Box 2. The fork is in Box 3. The coin is in Box 2. The coin is in Box 1. The bell is in Box 2. The rope is in Box 3. The coin is in Box 1. The sock is in Box 1. The hat is in Box 2. The fork is in Box 3. The fork is in Box 3. The drum is in Box 1. The kite is in Box 2. The card is in Box 3. The drum is in Box 1. The boat is in Box 1. The rope is in Box 2. The bell is in Box 3. The rope is in Box 2. The boat is in Box 1. The fork is in Box 2. The kite is in Box 3. The boat is in Box 1. The kite is in Box 1. The cake is in Box 2. The book is in Box 3. The book is in Box 3. The ball is in Box 1. The fork is in Box 2. The cup is in Box 3. The cup is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-06",
+   "prompt": "The fork is in Box 1. The leaf is in Box 2. The pen is in Box 3. The leaf is in Box 2. The hat is in Box 1. The key is in Box 2. The cake is in Box 3. The hat is in Box 1. The hat is in Box 1. The bell is in Box 2. The fork is in Box 3. The bell is in Box 2. The coin is in Box 1. The cake is in Box 2. The fork is in Box 3. The fork is in Box 3. The book is in Box 1. The card is in Box 2. The kite is in Box 3. The book is in Box 1. The lamp is in Box 1. The sock is in Box 2. The bell is in Box 3. The lamp is in Box 1. The key is in Box 1. The rope is in Box 2. The drum is in Box 3. The drum is in Box 3. The rope is in Box 1. The coin is in Box 2. The boat is in Box 3. The coin is in Box 2. The apple is in Box 1. The drum is in Box 2. The lamp is in Box 3. The apple is in Box 1. The leaf is in Box 1. The cake is in Box 2. The hat is in Box 3. The cake is in Box 2. The hat is in Box 1. The book is in Box 2. The sock is in Box 3. The book is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-07",
+   "prompt": "The card is in Box 1. The drum is in Box 2. The key is in Box 3. The key is in Box 3. The cake is in Box 1. The apple is in Box 2. The hat is in Box 3. The cake is in Box 1. The lamp is in Box 1. The bell is in Box 2. The drum is in Box 3. The drum is in Box 3. The cake is in Box 1. The apple is in Box 2. The cup is in Box 3. The cake is in Box 1. The ball is in Box 1. The cake is in Box 2. The ring is in Box 3. The ball is in Box 1. The apple is in Box 1. The coin is in Box 2. The hat is in Box 3. The coin is in Box 2. The lamp is in Box 1. The leaf is in Box 2. The kite is in Box 3. The lamp is in Box 1. The ring is in Box 1. The fork is in Box 2. The sock is in Box 3. The ring is in Box 1. The leaf is in Box 1. The drum is in Box 2. The rope is in Box 3. The rope is in Box 3. The coin is in Box 1. The leaf is in Box 2. The kite is in Box 3. The kite is in Box 3. The boat is in Box 1. The apple is in Box 2. The ball is in Box 3. The ball is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-08",
+   "prompt": "The pen is in Box 1. The ring is in Box 2. The card is in Box 3. The ring is in Box 2. The card is in Box 1. The cake is in Box 2. The boat is in Box 3. The boat is in Box 3. The rope is in Box 1. The boat is in Box 2. The drum is in Box 3. The drum is in Box 3. The cup is in Box 1. The pen is in Box 2. The apple is in Box 3. The apple is in Box 3. The key is in Box 1. The cake is in Box 2. The lamp is in Box 3. The key is in Box 1. The key is in Box 1. The kite is in Box 2. The leaf is in Box 3. The key is in Box 1. The key is in Box 1. The cake is in Box 2. The book is in Box 3. The book is in Box 3. The lamp is in Box 1. The book is in Box 2. The leaf is in Box 3. The book is in Box 2. The hat is in Box 1. The sock is in Box 2. The apple is in Box 3. The apple is in Box 3. The key is in Box 1. The boat is in Box 2. The drum is in Box 3. The drum is in Box 3. The drum is in Box 1. The rope is in Box 2. The leaf is in Box 3. The rope is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-09",
+   "prompt": "The card is in Box 1. The key is in Box 2. The sock is in Box 3. The sock is in Box 3. The key is in Box 1. The kite is in Box 2. The cup is in Box 3. The kite is in Box 2. The lamp is in Box 1. The ring is in Box 2. The cake is in Box 3. The ring is in Box 2. The apple is in Box 1. The ball is in Box 2. The fork is in Box 3. The ball is in Box 2. The cake is in Box 1. The drum is in Box 2. The pen is in Box 3. The drum is in Box 2. The lamp is in Box 1. The apple is in Box 2. The bell is in Box 3. The lamp is in Box 1. The boat is in Box 1. The leaf is in Box 2. The ball is in Box 3. The leaf is in Box 2. The coin is in Box 1. The ring is in Box 2. The apple is in Box 3. The coin is in Box 1. The boat is in Box 1. The apple is in Box 2. The hat is in Box 3. The hat is in Box 3. The coin is in Box 1. The pen is in Box 2. The apple is in Box 3. The pen is in Box 2. The hat is in Box 1. The card is in Box 2. The cup is in Box 3. The cup is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-10",
+   "prompt": "The fork is in Box 1. The cup is in Box 2. The key is in Box 3. The key is in Box 3. The leaf is in Box 1. The apple is in Box 2. The lamp is in Box 3. The apple is in Box 2. The bell is in Box 1. The apple is in Box 2. The cup is in Box 3. The bell is in Box 1. The book is in Box 1. The apple is in Box 2. The leaf is in Box 3. The apple is in Box 2. The sock is in Box 1. The apple is in Box 2. The cake is in Box 3. The apple is in Box 2. The sock is in Box 1. The cup is in Box 2. The cake is in Box 3. The sock is in Box 1. The ball is in Box 1. The lamp is in Box 2. The cup is in Box 3. The cup is in Box 3. The hat is in Box 1. The drum is in Box 2. The sock is in Box 3. The hat is in Box 1. The fork is in Box 1. The hat is in Box 2. The coin is in Box 3. The hat is in Box 2. The coin is in Box 1. The boat is in Box 2. The kite is in Box 3. The kite is in Box 3. The book is in Box 1. The card is in Box 2. The fork is in Box 3. The card is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-11",
+   "prompt": "The ring is in Box 1. The coin is in Box 2. The sock is in Box 3. The sock is in Box 3. The boat is in Box 1. The lamp is in Box 2. The drum is in Box 3. The drum is in Box 3. The rope is in Box 1. The hat is in Box 2. The ball is in Box 3. The ball is in Box 3. The hat is in Box 1. The coin is in Box 2. The kite is in Box 3. The hat is in Box 1. The cup is in Box 1. The hat is in Box 2. The rope is in Box 3. The rope is in Box 3. The pen is in Box 1. The lamp is in Box 2. The hat is in Box 3. The pen is in Box 1. The key is in Box 1. The bell is in Box 2. The cup is in Box 3. The key is in Box 1. The drum is in Box 1. The cup is in Box 2. The apple is in Box 3. The cup is in Box 2. The lamp is in Box 1. The cake is in Box 2. The book is in Box 3. The cake is in Box 2. The pen is in Box 1. The coin is in Box 2. The ring is in Box 3. The ring is in Box 3. The sock is in Box 1. The book is in Box 2. The ball is in Box 3. The sock is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-12",
+   "prompt": "The card is in Box 1. The boat is in Box 2. The sock is in Box 3. The card is in Box 1. The drum is in Box 1. The bell is in Box 2. The fork is in Box 3. The bell is in Box 2. The ring is in Box 1. The cake is in Box 2. The hat is in Box 3. The hat is in Box 3. The hat is in Box 1. The sock is in Box 2. The rope is in Box 3. The sock is in Box 2. The card is in Box 1. The bell is in Box 2. The pen is in Box 3. The bell is in Box 2. The cake is in Box 1. The sock is in Box 2. The boat is in Box 3. The sock is in Box 2. The key is in Box 1. The coin is in Box 2. The ring is in Box 3. The ring is in Box 3. The leaf is in Box 1. The lamp is in Box 2. The card is in Box 3. The lamp is in Box 2. The boat is in Box 1. The rope is in Box 2. The hat is in Box 3. The boat is in Box 1. The cake is in Box 1. The bell is in Box 2. The coin is in Box 3. The coin is in Box 3. The cake is in Box 1. The cup is in Box 2. The pen is in Box 3. The cup is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-13",
+   "prompt": "The ball is in Box 1. The book is in Box 2. The fork is in Box 3. The fork is in Box 3. The key is in Box 1. The bell is in Box 2. The drum is in Box 3. The bell is in Box 2. The cup is in Box 1. The book is in Box 2. The lamp is in Box 3. The book is in Box 2. The cake is in Box 1. The ring is in Box 2. The rope is in Box 3. The rope is in Box 3. The cup is in Box 1. The ball is in Box 2. The rope is in Box 3. The ball is in Box 2. The cup is in Box 1. The rope is in Box 2. The ball is in Box 3. The rope is in Box 2. The bell is in Box 1. The cake is in Box 2. The kite is in Box 3. The bell is in Box 1. The ring is in Box 1. The pen is in Box 2. The leaf is in Box 3. The pen is in Box 2. The fork is in Box 1. The pen is in Box 2. The kite is in Box 3. The pen is in Box 2. The ball is in Box 1. The lamp is in Box 2. The cake is in Box 3. The lamp is in Box 2. The kite is in Box 1. The cup is in Box 2. The book is in Box 3. The kite is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-14",
+   "prompt": "The coin is in Box 1. The ball is in Box 2. The ring is in Box 3. The ball is in Box 2. The apple is in Box 1. The coin is in Box 2. The bell is in Box 3. The apple is in Box 1. The card is in Box 1. The drum is in Box 2. The apple is in Box 3. The apple is in Box 3. The card is in Box 1. The cake is in Box 2. The ring is in Box 3. The card is in Box 1. The kite is in Box 1. The coin is in Box 2. The cup is in Box 3. The cup is in Box 3. The ball is in Box 1. The drum is in Box 2. The sock is in Box 3. The sock is in Box 3. The key is in Box 1. The hat is in Box 2. The sock is in Box 3. The key is in Box 1. The sock is in Box 1. The ring is in Box 2. The kite is in Box 3. The kite is in Box 3. The sock is in Box 1. The rope is in Box 2. The ring is in Box 3. The sock is in Box 1. The card is in Box 1. The bell is in Box 2. The fork is in Box 3. The fork is in Box 3. The ring is in Box 1. The fork is in Box 2. The leaf is in Box 3. The fork is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-15",
+   "prompt": "The drum is in Box 1. The sock is in Box 2. The cake is in Box 3. The sock is in Box 2. The kite is in Box 1. The key is in Box 2. The boat is in Box 3. The key is in Box 2. The lamp is in Box 1. The card is in Box 2. The fork is in Box 3. The fork is in Box 3. The pen is in Box 1. The ball is in Box 2. The coin is in Box 3. The coin is in Box 3. The boat is in Box 1. The key is in Box 2. The sock is in Box 3. The sock is in Box 3. The card is in Box 1. The kite is in Box 2. The lamp is in Box 3. The kite is in Box 2. The coin is in Box 1. The ring is in Box 2. The kite is in Box 3. The ring is in Box 2. The rope is in Box 1. The leaf is in Box 2. The apple is in Box 3. The apple is in Box 3. The book is in Box 1. The card is in Box 2. The ring is in Box 3. The book is in Box 1. The pen is in Box 1. The apple is in Box 2. The leaf is in Box 3. The leaf is in Box 3. The cup is in Box 1. The book is in Box 2. The leaf is in Box 3. The leaf is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-16",
+   "prompt": "The pen is in Box 1. The hat is in Box 2. The bell is in Box 3. The pen is in Box 1. The leaf is in Box 1. The apple is in Box 2. The sock is in Box 3. The sock is in Box 3. The book is in Box 1. The sock is in Box 2. The drum is in Box 3. The book is in Box 1. The bell is in Box 1. The key is in Box 2. The apple is in Box 3. The bell is in Box 1. The lamp is in Box 1. The bell is in Box 2. The fork is in Box 3. The lamp is in Box 1. The fork is in Box 1. The rope is in Box 2. The boat is in Box 3. The boat is in Box 3. The ball is in Box 1. The coin is in Box 2. The apple is in Box 3. The ball is in Box 1. The key is in Box 1. The cup is in Box 2. The bell is in Box 3. The bell is in Box 3. The ball is in Box 1. The pen is in Box 2. The apple is in Box 3. The ball is in Box 1. The apple is in Box 1. The fork is in Box 2. The card is in Box 3. The apple is in Box 1. The book is in Box 1. The drum is in Box 2. The fork is in Box 3. The book is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-17",
+   "prompt": "The fork is in Box 1. The bell is in Box 2. The leaf is in Box 3. The bell is in Box 2. The kite is in Box 1. The coin is in Box 2. The fork is in Box 3. The fork is in Box 3. The book is in Box 1. The drum is in Box 2. The apple is in Box 3. The apple is in Box 3. The lamp is in Box 1. The ball is in Box 2. The drum is in Box 3. The drum is in Box 3. The rope is in Box 1. The card is in Box 2. The fork is in Box 3. The fork is in Box 3. The kite is in Box 1. The leaf is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The key is in Box 1. The cup is in Box 2. The ball is in Box 3. The key is in Box 1. The pen is in Box 1. The kite is in Box 2. The drum is in Box 3. The pen is in Box 1. The cup is in Box 1. The pen is in Box 2. The ball is in Box 3. The ball is in Box 3. The coin is in Box 1. The sock is in Box 2. The fork is in Box 3. The coin is in Box 1. The bell is in Box 1. The apple is in Box 2. The book is in Box 3. The bell is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-18",
+   "prompt": "The boat is in Box 1. The ball is in Box 2. The hat is in Box 3. The ball is in Box 2. The pen is in Box 1. The ball is in Box 2. The rope is in Box 3. The ball is in Box 2. The hat is in Box 1. The key is in Box 2. The cup is in Box 3. The cup is in Box 3. The hat is in Box 1. The leaf is in Box 2. The drum is in Box 3. The drum is in Box 3. The cup is in Box 1. The book is in Box 2. The ball is in Box 3. The ball is in Box 3. The lamp is in Box 1. The coin is in Box 2. The book is in Box 3. The book is in Box 3. The card is in Box 1. The book is in Box 2. The drum is in Box 3. The card is in Box 1. The key is in Box 1. The ring is in Box 2. The kite is in Box 3. The key is in Box 1. The boat is in Box 1. The coin is in Box 2. The bell is in Box 3. The coin is in Box 2. The bell is in Box 1. The lamp is in Box 2. The boat is in Box 3. The bell is in Box 1. The kite is in Box 1. The book is in Box 2. The ring is in Box 3. The ring is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-19",
+   "prompt": "The lamp is in Box 1. The cake is in Box 2. The sock is in Box 3. The cake is in Box 2. The pen is in Box 1. The bell is in Box 2. The drum is in Box 3. The bell is in Box 2. The cake is in Box 1. The card is in Box 2. The pen is in Box 3. The pen is in Box 3. The drum is in Box 1. The lamp is in Box 2. The rope is in Box 3. The drum is in Box 1. The coin is in Box 1. The card is in Box 2. The apple is in Box 3. The card is in Box 2. The rope is in Box 1. The key is in Box 2. The leaf is in Box 3. The key is in Box 2. The key is in Box 1. The boat is in Box 2. The drum is in Box 3. The boat is in Box 2. The hat is in Box 1. The drum is in Box 2. The coin is in Box 3. The coin is in Box 3. The sock is in Box 1. The kite is in Box 2. The book is in Box 3. The sock is in Box 1. The hat is in Box 1. The ball is in Box 2. The kite is in Box 3. The ball is in Box 2. The apple is in Box 1. The card is in Box 2. The sock is in Box 3. The card is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-20",
+   "prompt": "The apple is in Box 1. The book is in Box 2. The sock is in Box 3. The sock is in Box 3. The pen is in Box 1. The coin is in Box 2. The leaf is in Box 3. The pen is in Box 1. The lamp is in Box 1. The key is in Box 2. The leaf is in Box 3. The lamp is in Box 1. The fork is in Box 1. The hat is in Box 2. The book is in Box 3. The fork is in Box 1. The sock is in Box 1. The key is in Box 2. The kite is in Box 3. The kite is in Box 3. The drum is in Box 1. The apple is in Box 2. The leaf is in Box 3. The apple is in Box 2. The cake is in Box 1. The sock is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The cake is in Box 1. The bell is in Box 2. The pen is in Box 3. The pen is in Box 3. The rope is in Box 1. The fork is in Box 2. The pen is in Box 3. The pen is in Box 3. The ball is in Box 1. The coin is in Box 2. The boat is in Box 3. The coin is in Box 2. The hat is in Box 1. The pen is in Box 2. The drum is in Box 3. The drum is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-21",
+   "prompt": "The leaf is in Box 1. The ring is in Box 2. The fork is in Box 3. The fork is in Box 3. The card is in Box 1. The hat is in Box 2. The cup is in Box 3. The cup is in Box 3. The hat is in Box 1. The ball is in Box 2. The rope is in Box 3. The hat is in Box 1. The drum is in Box 1. The coin is in Box 2. The book is in Box 3. The book is in Box 3. The boat is in Box 1. The key is in Box 2. The hat is in Box 3. The hat is in Box 3. The bell is in Box 1. The lamp is in Box 2. The coin is in Box 3. The bell is in Box 1. The leaf is in Box 1. The hat is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The sock is in Box 1. The boat is in Box 2. The cake is in Box 3. The cake is in Box 3. The hat is in Box 1. The cake is in Box 2. The bell is in Box 3. The hat is in Box 1. The leaf is in Box 1. The coin is in Box 2. The kite is in Box 3. The coin is in Box 2. The hat is in Box 1. The pen is in Box 2. The rope is in Box 3. The rope is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-22",
+   "prompt": "The apple is in Box 1. The book is in Box 2. The kite is in Box 3. The book is in Box 2. The hat is in Box 1. The boat is in Box 2. The ball is in Box 3. The hat is in Box 1. The kite is in Box 1. The cake is in Box 2. The rope is in Box 3. The cake is in Box 2. The apple is in Box 1. The drum is in Box 2. The leaf is in Box 3. The leaf is in Box 3. The ball is in Box 1. The sock is in Box 2. The card is in Box 3. The card is in Box 3. The ball is in Box 1. The cup is in Box 2. The coin is in Box 3. The ball is in Box 1. The rope is in Box 1. The cake is in Box 2. The card is in Box 3. The cake is in Box 2. The rope is in Box 1. The ball is in Box 2. The coin is in Box 3. The ball is in Box 2. The bell is in Box 1. The ball is in Box 2. The leaf is in Box 3. The bell is in Box 1. The hat is in Box 1. The lamp is in Box 2. The kite is in Box 3. The hat is in Box 1. The lamp is in Box 1. The kite is in Box 2. The drum is in Box 3. The drum is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-23",
+   "prompt": "The bell is in Box 1. The coin is in Box 2. The cup is in Box 3. The bell is in Box 1. The bell is in Box 1. The ball is in Box 2. The kite is in Box 3. The ball is in Box 2. The leaf is in Box 1. The rope is in Box 2. The drum is in Box 3. The drum is in Box 3. The cake is in Box 1. The kite is in Box 2. The rope is in Box 3. The kite is in Box 2. The key is in Box 1. The cake is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The fork is in Box 1. The hat is in Box 2. The ring is in Box 3. The hat is in Box 2. The rope is in Box 1. The pen is in Box 2. The fork is in Box 3. The pen is in Box 2. The key is in Box 1. The cup is in Box 2. The cake is in Box 3. The key is in Box 1. The boat is in Box 1. The cake is in Box 2. The fork is in Box 3. The cake is in Box 2. The sock is in Box 1. The rope is in Box 2. The cake is in Box 3. The cake is in Box 3. The hat is in Box 1. The card is in Box 2. The apple is in Box 3. The hat is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-24",
+   "prompt": "The drum is in Box 1. The lamp is in Box 2. The ring is in Box 3. The ring is in Box 3. The fork is in Box 1. The kite is in Box 2. The key is in Box 3. The fork is in Box 1. The hat is in Box 1. The card is in Box 2. The book is in Box 3. The hat is in Box 1. The apple is in Box 1. The key is in Box 2. The cup is in Box 3. The cup is in Box 3. The drum is in Box 1. The rope is in Box 2. The kite is in Box 3. The kite is in Box 3. The leaf is in Box 1. The ring is in Box 2. The book is in Box 3. The ring is in Box 2. The card is in Box 1. The pen is in Box 2. The hat is in Box 3. The card is in Box 1. The card is in Box 1. The ring is in Box 2. The rope is in Box 3. The card is in Box 1. The lamp is in Box 1. The coin is in Box 2. The cake is in Box 3. The cake is in Box 3. The ball is in Box 1. The key is in Box 2. The sock is in Box 3. The key is in Box 2. The key is in Box 1. The cake is in Box 2. The boat is in Box 3. The key is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-25",
+   "prompt": "The kite is in Box 1. The pen is in Box 2. The key is in Box 3. The pen is in Box 2. The sock is in Box 1. The book is in Box 2. The pen is in Box 3. The book is in Box 2. The kite is in Box 1. The ball is in Box 2. The drum is in Box 3. The ball is in Box 2. The bell is in Box 1. The cup is in Box 2. The ball is in Box 3. The cup is in Box 2. The card is in Box 1. The boat is in Box 2. The rope is in Box 3. The rope is in Box 3. The ball is in Box 1. The book is in Box 2. The ring is in Box 3. The book is in Box 2. The ring is in Box 1. The hat is in Box 2. The card is in Box 3. The card is in Box 3. The sock is in Box 1. The key is in Box 2. The cup is in Box 3. The cup is in Box 3. The apple is in Box 1. The key is in Box 2. The coin is in Box 3. The key is in Box 2. The sock is in Box 1. The ball is in Box 2. The bell is in Box 3. The sock is in Box 1. The apple is in Box 1. The lamp is in Box 2. The rope is in Box 3. The apple is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-26",
+   "prompt": "The coin is in Box 1. The kite is in Box 2. The leaf is in Box 3. The leaf is in Box 3. The sock is in Box 1. The pen is in Box 2. The fork is in Box 3. The fork is in Box 3. The cake is in Box 1. The pen is in Box 2. The rope is in Box 3. The rope is in Box 3. The boat is in Box 1. The apple is in Box 2. The book is in Box 3. The apple is in Box 2. The ball is in Box 1. The boat is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The card is in Box 1. The ball is in Box 2. The pen is in Box 3. The ball is in Box 2. The cup is in Box 1. The pen is in Box 2. The book is in Box 3. The cup is in Box 1. The rope is in Box 1. The cake is in Box 2. The drum is in Box 3. The cake is in Box 2. The lamp is in Box 1. The sock is in Box 2. The rope is in Box 3. The sock is in Box 2. The book is in Box 1. The kite is in Box 2. The key is in Box 3. The book is in Box 1. The sock is in Box 1. The kite is in Box 2. The leaf is in Box 3. The kite is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-27",
+   "prompt": "The coin is in Box 1. The bell is in Box 2. The sock is in Box 3. The sock is in Box 3. The coin is in Box 1. The bell is in Box 2. The boat is in Box 3. The boat is in Box 3. The kite is in Box 1. The ball is in Box 2. The cup is in Box 3. The ball is in Box 2. The pen is in Box 1. The leaf is in Box 2. The fork is in Box 3. The fork is in Box 3. The rope is in Box 1. The book is in Box 2. The ball is in Box 3. The book is in Box 2. The ring is in Box 1. The drum is in Box 2. The leaf is in Box 3. The leaf is in Box 3. The ball is in Box 1. The lamp is in Box 2. The key is in Box 3. The lamp is in Box 2. The drum is in Box 1. The kite is in Box 2. The ball is in Box 3. The ball is in Box 3. The bell is in Box 1. The ring is in Box 2. The lamp is in Box 3. The bell is in Box 1. The ball is in Box 1. The book is in Box 2. The bell is in Box 3. The ball is in Box 1. The book is in Box 1. The kite is in Box 2. The cake is in Box 3. The cake is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-28",
+   "prompt": "The leaf is in Box 1. The apple is in Box 2. The cup is in Box 3. The apple is in Box 2. The key is in Box 1. The drum is in Box 2. The lamp is in Box 3. The key is in Box 1. The hat is in Box 1. The drum is in Box 2. The ring is in Box 3. The ring is in Box 3. The key is in Box 1. The cup is in Box 2. The kite is in Box 3. The key is in Box 1. The cup is in Box 1. The boat is in Box 2. The bell is in Box 3. The bell is in Box 3. The coin is in Box 1. The pen is in Box 2. The kite is in Box 3. The kite is in Box 3. The key is in Box 1. The bell is in Box 2. The fork is in Box 3. The bell is in Box 2. The boat is in Box 1. The drum is in Box 2. The kite is in Box 3. The boat is in Box 1. The apple is in Box 1. The pen is in Box 2. The cake is in Box 3. The cake is in Box 3. The kite is in Box 1. The ball is in Box 2. The pen is in Box 3. The pen is in Box 3. The apple is in Box 1. The coin is in Box 2. The cup is in Box 3. The cup is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-29",
+   "prompt": "The drum is in Box 1. The bell is in Box 2. The coin is in Box 3. The drum is in Box 1. The drum is in Box 1. The key is in Box 2. The hat is in Box 3. The hat is in Box 3. The hat is in Box 1. The card is in Box 2. The fork is in Box 3. The hat is in Box 1. The fork is in Box 1. The card is in Box 2. The boat is in Box 3. The fork is in Box 1. The book is in Box 1. The cup is in Box 2. The fork is in Box 3. The cup is in Box 2. The key is in Box 1. The bell is in Box 2. The lamp is in Box 3. The bell is in Box 2. The card is in Box 1. The leaf is in Box 2. The fork is in Box 3. The fork is in Box 3. The leaf is in Box 1. The sock is in Box 2. The boat is in Box 3. The sock is in Box 2. The cake is in Box 1. The key is in Box 2. The apple is in Box 3. The cake is in Box 1. The leaf is in Box 1. The hat is in Box 2. The drum is in Box 3. The leaf is in Box 1. The pen is in Box 1. The cup is in Box 2. The boat is in Box 3. The pen is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-30",
+   "prompt": "The ball is in Box 1. The book is in Box 2. The key is in Box 3. The key is in Box 3. The key is in Box 1. The rope is in Box 2. The boat is in Box 3. The boat is in Box 3. The sock is in Box 1. The ball is in Box 2. The ring is in Box 3. The sock is in Box 1. The ball is in Box 1. The card is in Box 2. The leaf is in Box 3. The card is in Box 2. The coin is in Box 1. The hat is in Box 2. The book is in Box 3. The coin is in Box 1. The ball is in Box 1. The rope is in Box 2. The bell is in Box 3. The bell is in Box 3. The lamp is in Box 1. The coin is in Box 2. The kite is in Box 3. The lamp is in Box 1. The hat is in Box 1. The fork is in Box 2. The drum is in Box 3. The hat is in Box 1. The drum is in Box 1. The coin is in Box 2. The sock is in Box 3. The drum is in Box 1. The rope is in Box 1. The leaf is in Box 2. The ball is in Box 3. The rope is in Box 1. The leaf is in Box 1. The lamp is in Box 2. The boat is in Box 3. The leaf is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-31",
+   "prompt": "The rope is in Box 1. The hat is in Box 2. The key is in Box 3. The rope is in Box 1. The coin is in Box 1. The drum is in Box 2. The fork is in Box 3. The fork is in Box 3. The sock is in Box 1. The coin is in Box 2. The apple is in Box 3. The apple is in Box 3. The lamp is in Box 1. The apple is in Box 2. The ring is in Box 3. The ring is in Box 3. The drum is in Box 1. The key is in Box 2. The coin is in Box 3. The coin is in Box 3. The leaf is in Box 1. The apple is in Box 2. The cup is in Box 3. The cup is in Box 3. The lamp is in Box 1. The pen is in Box 2. The kite is in Box 3. The kite is in Box 3. The bell is in Box 1. The ball is in Box 2. The kite is in Box 3. The ball is in Box 2. The lamp is in Box 1. The drum is in Box 2. The book is in Box 3. The lamp is in Box 1. The key is in Box 1. The ring is in Box 2. The kite is in Box 3. The kite is in Box 3. The pen is in Box 1. The ball is in Box 2. The card is in Box 3. The card is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-32",
+   "prompt": "The bell is in Box 1. The sock is in Box 2. The pen is in Box 3. The bell is in Box 1. The sock is in Box 1. The lamp is in Box 2. The key is in Box 3. The lamp is in Box 2. The apple is in Box 1. The book is in Box 2. The card is in Box 3. The book is in Box 2. The book is in Box 1. The cup is in Box 2. The sock is in Box 3. The book is in Box 1. The card is in Box 1. The lamp is in Box 2. The ball is in Box 3. The lamp is in Box 2. The coin is in Box 1. The book is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The leaf is in Box 1. The fork is in Box 2. The hat is in Box 3. The leaf is in Box 1. The sock is in Box 1. The key is in Box 2. The ball is in Box 3. The key is in Box 2. The ball is in Box 1. The ring is in Box 2. The apple is in Box 3. The apple is in Box 3. The boat is in Box 1. The lamp is in Box 2. The hat is in Box 3. The lamp is in Box 2. The book is in Box 1. The kite is in Box 2. The sock is in Box 3. The sock is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-33",
+   "prompt": "The ring is in Box 1. The card is in Box 2. The sock is in Box 3. The card is in Box 2. The leaf is in Box 1. The ring is in Box 2. The sock is in Box 3. The leaf is in Box 1. The apple is in Box 1. The lamp is in Box 2. The book is in Box 3. The lamp is in Box 2. The hat is in Box 1. The kite is in Box 2. The rope is in Box 3. The hat is in Box 1. The pen is in Box 1. The boat is in Box 2. The fork is in Box 3. The pen is in Box 1. The drum is in Box 1. The apple is in Box 2. The bell is in Box 3. The apple is in Box 2. The cake is in Box 1. The hat is in Box 2. The kite is in Box 3. The kite is in Box 3. The ring is in Box 1. The fork is in Box 2. The boat is in Box 3. The ring is in Box 1. The drum is in Box 1. The bell is in Box 2. The cake is in Box 3. The drum is in Box 1. The ball is in Box 1. The key is in Box 2. The ring is in Box 3. The key is in Box 2. The leaf is in Box 1. The key is in Box 2. The pen is in Box 3. The key is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-34",
+   "prompt": "The cake is in Box 1. The pen is in Box 2. The cup is in Box 3. The cake is in Box 1. The rope is in Box 1. The key is in Box 2. The book is in Box 3. The book is in Box 3. The rope is in Box 1. The key is in Box 2. The kite is in Box 3. The key is in Box 2. The fork is in Box 1. The ball is in Box 2. The kite is in Box 3. The ball is in Box 2. The book is in Box 1. The bell is in Box 2. The coin is in Box 3. The coin is in Box 3. The cake is in Box 1. The key is in Box 2. The coin is in Box 3. The coin is in Box 3. The sock is in Box 1. The apple is in Box 2. The ball is in Box 3. The ball is in Box 3. The cake is in Box 1. The apple is in Box 2. The kite is in Box 3. The kite is in Box 3. The apple is in Box 1. The lamp is in Box 2. The key is in Box 3. The lamp is in Box 2. The bell is in Box 1. The apple is in Box 2. The sock is in Box 3. The sock is in Box 3. The pen is in Box 1. The drum is in Box 2. The kite is in Box 3. The kite is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-35",
+   "prompt": "The ball is in Box 1. The lamp is in Box 2. The drum is in Box 3. The lamp is in Box 2. The cake is in Box 1. The card is in Box 2. The cup is in Box 3. The cake is in Box 1. The lamp is in Box 1. The boat is in Box 2. The pen is in Box 3. The lamp is in Box 1. The ring is in Box 1. The cup is in Box 2. The drum is in Box 3. The cup is in Box 2. The hat is in Box 1. The cup is in Box 2. The drum is in Box 3. The drum is in Box 3. The book is in Box 1. The boat is in Box 2. The bell is in Box 3. The bell is in Box 3. The hat is in Box 1. The pen is in Box 2. The kite is in Box 3. The hat is in Box 1. The cake is in Box 1. The bell is in Box 2. The hat is in Box 3. The cake is in Box 1. The ball is in Box 1. The leaf is in Box 2. The drum is in Box 3. The leaf is in Box 2. The cake is in Box 1. The coin is in Box 2. The leaf is in Box 3. The cake is in Box 1. The card is in Box 1. The ring is in Box 2. The book is in Box 3. The book is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-36",
+   "prompt": "The book is in Box 1. The cup is in Box 2. The apple is in Box 3. The cup is in Box 2. The fork is in Box 1. The apple is in Box 2. The ball is in Box 3. The ball is in Box 3. The drum is in Box 1. The pen is in Box 2. The bell is in Box 3. The drum is in Box 1. The cup is in Box 1. The ring is in Box 2. The apple is in Box 3. The apple is in Box 3. The lamp is in Box 1. The sock is in Box 2. The coin is in Box 3. The lamp is in Box 1. The pen is in Box 1. The sock is in Box 2. The rope is in Box 3. The rope is in Box 3. The cake is in Box 1. The rope is in Box 2. The ring is in Box 3. The cake is in Box 1. The drum is in Box 1. The cup is in Box 2. The book is in Box 3. The drum is in Box 1. The cup is in Box 1. The rope is in Box 2. The kite is in Box 3. The rope is in Box 2. The hat is in Box 1. The ball is in Box 2. The cake is in Box 3. The cake is in Box 3. The boat is in Box 1. The leaf is in Box 2. The ring is in Box 3. The ring is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-37",
+   "prompt": "The drum is in Box 1. The ball is in Box 2. The kite is in Box 3. The ball is in Box 2. The sock is in Box 1. The bell is in Box 2. The book is in Box 3. The book is in Box 3. The leaf is in Box 1. The bell is in Box 2. The ring is in Box 3. The leaf is in Box 1. The apple is in Box 1. The pen is in Box 2. The cake is in Box 3. The apple is in Box 1. The book is in Box 1. The sock is in Box 2. The ring is in Box 3. The book is in Box 1. The boat is in Box 1. The cup is in Box 2. The rope is in Box 3. The rope is in Box 3. The kite is in Box 1. The cake is in Box 2. The pen is in Box 3. The kite is in Box 1. The cup is in Box 1. The book is in Box 2. The coin is in Box 3. The book is in Box 2. The lamp is in Box 1. The fork is in Box 2. The ball is in Box 3. The ball is in Box 3. The sock is in Box 1. The key is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The leaf is in Box 1. The hat is in Box 2. The rope is in Box 3. The rope is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-38",
+   "prompt": "The book is in Box 1. The apple is in Box 2. The sock is in Box 3. The apple is in Box 2. The key is in Box 1. The apple is in Box 2. The fork is in Box 3. The key is in Box 1. The drum is in Box 1. The ball is in Box 2. The key is in Box 3. The drum is in Box 1. The boat is in Box 1. The cake is in Box 2. The ball is in Box 3. The ball is in Box 3. The rope is in Box 1. The pen is in Box 2. The fork is in Box 3. The pen is in Box 2. The sock is in Box 1. The leaf is in Box 2. The drum is in Box 3. The sock is in Box 1. The boat is in Box 1. The apple is in Box 2. The sock is in Box 3. The sock is in Box 3. The drum is in Box 1. The cake is in Box 2. The coin is in Box 3. The drum is in Box 1. The key is in Box 1. The hat is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The hat is in Box 1. The key is in Box 2. The kite is in Box 3. The hat is in Box 1. The card is in Box 1. The ball is in Box 2. The pen is in Box 3. The card is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-39",
+   "prompt": "The card is in Box 1. The leaf is in Box 2. The kite is in Box 3. The leaf is in Box 2. The card is in Box 1. The coin is in Box 2. The fork is in Box 3. The card is in Box 1. The boat is in Box 1. The coin is in Box 2. The leaf is in Box 3. The boat is in Box 1. The book is in Box 1. The pen is in Box 2. The cake is in Box 3. The cake is in Box 3. The pen is in Box 1. The fork is in Box 2. The coin is in Box 3. The fork is in Box 2. The pen is in Box 1. The cake is in Box 2. The kite is in Box 3. The kite is in Box 3. The fork is in Box 1. The sock is in Box 2. The card is in Box 3. The sock is in Box 2. The key is in Box 1. The apple is in Box 2. The ball is in Box 3. The ball is in Box 3. The cake is in Box 1. The lamp is in Box 2. The hat is in Box 3. The lamp is in Box 2. The leaf is in Box 1. The boat is in Box 2. The fork is in Box 3. The leaf is in Box 1. The kite is in Box 1. The sock is in Box 2. The hat is in Box 3. The sock is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-40",
+   "prompt": "The boat is in Box 1. The hat is in Box 2. The book is in Box 3. The book is in Box 3. The book is in Box 1. The leaf is in Box 2. The fork is in Box 3. The leaf is in Box 2. The cake is in Box 1. The sock is in Box 2. The bell is in Box 3. The bell is in Box 3. The bell is in Box 1. The pen is in Box 2. The kite is in Box 3. The bell is in Box 1. The boat is in Box 1. The cake is in Box 2. The bell is in Box 3. The boat is in Box 1. The leaf is in Box 1. The apple is in Box 2. The ring is in Box 3. The apple is in Box 2. The sock is in Box 1. The ring is in Box 2. The leaf is in Box 3. The leaf is in Box 3. The key is in Box 1. The hat is in Box 2. The boat is in Box 3. The key is in Box 1. The kite is in Box 1. The drum is in Box 2. The book is in Box 3. The kite is in Box 1. The lamp is in Box 1. The book is in Box 2. The cake is in Box 3. The lamp is in Box 1. The cake is in Box 1. The ball is in Box 2. The fork is in Box 3. The ball is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-41",
+   "prompt": "The coin is in Box 1. The rope is in Box 2. The sock is in Box 3. The sock is in Box 3. The coin is in Box 1. The book is in Box 2. The boat is in Box 3. The book is in Box 2. The coin is in Box 1. The apple is in Box 2. The ring is in Box 3. The apple is in Box 2. The cake is in Box 1. The fork is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The cake is in Box 1. The apple is in Box 2. The book is in Box 3. The book is in Box 3. The ball is in Box 1. The coin is in Box 2. The cup is in Box 3. The ball is in Box 1. The key is in Box 1. The bell is in Box 2. The rope is in Box 3. The rope is in Box 3. The rope is in Box 1. The book is in Box 2. The hat is in Box 3. The book is in Box 2. The bell is in Box 1. The fork is in Box 2. The kite is in Box 3. The kite is in Box 3. The rope is in Box 1. The sock is in Box 2. The ring is in Box 3. The ring is in Box 3. The cake is in Box 1. The rope is in Box 2. The coin is in Box 3. The cake is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-42",
+   "prompt": "The hat is in Box 1. The pen is in Box 2. The cake is in Box 3. The pen is in Box 2. The card is in Box 1. The lamp is in Box 2. The bell is in Box 3. The card is in Box 1. The cake is in Box 1. The leaf is in Box 2. The hat is in Box 3. The leaf is in Box 2. The lamp is in Box 1. The drum is in Box 2. The sock is in Box 3. The sock is in Box 3. The kite is in Box 1. The bell is in Box 2. The ring is in Box 3. The kite is in Box 1. The ring is in Box 1. The lamp is in Box 2. The card is in Box 3. The ring is in Box 1. The key is in Box 1. The boat is in Box 2. The rope is in Box 3. The boat is in Box 2. The ring is in Box 1. The sock is in Box 2. The bell is in Box 3. The bell is in Box 3. The card is in Box 1. The hat is in Box 2. The drum is in Box 3. The card is in Box 1. The coin is in Box 1. The apple is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The boat is in Box 1. The pen is in Box 2. The book is in Box 3. The book is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-43",
+   "prompt": "The leaf is in Box 1. The card is in Box 2. The kite is in Box 3. The leaf is in Box 1. The pen is in Box 1. The hat is in Box 2. The fork is in Box 3. The hat is in Box 2. The apple is in Box 1. The bell is in Box 2. The kite is in Box 3. The apple is in Box 1. The rope is in Box 1. The bell is in Box 2. The ball is in Box 3. The bell is in Box 2. The hat is in Box 1. The ring is in Box 2. The rope is in Box 3. The ring is in Box 2. The ball is in Box 1. The leaf is in Box 2. The coin is in Box 3. The coin is in Box 3. The card is in Box 1. The hat is in Box 2. The fork is in Box 3. The card is in Box 1. The cake is in Box 1. The key is in Box 2. The bell is in Box 3. The bell is in Box 3. The coin is in Box 1. The book is in Box 2. The leaf is in Box 3. The leaf is in Box 3. The drum is in Box 1. The lamp is in Box 2. The card is in Box 3. The card is in Box 3. The apple is in Box 1. The book is in Box 2. The ring is in Box 3. The ring is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-44",
+   "prompt": "The bell is in Box 1. The fork is in Box 2. The rope is in Box 3. The fork is in Box 2. The book is in Box 1. The ring is in Box 2. The hat is in Box 3. The hat is in Box 3. The ring is in Box 1. The leaf is in Box 2. The drum is in Box 3. The leaf is in Box 2. The lamp is in Box 1. The fork is in Box 2. The pen is in Box 3. The pen is in Box 3. The kite is in Box 1. The drum is in Box 2. The fork is in Box 3. The fork is in Box 3. The cake is in Box 1. The ring is in Box 2. The coin is in Box 3. The cake is in Box 1. The cake is in Box 1. The sock is in Box 2. The ball is in Box 3. The cake is in Box 1. The bell is in Box 1. The lamp is in Box 2. The hat is in Box 3. The hat is in Box 3. The sock is in Box 1. The rope is in Box 2. The key is in Box 3. The rope is in Box 2. The apple is in Box 1. The ring is in Box 2. The sock is in Box 3. The apple is in Box 1. The key is in Box 1. The cake is in Box 2. The bell is in Box 3. The bell is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-45",
+   "prompt": "The fork is in Box 1. The rope is in Box 2. The cake is in Box 3. The cake is in Box 3. The cake is in Box 1. The pen is in Box 2. The hat is in Box 3. The hat is in Box 3. The hat is in Box 1. The leaf is in Box 2. The book is in Box 3. The leaf is in Box 2. The card is in Box 1. The book is in Box 2. The ball is in Box 3. The book is in Box 2. The rope is in Box 1. The kite is in Box 2. The key is in Box 3. The key is in Box 3. The cake is in Box 1. The coin is in Box 2. The ball is in Box 3. The coin is in Box 2. The leaf is in Box 1. The rope is in Box 2. The ring is in Box 3. The rope is in Box 2. The bell is in Box 1. The kite is in Box 2. The card is in Box 3. The bell is in Box 1. The ring is in Box 1. The ball is in Box 2. The hat is in Box 3. The ball is in Box 2. The card is in Box 1. The boat is in Box 2. The hat is in Box 3. The boat is in Box 2. The apple is in Box 1. The leaf is in Box 2. The card is in Box 3. The card is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-46",
+   "prompt": "The boat is in Box 1. The fork is in Box 2. The sock is in Box 3. The sock is in Box 3. The kite is in Box 1. The lamp is in Box 2. The fork is in Box 3. The fork is in Box 3. The bell is in Box 1. The hat is in Box 2. The rope is in Box 3. The hat is in Box 2. The book is in Box 1. The lamp is in Box 2. The ball is in Box 3. The ball is in Box 3. The key is in Box 1. The coin is in Box 2. The bell is in Box 3. The key is in Box 1. The hat is in Box 1. The card is in Box 2. The boat is in Box 3. The boat is in Box 3. The bell is in Box 1. The coin is in Box 2. The hat is in Box 3. The hat is in Box 3. The ring is in Box 1. The cake is in Box 2. The kite is in Box 3. The ring is in Box 1. The ring is in Box 1. The ball is in Box 2. The bell is in Box 3. The ball is in Box 2. The boat is in Box 1. The hat is in Box 2. The apple is in Box 3. The apple is in Box 3. The boat is in Box 1. The bell is in Box 2. The rope is in Box 3. The rope is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-47",
+   "prompt": "The cake is in Box 1. The key is in Box 2. The rope is in Box 3. The cake is in Box 1. The hat is in Box 1. The apple is in Box 2. The ring is in Box 3. The apple is in Box 2. The pen is in Box 1. The card is in Box 2. The sock is in Box 3. The card is in Box 2. The boat is in Box 1. The bell is in Box 2. The coin is in Box 3. The coin is in Box 3. The rope is in Box 1. The key is in Box 2. The bell is in Box 3. The key is in Box 2. The ring is in Box 1. The pen is in Box 2. The card is in Box 3. The card is in Box 3. The ball is in Box 1. The cake is in Box 2. The leaf is in Box 3. The ball is in Box 1. The fork is in Box 1. The leaf is in Box 2. The key is in Box 3. The key is in Box 3. The apple is in Box 1. The card is in Box 2. The key is in Box 3. The key is in Box 3. The key is in Box 1. The boat is in Box 2. The pen is in Box 3. The boat is in Box 2. The ball is in Box 1. The key is in Box 2. The fork is in Box 3. The fork is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-48",
+   "prompt": "The fork is in Box 1. The book is in Box 2. The sock is in Box 3. The book is in Box 2. The boat is in Box 1. The cake is in Box 2. The coin is in Box 3. The boat is in Box 1. The apple is in Box 1. The key is in Box 2. The leaf is in Box 3. The apple is in Box 1. The lamp is in Box 1. The leaf is in Box 2. The cup is in Box 3. The cup is in Box 3. The cup is in Box 1. The pen is in Box 2. The apple is in Box 3. The cup is in Box 1. The ring is in Box 1. The apple is in Box 2. The pen is in Box 3. The ring is in Box 1. The ball is in Box 1. The apple is in Box 2. The leaf is in Box 3. The ball is in Box 1. The drum is in Box 1. The lamp is in Box 2. The cake is in Box 3. The lamp is in Box 2. The book is in Box 1. The cake is in Box 2. The key is in Box 3. The book is in Box 1. The book is in Box 1. The fork is in Box 2. The pen is in Box 3. The book is in Box 1. The book is in Box 1. The bell is in Box 2. The drum is in Box 3. The drum is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-49",
+   "prompt": "The fork is in Box 1. The boat is in Box 2. The hat is in Box 3. The boat is in Box 2. The book is in Box 1. The fork is in Box 2. The cup is in Box 3. The book is in Box 1. The drum is in Box 1. The hat is in Box 2. The book is in Box 3. The drum is in Box 1. The pen is in Box 1. The book is in Box 2. The apple is in Box 3. The book is in Box 2. The key is in Box 1. The sock is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The book is in Box 1. The coin is in Box 2. The card is in Box 3. The coin is in Box 2. The boat is in Box 1. The pen is in Box 2. The ball is in Box 3. The boat is in Box 1. The ring is in Box 1. The rope is in Box 2. The bell is in Box 3. The rope is in Box 2. The drum is in Box 1. The cup is in Box 2. The lamp is in Box 3. The drum is in Box 1. The apple is in Box 1. The fork is in Box 2. The sock is in Box 3. The fork is in Box 2. The coin is in Box 1. The pen is in Box 2. The kite is in Box 3. The pen is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-50",
+   "prompt": "The lamp is in Box 1. The fork is in Box 2. The cake is in Box 3. The fork is in Box 2. The boat is in Box 1. The pen is in Box 2. The sock is in Box 3. The pen is in Box 2. The book is in Box 1. The ball is in Box 2. The apple is in Box 3. The ball is in Box 2. The key is in Box 1. The ball is in Box 2. The card is in Box 3. The ball is in Box 2. The leaf is in Box 1. The rope is in Box 2. The key is in Box 3. The rope is in Box 2. The drum is in Box 1. The fork is in Box 2. The coin is in Box 3. The coin is in Box 3. The drum is in Box 1. The ball is in Box 2. The sock is in Box 3. The sock is in Box 3. The kite is in Box 1. The drum is in Box 2. The book is in Box 3. The kite is in Box 1. The apple is in Box 1. The rope is in Box 2. The card is in Box 3. The rope is in Box 2. The cake is in Box 1. The coin is in Box 2. The boat is in Box 3. The cake is in Box 1. The cup is in Box 1. The fork is in Box 2. The bell is in Box 3. The fork is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-51",
+   "prompt": "The ball is in Box 1. The book is in Box 2. The pen is in Box 3. The book is in Box 2. The cup is in Box 1. The kite is in Box 2. The ball is in Box 3. The cup is in Box 1. The hat is in Box 1. The cup is in Box 2. The coin is in Box 3. The cup is in Box 2. The hat is in Box 1. The lamp is in Box 2. The apple is in Box 3. The apple is in Box 3. The ring is in Box 1. The book is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The key is in Box 1. The pen is in Box 2. The ring is in Box 3. The ring is in Box 3. The coin is in Box 1. The card is in Box 2. The hat is in Box 3. The card is in Box 2. The sock is in Box 1. The ring is in Box 2. The bell is in Box 3. The ring is in Box 2. The key is in Box 1. The apple is in Box 2. The ring is in Box 3. The ring is in Box 3. The sock is in Box 1. The book is in Box 2. The lamp is in Box 3. The book is in Box 2. The book is in Box 1. The rope is in Box 2. The bell is in Box 3. The book is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-52",
+   "prompt": "The book is in Box 1. The cake is in Box 2. The lamp is in Box 3. The book is in Box 1. The lamp is in Box 1. The book is in Box 2. The sock is in Box 3. The sock is in Box 3. The card is in Box 1. The drum is in Box 2. The book is in Box 3. The book is in Box 3. The drum is in Box 1. The apple is in Box 2. The ball is in Box 3. The drum is in Box 1. The rope is in Box 1. The key is in Box 2. The drum is in Box 3. The key is in Box 2. The apple is in Box 1. The sock is in Box 2. The coin is in Box 3. The apple is in Box 1. The drum is in Box 1. The hat is in Box 2. The boat is in Box 3. The boat is in Box 3. The leaf is in Box 1. The ring is in Box 2. The lamp is in Box 3. The lamp is in Box 3. The pen is in Box 1. The ball is in Box 2. The sock is in Box 3. The pen is in Box 1. The pen is in Box 1. The bell is in Box 2. The cup is in Box 3. The bell is in Box 2. The key is in Box 1. The kite is in Box 2. The book is in Box 3. The book is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-53",
+   "prompt": "The lamp is in Box 1. The sock is in Box 2. The book is in Box 3. The sock is in Box 2. The ball is in Box 1. The key is in Box 2. The cup is in Box 3. The cup is in Box 3. The bell is in Box 1. The ring is in Box 2. The sock is in Box 3. The sock is in Box 3. The key is in Box 1. The rope is in Box 2. The bell is in Box 3. The bell is in Box 3. The fork is in Box 1. The ring is in Box 2. The coin is in Box 3. The fork is in Box 1. The card is in Box 1. The apple is in Box 2. The sock is in Box 3. The apple is in Box 2. The cup is in Box 1. The bell is in Box 2. The key is in Box 3. The bell is in Box 2. The lamp is in Box 1. The leaf is in Box 2. The cup is in Box 3. The lamp is in Box 1. The cake is in Box 1. The lamp is in Box 2. The pen is in Box 3. The pen is in Box 3. The sock is in Box 1. The leaf is in Box 2. The cake is in Box 3. The leaf is in Box 2. The kite is in Box 1. The bell is in Box 2. The pen is in Box 3. The kite is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-54",
+   "prompt": "The sock is in Box 1. The apple is in Box 2. The coin is in Box 3. The sock is in Box 1. The drum is in Box 1. The key is in Box 2. The cup is in Box 3. The cup is in Box 3. The apple is in Box 1. The lamp is in Box 2. The coin is in Box 3. The coin is in Box 3. The book is in Box 1. The bell is in Box 2. The key is in Box 3. The book is in Box 1. The leaf is in Box 1. The pen is in Box 2. The bell is in Box 3. The leaf is in Box 1. The fork is in Box 1. The cake is in Box 2. The ring is in Box 3. The fork is in Box 1. The book is in Box 1. The sock is in Box 2. The pen is in Box 3. The book is in Box 1. The book is in Box 1. The drum is in Box 2. The coin is in Box 3. The book is in Box 1. The drum is in Box 1. The sock is in Box 2. The cup is in Box 3. The cup is in Box 3. The boat is in Box 1. The hat is in Box 2. The drum is in Box 3. The boat is in Box 1. The coin is in Box 1. The card is in Box 2. The bell is in Box 3. The coin is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-55",
+   "prompt": "The apple is in Box 1. The boat is in Box 2. The kite is in Box 3. The boat is in Box 2. The coin is in Box 1. The cup is in Box 2. The rope is in Box 3. The cup is in Box 2. The lamp is in Box 1. The drum is in Box 2. The rope is in Box 3. The drum is in Box 2. The ball is in Box 1. The fork is in Box 2. The apple is in Box 3. The fork is in Box 2. The pen is in Box 1. The cake is in Box 2. The coin is in Box 3. The coin is in Box 3. The bell is in Box 1. The ball is in Box 2. The pen is in Box 3. The bell is in Box 1. The ring is in Box 1. The lamp is in Box 2. The leaf is in Box 3. The lamp is in Box 2. The card is in Box 1. The hat is in Box 2. The cup is in Box 3. The hat is in Box 2. The boat is in Box 1. The rope is in Box 2. The kite is in Box 3. The boat is in Box 1. The coin is in Box 1. The fork is in Box 2. The cup is in Box 3. The cup is in Box 3. The drum is in Box 1. The lamp is in Box 2. The sock is in Box 3. The sock is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-56",
+   "prompt": "The key is in Box 1. The cup is in Box 2. The fork is in Box 3. The key is in Box 1. The bell is in Box 1. The key is in Box 2. The card is in Box 3. The bell is in Box 1. The sock is in Box 1. The bell is in Box 2. The fork is in Box 3. The fork is in Box 3. The coin is in Box 1. The card is in Box 2. The bell is in Box 3. The coin is in Box 1. The book is in Box 1. The kite is in Box 2. The ring is in Box 3. The book is in Box 1. The ring is in Box 1. The coin is in Box 2. The pen is in Box 3. The pen is in Box 3. The leaf is in Box 1. The fork is in Box 2. The drum is in Box 3. The leaf is in Box 1. The book is in Box 1. The cake is in Box 2. The lamp is in Box 3. The book is in Box 1. The key is in Box 1. The pen is in Box 2. The drum is in Box 3. The key is in Box 1. The lamp is in Box 1. The card is in Box 2. The hat is in Box 3. The hat is in Box 3. The leaf is in Box 1. The apple is in Box 2. The ball is in Box 3. The ball is in Box",
+   "target": "3",
+   "intermediates": [
+    "3"
+   ]
+  },
+  {
+   "name": "bind3-57",
+   "prompt": "The rope is in Box 1. The lamp is in Box 2. The sock is in Box 3. The lamp is in Box 2. The hat is in Box 1. The sock is in Box 2. The drum is in Box 3. The drum is in Box 3. The apple is in Box 1. The ball is in Box 2. The book is in Box 3. The apple is in Box 1. The boat is in Box 1. The lamp is in Box 2. The bell is in Box 3. The bell is in Box 3. The bell is in Box 1. The fork is in Box 2. The kite is in Box 3. The kite is in Box 3. The book is in Box 1. The key is in Box 2. The ring is in Box 3. The ring is in Box 3. The pen is in Box 1. The sock is in Box 2. The coin is in Box 3. The coin is in Box 3. The cake is in Box 1. The boat is in Box 2. The cup is in Box 3. The cup is in Box 3. The coin is in Box 1. The leaf is in Box 2. The boat is in Box 3. The coin is in Box 1. The pen is in Box 1. The fork is in Box 2. The boat is in Box 3. The boat is in Box 3. The coin is in Box 1. The ring is in Box 2. The cup is in Box 3. The coin is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  },
+  {
+   "name": "bind3-58",
+   "prompt": "The rope is in Box 1. The cake is in Box 2. The apple is in Box 3. The apple is in Box 3. The bell is in Box 1. The hat is in Box 2. The lamp is in Box 3. The hat is in Box 2. The hat is in Box 1. The coin is in Box 2. The book is in Box 3. The hat is in Box 1. The leaf is in Box 1. The sock is in Box 2. The ball is in Box 3. The leaf is in Box 1. The leaf is in Box 1. The coin is in Box 2. The key is in Box 3. The coin is in Box 2. The hat is in Box 1. The fork is in Box 2. The cup is in Box 3. The fork is in Box 2. The apple is in Box 1. The sock is in Box 2. The rope is in Box 3. The rope is in Box 3. The apple is in Box 1. The ball is in Box 2. The hat is in Box 3. The ball is in Box 2. The hat is in Box 1. The drum is in Box 2. The kite is in Box 3. The drum is in Box 2. The hat is in Box 1. The key is in Box 2. The cake is in Box 3. The cake is in Box 3. The bell is in Box 1. The fork is in Box 2. The hat is in Box 3. The fork is in Box",
+   "target": "2",
+   "intermediates": [
+    "2"
+   ]
+  },
+  {
+   "name": "bind3-59",
+   "prompt": "The hat is in Box 1. The book is in Box 2. The drum is in Box 3. The book is in Box 2. The boat is in Box 1. The coin is in Box 2. The hat is in Box 3. The hat is in Box 3. The cup is in Box 1. The boat is in Box 2. The card is in Box 3. The boat is in Box 2. The lamp is in Box 1. The book is in Box 2. The boat is in Box 3. The boat is in Box 3. The bell is in Box 1. The rope is in Box 2. The cup is in Box 3. The bell is in Box 1. The kite is in Box 1. The hat is in Box 2. The cake is in Box 3. The cake is in Box 3. The boat is in Box 1. The drum is in Box 2. The fork is in Box 3. The drum is in Box 2. The book is in Box 1. The apple is in Box 2. The boat is in Box 3. The boat is in Box 3. The coin is in Box 1. The bell is in Box 2. The sock is in Box 3. The bell is in Box 2. The coin is in Box 1. The sock is in Box 2. The bell is in Box 3. The bell is in Box 3. The fork is in Box 1. The card is in Box 2. The coin is in Box 3. The fork is in Box",
+   "target": "1",
+   "intermediates": [
+    "1"
+   ]
+  }
+ ]
+}
