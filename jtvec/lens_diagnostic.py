@@ -63,6 +63,23 @@ MATCHED = {"fresh1hop-operand": "fresh1hop-answer",
            "fresh2hop-bridge": "fresh2hop-answer"}
 
 
+def amended_q5_verdict(anchor_shows: dict[str, tuple[bool, int]],
+                       adequate_n: int = 20) -> dict:
+    """EXP-M5-0 amended Q5 (D-027 outcome c). anchor_shows[task] =
+    (shows_advantage, N_correct) for LATENT-INTERMEDIATE anchors. Q5 passes iff
+    >= 2 latent anchors at adequate N (>= adequate_n) clear the advantage;
+    anchors below adequate N are descriptive only (2hop-bridge rider)."""
+    clearing = [t for t, (s, n) in anchor_shows.items() if s and n >= adequate_n]
+    descriptive = {t: n for t, (s, n) in anchor_shows.items() if n < adequate_n}
+    return {
+        "passed": len(clearing) >= 2,
+        "clearing_adequate_n": sorted(clearing),
+        "n_clearing": len(clearing),
+        "descriptive_low_n": descriptive,
+        "adequate_n": adequate_n,
+    }
+
+
 def diagnostic_verdict(per_task_draws: dict[str, list[dict]],
                        advantage_ratio: float,
                        matched: dict[str, str] | None = None) -> dict:

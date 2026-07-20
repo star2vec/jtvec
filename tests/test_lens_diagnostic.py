@@ -12,6 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from jtvec.lens_diagnostic import (
+    amended_q5_verdict,
     arm_max_contrast,
     diagnostic_verdict,
     task_arm_ratios,
@@ -97,6 +98,24 @@ def test_verdict_no_gap_when_output_also_shows():
     v = diagnostic_verdict(per_task, RATIO)
     assert v["verdict"] == "NO-GAP"
     assert v["n_dissociating_pairs"] == 0
+
+
+def test_amended_q5_passes_on_two_adequate_anchors():
+    # two adequate-N latent anchors clear; one low-N clears but is descriptive
+    v = amended_q5_verdict(
+        {"capital-operand": (True, 33), "fresh1hop-operand": (True, 28),
+         "fresh2hop-bridge": (True, 6)}, adequate_n=20)
+    assert v["passed"] is True
+    assert v["clearing_adequate_n"] == ["capital-operand", "fresh1hop-operand"]
+    assert v["descriptive_low_n"] == {"fresh2hop-bridge": 6}
+
+
+def test_amended_q5_fails_with_only_one_adequate_anchor():
+    v = amended_q5_verdict(
+        {"capital-operand": (True, 33), "fresh1hop-operand": (False, 28),
+         "fresh2hop-bridge": (True, 6)}, adequate_n=20)
+    assert v["passed"] is False  # only 1 adequate-N anchor clears; low-N doesn't count
+    assert v["n_clearing"] == 1
 
 
 def test_verdict_no_gap_when_only_one_pair_dissociates():
