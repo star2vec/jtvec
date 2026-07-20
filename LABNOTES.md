@@ -1459,3 +1459,47 @@ D-027 outcome (c): amend the EXP-M5-0 Q5 probing-contrast (max-contrast metric
 amendment is the prereg act; 1.4B admission follows her ruling. Non-lens axes
 were never in question. 2.8B escalation is NOT triggered (the deflation branch
 did not fire).
+
+### 2026-07-21 — Q5 amendment ratified; latent-vs-output specificity (A1); Q2/Q6 blocker (Claude)
+
+Ecaterina ruled (session, 2026-07-21):
+
+- Q5 amendment RATIFIED with two riders, folded into
+  harness/preregs/EXP-M5-0-amendment-Q5.md and committed: (a) the
+  fair-statistic clause (all baselines under the identical max-contrast
+  statistic) is a PERMANENT part of Q5 on every substrate; (b)
+  latent-intermediate probes are, by definition, the A1-relevant anchor class
+  (an output-token probe cannot answer A1, since the logit lens reads the
+  emitted token by construction).
+
+- Substantive diagnostic outcome (ruling 4; HYPOTHESIS tier, flagged for the
+  paper's A1-definition section): on Pythia-1.4b@fedc38a, EXP-M5-0b, the
+  J-lens's max-contrast advantage over the logit lens is SPECIFIC to
+  latent-intermediate readout. On identical prompts, the held operand/bridge is
+  read by the J-lens far better than by the logit lens (operand 6.98x, bridge
+  15.52x; jlens HMR ~2-3 vs logit ~15-20), while the emitted answer is read no
+  better by the J-lens than the logit lens (~0.9x); random baselines 0.0 under
+  the identical statistic. This latent-vs-output specificity is the proposed
+  operational definition of A1 (decodability = the workspace holds content the
+  logit lens does not surface). Stays HYPOTHESIS-tier: one substrate, one gate,
+  a methodological diagnostic — not a residency finding (that is M6 on certified
+  species). Not to be stated as a finding in the paper until confirmed.
+
+- Formal re-run ORDERED (~40 min, EXP-M5-0-labelled, amended criterion, proper
+  anchor N): 1.4B admitted on that PASS, not on the re-graded diagnostic.
+
+- D-029 (proposed; BLOCKS the re-run's PASS): the original gate
+  (results/m5/20260720-024819-p14b-lens-gate) failed on Q2 and Q6 as well as
+  Q5. The amendment fixes Q5 only. Amended Q5 now passes, but Q2 (swap dp 0.483
+  clears the 0.30 dp bar, but top-1 flip 0.5625 misses the 0.75 bar) and Q6 (dp
+  IQR 0.0707 > 0.05, draw-1 outlier) still fail — both swap-intervention rules,
+  untouched by the probing-contrast amendment. So a re-run today returns FAIL
+  and does NOT admit 1.4B. Options put to Ecaterina, none adopted: (i)
+  recalibrate the Q2 flip / Q6 IQR bars per substrate on the same evidence-based
+  footing as Q5 (the swap moves probability strongly, dp 0.48; a 410M-derived
+  argmax-flip bar and a 0.05 IQR bar may be too brittle for 1.4B — parallel to
+  Q5's band-min brittleness); (ii) investigate the swap's per-draw weakness on
+  1.4B (real, and then A2/A3-relevant, or artifact); (iii) scope this admission
+  to A1 (Q5) and hold the swap-dependent A2/A3 admission pending Q2/Q6. The
+  formal re-run is built-ready and HELD pending this ruling — running it now
+  only re-confirms the predetermined Q2/Q6 FAIL.
