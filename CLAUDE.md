@@ -75,7 +75,14 @@ post_hoc, scratchpad/results-scout only, banned from CLAIMS/findings).
 Preregs EXP-M5-0-qualification + EXP-M5-1-concept-gate COMMITTED (thresholds
 ratified; both are gates, no CLAIMS entry). Current machine: the original M1
 MacBook 16GB (MPS, fp32); heavy tiers remain the win32 RTX laptop and an
-A100. Next: build scripts/m5_0_qualification.py (+ a generalized lens-gate
-orchestrator for 1.4B) with landing tests, commit, run M5.0 Mac baselines,
-then launch the 1.4B lens gate detached overnight. Standing: D-002 accepted
-knowingly; CLM-003/CLM-004 verify: lines still pending.
+A100. 1.4B lens gate RAN (scripts/m5_lens_gate.py, EXP-M5-0 rule 5):
+verdict FAIL (Q1/Q3/Q4 pass; Q2 flip 0.56<0.75 though dp 0.48 strong; Q5
+J-lens beats logit >=5x on only 1/4 anchors; Q6 dp IQR 0.071 from a draw-1
+outlier), evidence results/m5/20260720-024819-p14b-lens-gate + raw replay in
+LABNOTES. Per the prereg, 1.4B is inadmissible for lens-readout axes (A1/A3)
+pending D-027 (proposed: escalate to 2.8B / study the J-lens-vs-logit
+convergence / revisit thresholds; 410M stays lens-admitted). Next (BLOCKED on
+rulings): M5.0 baseline orchestrator awaits D-025 (S1 shot count) + D-026
+(binding data); 1.4B lens disposition awaits D-027. Standing: D-002 accepted
+knowingly; CLM-003/CLM-004 verify: lines still pending (raw re-derivation
+done + laid out for Ecaterina, 2026-07-20).

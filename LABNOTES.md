@@ -1292,3 +1292,73 @@ Next: launching the 1.4B lens gate detached overnight (nohup + Monitor; the
 (one commit per experiment). The M5.0 baseline orchestrator
 (scripts/m5_0_qualification.py) is deferred pending D-025/D-026 — it needs
 both rulings to fix its S1 and binding batteries before it is built + run.
+
+---
+
+## 2026-07-20 — M5.0 1.4B lens gate: verdict FAIL; raw replay (Claude)
+
+Run results/m5/20260720-024819-p14b-lens-gate (prereg EXP-M5-0 rule 5, commit
+cf1da2b; skip4-only, 3 draws seeds 0/1/2). m5_0_lens_verdict = FAIL. On
+EleutherAI/pythia-1.4b@fedc38a, band [4,16], N_swap=16. Q1 PASS (all 3 draws
+pass the vendored 9-check sanity gate), Q3 PASS (sham median 0.0004 <= 0.0625),
+Q4 PASS; Q2, Q5, Q6 FAIL.
+
+Raw replay (read-only, per the surprise->replay rule; nothing below asserted as
+a finding):
+
+- Q2 positive control FAIL, but on flip not effect. dp(swap_answer) median
+  0.483 (draws 0.495/0.353/0.483) clears the 0.30 bar; swap_top1_rate median
+  0.5625 (0.562/0.375/0.562) misses the 0.75 bar. Per-item dp is bimodal:
+  strong on most capital pairs (0.70-0.94) with a few near-zero (England->Spain
+  0.005, Greece->Egypt 0.009, Poland->Ireland 0.05). The swap moves answer
+  probability; top-1 flips ~56%.
+- Q5 probing contrast FAIL: 1 of 4 anchor tasks clears (needs 2). capital-
+  operand band-min L13 jlens HMR 1.54 vs logit 19.73 (12.8x) PASS; capital-
+  recall L15 1.38 vs 1.53 (1.1x), opposites L14 1.00 vs 1.00, word-pairs L16
+  1.60 vs 1.51 (0.9x) -- the logit lens reads those three as well as the
+  J-lens. Scanning all 23 layers (not only the band), the logit-to-jlens HMR
+  ratio never exceeds ~1.3 for those three tasks.
+- Q6 draw stability FAIL: dp IQR 0.0707 > 0.05 (band-min HMR IQR <= 0.065,
+  fine); driven by draw1 as a low outlier (dp 0.353 / flip 0.375 vs ~0.49 /
+  0.56 on draws 0/2).
+
+Not a pipeline artifact: all 3 draws pass Q1, the swap effect is strong and
+per-item structured, and J-lens HMRs are low (~1-2) where expected. Contrast
+with 410M (M1 VERIFIED: capital-recall logit HMR 61.5 at L16 vs J-lens 2.5):
+on 1.4B the logit lens itself reaches HMR ~1-2 on capital-recall/opposites/
+word-pairs in the upper-mid layers. Whether that is a genuine scale effect
+(the J-lens advantage over the logit lens narrowing as the residual stream
+becomes more logit-readable with scale) is OPEN and HYPOTHESIS-tier -- one gate
+run, not concluded. It touches the pre-registered deflation branch in
+TAXONOMY_DESIGN (whether the J-lens indexes output-proximity rather than
+representation type); the A1/A3 axes require the J-lens to separate from the
+logit lens, which 1.4B did not exhibit here on 3 of 4 anchors.
+
+Deviations / notes:
+- Band not re-derived (conformance gap). EXP-M5-0 rule 5 specifies the band is
+  re-derived from the probing profile per model; scripts/m5_lens_gate.py used
+  the config's fixed [4,16] (the 410M PROVISIONAL band). Verified above (full-
+  profile scan) that this did NOT cause the FAIL -- the logit lens is
+  competitive at every layer for the three failing tasks, so a re-run with a
+  re-derived band would still FAIL Q5. Flagged for the record.
+- Resource reality (retracts the earlier D-027 "12h-LAW breach" alarm I raised
+  mid-run): actual compute was fits 6877/5385/4817 s (1.91/1.50/1.34 h) +
+  evals ~16 min each + baselines ~0.2 h ~= 5.75 h total, within the ~7-8 h
+  prereg estimate and under the 12 h LAW. Wall-clock was 14.5 h (02:48->17:16)
+  only because the laptop slept ~07:12-13:25 while unattended; caffeinate
+  (bound to the run PID) held it awake afterward. No compute-budget deviation.
+
+Disposition PUT TO ECATERINA (D-027, proposed; the prereg failure clause makes
+1.4B inadmissible for the lens-readout axes A1/A3 and calls for an escalation
+ruling). Options, none adopted:
+(a) escalate the primary substrate to Pythia-2.8B (TAXONOMY_DESIGN scope
+    allows; compute flag ~2.8x the 1.4B per-fit cost -> GPU tier likely);
+(b) treat the J-lens vs logit convergence at 1.4B as a first-class question and
+    design a dedicated measurement before escalating (it may be a deflation or
+    a scale-effect result in its own right);
+(c) revisit the Q-rule thresholds for larger models -- flip 0.75 and the 5x
+    logit-contrast were set from 410M anchors -- a prereg amendment, her call;
+(d) 410M stays lens-admitted (M1-certified) and can anchor S1/S2 while the
+    1.4B question is resolved.
+Non-lens axes (A2 potency vs sham) are unaffected by a lens-gate FAIL. No
+further lens-dependent M5 work on 1.4B until she rules.

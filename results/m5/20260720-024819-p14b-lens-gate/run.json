@@ -1,0 +1,19 @@
+{
+  "run_name": "p14b-lens-gate",
+  "started": "2026-07-20T02:48:19",
+  "git_commit": "cf1da2b9d4f64842527781d26279d82bb0bd4e98",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-0-qualification.md",
+  "prereg_commit": "cf1da2b9d4f64842527781d26279d82bb0bd4e98",
+  "config_sha256": "dc11fcc9afe3b3874816066bd9a016dea38b0561493a9df7657903a2c36da654",
+  "post_hoc": false,
+  "m5_0_lens_verdict": "FAIL",
+  "rules": {
+    "Q1_all_draws_gate_pass": true,
+    "Q2_positive_control": false,
+    "Q3_sham": true,
+    "Q4_negative_control": true,
+    "Q5_probing_contrast": false,
+    "Q6_draw_stability": false
+  },
+  "finished": "2026-07-20T17:16:17"
+}

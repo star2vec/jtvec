@@ -1,0 +1,40 @@
+{
+  "rules": {
+    "Q1_all_draws_gate_pass": true,
+    "Q2_positive_control": false,
+    "Q3_sham": true,
+    "Q4_negative_control": true,
+    "Q5_probing_contrast": false,
+    "Q6_draw_stability": false
+  },
+  "diagnostics": {
+    "n_swap": 16,
+    "sham_bound": 0.0625,
+    "dp_median": 0.4831,
+    "dp_iqr": 0.0707,
+    "flip_median": 0.5625,
+    "sham_median": 0.0004,
+    "anchor_tasks": [
+      "capital-operand",
+      "capital-recall",
+      "opposites",
+      "word-pairs"
+    ],
+    "q5_passing_tasks": [
+      "capital-operand"
+    ],
+    "hmr_iqr_by_task": {
+      "capital-operand": 0.065,
+      "capital-recall": 0.02,
+      "opposites": 0.0,
+      "word-pairs": 0.035
+    }
+  },
+  "variant": "skip4",
+  "model": "EleutherAI/pythia-1.4b@fedc38a",
+  "band": [
+    4,
+    16
+  ],
+  "m5_0_lens_verdict": "FAIL"
+}

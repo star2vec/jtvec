@@ -1,0 +1,37 @@
+{
+  "model_revision": "fedc38a16eea3bd36a96b906d78d11d2ce18ed79",
+  "probe_s_per_prompt": 486.8497808750253,
+  "peak_rss_gb": 8.98,
+  "variants": {
+    "skip4": {
+      "lens_dir": "/Users/ecaterina/Developer/jtvec/cache/m5/p14b_draw2/lenses/EleutherAI/pythia-1.4b@fedc38a16eea3bd36a96b906d78d11d2ce18ed79/skip4_n10",
+      "source_layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "n_prompts": 10,
+      "wall_clock_s": 4817.4
+    }
+  }
+}
