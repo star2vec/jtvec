@@ -1,0 +1,17 @@
+{
+  "tier": "scout",
+  "post_hoc": true,
+  "decision": "D-028",
+  "model": "EleutherAI/pythia-1.4b",
+  "revision_requested": "fedc38a16eea3bd36a96b906d78d11d2ce18ed79",
+  "revision_resolved": "fedc38a16eea3bd36a96b906d78d11d2ce18ed79",
+  "dtype": "fp16",
+  "device": "cuda",
+  "load_s": 5.9,
+  "run_s": 350.8,
+  "n_generations": 2120,
+  "max_new_tokens": 10,
+  "n_shots": 4,
+  "seed": 28,
+  "peak_vram_gb": 2.88
+}

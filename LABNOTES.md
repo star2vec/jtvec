@@ -1362,3 +1362,53 @@ ruling). Options, none adopted:
     1.4B question is resolved.
 Non-lens axes (A2 potency vs sham) are unaffected by a lens-gate FAIL. No
 further lens-dependent M5 work on 1.4B until she rules.
+
+---
+
+## 2026-07-20 — Scout: multi-hop latent-composition variance pilot (D-028) (Claude)
+
+D-028 (ruled by Ecaterina via the session instruction; second scout-tier
+authorization on the D-024 pattern): single-run, post_hoc-stamped,
+results-scout/ only, HARD-BANNED from CLAIMS.md and from findings language.
+Purpose — a go/no-go input for the (not-yet-in-repo) "relgraph" spinoff, not a
+claim: price whether *latent* (no-CoT) 2-hop success is VARIABLE at a feasible
+Pythia scale, conditional on both constituent 1-hops passing. If latent
+multi-hop were uniformly failed or uniformly passed, relgraph's key assumption
+dies and the taxonomy proceeds alone. This session priced that assumption; it
+built no relgraph.
+
+Setup: scripts/scout_multihop.py (this session, uncommitted->committed with
+this entry) builds 2-hop compositions from third_party/relations (D-022 vendor)
+with a latent bridge entity — 7 relation pairs across 3 bridge types (country
+x4, company x2, person x1), 265 items; every item also tests both constituent
+1-hops on the same entities, plus a no-bridge paraphrase (bridge stated) format
+control. Measures: greedy exact-match (word-prefix; lenient window flag logged
+too) + correct-answer log-prob; zero-shot and 4-shot; a shuffled-gold frequency
+control (re-score of the greedy 2-hop gens). Substrates pythia-1.4b@fedc38a
+(D-023 pin) and pythia-2.8b@2a259cdd96a4beb1cdf467512e3904197345f6a9 (main
+resolved 2026-07-20 via HfApi; recorded scout-only, NOT a ratified pin — a pin
+decision stays Ecaterina's), fp16 inference at scout tier (dtype in each
+manifest). RTX 2000 Ada laptop; ~16 min total compute, peaks 2.88 / 5.64 GB,
+under the 12 h LAW. Evidence:
+results-scout/20260720-200644-multihop-variance/ (battery.json, per-item
+results.jsonl, raw completions, verdict.json + verdict_table.md, SCOUTLOG.md).
+Parent commit d7f4f2b.
+
+Scan verdict (scout label, not a finding): VARIANCE-EXISTS at 4-shot on both
+scales (strict and lenient matcher); MIXED-INCONCLUSIVE zero-shot on both.
+Among items where both 1-hops pass, the four country-bridge landmark pairs are
+admissible (n_both 22-30, frequency control ok) and land inside [0.2,0.8]:
+cond-2hop capital 0.375/0.28, currency 0.39/0.43, language 0.68/0.80,
+largest_city 0.50/0.46 (1.4b/2.8b). Ordering is stable across scale (most
+compositional = language; least = capital). The no-bridge control stays high
+(0.65-1.0, incl. zero-shot) on the same items, so the drop tracks the LATENT
+bridge, not prompt format. The shuffled-gold control excluded product->hq
+(golds 92% one value; real==shuffled EM) and product->ceo; father->mother had
+no both-pass items at either scale. Zero-shot is thin because obscure-landmark
+hop-A mostly fails there.
+
+Disposition for Ecaterina: this scout scan is a go-signal input for relgraph's
+precondition, confined to the country bridge; it is not evidence for any
+taxonomy claim and opens no CLAIMS entry. No number here is quoted outside the
+scout report. Any relgraph follow-up (or an admissible non-country bridge)
+would earn its own prereg + gate treatment. [scout tier; no sign-off implied]
