@@ -1,0 +1,102 @@
+{
+ "task": "fresh2hop-answer",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "fh-Machu-Picchu",
+   "prompt": "Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for reggae music is Kingston. Fact: The capital of the country famous for Machu Picchu is",
+   "target": "Lima",
+   "intermediates": [
+    "Lima"
+   ]
+  },
+  {
+   "name": "fh-safari-wildlife",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for reggae music is Kingston. Fact: The capital of the country famous for safari wildlife is",
+   "target": "Nairobi",
+   "intermediates": [
+    "Nairobi"
+   ]
+  },
+  {
+   "name": "fh-reggae-music",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for reggae music is",
+   "target": "Kingston",
+   "intermediates": [
+    "Kingston"
+   ]
+  },
+  {
+   "name": "fh-Mount-Everest",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for Mount Everest is",
+   "target": "Kathmandu",
+   "intermediates": [
+    "Kathmandu"
+   ]
+  },
+  {
+   "name": "fh-the-ancient-city-of-Petra",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for the ancient city of Petra is",
+   "target": "Amman",
+   "intermediates": [
+    "Amman"
+   ]
+  },
+  {
+   "name": "fh-the-Galapagos-Islands",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for the Galapagos Islands is",
+   "target": "Quito",
+   "intermediates": [
+    "Quito"
+   ]
+  },
+  {
+   "name": "fh-volcanoes-and-geysers",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for volcanoes and geysers is",
+   "target": "Reykjavik",
+   "intermediates": [
+    "Reykjavik"
+   ]
+  },
+  {
+   "name": "fh-coffee-production",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for coffee production is",
+   "target": "Bogota",
+   "intermediates": [
+    "Bogota"
+   ]
+  },
+  {
+   "name": "fh-Dracula-and-Transylvania",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for Dracula and Transylvania is",
+   "target": "Bucharest",
+   "intermediates": [
+    "Bucharest"
+   ]
+  },
+  {
+   "name": "fh-yerba-mate-tea",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for yerba mate tea is",
+   "target": "Asuncion",
+   "intermediates": [
+    "Asuncion"
+   ]
+  },
+  {
+   "name": "fh-the-Atlas-Mountains",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for the Atlas Mountains is",
+   "target": "Rabat",
+   "intermediates": [
+    "Rabat"
+   ]
+  },
+  {
+   "name": "fh-pho-and-motorbikes",
+   "prompt": "Fact: The capital of the country famous for Machu Picchu is Lima. Fact: The capital of the country famous for safari wildlife is Nairobi. Fact: The capital of the country famous for pho and motorbikes is",
+   "target": "Hanoi",
+   "intermediates": [
+    "Hanoi"
+   ]
+  }
+ ]
+}

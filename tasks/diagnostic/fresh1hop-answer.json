@@ -1,0 +1,246 @@
+{
+ "task": "fresh1hop-answer",
+ "protocol": "completion",
+ "items": [
+  {
+   "name": "fc-Peru",
+   "prompt": "The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Vietnam is Hanoi. The capital of Peru is",
+   "target": "Lima",
+   "intermediates": [
+    "Lima"
+   ]
+  },
+  {
+   "name": "fc-Chile",
+   "prompt": "The capital of Peru is Lima. The capital of Kenya is Nairobi. The capital of Vietnam is Hanoi. The capital of Chile is",
+   "target": "Santiago",
+   "intermediates": [
+    "Santiago"
+   ]
+  },
+  {
+   "name": "fc-Kenya",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Vietnam is Hanoi. The capital of Kenya is",
+   "target": "Nairobi",
+   "intermediates": [
+    "Nairobi"
+   ]
+  },
+  {
+   "name": "fc-Vietnam",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Vietnam is",
+   "target": "Hanoi",
+   "intermediates": [
+    "Hanoi"
+   ]
+  },
+  {
+   "name": "fc-Indonesia",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Indonesia is",
+   "target": "Jakarta",
+   "intermediates": [
+    "Jakarta"
+   ]
+  },
+  {
+   "name": "fc-Philippines",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Philippines is",
+   "target": "Manila",
+   "intermediates": [
+    "Manila"
+   ]
+  },
+  {
+   "name": "fc-Pakistan",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Pakistan is",
+   "target": "Islamabad",
+   "intermediates": [
+    "Islamabad"
+   ]
+  },
+  {
+   "name": "fc-Nepal",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Nepal is",
+   "target": "Kathmandu",
+   "intermediates": [
+    "Kathmandu"
+   ]
+  },
+  {
+   "name": "fc-Ecuador",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Ecuador is",
+   "target": "Quito",
+   "intermediates": [
+    "Quito"
+   ]
+  },
+  {
+   "name": "fc-Uruguay",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Uruguay is",
+   "target": "Montevideo",
+   "intermediates": [
+    "Montevideo"
+   ]
+  },
+  {
+   "name": "fc-Venezuela",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Venezuela is",
+   "target": "Caracas",
+   "intermediates": [
+    "Caracas"
+   ]
+  },
+  {
+   "name": "fc-Ghana",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Ghana is",
+   "target": "Accra",
+   "intermediates": [
+    "Accra"
+   ]
+  },
+  {
+   "name": "fc-Morocco",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Morocco is",
+   "target": "Rabat",
+   "intermediates": [
+    "Rabat"
+   ]
+  },
+  {
+   "name": "fc-Tunisia",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Tunisia is",
+   "target": "Tunis",
+   "intermediates": [
+    "Tunis"
+   ]
+  },
+  {
+   "name": "fc-Libya",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Libya is",
+   "target": "Tripoli",
+   "intermediates": [
+    "Tripoli"
+   ]
+  },
+  {
+   "name": "fc-Jordan",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Jordan is",
+   "target": "Amman",
+   "intermediates": [
+    "Amman"
+   ]
+  },
+  {
+   "name": "fc-Qatar",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Qatar is",
+   "target": "Doha",
+   "intermediates": [
+    "Doha"
+   ]
+  },
+  {
+   "name": "fc-Oman",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Oman is",
+   "target": "Muscat",
+   "intermediates": [
+    "Muscat"
+   ]
+  },
+  {
+   "name": "fc-Uganda",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Uganda is",
+   "target": "Kampala",
+   "intermediates": [
+    "Kampala"
+   ]
+  },
+  {
+   "name": "fc-Zimbabwe",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Zimbabwe is",
+   "target": "Harare",
+   "intermediates": [
+    "Harare"
+   ]
+  },
+  {
+   "name": "fc-Angola",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Angola is",
+   "target": "Luanda",
+   "intermediates": [
+    "Luanda"
+   ]
+  },
+  {
+   "name": "fc-Senegal",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Senegal is",
+   "target": "Dakar",
+   "intermediates": [
+    "Dakar"
+   ]
+  },
+  {
+   "name": "fc-Paraguay",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Paraguay is",
+   "target": "Asuncion",
+   "intermediates": [
+    "Asuncion"
+   ]
+  },
+  {
+   "name": "fc-Iceland",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Iceland is",
+   "target": "Reykjavik",
+   "intermediates": [
+    "Reykjavik"
+   ]
+  },
+  {
+   "name": "fc-Bulgaria",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Bulgaria is",
+   "target": "Sofia",
+   "intermediates": [
+    "Sofia"
+   ]
+  },
+  {
+   "name": "fc-Romania",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Romania is",
+   "target": "Bucharest",
+   "intermediates": [
+    "Bucharest"
+   ]
+  },
+  {
+   "name": "fc-Croatia",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Croatia is",
+   "target": "Zagreb",
+   "intermediates": [
+    "Zagreb"
+   ]
+  },
+  {
+   "name": "fc-Serbia",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Serbia is",
+   "target": "Belgrade",
+   "intermediates": [
+    "Belgrade"
+   ]
+  },
+  {
+   "name": "fc-Colombia",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Colombia is",
+   "target": "Bogota",
+   "intermediates": [
+    "Bogota"
+   ]
+  },
+  {
+   "name": "fc-Algeria",
+   "prompt": "The capital of Peru is Lima. The capital of Chile is Santiago. The capital of Kenya is Nairobi. The capital of Algeria is",
+   "target": "Algiers",
+   "intermediates": [
+    "Algiers"
+   ]
+  }
+ ]
+}
