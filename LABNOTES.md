@@ -1504,29 +1504,36 @@ Ecaterina ruled (session, 2026-07-21):
   formal re-run is built-ready and HELD pending this ruling — running it now
   only re-confirms the predetermined Q2/Q6 FAIL.
 
-### 2026-07-21 — EXP-M5-0 amended-gate re-run: amended-Q5 PASS; overall blocked on Q2/Q6 (Claude)
+### 2026-07-21 — D-029 ruled (scoped admission); 2.8B pin; EXP-M5-0c drafted (Claude)
 
-Formal EXP-M5-0-labelled re-run under the ratified amended criterion (D-027
-outcome c), fresh re-probe of the latent-intermediate anchors on the 3 cached
-lenses (NOT a diagnostic re-grade); run
-results/m5/20260721-001417-p14b-lens-gate-amended (peak RSS 2.65 GB, ~1h40m).
+- D-029 RULED (Ecaterina, 2026-07-21) — option (iii) + gated diagnostic:
+  EXP-M5-0 gate admission is scoped PER AXIS CLASS. Amended-Q5 PASS admits
+  Pythia-1.4b@fedc38a for A1 and A4 work only (lens-readout / decodability +
+  report-coupling). Q2 and Q6 remain BLOCKING for A2/A3 admission (swap-potency
+  / basis-mediation). No Q2/Q6 bar change without an EXP-M5-0c verdict on record
+  first; if 0c finds a genuinely reduced swap gap-shift at 1.4B (vs a
+  flip-rate/base-margin confound), that is a potency-scaling observation,
+  HYPOTHESIS tier, NOT a gate failure. Amendment recorded in
+  harness/preregs/EXP-M5-0-amendment-Q5.md; committed.
 
-Rules: Q1 PASS, Q2 FAIL, Q3 PASS, Q4 PASS, Q5(amended) PASS, Q6 FAIL.
-overall_pass = False; blockers = Q2, Q6.
+- D-030 (2.8B pin RATIFIED, Ecaterina 2026-07-21): pythia-2.8b@2a259cd is the
+  pinned 2.8B checkpoint for ALL tiers (supersedes the D-028 scout's scout-only
+  use of the same SHA). Use this revision for every 2.8B config going forward,
+  mirroring the 1.4B @fedc38a (D-023) pattern.
 
-amended-Q5 PASS: 2 adequate-N latent anchors clear 5x (capital-operand 27.06x
-N=33; fresh1hop-operand 6.98x N=28); fresh2hop-bridge 15.52x but N=6, descriptive
-(the 2hop rider). Output controls recorded: fresh1hop-answer 0.89x (clean, no
-advantage on the novel answer); capital-recall 20.35x — an output-token probe
-that still clears the bar on FAMILIAR answers (the J-lens's ~2-layer lead exists
-there too), recorded per rider (b) but not counted toward A1. Numbers reproduce
-the diagnostic bit-for-bit on the shared anchors, confirming the fresh run.
+- EXP-M5-0c drafted (harness/preregs/EXP-M5-0c-swap-decomposition.md) as
+  DRAFT-AWAITING-RATIFICATION (per Ecaterina's explicit instruction to commit
+  the draft so the RTX session can access it — NOT the prereg act; her
+  ratification line makes it active). Design: swap-intervention decomposition,
+  410M vs 1.4B, matched swap tasks, sham twins, >= 3 lens draws median/IQR;
+  separates the sham-controlled logit-gap-shift distribution from the top-1
+  flip rate; includes a margin-normalized flip statistic as the candidate
+  recalibrated Q2 metric; positive + negative instrument controls; identical
+  statistic across substrates; tiered for the RTX (~1.5-2.5 h). Configs
+  m5_0c_swap_pythia{410m,1p4b}.yaml drafted. The RTX session builds + runs 0c
+  after Ecaterina's ratification.
 
-Consequence: amended-Q5 (the A1 probing contrast) is formally satisfied on 1.4B,
-but the overall gate does not PASS because the swap-based Q2 (flip 0.5625 <
-0.75; dp 0.483 clears its own 0.30 bar) and Q6 (dp IQR 0.0707 > 0.05) still
-fail, untouched by the Q5 amendment. Per the prereg, 1.4B is NOT admitted until
-the overall gate passes. D-029 remains OPEN (proposed options unchanged:
-recalibrate Q2/Q6 per substrate on the Q5 footing / investigate the swap's
-per-draw weakness / scope the admission to A1 and hold A2/A3). No 1.4B admission
-and no downstream M5.0/S1 launch until Ecaterina rules D-029.
+- Parallel-tier note: the RTX session (D-028 scout, and 0c next) runs
+  independently on the win32 RTX laptop; this Mac session integrated the D-028
+  scout commit (rebased, both LABNOTES entries kept). The RTX 0c run needs only
+  these commits pushed to origin — no Mac dependency.

@@ -64,20 +64,17 @@ included only if it reaches adequate N, else marked descriptive; the well-
 powered latent anchors (fresh1hop-operand N=28, capital-operand N=33) carry the
 >= 2 requirement.
 
-BLOCKER surfaced (needs a ruling before the re-run can PASS): the original gate
-(results/m5/20260720-024819-p14b-lens-gate) failed on Q2 and Q6 as well as Q5.
-This amendment fixes Q5 only. Under the amended criterion Q5 now PASSES, but:
-- Q2 (positive control): swap dp median 0.483 CLEARS the 0.30 dp bar, but the
-  top-1 flip rate 0.5625 MISSES the 0.75 flip bar.
-- Q6 (draw stability): dp IQR 0.0707 > 0.05 (driven by draw-1; band-min HMR IQR
-  is fine).
-Both are swap-intervention rules, untouched by the probing-contrast amendment,
-so a re-run today returns FAIL and does not admit 1.4B. See the D-029 proposal
-in LABNOTES (options: recalibrate the Q2 flip / Q6 IQR bars per substrate on the
-same evidence-based footing as Q5 — the swap moves probability strongly (dp
-0.48) but a 410M-derived argmax-flip bar may be too brittle; investigate the
-swap's per-draw weakness; or scope this admission to A1 (Q5) and hold the
-swap-dependent A2/A3 admission pending Q2/Q6). Not adopted — flagged.
+D-029 RULED (Ecaterina, 2026-07-21) — option (iii), per-axis-class scoped
+admission: gate admission is scoped by axis class.
+- **Amended-Q5 PASS admits Pythia-1.4b@fedc38a for A1 and A4 work** (the
+  lens-readout / decodability + report-coupling axes). The formal amended-Q5
+  PASS is on record at results/m5/20260721-001417-p14b-lens-gate-amended.
+- **Q2 and Q6 remain BLOCKING for A2/A3 admission** (the swap-potency /
+  basis-mediation axes). No Q2/Q6 bar change without an EXP-M5-0c verdict on
+  record first (harness/preregs/EXP-M5-0c-swap-decomposition.md, drafted).
+- If EXP-M5-0c shows a genuinely reduced swap gap-shift at 1.4B (vs a
+  flip-rate/base-margin confound), that is registered as a potency-scaling
+  observation, HYPOTHESIS tier — NOT treated as a gate failure.
 
 ## Scope / non-goals
 
