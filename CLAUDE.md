@@ -79,10 +79,16 @@ A100. 1.4B lens gate RAN (scripts/m5_lens_gate.py, EXP-M5-0 rule 5):
 verdict FAIL (Q1/Q3/Q4 pass; Q2 flip 0.56<0.75 though dp 0.48 strong; Q5
 J-lens beats logit >=5x on only 1/4 anchors; Q6 dp IQR 0.071 from a draw-1
 outlier), evidence results/m5/20260720-024819-p14b-lens-gate + raw replay in
-LABNOTES. Per the prereg, 1.4B is inadmissible for lens-readout axes (A1/A3)
-pending D-027 (proposed: escalate to 2.8B / study the J-lens-vs-logit
-convergence / revisit thresholds; 410M stays lens-admitted). Next (BLOCKED on
-rulings): M5.0 baseline orchestrator awaits D-025 (S1 shot count) + D-026
-(binding data); 1.4B lens disposition awaits D-027. Standing: D-002 accepted
-knowingly; CLM-003/CLM-004 verify: lines still pending (raw re-derivation
-done + laid out for Ecaterina, 2026-07-20).
+LABNOTES. D-027 RULED (diagnostic-first): EXP-M5-0b (latent-vs-output probe on the
+cached draws) returned GAP-RETURNS — the gate FAIL was metric+anchor
+miscalibration, not J-lens/logit convergence (fresh latent operand 6.98x /
+bridge 15.52x vs matched outputs ~0.9x, all random 0.0, 3 draws; capital-
+recall recovered to 20.35x under max-contrast vs the gate's 1.1x). Evidence
+results/m5/20260720-215157-p14b-lens-diagnostic. 2.8B NOT triggered. Next:
+Q5 amendment (max-contrast metric + latent anchors) drafted UNCOMMITTED for
+Ecaterina's ratification -> on ratification a cheap amended-gate re-run admits
+1.4B. Also BLOCKED on rulings: M5.0 baselines await nothing further (D-025/
+D-026 ruled — build the qualification orchestrator + bind2/bind3 generator,
+show the template first); S1 concept-gate build (EXP-M5-1) authorized
+(code+tests). Standing: D-002 accepted knowingly; CLM-003/CLM-004 verify:
+lines still pending (raw re-derivation laid out 2026-07-20).

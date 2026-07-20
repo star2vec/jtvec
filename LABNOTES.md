@@ -1412,3 +1412,50 @@ precondition, confined to the country bridge; it is not evidence for any
 taxonomy claim and opens no CLAIMS entry. No number here is quoted outside the
 scout report. Any relgraph follow-up (or an admissible non-country bridge)
 would earn its own prereg + gate treatment. [scout tier; no sign-off implied]
+### 2026-07-20 — EXP-M5-0b diagnostic: GAP-RETURNS; D-027 resolves to miscalibration (Claude)
+
+Run results/m5/20260720-215157-p14b-lens-diagnostic (prereg c9f2acd; probe-only
+on the 3 cached M5.0 lenses, no refit; wall ~1h40m, peak RSS 5.64 GB).
+diagnostic_verdict = GAP-RETURNS (2/2 fresh matched pairs dissociate). Metric =
+max-contrast layer ratio applied identically to jlens / logit / random arms
+(ratified amendment); median over 3 draws.
+
+Fresh matched battery (decision-bearing; latent vs output on identical prompts):
+
+| fresh task | probe | jlens ratio median | N | clears 5x bar |
+|---|---|---|---|---|
+| fresh1hop-operand | latent (country) | 6.98x | 28 | yes |
+| fresh1hop-answer | output (capital) | 0.89x | 28 | no |
+| fresh2hop-bridge | latent (country) | 15.52x | 6 | yes |
+| fresh2hop-answer | output (capital) | 0.98x | 6 | no |
+
+Every random-arm control ratio = 0.0 (the identical statistic gives noise no
+advantage; the amendment guard holds). The 2-hop pair is underpowered (N=6, the
+1.4B model does 6/12 fresh 2-hop) but the effect is large enough to be
+unambiguous; the 1-hop pair (N=28) carries the decision on its own.
+
+Post-hoc context (existing anchors, labelled post-hoc; jlens ratio median):
+capital-operand 27.06x, capital-recall 20.35x, multihop-scaled 4.27x,
+opposites 1.00x, word-pairs 1.45x. Note capital-recall (an OUTPUT-token probe)
+is recovered to 20.35x here vs the gate's 1.1x under the withdrawn
+band-min-jlens metric — the max-contrast metric surfaces the ~2-layer J-lens
+lead the gate stepped past. opposites/word-pairs stay ~1x under either metric
+(simple associative tasks, no J-lens-specific lead).
+
+Raw replay (read-only): fresh1hop-operand draw0 hand-recomputes to 6.81x @L22
+(jlens HMR 2.86 vs logit 19.46); at the same L22 the matched output answer is
+jlens 1.15 vs logit 1.12 (ratio 0.97). Same prompts, same layer: the J-lens
+reads the held operand far better than the logit lens, the answer no better.
+Pipeline verified.
+
+Interpretation (scoped; a methodological diagnostic, NOT a residency finding):
+on Pythia-1.4b@fedc38a, the M5.0 lens-gate FAIL was substantially a metric +
+anchor miscalibration, not a J-lens/logit convergence. Under the max-contrast
+metric the J-lens has a robust, 3-draw-replicated advantage on
+latent-intermediate probes that is absent on matched output probes. This is
+D-027 outcome (c): amend the EXP-M5-0 Q5 probing-contrast (max-contrast metric
++ latent-intermediate anchors), then admit 1.4B. Amendment drafted UNCOMMITTED
+(EXP-M5-0 amendment below / harness) for Ecaterina's ratification — the prereg
+amendment is the prereg act; 1.4B admission follows her ruling. Non-lens axes
+were never in question. 2.8B escalation is NOT triggered (the deflation branch
+did not fire).

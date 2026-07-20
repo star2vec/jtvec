@@ -1,0 +1,12 @@
+{
+  "run_name": "p14b-lens-diagnostic",
+  "started": "2026-07-20T21:51:57",
+  "git_commit": "621f259023c2c20ad7625138ba7e2d2788f4b2a2",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-0b-lens-diagnostic.md",
+  "prereg_commit": "c9f2acd71cbd34249e674dad3ab2f146748f4d89",
+  "config_sha256": "b97be8422eb1094d0c635b7bc2f96e8d4698f2c882d8714a493ca955fbf59f3e",
+  "post_hoc": false,
+  "diagnostic_verdict": "GAP-RETURNS",
+  "n_dissociating_pairs": 2,
+  "finished": "2026-07-20T23:37:45"
+}
