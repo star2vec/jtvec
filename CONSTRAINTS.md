@@ -51,6 +51,25 @@ added. Nothing may be promoted a tier without the evidence line filled in.
 - LAW: A claims ledger (CLAIMS.md) tracks every scientific claim with status
   ∈ {hypothesis, preliminary, verified, withdrawn} and the evidence commit.
   The paper may only contain claims at "verified".
+- LAW: Instrument-amendment discipline (added 2026-07-21 by Ecaterina, session
+  ruling, after three consecutive gate-fail → diagnose-miscalibration → amend
+  cycles: M1 lens gate/D-027, 1.4B Q2/0c H-CONFOUND, M5.1 concept/D-033 — each
+  individually defensible, the pattern a live risk that amendment is harvesting
+  researcher degrees of freedom rather than fixing instruments). No FOURTH
+  amendment to any instrument is ratifiable without a NULL-CHECK on record
+  first: the recalibrated instrument, run under its own statistic against a
+  known-null condition (existing sham twins / scrambled-label controls, on a
+  substrate+task where nothing is to be found, ≥ 3 draws, median/IQR), must
+  report NULL on that null, per a pass condition fixed before the run. An
+  instrument that reports signal on the null is withdrawn and the amendment it
+  supports is not ratifiable pending re-spec.
+- LAW: Amendment budget (standing, 2026-07-21, Ecaterina). Two instrument-
+  amendment cycles remain across ALL instruments. When exhausted, M6 runs on
+  whatever instruments are certified and every unmeasurable species is REPORTED
+  as unmeasurable — a taxonomy with holes is preferred to recalibrating into
+  one. Escalating the substrate to make a gate pass counts as an amendment
+  cycle (the S4/2.8B precedent): the prior question is always specification,
+  not scale.
 
 ## Verified (v1 evidence that survived controls — narrow scope)
 

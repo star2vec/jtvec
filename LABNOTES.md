@@ -1795,3 +1795,77 @@ this qualification adds S3 (LRE operators) as a measurable species on 1.4B and
 leaves S4 unmeasurable pending the binding decision. Gates: pytest 176 passed,
 validators 3/3. The Mac session folds this into the species x substrate matrix.
 [no sign-off implied]
+
+### 2026-07-21 — GOVERNANCE: amendment-discipline risk recorded; null-check ORDERED; D-032/D-033/Q2/S4 ruled (Ecaterina)
+
+Ecaterina's rulings this session (recorded verbatim in intent; she is the
+researcher, this is her governance act):
+
+0. STANDING EPISTEMIC RISK (governance, NOT a claim). Three consecutive gate
+   failures — M1 lens gate → D-027 (GAP-RETURNS), 1.4B Q2 → EXP-M5-0c H-CONFOUND,
+   M5.1 concept → D-033 — were each resolved by diagnosis-of-miscalibration
+   followed by amendment, and each recalibration recovered signal. Each was
+   individually defensible; the PATTERN of three is a separate object and a live
+   risk that the amendment process is harvesting researcher degrees of freedom
+   rather than fixing instruments. Recorded as a standing risk. Procedural rule
+   written into CONSTRAINTS.md (LAW): no fourth instrument amendment is
+   ratifiable without a null-check on record first.
+
+1. NULL-CHECK ORDERED (highest priority, precedes everything else on the Mac).
+   Draft → ratify → run. The recalibrated instruments — the amended-Q5
+   max-contrast statistic and the D-033 extended-ladder concept readout — are run
+   against known-null conditions (existing sham twins / scrambled-label controls)
+   on a substrate+task where nothing is to be found, same statistic, ≥ 3 draws,
+   median/IQR. Pass fixed before the run: recalibrated instruments must report
+   NULL on null. Signal-on-null → that recalibration is suspect and its amendment
+   is withdrawn pending re-spec. Reported per instrument. Prereg drafted:
+   harness/preregs/EXP-M5-1c-null-check.md (UNCOMMITTED; awaiting ratification).
+   NO run on this machine before Ecaterina ratifies the null-check.
+
+2. D-032 RATIFIED (RTX's 0c negative-control specification fix). The 0c negative
+   control is read as prob-space Δp(swap_answer) under the sham (what gated;
+   passes on both substrates); the logit-space readings are informational. Low
+   stakes; the H-CONFOUND verdict is unaffected (the sham-controlled statistic
+   cancels the shared ablation either way).
+
+3. D-033 RATIFIED WITH CONDITIONS — HELD until the null-check clears. EXP-M5-1b
+   prereg amended before running: (a) a saturation criterion is fixed in advance
+   — if the direction cosine PLATEAUS below the certificate bar rather than
+   crossing it, that is a NEGATIVE result on S1 and the ladder is NOT extended
+   again (plateau test + ladder ceiling stated in the prereg); (b) the p=0.00056
+   potency floor is a RESOLUTION failure, not a value — fixed by increasing
+   trials until the quantity is resolvable, or declared unmeasurable, NOT
+   reinterpreted; (c) the expected verdict is NOT pre-named (the cosine
+   trajectory is consistent with a short ladder AND with convergence to something
+   that is not the concept; the run decides).
+
+4. Q2 recalibration HELD, not ratified. Per D-029, no Q2 bar change without the
+   0c verdict on record; 0c returned H-CONFOUND at HYPOTHESIS tier on ONE
+   substrate — suggestive, not sufficient. Precondition for any Q2 bar change:
+   replicate the base-margin/flip-rate confound at 410M, where the original bars
+   were derived. If base margin predicts flip rate at 410M too, the recalibration
+   is substrate-general and Ecaterina will consider it; if not, the bar is being
+   fitted to 1.4B and Q2 stands as written. Replication prereg drafted (RTX/GPU
+   tier): harness/preregs/EXP-M5-0d-q2-replication-410m.md (UNCOMMITTED). Do NOT
+   queue ahead of the null-check.
+
+5. S4 BINDING — do NOT escalate to 2.8B yet (escalating substrate until a gate
+   passes is the same move as amending a metric until it passes; this is the
+   fourth instance). The prior question is specification, not scale: determine
+   whether the D-026 binding generator produces weak binding (instrument) or
+   whether Pythia-class models bind weakly at these scales (substrate).
+   Specification analysis owed to Ecaterina BEFORE any compute (generator
+   templates, what the 0.62/0.65 scores measure, a strong-binding positive
+   control). If substrate: the honest outcome is four species with S4
+   unmeasurable in this family + the qualification numbers as evidence — an
+   ACCEPTED result. Any later 2.8B run must contain the "still fails → S4 dropped
+   from the grid" branch, written before the run.
+
+6. AMENDMENT BUDGET (standing). Two more amendment cycles across all instruments;
+   then M6 runs on whatever is certified and unmeasurable species are reported as
+   unmeasurable. Written into CONSTRAINTS.md (LAW). A taxonomy with holes is
+   preferred to recalibrating into one.
+
+Sequence now: (a) null-check prereg for ratification; (b) S4 specification
+analysis; (c) 410M Q2-replication prereg drafted for the RTX. Nothing runs before
+the null-check is ratified. [no sign-off implied]
