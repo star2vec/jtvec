@@ -1,0 +1,42 @@
+# EXP-M5-2 S3 relational-operator stability gate — Pythia-1.4B (the only
+# S3-admitted substrate; RTX cuda). Standard schema fields + an `operator:`
+# block for the extractor params (read via a tolerant loader; the strict Config
+# schema ignores the extra block). Vendored JacobianIclMeanEstimator
+# (third_party/relations @1b9ec3c) called as a library, unmodified.
+experiment: pythia1p4b_m5_2_operator
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-1.4b
+  revision: fedc38a16eea3bd36a96b906d78d11d2ce18ed79  # D-023 pin
+  dtype: float32   # match the M5.0 operator/faithfulness numerics (fp16 ok if VRAM-bound)
+evals:
+  band: [4, 16]    # unused by this gate; present only for schema compatibility
+operator:
+  # h_layer fixed by a one-time, draw-independent layer probe on
+  # factual/country_capital_city (2026-07-22): faithfulness over {4,6,8,12} =
+  # {0.250, 0.333, 0.667, 0.750}; L12 is the faithfulness-maximizing mid-depth
+  # layer (>= the 0.60 positive-control bar; LANDING passed). Recorded before
+  # the gate; NOT re-picked after gate results. z_layer null -> final layer.
+  h_layer: 12
+  z_layer: null
+  k_estimate: 6    # ICL exemplars averaged per operator per draw (Jacobian mean)
+  n_probe: 30      # held-out probe target; achieved N reported per relation
+  seeds: [1, 2, 3] # only the ICL-context + subject sampling varies across draws
+  relations:
+    - factual/country_capital_city
+    - factual/food_from_country
+    - factual/product_by_company
+    - linguistic/adj_antonym
+    - linguistic/verb_past_tense
+    - linguistic/word_first_letter
+    - commonsense/object_superclass
+    - commonsense/work_location
+  bars:            # ratified in EXP-M5-2-operator-gate.md
+    agreement: 0.90        # cross-draw top-1 output-token agreement
+    output_cosine: 0.95    # cross-draw output-state cosine
+    faithfulness_pos: 0.60 # positive control: held-out faithfulness
+    shuffled_neg: 0.10     # negative control: shuffled-relation operator must fail
+    n_relations_certify: 6 # >= 6 of 8 to call S3 certified as a species
+cache_dir: cache/m5/m5_2_operator
+results_dir: results/m5
