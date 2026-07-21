@@ -95,9 +95,13 @@ no). D-031 RULED: 1.4B Pass B (FV+LRE) killed on the Mac (swap-thrash 21.6/22.5
 GB, 8-10+ h ETA) and MOVED to the RTX — orchestrator now substrate-selectable,
 configs/m5_0_qual_pythia1p4b_cuda.yaml added; RTX runs
 `scripts/m5_0_qualification.py pythia-1.4b=configs/m5_0_qual_pythia1p4b_cuda.yaml`
-for one clean 1.4B run dir. FLAG open: binding (S4) clears 0.70 on NEITHER model
-at N=60 -> S4/H5 needs a stronger substrate or a battery re-spec (Ecaterina to
-rule). EXP-M5-1 (S1 concept gate) BUILT (code+tests, commit 310ca88) and RAN on
+for one clean 1.4B run dir. RTX DONE (905b557, results/m5/20260721-124041-
+qualification, supersedes Mac Pass A): 1.4B S3 ADMITTED (LRE 8/12: capital-city
+.93, past-tense .78, first-letter .88, superclass .78, antonym .72, by-company
+.62, from-country .60, work-location .607), S1 5/8, FV 2/3 (cap .98/sp .98/en-fr
+.67), bind2 0.65. So S3 admits ONLY at 1.4B (410M 4/12); M5.2 has its substrate.
+FLAG open: binding (S4) clears 0.70 on NEITHER model at N=60 -> S4/H5 needs a
+stronger substrate or a battery re-spec (Ecaterina to rule). EXP-M5-1 (S1 concept gate) BUILT (code+tests, commit 310ca88) and RAN on
 410M (results/m5/20260721-132124-m5-1-concept): S1 certificate NOT issued —
 instrument-control failure (pos control 0/8). Raw replay (diagnostic-first, D-027
 shape): NOT signal absence but two miscalibrations — (1) cosine ladder too short
