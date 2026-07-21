@@ -1,9 +1,12 @@
-# M5.1 S1 concept-direction stability gate, Pythia-410M (EXP-M5-1). Band
-# [4,16] carried from the M1 410M lens gate (re-derived per model at gate
-# time on other substrates). Mean-difference extractor over certified-task
-# answer states; 3 draws via resampled context sets (seeds 1/2/3 in the
-# orchestrator, D-006-style: only the extraction stream varies). The 1.4B
-# sibling is drafted once EXP-M5-0 admits 1.4B and its band is re-derived.
+# EXP-M5-1 S1 concept-direction stability gate on Pythia-410M (admitted by
+# EXP-M5-0; M1-certified band [4,16]). Standard jvec.config.Config schema (the
+# gate params — roster, ladder RUNGS, convergence rule, control bars — are
+# ratified constants in jtvec.concept_gate / scripts/m5_1_concept_gate.py, the
+# m4_e3 pattern; the config carries only model/device/band). Extraction +
+# injection are forward-only (no lens fit, no Jacobian): the mean-difference
+# concept direction lives in the residual stream, so no lens cache is required.
+# fp32/MPS per the M1 stack. The 1.4B sibling is drafted once EXP-M5-0 admits
+# 1.4B and its band is re-derived.
 experiment: pythia410m_m5_1_concept
 seed: 0
 device: mps
@@ -11,22 +14,24 @@ model:
   name: EleutherAI/pythia-410m
   revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
   dtype: float32
-extractor:
-  band: [4, 16]
-  position: final
-  n_draws: 3
-  ladder_n_contexts: [8, 16, 32, 64]
-  concept_families:
-    capital-recall: [Paris, London, Rome, Berlin, Madrid, Vienna, Athens, Cairo]
-    entity-identity: null  # country/city carrier templates (M1/M3 apparatus)
-rule:
-  min_pairwise_cosine: 0.95
-  downstream_effect_iqr_max: 0.05
-  witness_required: true
-controls:
-  positive_min_margin: 0.10   # Δp(own answer) over sham median
-  negative_random_seeds: 10
-  quant_bound_base: 0.02      # effective bound max(0.02, 1/N), D-010
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]          # M1-certified band
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10     # negative-control random directions
+  swap_alpha: 1.0
   swap_rcond: 0.05
 cache_dir: cache/m5/concept_pythia410m
 results_dir: results/m5
