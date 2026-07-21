@@ -1,0 +1,16 @@
+{
+  "run_name": "m5-1c-nullcheck",
+  "started": "2026-07-22T01:27:27",
+  "git_commit": "9a56ab4bf0d924beec181c04fea3ab014de68c97",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-1c-null-check.md",
+  "prereg_commit": "9a56ab4bf0d924beec181c04fea3ab014de68c97",
+  "config_sha256": "ae79f8f2317daa5965e611d4f779250c8a8baa31b381a98d2661877179704d5e",
+  "post_hoc": false,
+  "overall_null_check_passed": true,
+  "i1_passed": true,
+  "i2_passed": true,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 3478.3,
+  "peak_rss_gb": 2.05,
+  "finished": "2026-07-22T02:25:26"
+}

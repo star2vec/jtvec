@@ -1,0 +1,6 @@
+{"rung": 8, "scrambled_cos": 0.0, "genuine_cos": 0.0}
+{"rung": 16, "scrambled_cos": 0.0588, "genuine_cos": 0.0}
+{"rung": 32, "scrambled_cos": -0.0376, "genuine_cos": 0.0}
+{"rung": 64, "scrambled_cos": 0.0895, "genuine_cos": 0.9967}
+{"rung": 128, "scrambled_cos": -0.0075, "genuine_cos": 0.9973}
+{"rung": 256, "scrambled_cos": -0.0205, "genuine_cos": 0.9953}

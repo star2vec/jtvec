@@ -1926,3 +1926,36 @@ budget (new species extractor, not a recalibration). The RTX builds its own
 orchestrator against the committed prereg (0c precedent) and runs on cuda; the
 S3 certificate + sign-off stay Ecaterina's. RTX startup prompt delivered this
 session. [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-1c null-check PASSED: both recalibrated instruments report null on null (Claude)
+
+Governance gate cleared. results/m5/20260722-012727-m5-1c-nullcheck (410M,
+start_run, prereg committed; wall 3478 s, peak 2.05 GB, no swap). Both
+recalibrated instruments report NULL on their known-nulls:
+
+- I1 (amended-Q5 max-contrast, scrambled-label latent probe): genuine
+  capital-operand ratio_jlens {55.4, 77.3, 48.5} (median 55.4, all >> the 5.0
+  bar) vs SCRAMBLED 0.00 on all 3 draws. The max-over-layers selection returns
+  exactly zero advantage when the probe target is permuted -> it does not inflate
+  noise. PASS.
+- I2 (D-033 extended-ladder concept readout, scrambled-label directions):
+  scrambled min-pairwise cosine max over rungs 0.0895 (< 0.95, no false
+  convergence); scrambled sham-controlled Δp within [2e-5, 5.6e-4] across alphas
+  {1,2,4,8} (<= the 0.005 band, no manufactured steering). Sanities: genuine-vs-
+  scrambled discrimination cos@256 0.995 vs -0.021 (ok); unembed-injection Δp
+  0.80 >> band (injection can steer). PASS.
+
+Consequence: the three-cycle amendment-discipline RISK (M1/D-027, 1.4B-Q2/0c,
+M5.1/D-033) is resolved ON RECORD — the Q5 max-contrast statistic and the D-033
+concept readout are validated as not-noise-harvesting. Per the CONSTRAINTS
+instrument-amendment LAW, amendments are now ratifiable downstream (the null-check
+is on record). The EXP-M5-1b HOLD is CLEARED (its release-condition, "null-check
+clears", is met); 1b is unblocked pending Ecaterina's go.
+
+CAVEAT (condition c honoured): the I2 genuine cos@256 (0.995) is the
+DISCRIMINATION SANITY, pool-grouped (its small-rung 0.0s are a pool-ordering
+artifact, not signal) — NOT the formal 1b measurement. EXP-M5-1b (per-concept
+extraction, extended ladder) remains the decider; no S1 convergence claimed here.
+
+1b runner built + green (scripts/m5_1b_concept_diagnostic.py, plateau helper,
+206 tests) and HELD uncommitted, ready to fire on Ecaterina's go. [no sign-off implied]
