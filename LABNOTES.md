@@ -1563,3 +1563,61 @@ verify: CLM-004 raw-read: 30 re-derived: yes verified-by: Ecaterina date: 2026-0
 - EXP-M5-0c RATIFIED (Ecaterina, 2026-07-21, via session instruction): the
   swap-decomposition prereg is now the prereg act; the DRAFT marker is cleared.
   The RTX session may build + run it. Thresholds ratified as drafted.
+
+### 2026-07-21 — M5.0 qualification: 410M complete; 1.4B FV/LRE -> RTX (D-031, Claude)
+
+EXP-M5-0 qualification run `results/m5/20260721-033359-qualification` (start_run,
+prereg committed, clean tree; raw retained; both substrate configs copied in).
+410M ran to completion; on 1.4B, Pass A (S1 + binding) completed and Pass B
+(FV + LRE) was killed mid-run.
+
+D-031 RULED (Ecaterina, session, 2026-07-21): the 1.4B qualification Pass B was
+thrashing swap on the 16 GB Mac (vm.swapusage 21.6/22.5 GB used, ~0.9 GB free;
+per-item eval time climbing ~5 s -> 30 s; projected 8-10+ h remaining and rising,
+with a live OOM/stall risk). This is the swap-risk the M5-kickoff plan flagged
+for 1.4B fp32 on 16 GB. Presented as a flagged decision; Ecaterina chose "kill
+it, move 1.4B to RTX" (heavy 1.4B compute is the RTX/GPU tier per the standing
+compute rulings). No decision-rule or threshold change — a compute-placement
+execution of the existing rulings.
+
+Actions taken:
+- Killed the run (python + uv + the bound caffeinate); swap released.
+- `qualification.json` reconstructed from the retained on-disk raw cells (not the
+  log; script in scratchpad), covering 410M (complete) + 1.4B Pass A, with 1.4B
+  FV/LRE marked `deferred-to-rtx`. A `note` field records the kill + provenance.
+- Orchestrator `scripts/m5_0_qualification.py` made substrate-selectable
+  (`parse_selection`: no args = both Mac substrates; `name=config_path` overrides
+  the config) so the RTX runs the FULL 1.4B qualification on cuda in one clean
+  self-contained run dir. Added `configs/m5_0_qual_pythia1p4b_cuda.yaml`
+  (device: cuda, dtype float32, D-023 pin, no lens cache needed — qualification
+  is forward-pass only). Landing test + full suite green (166 passed),
+  validators 3/3.
+
+Qualification results on the Mac (scope: greedy exact-match, seeds per config;
+these are admission GATES, not CLAIMS — no verify line):
+
+- pythia-410m@9879c9b (COMPLETE):
+  - S1 5/8 admitted (>=0.80): capital-recall, capital-operand, swap-capitals,
+    opposites, word-pairs; below bar: typo-robustness 0.70, context-binding 0.533,
+    multihop-scaled 0.50.
+  - FV 2/3 (>=0.80, 10-shot): capitalize 0.929, singular-plural 0.861 admitted;
+    english-french 0.474 below.
+  - LRE 4/12 passing (>=0.60): country-capital 0.643, adj-antonym 0.60,
+    verb-past 0.76, word-first-letter 0.98 -> S3 NOT admitted (needs >=8). 410M
+    is too weak for the LRE operator battery, as expected at this scale.
+  - Binding: bind2 0.617, bind3 0.45 -> S4 NOT admitted (bar 0.70).
+- pythia-1.4b@fedc38a (PASS A only; FV/LRE on RTX):
+  - S1 5/8 admitted (same five as 410M); below bar: typo-robustness 0.767,
+    context-binding 0.533, multihop-scaled 0.625.
+  - Binding: bind2 0.65, bind3 0.667 -> S4 NOT admitted (bar 0.70).
+
+Observation worth recording (not over-read): the binding battery (S4) clears its
+0.70 admission bar on NEITHER model at N=60 (410M bind2 0.617, 1.4B bind2 0.65).
+If the RTX 1.4B FV/LRE confirms the expected S3 admission but binding stays sub-bar,
+S4 admission (and thus H5) needs either a stronger substrate (2.8B, D-030) or a
+binding-battery re-spec before it can be measured. Flagged for Ecaterina; no action
+without a ruling.
+
+Next: RTX runs `scripts/m5_0_qualification.py pythia-1.4b=configs/m5_0_qual_pythia1p4b_cuda.yaml`
+after these commits land -> one clean 1.4B qualification run dir (supersedes the
+Mac Pass A partial). The Mac session picks it up and folds it into the matrix.

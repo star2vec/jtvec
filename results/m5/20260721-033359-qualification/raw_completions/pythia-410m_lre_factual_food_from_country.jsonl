@@ -1,0 +1,20 @@
+{"substrate": "pythia-410m", "subject": "Moussaka", "object": "Greece", "gen": "Poland", "hit": false}
+{"substrate": "pythia-410m", "subject": "Biryani", "object": "India", "gen": "India", "hit": true}
+{"substrate": "pythia-410m", "subject": "Pavlova", "object": "New Zealand", "gen": "Russia\n\nSee", "hit": false}
+{"substrate": "pythia-410m", "subject": "Tacos", "object": "Mexico", "gen": "Mexico", "hit": true}
+{"substrate": "pythia-410m", "subject": "Rendang", "object": "Indonesia", "gen": "India", "hit": false}
+{"substrate": "pythia-410m", "subject": "Poutine", "object": "Canada", "gen": "France", "hit": false}
+{"substrate": "pythia-410m", "subject": "Falafel", "object": "Middle East", "gen": "Turkey\n\nSee", "hit": false}
+{"substrate": "pythia-410m", "subject": "Chimichurri", "object": "Argentina", "gen": "Italy", "hit": false}
+{"substrate": "pythia-410m", "subject": "Dim Sum", "object": "China", "gen": "the United States", "hit": false}
+{"substrate": "pythia-410m", "subject": "Shawarma", "object": "Middle East", "gen": "Pakistan\n\nSee", "hit": false}
+{"substrate": "pythia-410m", "subject": "Borscht", "object": "Ukraine", "gen": "Ukraine", "hit": true}
+{"substrate": "pythia-410m", "subject": "Pad Thai", "object": "Thailand", "gen": "Thailand", "hit": true}
+{"substrate": "pythia-410m", "subject": "Pho", "object": "Vietnam", "gen": "Greece", "hit": false}
+{"substrate": "pythia-410m", "subject": "Hummus", "object": "Lebanon", "gen": "Turkey", "hit": false}
+{"substrate": "pythia-410m", "subject": "Feijoada", "object": "Brazil", "gen": "Brazil", "hit": true}
+{"substrate": "pythia-410m", "subject": "Sushi", "object": "Japan", "gen": "Japan", "hit": true}
+{"substrate": "pythia-410m", "subject": "Goulash", "object": "Hungary", "gen": "Greece", "hit": false}
+{"substrate": "pythia-410m", "subject": "Ceviche", "object": "Peru", "gen": "Mexico", "hit": false}
+{"substrate": "pythia-410m", "subject": "Kimchi", "object": "South Korea", "gen": "Korea\n\nSee", "hit": false}
+{"substrate": "pythia-410m", "subject": "Fondue", "object": "Switzerland", "gen": "Germany", "hit": false}

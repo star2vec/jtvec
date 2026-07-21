@@ -1,0 +1,50 @@
+{"substrate": "pythia-410m", "subject": "Treuchtlingen", "object": "Germany", "gen": "Germany", "hit": true}
+{"substrate": "pythia-410m", "subject": "Bogra Zilla School", "object": "Bangladesh", "gen": "India", "hit": false}
+{"substrate": "pythia-410m", "subject": "Ljig", "object": "Serbia", "gen": "Slovenia", "hit": false}
+{"substrate": "pythia-410m", "subject": "Kununurra", "object": "Australia", "gen": "Australia", "hit": true}
+{"substrate": "pythia-410m", "subject": "European route E25", "object": "Luxembourg", "gen": "France\nEuropean route", "hit": false}
+{"substrate": "pythia-410m", "subject": "Piedecuesta", "object": "Colombia", "gen": "Spain", "hit": false}
+{"substrate": "pythia-410m", "subject": "Ayn Halaqim Subdistrict", "object": "Syria", "gen": "Iran", "hit": false}
+{"substrate": "pythia-410m", "subject": "Adare Manor", "object": "Ireland", "gen": "India", "hit": false}
+{"substrate": "pythia-410m", "subject": "public transport in Istanbul", "object": "Turkey", "gen": "Turkey", "hit": true}
+{"substrate": "pythia-410m", "subject": "Montreal Centre", "object": "Canada", "gen": "Canada", "hit": true}
+{"substrate": "pythia-410m", "subject": "Ikuno-ku", "object": "Japan", "gen": "Japan", "hit": true}
+{"substrate": "pythia-410m", "subject": "Kaunas Cathedral Basilica", "object": "Lithuania", "gen": "Lithuania", "hit": true}
+{"substrate": "pythia-410m", "subject": "Kamikita District", "object": "Japan", "gen": "Japan", "hit": true}
+{"substrate": "pythia-410m", "subject": "Band-e Kaisar", "object": "Iran", "gen": "Iran", "hit": true}
+{"substrate": "pythia-410m", "subject": "Staatliche Antikensammlungen", "object": "Germany", "gen": "Germany", "hit": true}
+{"substrate": "pythia-410m", "subject": "AA Drink-leontien.nl", "object": "Netherlands", "gen": "the Netherlands", "hit": false}
+{"substrate": "pythia-410m", "subject": "Hurley River", "object": "Canada", "gen": "Canada", "hit": true}
+{"substrate": "pythia-410m", "subject": "Namba Station", "object": "Japan", "gen": "Japan", "hit": true}
+{"substrate": "pythia-410m", "subject": "Weston GO Station", "object": "Canada", "gen": "Australia", "hit": false}
+{"substrate": "pythia-410m", "subject": "Putyvl", "object": "Ukraine", "gen": "Russia", "hit": false}
+{"substrate": "pythia-410m", "subject": "Valdemarsvik", "object": "Sweden", "gen": "Estonia", "hit": false}
+{"substrate": "pythia-410m", "subject": "Hogeschool Gent", "object": "Belgium", "gen": "Germany", "hit": false}
+{"substrate": "pythia-410m", "subject": "Koriya district", "object": "India", "gen": "Russia\nK", "hit": false}
+{"substrate": "pythia-410m", "subject": "Dziemiany", "object": "Poland", "gen": "Poland", "hit": true}
+{"substrate": "pythia-410m", "subject": "Queens Gardens, Brisbane", "object": "Australia", "gen": "Australia", "hit": true}
+{"substrate": "pythia-410m", "subject": "Palupera Rural Municipality", "object": "Estonia", "gen": "Russia\n\nSee", "hit": false}
+{"substrate": "pythia-410m", "subject": "Goseck circle", "object": "Germany", "gen": "Russia\nK", "hit": false}
+{"substrate": "pythia-410m", "subject": "Khasavyurt", "object": "Russia", "gen": "Russia\nK", "hit": true}
+{"substrate": "pythia-410m", "subject": "Instituto Pedro Nunes", "object": "Portugal", "gen": "Brazil", "hit": false}
+{"substrate": "pythia-410m", "subject": "Blennerville", "object": "Ireland", "gen": "Canada", "hit": false}
+{"substrate": "pythia-410m", "subject": "East Karelia", "object": "Russia", "gen": "Russia\nK", "hit": true}
+{"substrate": "pythia-410m", "subject": "Winlaton Youth Training Centre", "object": "Australia", "gen": "Canada", "hit": false}
+{"substrate": "pythia-410m", "subject": "Montiel", "object": "Spain", "gen": "Mexico", "hit": false}
+{"substrate": "pythia-410m", "subject": "Chu Lai Base Area", "object": "Vietnam", "gen": "China", "hit": false}
+{"substrate": "pythia-410m", "subject": "Palana", "object": "Russia", "gen": "Russia\nK", "hit": true}
+{"substrate": "pythia-410m", "subject": "KiKa", "object": "Germany", "gen": "Russia\nK", "hit": false}
+{"substrate": "pythia-410m", "subject": "Breege", "object": "Germany", "gen": "France", "hit": false}
+{"substrate": "pythia-410m", "subject": "Kalvola", "object": "Finland", "gen": "Russia\nK", "hit": false}
+{"substrate": "pythia-410m", "subject": "Tukvar Tea Estate", "object": "India", "gen": "Russia", "hit": false}
+{"substrate": "pythia-410m", "subject": "Hotel Oloffson", "object": "Haiti", "gen": "Sweden", "hit": false}
+{"substrate": "pythia-410m", "subject": "Waurn Ponds", "object": "Australia", "gen": "Canada", "hit": false}
+{"substrate": "pythia-410m", "subject": "Tampines Expressway", "object": "Singapore", "gen": "Malaysia", "hit": false}
+{"substrate": "pythia-410m", "subject": "Mediolanum Forum", "object": "Italy", "gen": "Italy", "hit": true}
+{"substrate": "pythia-410m", "subject": "Lamongan", "object": "Indonesia", "gen": "Indonesia\nK", "hit": true}
+{"substrate": "pythia-410m", "subject": "Khorramdarreh Rural District", "object": "Iran", "gen": "Iran\nK", "hit": true}
+{"substrate": "pythia-410m", "subject": "Free National Movement", "object": "Bahamas", "gen": "Russia\n\nSee", "hit": false}
+{"substrate": "pythia-410m", "subject": "Tinguiririca River", "object": "Chile", "gen": "Italy", "hit": false}
+{"substrate": "pythia-410m", "subject": "Hida Mountains", "object": "Japan", "gen": "Russia", "hit": false}
+{"substrate": "pythia-410m", "subject": "Al-Suqaylabiyah Subdistrict", "object": "Syria", "gen": "Syria", "hit": true}
+{"substrate": "pythia-410m", "subject": "Wismar", "object": "Germany", "gen": "Austria", "hit": false}

@@ -1,0 +1,37 @@
+# M5.0 qualification config for Pythia-1.4B on the RTX (cuda) tier.
+# Sibling of configs/m5_lens_pythia1p4b_draw0.yaml with device: cuda — created
+# 2026-07-21 after the 1.4B qualification Pass B was killed on the 16 GB Mac
+# (swap-thrash, 21.6/22.5 GB; ETA 8-10+ h). Per Ecaterina's ruling the 1.4B
+# qualification moves to the RTX, which has the VRAM to run it without swap.
+# Qualification is forward-pass only (no lens fit), so no lens caches are
+# needed. dtype float32 to stay comparable with the 410M Mac-fp32 numbers
+# (cuda fp16 is numerically fine here if VRAM-constrained — the MPS fp16
+# breakage does NOT apply on cuda — but float32 keeps exact-match cells matched).
+experiment: pythia1p4b_m5_qual_cuda
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-1.4b
+  revision: fedc38a16eea3bd36a96b906d78d11d2ce18ed79  # D-023 pin
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+cache_dir: cache/m5/p14b_qual_cuda
+results_dir: results/m5/p14b_qual_cuda

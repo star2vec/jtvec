@@ -1,0 +1,213 @@
+{
+  "reports": {
+    "pythia-410m": {
+      "substrate": "pythia-410m",
+      "s1": {
+        "capital-recall": {
+          "accuracy": 0.8611,
+          "n": 36,
+          "admitted": true
+        },
+        "capital-operand": {
+          "accuracy": 0.8611,
+          "n": 36,
+          "admitted": true
+        },
+        "swap-capitals": {
+          "accuracy": 0.9375,
+          "n": 16,
+          "admitted": true
+        },
+        "opposites": {
+          "accuracy": 1.0,
+          "n": 16,
+          "admitted": true
+        },
+        "word-pairs": {
+          "accuracy": 0.9167,
+          "n": 24,
+          "admitted": true
+        },
+        "typo-robustness": {
+          "accuracy": 0.7,
+          "n": 30,
+          "admitted": false
+        },
+        "context-binding": {
+          "accuracy": 0.5333,
+          "n": 30,
+          "admitted": false
+        },
+        "multihop-scaled": {
+          "accuracy": 0.5,
+          "n": 24,
+          "admitted": false
+        }
+      },
+      "binding": {
+        "bind2": {
+          "accuracy": 0.6167,
+          "n": 60
+        },
+        "bind3": {
+          "accuracy": 0.45,
+          "n": 60
+        },
+        "s4_admitted": false
+      },
+      "fv": {
+        "capitalize": {
+          "exec_10shot": 0.9294,
+          "zero_shot": 0.0059,
+          "n": 170,
+          "admitted": true
+        },
+        "singular-plural": {
+          "exec_10shot": 0.8605,
+          "zero_shot": 0.0233,
+          "n": 43,
+          "admitted": true
+        },
+        "english-french": {
+          "exec_10shot": 0.4742,
+          "zero_shot": 0.0071,
+          "n": 987,
+          "admitted": false
+        }
+      },
+      "lre": {
+        "factual_country_capital_city": {
+          "accuracy": 0.6429,
+          "n": 14,
+          "admitted": true
+        },
+        "factual_landmark_in_country": {
+          "accuracy": 0.4,
+          "n": 50,
+          "admitted": false
+        },
+        "factual_food_from_country": {
+          "accuracy": 0.3,
+          "n": 20,
+          "admitted": false
+        },
+        "factual_product_by_company": {
+          "accuracy": 0.44,
+          "n": 50,
+          "admitted": false
+        },
+        "linguistic_adj_antonym": {
+          "accuracy": 0.6,
+          "n": 50,
+          "admitted": true
+        },
+        "linguistic_verb_past_tense": {
+          "accuracy": 0.76,
+          "n": 50,
+          "admitted": true
+        },
+        "linguistic_word_first_letter": {
+          "accuracy": 0.98,
+          "n": 50,
+          "admitted": true
+        },
+        "linguistic_word_last_letter": {
+          "accuracy": 0.06,
+          "n": 50,
+          "admitted": false
+        },
+        "commonsense_object_superclass": {
+          "accuracy": 0.54,
+          "n": 50,
+          "admitted": false
+        },
+        "commonsense_fruit_inside_color": {
+          "accuracy": 0.3077,
+          "n": 26,
+          "admitted": false
+        },
+        "commonsense_task_done_by_tool": {
+          "accuracy": 0.4048,
+          "n": 42,
+          "admitted": false
+        },
+        "commonsense_work_location": {
+          "accuracy": 0.3929,
+          "n": 28,
+          "admitted": false
+        },
+        "s3_admitted": false,
+        "n_relations_passing": 4
+      }
+    },
+    "pythia-1.4b": {
+      "substrate": "pythia-1.4b",
+      "s1": {
+        "capital-recall": {
+          "accuracy": 0.9167,
+          "n": 36,
+          "admitted": true
+        },
+        "capital-operand": {
+          "accuracy": 0.9167,
+          "n": 36,
+          "admitted": true
+        },
+        "swap-capitals": {
+          "accuracy": 1.0,
+          "n": 16,
+          "admitted": true
+        },
+        "opposites": {
+          "accuracy": 1.0,
+          "n": 16,
+          "admitted": true
+        },
+        "word-pairs": {
+          "accuracy": 0.9583,
+          "n": 24,
+          "admitted": true
+        },
+        "typo-robustness": {
+          "accuracy": 0.7667,
+          "n": 30,
+          "admitted": false
+        },
+        "context-binding": {
+          "accuracy": 0.5333,
+          "n": 30,
+          "admitted": false
+        },
+        "multihop-scaled": {
+          "accuracy": 0.625,
+          "n": 24,
+          "admitted": false
+        }
+      },
+      "binding": {
+        "bind2": {
+          "accuracy": 0.65,
+          "n": 60
+        },
+        "bind3": {
+          "accuracy": 0.6667,
+          "n": 60
+        },
+        "s4_admitted": false
+      },
+      "fv": {
+        "status": "deferred-to-rtx"
+      },
+      "lre": {
+        "status": "deferred-to-rtx"
+      }
+    }
+  },
+  "bars": {
+    "s1": 0.8,
+    "fv": 0.8,
+    "lre": 0.6,
+    "bind2": 0.7
+  },
+  "note": "Reconstructed from retained raw cells after the 1.4B Pass B (FV+LRE) was killed on 2026-07-21 due to Mac swap-thrash (21.6/22.5 GB swap, per-item times climbing to 30 s, ETA 8-10+ h). Per Ecaterina's ruling, 1.4B FV+LRE moved to the RTX cuda tier. 410M is complete; 1.4B Pass A (S1 + binding) completed on the Mac. Re-derived from disk, not the log."
+}

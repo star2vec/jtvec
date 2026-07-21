@@ -84,11 +84,19 @@ cached draws) returned GAP-RETURNS — the gate FAIL was metric+anchor
 miscalibration, not J-lens/logit convergence (fresh latent operand 6.98x /
 bridge 15.52x vs matched outputs ~0.9x, all random 0.0, 3 draws; capital-
 recall recovered to 20.35x under max-contrast vs the gate's 1.1x). Evidence
-results/m5/20260720-215157-p14b-lens-diagnostic. 2.8B NOT triggered. Next:
-Q5 amendment (max-contrast metric + latent anchors) drafted UNCOMMITTED for
-Ecaterina's ratification -> on ratification a cheap amended-gate re-run admits
-1.4B. Also BLOCKED on rulings: M5.0 baselines await nothing further (D-025/
-D-026 ruled — build the qualification orchestrator + bind2/bind3 generator,
-show the template first); S1 concept-gate build (EXP-M5-1) authorized
-(code+tests). Standing: D-002 accepted knowingly; CLM-003/CLM-004 verify:
-lines still pending (raw re-derivation laid out 2026-07-20).
+results/m5/20260720-215157-p14b-lens-diagnostic. 2.8B NOT triggered. Since
+then (2026-07-21): verify-LAW amended (by-hand burden lifted; human
+confirmation stays the gate); CLM-003 + CLM-004 VERIFIED (Ecaterina; verify
+lines in LABNOTES); EXP-M5-0-amendment-Q5 + EXP-M5-0c RATIFIED. M5.0
+qualification RAN (results/m5/20260721-033359-qualification): 410M COMPLETE
+(S1 5/8; FV 2/3 — capitalize 0.93 / singplur 0.86 / eng-fr 0.47; LRE 4/12 ->
+S3 no; bind2 0.617 -> S4 no) and 1.4B Pass A done (S1 5/8; bind2 0.65 -> S4
+no). D-031 RULED: 1.4B Pass B (FV+LRE) killed on the Mac (swap-thrash 21.6/22.5
+GB, 8-10+ h ETA) and MOVED to the RTX — orchestrator now substrate-selectable,
+configs/m5_0_qual_pythia1p4b_cuda.yaml added; RTX runs
+`scripts/m5_0_qualification.py pythia-1.4b=configs/m5_0_qual_pythia1p4b_cuda.yaml`
+for one clean 1.4B run dir. FLAG open: binding (S4) clears 0.70 on NEITHER model
+at N=60 -> S4/H5 needs a stronger substrate or a battery re-spec (Ecaterina to
+rule). Next reading-track: EXP-M5-1 (S1 concept-direction stability gate; code
+authorized). RTX queue: EXP-M5-0c swap-decomposition + the 1.4B qualification
+Pass B. Standing: D-002 accepted knowingly.

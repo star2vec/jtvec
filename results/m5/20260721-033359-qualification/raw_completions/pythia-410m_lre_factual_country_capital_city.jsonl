@@ -1,0 +1,14 @@
+{"substrate": "pythia-410m", "subject": "Mexico", "object": "Mexico City", "gen": "Mexico City\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "Egypt", "object": "Cairo", "gen": "Cairo\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "Brazil", "object": "Bras\\u00edlia", "gen": "Rio de Janeiro\nThe capital city of", "hit": false}
+{"substrate": "pythia-410m", "subject": "Nigeria", "object": "Abuja", "gen": "Lagos\nThe", "hit": false}
+{"substrate": "pythia-410m", "subject": "Chile", "object": "Santiago", "gen": "Santiago\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "Pakistan", "object": "Islamabad", "gen": "Karachi\nThe", "hit": false}
+{"substrate": "pythia-410m", "subject": "Spain", "object": "Madrid", "gen": "Madrid\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "Australia", "object": "Canberra", "gen": "Melbourne\nThe capital city", "hit": false}
+{"substrate": "pythia-410m", "subject": "Japan", "object": "Tokyo", "gen": "Tokyo\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "South Korea", "object": "Seoul", "gen": "Seoul\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "Venezuela", "object": "Caracas", "gen": "Caracas\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "Canada", "object": "Ottawa", "gen": "Toronto\nThe", "hit": false}
+{"substrate": "pythia-410m", "subject": "Russia", "object": "Moscow", "gen": "Moscow\nThe", "hit": true}
+{"substrate": "pythia-410m", "subject": "Italy", "object": "Rome", "gen": "Rome\nThe", "hit": true}

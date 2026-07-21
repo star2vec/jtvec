@@ -1,0 +1,16 @@
+{"substrate": "pythia-1.4b", "name": "swap-France-to-Italy", "correct": true, "top1": " Paris", "expected": "Paris"}
+{"substrate": "pythia-1.4b", "name": "swap-Italy-to-France", "correct": true, "top1": " Rome", "expected": "Rome"}
+{"substrate": "pythia-1.4b", "name": "swap-England-to-Spain", "correct": true, "top1": " London", "expected": "London"}
+{"substrate": "pythia-1.4b", "name": "swap-Spain-to-England", "correct": true, "top1": " Madrid", "expected": "Madrid"}
+{"substrate": "pythia-1.4b", "name": "swap-Germany-to-Russia", "correct": true, "top1": " Berlin", "expected": "Berlin"}
+{"substrate": "pythia-1.4b", "name": "swap-Russia-to-Germany", "correct": true, "top1": " Moscow", "expected": "Moscow"}
+{"substrate": "pythia-1.4b", "name": "swap-Japan-to-China", "correct": true, "top1": " Tokyo", "expected": "Tokyo"}
+{"substrate": "pythia-1.4b", "name": "swap-China-to-Japan", "correct": true, "top1": " Beijing", "expected": "Beijing"}
+{"substrate": "pythia-1.4b", "name": "swap-Greece-to-Egypt", "correct": true, "top1": " Athens", "expected": "Athens"}
+{"substrate": "pythia-1.4b", "name": "swap-Egypt-to-Greece", "correct": true, "top1": " Cairo", "expected": "Cairo"}
+{"substrate": "pythia-1.4b", "name": "swap-Ireland-to-Poland", "correct": true, "top1": " Dublin", "expected": "Dublin"}
+{"substrate": "pythia-1.4b", "name": "swap-Poland-to-Ireland", "correct": true, "top1": " Warsaw", "expected": "Warsaw"}
+{"substrate": "pythia-1.4b", "name": "swap-Sweden-to-Norway", "correct": true, "top1": " Stockholm", "expected": "Stockholm"}
+{"substrate": "pythia-1.4b", "name": "swap-Norway-to-Sweden", "correct": true, "top1": " Oslo", "expected": "Oslo"}
+{"substrate": "pythia-1.4b", "name": "swap-Cuba-to-Iran", "correct": true, "top1": " Hav", "expected": "Havana"}
+{"substrate": "pythia-1.4b", "name": "swap-Iran-to-Cuba", "correct": true, "top1": " Tehran", "expected": "Tehran"}

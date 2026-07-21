@@ -1,0 +1,50 @@
+{"substrate": "pythia-410m", "subject": "goose", "object": "bird", "gen": "bird\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "tilapia", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "potato", "object": "plant", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "strawberry", "object": "fruit", "gen": "fruit\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "turtle", "object": "reptile", "gen": "bird\nA banana", "hit": false}
+{"substrate": "pythia-410m", "subject": "salmon", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "trout", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "flower", "object": "plant", "gen": "plant\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "ostrich", "object": "bird", "gen": "bird\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "dog", "object": "mammal", "gen": "bird\nA banana", "hit": false}
+{"substrate": "pythia-410m", "subject": "fish", "object": "fish", "gen": "plant\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "owl", "object": "bird", "gen": "bird\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "carrot", "object": "plant", "gen": "vegetable\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "tomato", "object": "vegetable", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "duck", "object": "bird", "gen": "bird\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "grass", "object": "plant", "gen": "plant\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "goldfish", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "lion", "object": "animal", "gen": "bird\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "weed", "object": "plant", "gen": "plant\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "tree", "object": "plant", "gen": "plant\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "salmon", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "tiger", "object": "animal", "gen": "bird\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "spinach", "object": "vegetable", "gen": "vegetable\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "carrot", "object": "vegetable", "gen": "vegetable\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "pear", "object": "fruit", "gen": "fruit\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "apple", "object": "plant", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "swordfish", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "cucumber", "object": "vegetable", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "snake", "object": "reptile", "gen": "plant\nA frog", "hit": false}
+{"substrate": "pythia-410m", "subject": "lizard", "object": "reptile", "gen": "plant\nA frog", "hit": false}
+{"substrate": "pythia-410m", "subject": "peach", "object": "fruit", "gen": "fruit\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "toad", "object": "amphibian", "gen": "plant\nA frog", "hit": false}
+{"substrate": "pythia-410m", "subject": "blueberry", "object": "fruit", "gen": "fruit\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "cucumber", "object": "plant", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "pineapple", "object": "plant", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "frog", "object": "amphibian", "gen": "plant\nA cuc", "hit": false}
+{"substrate": "pythia-410m", "subject": "tuna", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "rose", "object": "flower", "gen": "flower\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "sparrow", "object": "bird", "gen": "bird\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "lettuce", "object": "vegetable", "gen": "plant\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "crocodile", "object": "reptile", "gen": "bird\nA frog", "hit": false}
+{"substrate": "pythia-410m", "subject": "giraffe", "object": "animal", "gen": "bird\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "orange", "object": "fruit", "gen": "plant\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "potato", "object": "vegetable", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "apple", "object": "fruit", "gen": "fruit\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "tomato", "object": "plant", "gen": "fruit\nA", "hit": false}
+{"substrate": "pythia-410m", "subject": "goldfish", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "grapefruit", "object": "fruit", "gen": "fruit\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "catfish", "object": "fish", "gen": "fish\nA", "hit": true}
+{"substrate": "pythia-410m", "subject": "elephant", "object": "animal", "gen": "bird\nA", "hit": false}

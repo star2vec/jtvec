@@ -1,0 +1,9 @@
+{
+  "run_name": "qualification",
+  "started": "2026-07-21T03:33:59",
+  "git_commit": "9b6320dd1fde0df4715c3d1889d02f313509bcee",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-0-qualification.md",
+  "prereg_commit": "cf1da2b9d4f64842527781d26279d82bb0bd4e98",
+  "config_sha256": "9e46085a2a24092ee986c035aa737f6b2424df81a5a4155f141f5b7c91f45451",
+  "post_hoc": false
+}

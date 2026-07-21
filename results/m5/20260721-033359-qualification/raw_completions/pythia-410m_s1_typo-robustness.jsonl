@@ -1,0 +1,30 @@
+{"substrate": "pythia-410m", "name": "typo-language", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-tomorrow", "correct": false, "top1": ".", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-beautiful", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-business", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-government", "correct": true, "top1": " for", "expected": " for"}
+{"substrate": "pythia-410m", "name": "typo-restaurant", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-beginning", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-believe", "correct": true, "top1": " that", "expected": " that"}
+{"substrate": "pythia-410m", "name": "typo-friend", "correct": true, "top1": " since", "expected": " since"}
+{"substrate": "pythia-410m", "name": "typo-weather", "correct": false, "top1": " weather", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-arrive", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-address", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-library", "correct": false, "top1": " in", "expected": " on"}
+{"substrate": "pythia-410m", "name": "typo-separate", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-surprise", "correct": false, "top1": " to", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-chocolate", "correct": false, "top1": ",", "expected": " and"}
+{"substrate": "pythia-410m", "name": "typo-exercise", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-familiar", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-foreign", "correct": false, "top1": " accent", "expected": " language"}
+{"substrate": "pythia-410m", "name": "typo-grammar", "correct": false, "top1": ",", "expected": " and"}
+{"substrate": "pythia-410m", "name": "typo-immediately", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-necessary", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-neighbor", "correct": false, "top1": "hood", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-occasion", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-piece", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-pleasant", "correct": false, "top1": ",", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-tongue", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-Wednesday", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-410m", "name": "typo-ear", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-410m", "name": "typo-sugar", "correct": true, "top1": ",", "expected": ","}

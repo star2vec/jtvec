@@ -128,16 +128,36 @@ def qualify(sub: str, cfg_path: Path, ctx) -> dict:
     return report
 
 
+def parse_selection(argv: list[str]) -> dict[str, Path]:
+    """Substrate selection. No args -> both Mac substrates (default). Each arg is
+    a substrate name (uses its SUBSTRATES config) or "name=config_path" to
+    override the config (e.g. the RTX cuda config after the 2026-07-21 swap-thrash
+    ruling): `m5_0_qualification.py pythia-1.4b=configs/m5_0_qual_pythia1p4b_cuda.yaml`."""
+    if not argv:
+        return dict(SUBSTRATES)
+    sel = {}
+    for a in argv:
+        if "=" in a:
+            name, path = a.split("=", 1)
+            sel[name] = Path(path) if Path(path).is_absolute() else REPO_ROOT / path
+        else:
+            sel[a] = SUBSTRATES[a]
+    return sel
+
+
 def main() -> None:
-    ctx = start_run(repo_root=REPO_ROOT, config_path=SUBSTRATES["pythia-410m"],
+    selected = parse_selection(sys.argv[1:])
+    primary = next(iter(selected))
+    ctx = start_run(repo_root=REPO_ROOT, config_path=selected[primary],
                     results_root=REPO_ROOT / "results/m5", run_name="qualification",
                     prereg_path=PREREG)
-    print(f"qualification run dir: {ctx.results_dir}", flush=True)
+    print(f"qualification run dir: {ctx.results_dir} (substrates: {list(selected)})", flush=True)
     import shutil
-    shutil.copy2(SUBSTRATES["pythia-1.4b"], ctx.results_dir / SUBSTRATES["pythia-1.4b"].name)
+    for cfg_path in selected.values():
+        shutil.copy2(cfg_path, ctx.results_dir / cfg_path.name)
 
     reports = {}
-    for sub, cfg_path in SUBSTRATES.items():
+    for sub, cfg_path in selected.items():
         print(f"\n===== qualifying {sub} =====", flush=True)
         reports[sub] = qualify(sub, cfg_path, ctx)
 
