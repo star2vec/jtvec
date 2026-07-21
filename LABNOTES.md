@@ -1869,3 +1869,28 @@ researcher, this is her governance act):
 Sequence now: (a) null-check prereg for ratification; (b) S4 specification
 analysis; (c) 410M Q2-replication prereg drafted for the RTX. Nothing runs before
 the null-check is ratified. [no sign-off implied]
+
+### 2026-07-21 — EXP-M5-0c CLOSED: D-032 spec fix applied (RTX, bookkeeping) (Claude)
+
+Per Ecaterina's D-032 ratification (governance commit 0ab6ce3), applied the 0c
+negative-control specification fix to harness/preregs/EXP-M5-0c-swap-decomposition.md
+(Instruments + a ratified Deviations entry): the negative control is read as the
+prob-space Δp(swap_answer) under the sham within [−0.03, 0.03] (what already
+gated the run — 410M 0.0088, 1.4B 0.0004, both pass); the logit-space sham
+readings are informational. Text-only; no re-run. The H-CONFOUND verdict
+(results/m5/20260721-072815-0c-swap-decomposition) is unchanged — the
+sham-controlled statistic cancels the shared source-ablation. Recorded as a
+reading clarification, not an instrument recalibration: it recovers no signal
+and does not consume an amendment-budget cycle (new CONSTRAINTS amendment-
+discipline LAW). The run's own verdict.json / verdict_table.md are left as
+written (immutable run output; they gated on the now-ratified prob-space control
+and flagged the logit-space ambiguity that D-032 resolves). 0c is CLOSED.
+
+Explicitly NOT done here, per the governance rulings + this session's
+instruction (propose, never adopt; all thresholds to Ecaterina): no Q2 bar
+change proposed on the 1.4B 0c result alone (Q2 recalibration HELD under D-029;
+the 410M base-margin/flip replication EXP-M5-0d stays unstarted and its spec
+unmodified, held until Ecaterina rules "Q2-replication ratified"); no S4 compute
+and no 2.8B escalation (specification-before-scale, owed to Ecaterina first); the
+ordered null-check is the Mac's and precedes runs. Gates: pytest 176 passed,
+validators 3/3. [no sign-off implied]

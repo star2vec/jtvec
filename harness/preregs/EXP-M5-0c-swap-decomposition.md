@@ -84,8 +84,10 @@ RNG).
 
 - swap-effect readout: positive control = on 410M the sham-controlled gap-shift
   median >= [proposed 0.30 logit units] (the M1-certified swap works, dp +0.60
-  reference); negative control = sham gap-shift median within [−0.03, 0.03]
-  logit units on both substrates. require_controlled() gates the verdict.
+  reference); negative control = prob-space Δp(swap_answer) under the sham within
+  [−0.03, 0.03] on both substrates (D-032 ratified 2026-07-21 — see Deviations;
+  the logit-space sham gap-shift is retained as informational only).
+  require_controlled() gates the verdict on positive + prob-space negative.
 - identical statistic across substrates: same gap definition, same
   margin-normalization, same layers/positions, same sham construction, same
   draw handling — enforced by a shared code path parameterized only by
@@ -120,6 +122,25 @@ on the Mac.)
   requires; it does not depend on reusing the Mac's exact lens tensors. No
   threshold or decision-rule change.
 
+- Negative-control specification fix (D-032, RATIFIED by Ecaterina 2026-07-21,
+  governance commit 0ab6ce3; text-only, verdict unaffected). The negative
+  control is read as the prob-space Δp(swap_answer) under the sham within
+  [−0.03, 0.03] on both substrates (410M 0.0088, 1.4B 0.0004 — both pass), NOT
+  the logit-space sham gap-shift. Reason (raw replay on the certified 410M): a
+  norm-matched sham is an ACTIVE edit whose logit-space effects are O(1) — it
+  ablates the source component and so suppresses the original answer, raising the
+  gap regardless of any push toward the swap target — so no logit-space sham
+  quantity meets a prob-scale [−0.03, 0.03] band even on 410M. The band matches
+  the M-series Q3 sham (Δp under the random direction, ~0). The logit readings
+  (410M gap-shift 3.75 / target-push 1.59; 1.4B 1.02 / 1.05) are retained as
+  informational. The sham-controlled decision statistic (real − sham) cancels
+  the shared ablation, so the H-CONFOUND verdict is unchanged. This is a reading
+  clarification, not an instrument recalibration: it recovers no signal and does
+  not consume an amendment-budget cycle (CONSTRAINTS amendment-discipline LAW).
+
 ## Ratification
 
 ratified: EXP-M5-0c 2026-07-21 — Ecaterina (via session instruction "ratify 0c").
+D-032 negative-control spec fix ratified 2026-07-21 (governance commit 0ab6ce3);
+applied to Instruments + Deviations above. 0c CLOSED at verdict H-CONFOUND
+(HYPOTHESIS tier; no Q2/Q6 bar change, per D-029).
