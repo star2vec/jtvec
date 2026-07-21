@@ -1910,3 +1910,19 @@ scrambled-label probes over cached 410M lenses; I2 scrambled-label concept
 direction + extended ladder + alpha-swept Δp) with landing tests, then running
 on 410M (Mac, detached + Monitor + caffeinate). Q2-replication + S4 remain held
 for Ecaterina's rulings. [no sign-off implied]
+
+
+### 2026-07-22 — EXP-M5-2 (S3 operator gate) RATIFIED; RTX to build+run (Claude)
+
+Ecaterina ratified EXP-M5-2 ("ratify m5.2"). Prereg committed as the prereg act
+(harness/preregs/EXP-M5-2-operator-gate.md). S3 relational-operator stability
+gate on 1.4B (the only S3-admitted substrate): vendored JacobianIclMeanEstimator
+-> LinearRelationOperator per relation, 3 draws; functional convergence (top-1
+output agreement >= 0.90 AND output-state cosine >= 0.95) + controls (held-out
+faithfulness >= 0.60 positive; shuffled-relation must fail negative). 8 relations
+(the S3-passing set). Stated independent of the EXP-M5-1c null-check (functional
+gate, no max-contrast/concept instrument) and NOT counted against the amendment
+budget (new species extractor, not a recalibration). The RTX builds its own
+orchestrator against the committed prereg (0c precedent) and runs on cuda; the
+S3 certificate + sign-off stay Ecaterina's. RTX startup prompt delivered this
+session. [no sign-off implied]
