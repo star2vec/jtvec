@@ -1696,3 +1696,51 @@ separate EXP-M5-0 amendment for Ecaterina, not adopted here.
   ruling. Recorded here; not adopted beyond this run's gating.
 
 Gates before commit: pytest 176 passed, validators 3/3. [no sign-off implied]
+### 2026-07-21 — EXP-M5-1 S1 concept gate RAN on 410M: NO certificate (instrument-control failure; ladder+readout miscalibration) (Claude)
+
+EXP-M5-1 concept gate ran on Pythia-410M (results/m5/20260721-132124-m5-1-concept;
+start_run, prereg EXP-M5-1 committed at 310ca88, clean tree; 200 raw cells, >= 40
+records each; wall 785 s, peak RSS 1.98 GB — Mac-eligible, no swap). Capital
+family, 8 concepts, band [4,16], 3 draws (seeds 1/2/3), ladder {8,16,32,64},
+N_eval=40. Design as accepted by Ecaterina this session (norm-preserving residual
+activation-addition injection; off-target-carrier Δp readout; band-concatenated
+"d@T"; capital family, entity-identity deferred).
+
+Result: S1 species certificate NOT issued. All 8 concepts converged_at=None,
+positive control FAILED 0/8, negative control passed 8/8. Per the instruments LAW
+this is an INSTRUMENT-CONTROL FAILURE -> no certificate, an instrument-failure
+report (NOT an S1-residency statement; certificates.json empty).
+
+Raw replay (diagnostic-first, per the D-027 precedent) separates two
+miscalibrations, neither of which is signal absence:
+1. Ladder too short (cosine criterion). Min pairwise cosine of the
+   mean-difference direction rises MONOTONICALLY with n_contexts for every
+   concept (T8 ~0.6 -> T16 ~0.7 -> T32 ~0.8 -> T64 0.90-0.94), approaching the
+   0.95 bar from below without plateauing; none clear 0.95 AT T=64, so
+   converged_at=None. The direction is stabilising; the ladder simply stops at
+   64 (extend to 128+).
+2. Readout at the floor (potency criterion). The N=40 readout carriers query
+   OTHER roster countries, so mean p_base(concept token) = 0.00056 (max 0.0134,
+   N=320). Absolute Δp(concept) then cannot reach the +0.10 positive-control
+   bar; effect medians are +-0.003 vs sham ~0. The effect-IQR criterion "passes"
+   trivially (IQR 0.0000-0.006) only because the effect is pinned at ~0. Under
+   this readout BOTH the positive control and the IQR criterion are
+   uninformative.
+
+Same shape as the M1 lens-gate FAIL -> D-027 (GAP-RETURNS): the gate fails on
+metric+ladder miscalibration, not on the extractor's convergence. Evidence
+committed with this entry.
+
+D-033 FLAGGED (awaiting Ecaterina's ruling; D-032 was concurrently taken by the
+RTX 0c negative-control proposal in the entry above, so this renumbers to D-033):
+an EXP-M5-1 amendment / EXP-M5-1b diagnostic addressing both miscalibrations,
+drafted UNCOMMITTED (committing is the prereg act, only on ratification). Options
+laid out this session:
+(a) extend the ladder (add T=128, and 256 if needed) — cheap; the cosine
+    trajectory predicts it clears 0.95 with a witness;
+(b) recalibrate the potency readout so the positive control is testable —
+    (i) on-target carriers + a rank / log-odds metric rather than absolute Δp,
+    (ii) stronger injection (alpha > natural-norm, or the M1 lens-coordinate
+    projection instead of the plain norm-preserving addition — reopens design
+    decision #1), or (iii) neutral carriers where p(c) is mid-range.
+No gate re-run until she rules; no threshold or readout change adopted silently.

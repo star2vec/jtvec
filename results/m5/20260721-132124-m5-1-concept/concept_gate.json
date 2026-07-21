@@ -1,0 +1,602 @@
+{
+  "reports": {
+    "Paris": {
+      "concept": "Paris",
+      "answer_token_id": 7785,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6140375137329102,
+            "effect_iqr": 0.005209344491231604
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6584805250167847,
+            "effect_iqr": 0.005770069971913471
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7630231976509094,
+            "effect_iqr": 0.0008111902192467824
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.9050551652908325,
+            "effect_iqr": 0.0018864271056372676
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": 0.00486,
+          "2": -0.0003,
+          "3": 0.01012
+        },
+        "16": {
+          "1": 0.01433,
+          "2": 0.00492,
+          "3": 0.00279
+        },
+        "32": {
+          "1": 0.00127,
+          "2": 0.00158,
+          "3": 0.00289
+        },
+        "64": {
+          "1": -2e-05,
+          "2": 0.00333,
+          "3": 0.00376
+        }
+      },
+      "sham_by_draw": {
+        "1": -0.00062,
+        "2": -0.00061,
+        "3": -0.00061
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median +0.0033 - sham median -0.0006 = +0.0039 vs bar +0.1",
+          "effect_median": 0.00333466528027202,
+          "sham_median": -0.0006144193891145733
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0052 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    },
+    "London": {
+      "concept": "London",
+      "answer_token_id": 4693,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7400052547454834,
+            "effect_iqr": 0.0007881425047798984
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7821190357208252,
+            "effect_iqr": 5.3546042181551456e-05
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.8576754927635193,
+            "effect_iqr": 0.00017565243015269503
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.9416273236274719,
+            "effect_iqr": 0.00032650490829837513
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": -0.0017,
+          "2": -0.00173,
+          "3": -0.00015
+        },
+        "16": {
+          "1": -0.00158,
+          "2": -0.00165,
+          "3": -0.00155
+        },
+        "32": {
+          "1": -0.00131,
+          "2": -0.00166,
+          "3": -0.00139
+        },
+        "64": {
+          "1": -0.00077,
+          "2": -0.00125,
+          "3": -0.00142
+        }
+      },
+      "sham_by_draw": {
+        "1": -0.00172,
+        "2": -0.00176,
+        "3": -0.00176
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median -0.0013 - sham median -0.0018 = +0.0005 vs bar +0.1",
+          "effect_median": -0.0012517859440777102,
+          "sham_median": -0.001764498212264698
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0019 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    },
+    "Rome": {
+      "concept": "Rome",
+      "answer_token_id": 12300,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6216357350349426,
+            "effect_iqr": 0.00034312304858303834
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6950134634971619,
+            "effect_iqr": 0.0009041531651746483
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7852042317390442,
+            "effect_iqr": 0.0002244866285536773
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.9095601439476013,
+            "effect_iqr": 8.54297304158536e-05
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": 2e-05,
+          "2": -0.00066,
+          "3": -0.0006
+        },
+        "16": {
+          "1": 0.00122,
+          "2": -0.00038,
+          "3": -0.00059
+        },
+        "32": {
+          "1": -0.00056,
+          "2": -0.00018,
+          "3": -0.00062
+        },
+        "64": {
+          "1": -0.0006,
+          "2": -0.00043,
+          "3": -0.00043
+        }
+      },
+      "sham_by_draw": {
+        "1": -0.00072,
+        "2": -0.00072,
+        "3": -0.00071
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median -0.0004 - sham median -0.0007 = +0.0003 vs bar +0.1",
+          "effect_median": -0.0004262059593202139,
+          "sham_median": -0.0007195719605633144
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0007 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    },
+    "Berlin": {
+      "concept": "Berlin",
+      "answer_token_id": 12911,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6325846910476685,
+            "effect_iqr": 0.0006697619742453753
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6834750175476074,
+            "effect_iqr": 0.00015910174597593134
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7857940793037415,
+            "effect_iqr": 9.490047834788125e-05
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.9068052768707275,
+            "effect_iqr": 1.2920362041768342e-05
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": 0.00034,
+          "2": -0.001,
+          "3": -0.00089
+        },
+        "16": {
+          "1": -0.00065,
+          "2": -0.00078,
+          "3": -0.00097
+        },
+        "32": {
+          "1": -0.00081,
+          "2": -0.00083,
+          "3": -0.001
+        },
+        "64": {
+          "1": -0.00085,
+          "2": -0.00084,
+          "3": -0.00083
+        }
+      },
+      "sham_by_draw": {
+        "1": -0.00105,
+        "2": -0.00097,
+        "3": -0.00103
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median -0.0008 - sham median -0.0010 = +0.0002 vs bar +0.1",
+          "effect_median": -0.0008418942921935013,
+          "sham_median": -0.0010306743932346762
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0011 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    },
+    "Madrid": {
+      "concept": "Madrid",
+      "answer_token_id": 21924,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.5891185998916626,
+            "effect_iqr": 0.004343712640888953
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6182944774627686,
+            "effect_iqr": 0.004710181954533255
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7314313650131226,
+            "effect_iqr": 0.001842887012753636
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.8980225324630737,
+            "effect_iqr": 0.003582166185515234
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": 0.00074,
+          "2": 0.0013,
+          "3": 0.00943
+        },
+        "16": {
+          "1": 0.00057,
+          "2": -5e-05,
+          "3": 0.00937
+        },
+        "32": {
+          "1": 0.00032,
+          "2": 0.0007,
+          "3": 0.004
+        },
+        "64": {
+          "1": 0.00055,
+          "2": 0.00771,
+          "3": 0.0011
+        }
+      },
+      "sham_by_draw": {
+        "1": -0.00012,
+        "2": -0.00012,
+        "3": -0.00012
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median +0.0011 - sham median -0.0001 = +0.0012 vs bar +0.1",
+          "effect_median": 0.0010966032071451082,
+          "sham_median": -0.00011968787395630898
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0001 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    },
+    "Vienna": {
+      "concept": "Vienna",
+      "answer_token_id": 26229,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6986691951751709,
+            "effect_iqr": 1.5104180633329796e-06
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7606054544448853,
+            "effect_iqr": 2.1547904516694443e-06
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.8343624472618103,
+            "effect_iqr": 5.768029627262194e-07
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.9342427253723145,
+            "effect_iqr": 9.158454545855595e-08
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": -0.00011,
+          "2": -0.00011,
+          "3": -0.00011
+        },
+        "16": {
+          "1": -0.00011,
+          "2": -0.00011,
+          "3": -0.00011
+        },
+        "32": {
+          "1": -0.00011,
+          "2": -0.00011,
+          "3": -0.00011
+        },
+        "64": {
+          "1": -0.00011,
+          "2": -0.00011,
+          "3": -0.00011
+        }
+      },
+      "sham_by_draw": {
+        "1": -0.0001,
+        "2": -0.0001,
+        "3": -8e-05
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median -0.0001 - sham median -0.0001 = -0.0000 vs bar +0.1",
+          "effect_median": -0.00011127589018897766,
+          "sham_median": -9.80384423257874e-05
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0001 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    },
+    "Athens": {
+      "concept": "Athens",
+      "answer_token_id": 27411,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.6932296752929688,
+            "effect_iqr": 2.106827366219477e-05
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7528146505355835,
+            "effect_iqr": 0.001342907824692574
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.8333292007446289,
+            "effect_iqr": 0.0005684870236507323
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.9273513555526733,
+            "effect_iqr": 1.3337179984773689e-05
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": -1e-05,
+          "2": 2e-05,
+          "3": -2e-05
+        },
+        "16": {
+          "1": 3e-05,
+          "2": 0.00267,
+          "3": -2e-05
+        },
+        "32": {
+          "1": 7e-05,
+          "2": 0.00114,
+          "3": 0.0
+        },
+        "64": {
+          "1": 3e-05,
+          "2": 2e-05,
+          "3": 5e-05
+        }
+      },
+      "sham_by_draw": {
+        "1": -2e-05,
+        "2": 8e-05,
+        "3": -1e-05
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median +0.0000 - sham median -0.0000 = +0.0000 vs bar +0.1",
+          "effect_median": 3.0494162415095617e-05,
+          "sham_median": -9.277582013567098e-06
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0000 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    },
+    "Cairo": {
+      "concept": "Cairo",
+      "answer_token_id": 37068,
+      "n_eval": 40,
+      "verdict": {
+        "converged": false,
+        "converged_at": null,
+        "passes_at_max_rung_only": false,
+        "per_rung": {
+          "8": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7019411325454712,
+            "effect_iqr": 0.0006114827815146384
+          },
+          "16": {
+            "pass": false,
+            "min_pairwise_cosine": 0.7643165588378906,
+            "effect_iqr": 0.000938935590238543
+          },
+          "32": {
+            "pass": false,
+            "min_pairwise_cosine": 0.8451797366142273,
+            "effect_iqr": 0.00228560727389322
+          },
+          "64": {
+            "pass": false,
+            "min_pairwise_cosine": 0.9302606582641602,
+            "effect_iqr": 0.0002819603082272693
+          }
+        }
+      },
+      "effects_by_rung": {
+        "8": {
+          "1": 0.00013,
+          "2": -1e-05,
+          "3": 0.00121
+        },
+        "16": {
+          "1": 0.00052,
+          "2": 0.00214,
+          "3": 0.00239
+        },
+        "32": {
+          "1": 2e-05,
+          "2": 0.00087,
+          "3": 0.00459
+        },
+        "64": {
+          "1": 1e-05,
+          "2": 0.0001,
+          "3": 0.00058
+        }
+      },
+      "sham_by_draw": {
+        "1": 0.00024,
+        "2": 4e-05,
+        "3": 5e-05
+      },
+      "controls": {
+        "positive": {
+          "passed": false,
+          "detail": "\u0394p(answer) median +0.0001 - sham median +0.0001 = +0.0001 vs bar +0.1",
+          "effect_median": 0.00010245593848026146,
+          "sham_median": 5.115497153269643e-05
+        },
+        "negative": {
+          "passed": true,
+          "detail": "max |\u0394p| 0.0001 vs bound 0.0250 = max(0.02, 1/40)"
+        },
+        "controlled": false
+      }
+    }
+  },
+  "species_certificate": {
+    "species": "S1",
+    "model": "EleutherAI/pythia-410m@9879c9b",
+    "roster": [
+      "Paris",
+      "London",
+      "Rome",
+      "Berlin",
+      "Madrid",
+      "Vienna",
+      "Athens",
+      "Cairo"
+    ],
+    "issued": false,
+    "concepts_converged": 0,
+    "concepts_controlled": 0
+  },
+  "rule": {
+    "min_pairwise_cosine": 0.95,
+    "max_effect_iqr": 0.05,
+    "positive_min_gain": 0.1
+  }
+}

@@ -1,0 +1,40 @@
+{"concept": "Berlin", "prompt_tail": "l of Ireland is Dublin. The capital of France is", "p_base": 0.00011, "p_inj": 1e-05, "dp": -0.0001}
+{"concept": "Berlin", "prompt_tail": "l of England is London. The capital of France is", "p_base": 3e-05, "p_inj": 0.00014, "dp": 0.00011}
+{"concept": "Berlin", "prompt_tail": " of Portugal is Lisbon. The capital of France is", "p_base": 0.00018, "p_inj": 0.00013, "dp": -4e-05}
+{"concept": "Berlin", "prompt_tail": "ital of Egypt is Cairo. The capital of France is", "p_base": 8e-05, "p_inj": 6e-05, "dp": -2e-05}
+{"concept": "Berlin", "prompt_tail": "al of Poland is Warsaw. The capital of France is", "p_base": 0.00031, "p_inj": 7e-05, "dp": -0.00025}
+{"concept": "Berlin", "prompt_tail": "of Sweden is Stockholm. The capital of France is", "p_base": 7e-05, "p_inj": 0.0001, "dp": 2e-05}
+{"concept": "Berlin", "prompt_tail": " of Ireland is Dublin. The capital of England is", "p_base": 0.00011, "p_inj": 1e-05, "dp": -0.0001}
+{"concept": "Berlin", "prompt_tail": "al of France is Paris. The capital of England is", "p_base": 5e-05, "p_inj": 0.00017, "dp": 0.00012}
+{"concept": "Berlin", "prompt_tail": "of Portugal is Lisbon. The capital of England is", "p_base": 0.0003, "p_inj": 0.00011, "dp": -0.0002}
+{"concept": "Berlin", "prompt_tail": "tal of Egypt is Cairo. The capital of England is", "p_base": 0.00025, "p_inj": 5e-05, "dp": -0.0002}
+{"concept": "Berlin", "prompt_tail": "l of Poland is Warsaw. The capital of England is", "p_base": 0.00041, "p_inj": 5e-05, "dp": -0.00036}
+{"concept": "Berlin", "prompt_tail": "f Sweden is Stockholm. The capital of England is", "p_base": 6e-05, "p_inj": 8e-05, "dp": 2e-05}
+{"concept": "Berlin", "prompt_tail": "al of Ireland is Dublin. The capital of Italy is", "p_base": 0.00048, "p_inj": 1e-05, "dp": -0.00047}
+{"concept": "Berlin", "prompt_tail": "ital of France is Paris. The capital of Italy is", "p_base": 0.00026, "p_inj": 0.00024, "dp": -2e-05}
+{"concept": "Berlin", "prompt_tail": "l of Portugal is Lisbon. The capital of Italy is", "p_base": 0.00028, "p_inj": 0.00015, "dp": -0.00013}
+{"concept": "Berlin", "prompt_tail": "pital of Egypt is Cairo. The capital of Italy is", "p_base": 0.00049, "p_inj": 8e-05, "dp": -0.00042}
+{"concept": "Berlin", "prompt_tail": "tal of Poland is Warsaw. The capital of Italy is", "p_base": 0.00052, "p_inj": 8e-05, "dp": -0.00045}
+{"concept": "Berlin", "prompt_tail": " of Sweden is Stockholm. The capital of Italy is", "p_base": 0.00018, "p_inj": 0.00012, "dp": -6e-05}
+{"concept": "Berlin", "prompt_tail": "al of Ireland is Dublin. The capital of Spain is", "p_base": 2e-05, "p_inj": 1e-05, "dp": -1e-05}
+{"concept": "Berlin", "prompt_tail": "ital of France is Paris. The capital of Spain is", "p_base": 2e-05, "p_inj": 0.00018, "dp": 0.00016}
+{"concept": "Berlin", "prompt_tail": "l of Portugal is Lisbon. The capital of Spain is", "p_base": 2e-05, "p_inj": 0.00011, "dp": 9e-05}
+{"concept": "Berlin", "prompt_tail": "pital of Egypt is Cairo. The capital of Spain is", "p_base": 1e-05, "p_inj": 5e-05, "dp": 4e-05}
+{"concept": "Berlin", "prompt_tail": "tal of Poland is Warsaw. The capital of Spain is", "p_base": 7e-05, "p_inj": 6e-05, "dp": -1e-05}
+{"concept": "Berlin", "prompt_tail": " of Sweden is Stockholm. The capital of Spain is", "p_base": 2e-05, "p_inj": 7e-05, "dp": 5e-05}
+{"concept": "Berlin", "prompt_tail": " of Ireland is Dublin. The capital of Austria is", "p_base": 0.00849, "p_inj": 1e-05, "dp": -0.00848}
+{"concept": "Berlin", "prompt_tail": "al of France is Paris. The capital of Austria is", "p_base": 0.00498, "p_inj": 0.00019, "dp": -0.00479}
+{"concept": "Berlin", "prompt_tail": "of Portugal is Lisbon. The capital of Austria is", "p_base": 0.00388, "p_inj": 0.00011, "dp": -0.00377}
+{"concept": "Berlin", "prompt_tail": "tal of Egypt is Cairo. The capital of Austria is", "p_base": 0.0028, "p_inj": 7e-05, "dp": -0.00274}
+{"concept": "Berlin", "prompt_tail": "l of Poland is Warsaw. The capital of Austria is", "p_base": 0.00594, "p_inj": 6e-05, "dp": -0.00588}
+{"concept": "Berlin", "prompt_tail": "f Sweden is Stockholm. The capital of Austria is", "p_base": 0.00421, "p_inj": 8e-05, "dp": -0.00413}
+{"concept": "Berlin", "prompt_tail": "l of Ireland is Dublin. The capital of Greece is", "p_base": 0.00105, "p_inj": 1e-05, "dp": -0.00104}
+{"concept": "Berlin", "prompt_tail": "tal of France is Paris. The capital of Greece is", "p_base": 0.00109, "p_inj": 0.00016, "dp": -0.00094}
+{"concept": "Berlin", "prompt_tail": " of Portugal is Lisbon. The capital of Greece is", "p_base": 0.00071, "p_inj": 9e-05, "dp": -0.00062}
+{"concept": "Berlin", "prompt_tail": "ital of Egypt is Cairo. The capital of Greece is", "p_base": 0.00045, "p_inj": 3e-05, "dp": -0.00042}
+{"concept": "Berlin", "prompt_tail": "al of Poland is Warsaw. The capital of Greece is", "p_base": 0.00081, "p_inj": 5e-05, "dp": -0.00077}
+{"concept": "Berlin", "prompt_tail": "of Sweden is Stockholm. The capital of Greece is", "p_base": 0.0007, "p_inj": 7e-05, "dp": -0.00063}
+{"concept": "Berlin", "prompt_tail": "al of Ireland is Dublin. The capital of Egypt is", "p_base": 0.00034, "p_inj": 1e-05, "dp": -0.00033}
+{"concept": "Berlin", "prompt_tail": "ital of France is Paris. The capital of Egypt is", "p_base": 0.00086, "p_inj": 0.0002, "dp": -0.00066}
+{"concept": "Berlin", "prompt_tail": "l of Portugal is Lisbon. The capital of Egypt is", "p_base": 0.00114, "p_inj": 0.00013, "dp": -0.00101}
+{"concept": "Berlin", "prompt_tail": "tal of Greece is Athens. The capital of Egypt is", "p_base": 0.00029, "p_inj": 4e-05, "dp": -0.00025}

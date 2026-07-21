@@ -97,6 +97,17 @@ configs/m5_0_qual_pythia1p4b_cuda.yaml added; RTX runs
 `scripts/m5_0_qualification.py pythia-1.4b=configs/m5_0_qual_pythia1p4b_cuda.yaml`
 for one clean 1.4B run dir. FLAG open: binding (S4) clears 0.70 on NEITHER model
 at N=60 -> S4/H5 needs a stronger substrate or a battery re-spec (Ecaterina to
-rule). Next reading-track: EXP-M5-1 (S1 concept-direction stability gate; code
-authorized). RTX queue: EXP-M5-0c swap-decomposition + the 1.4B qualification
-Pass B. Standing: D-002 accepted knowingly.
+rule). EXP-M5-1 (S1 concept gate) BUILT (code+tests, commit 310ca88) and RAN on
+410M (results/m5/20260721-132124-m5-1-concept): S1 certificate NOT issued —
+instrument-control failure (pos control 0/8). Raw replay (diagnostic-first, D-027
+shape): NOT signal absence but two miscalibrations — (1) cosine ladder too short
+(direction cosine rises monotonically to 0.90-0.94 at T=64, approaching 0.95;
+extend to 128+), (2) potency readout at the floor (off-target carriers, mean
+p_base 0.00056, so the +0.10 absolute-Δp bar + the IQR criterion are both
+uninformative). D-033 FLAGGED: EXP-M5-1 amendment / EXP-M5-1b diagnostic
+(ladder extension + readout recalibration) drafted UNCOMMITTED, awaiting ruling;
+no gate re-run until then. EXP-M5-0c RAN on the RTX (H-CONFOUND: 1.4b's Q2 flip
+miss tracks a higher base-answer margin, not a reduced sham-controlled effect —
+diagnostic, HYPOTHESIS tier, no Q2/Q6 change; D-032 the RTX's proposed 0c
+negative-control fix, awaiting ruling). RTX queue: the 1.4B qualification Pass B.
+Standing: D-002 accepted knowingly.

@@ -1,0 +1,37 @@
+# EXP-M5-1 S1 concept-direction stability gate on Pythia-410M (admitted by
+# EXP-M5-0; M1-certified band [4,16]). Standard jvec.config.Config schema (the
+# gate params — roster, ladder RUNGS, convergence rule, control bars — are
+# ratified constants in jtvec.concept_gate / scripts/m5_1_concept_gate.py, the
+# m4_e3 pattern; the config carries only model/device/band). Extraction +
+# injection are forward-only (no lens fit, no Jacobian): the mean-difference
+# concept direction lives in the residual stream, so no lens cache is required.
+# fp32/MPS per the M1 stack. The 1.4B sibling is drafted once EXP-M5-0 admits
+# 1.4B and its band is re-derived.
+experiment: pythia410m_m5_1_concept
+seed: 0
+device: mps
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]          # M1-certified band
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10     # negative-control random directions
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+cache_dir: cache/m5/concept_pythia410m
+results_dir: results/m5

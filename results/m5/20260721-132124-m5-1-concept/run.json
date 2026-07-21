@@ -1,0 +1,15 @@
+{
+  "run_name": "m5-1-concept",
+  "started": "2026-07-21T13:21:24",
+  "git_commit": "310ca88627ee4f0585256291c7516da687e58bb4",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-1-concept-gate.md",
+  "prereg_commit": "cf1da2b9d4f64842527781d26279d82bb0bd4e98",
+  "config_sha256": "6ae6b9d2c4e42ffc3cc3df6541a98c7a4a80aac4f4e0db28632f58cb219e0046",
+  "post_hoc": false,
+  "species_certificate_issued": false,
+  "concepts_converged": 0,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 785.4,
+  "peak_rss_gb": 1.98,
+  "finished": "2026-07-21T13:34:29"
+}
