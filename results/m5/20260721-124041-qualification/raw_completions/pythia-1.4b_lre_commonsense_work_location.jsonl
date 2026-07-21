@@ -1,0 +1,28 @@
+{"substrate": "pythia-1.4b", "subject": "athlete", "object": "stadium", "gen": "gym\nA", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "fashion designer", "object": "studio", "gen": "fashion store", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "hairdresser", "object": "salon", "gen": "salon\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "soldier", "object": "military base", "gen": "military base\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "lawyer", "object": "courthouse", "gen": "law firm\nA", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "musician", "object": "concert hall", "gen": "studio\nA teacher", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "mechanic", "object": "garage", "gen": "garage\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "chef", "object": "kitchen", "gen": "restaurant\nA", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "accountant", "object": "office", "gen": "bank\nA", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "nurse", "object": "hospital", "gen": "hospital\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "salesperson", "object": "store", "gen": "store\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "artist", "object": "studio", "gen": "gallery\nA", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "trainer", "object": "gym", "gen": "gym\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "baker", "object": "bakery", "gen": "bakery\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "librarian", "object": "library", "gen": "library\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "firefighter", "object": "fire station", "gen": "firehouse\nA", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "historian", "object": "library", "gen": "library\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "doctor", "object": "hospital", "gen": "hospital\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "waitress", "object": "restaurant", "gen": "restaurant\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "surgeon", "object": "hospital", "gen": "hospital\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "secretary", "object": "office", "gen": "office\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "pilot", "object": "airplane", "gen": "plane\nA", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "software engineer", "object": "office", "gen": "software company", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "student", "object": "school", "gen": "school\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "insurance agent", "object": "office", "gen": "brokerage firm", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "teacher", "object": "school", "gen": "school\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "researcher", "object": "laboratory", "gen": "laboratory\nA", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "photographer", "object": "studio", "gen": "studio\nA", "hit": true}

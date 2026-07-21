@@ -1,0 +1,11 @@
+{
+  "run_name": "qualification",
+  "started": "2026-07-21T12:40:41",
+  "git_commit": "a7d3194fbab9a14f1ca162752fa949f23f2eb2e8",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M5-0-qualification.md",
+  "prereg_commit": "cf1da2b9d4f64842527781d26279d82bb0bd4e98",
+  "config_sha256": "0c7034d5b710fd964945e883c22135c2d79c1a95d657f615740432888bac5240",
+  "post_hoc": false,
+  "peak_rss_gb": 14.37,
+  "finished": "2026-07-21T14:08:08"
+}

@@ -1,0 +1,30 @@
+{"substrate": "pythia-1.4b", "name": "typo-language", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-tomorrow", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-beautiful", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-business", "correct": false, "top1": " and", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-government", "correct": true, "top1": " for", "expected": " for"}
+{"substrate": "pythia-1.4b", "name": "typo-restaurant", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-beginning", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-believe", "correct": true, "top1": " that", "expected": " that"}
+{"substrate": "pythia-1.4b", "name": "typo-friend", "correct": false, "top1": " for", "expected": " since"}
+{"substrate": "pythia-1.4b", "name": "typo-weather", "correct": false, "top1": ",", "expected": " for"}
+{"substrate": "pythia-1.4b", "name": "typo-arrive", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-address", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-library", "correct": true, "top1": " on", "expected": " on"}
+{"substrate": "pythia-1.4b", "name": "typo-separate", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-surprise", "correct": true, "top1": " for", "expected": " for"}
+{"substrate": "pythia-1.4b", "name": "typo-chocolate", "correct": true, "top1": " and", "expected": " and"}
+{"substrate": "pythia-1.4b", "name": "typo-exercise", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-familiar", "correct": false, "top1": " to", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-foreign", "correct": true, "top1": " language", "expected": " language"}
+{"substrate": "pythia-1.4b", "name": "typo-grammar", "correct": false, "top1": ",", "expected": " and"}
+{"substrate": "pythia-1.4b", "name": "typo-immediately", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-necessary", "correct": true, "top1": " for", "expected": " for"}
+{"substrate": "pythia-1.4b", "name": "typo-neighbor", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-occasion", "correct": false, "top1": " for", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-piece", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-pleasant", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-tongue", "correct": false, "top1": ".", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-Wednesday", "correct": true, "top1": ",", "expected": ","}
+{"substrate": "pythia-1.4b", "name": "typo-ear", "correct": true, "top1": ".", "expected": "."}
+{"substrate": "pythia-1.4b", "name": "typo-sugar", "correct": true, "top1": ",", "expected": ","}

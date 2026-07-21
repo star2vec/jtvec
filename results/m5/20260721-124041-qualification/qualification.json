@@ -1,0 +1,160 @@
+{
+  "reports": {
+    "pythia-1.4b": {
+      "substrate": "pythia-1.4b",
+      "revision": "fedc38a16eea3bd36a96b906d78d11d2ce18ed79",
+      "s1": {
+        "capital-operand": {
+          "accuracy": 0.9167,
+          "shots_as_authored": 3,
+          "n": 36,
+          "admitted": true
+        },
+        "capital-recall": {
+          "accuracy": 0.9167,
+          "shots_as_authored": 3,
+          "n": 36,
+          "admitted": true
+        },
+        "context-binding": {
+          "accuracy": 0.5333,
+          "shots_as_authored": 6,
+          "n": 30,
+          "admitted": false
+        },
+        "multihop-scaled": {
+          "accuracy": 0.625,
+          "shots_as_authored": 2,
+          "n": 24,
+          "admitted": false
+        },
+        "opposites": {
+          "accuracy": 1.0,
+          "shots_as_authored": 3,
+          "n": 16,
+          "admitted": true
+        },
+        "swap-capitals": {
+          "accuracy": 1.0,
+          "shots_as_authored": 3,
+          "n": 16,
+          "admitted": true
+        },
+        "typo-robustness": {
+          "accuracy": 0.7667,
+          "shots_as_authored": 0,
+          "n": 30,
+          "admitted": false
+        },
+        "word-pairs": {
+          "accuracy": 0.9583,
+          "shots_as_authored": 3,
+          "n": 24,
+          "admitted": true
+        }
+      },
+      "binding": {
+        "bind2": {
+          "accuracy": 0.65,
+          "n": 60
+        },
+        "bind3": {
+          "accuracy": 0.6667,
+          "n": 60
+        },
+        "s4_admitted": false
+      },
+      "fv": {
+        "capitalize": {
+          "exec_10shot": 0.9824,
+          "zero_shot": 0.0294,
+          "n": 170,
+          "admitted": true
+        },
+        "singular-plural": {
+          "exec_10shot": 0.9767,
+          "zero_shot": 0.0465,
+          "n": 43,
+          "admitted": true
+        },
+        "english-french": {
+          "exec_10shot": 0.6727,
+          "zero_shot": 0.0071,
+          "n": 987,
+          "admitted": false
+        }
+      },
+      "lre": {
+        "factual/country_capital_city": {
+          "accuracy": 0.9286,
+          "n": 14,
+          "admitted": true
+        },
+        "factual/landmark_in_country": {
+          "accuracy": 0.48,
+          "n": 50,
+          "admitted": false
+        },
+        "factual/food_from_country": {
+          "accuracy": 0.6,
+          "n": 20,
+          "admitted": true
+        },
+        "factual/product_by_company": {
+          "accuracy": 0.62,
+          "n": 50,
+          "admitted": true
+        },
+        "linguistic/adj_antonym": {
+          "accuracy": 0.72,
+          "n": 50,
+          "admitted": true
+        },
+        "linguistic/verb_past_tense": {
+          "accuracy": 0.78,
+          "n": 50,
+          "admitted": true
+        },
+        "linguistic/word_first_letter": {
+          "accuracy": 0.88,
+          "n": 50,
+          "admitted": true
+        },
+        "linguistic/word_last_letter": {
+          "accuracy": 0.04,
+          "n": 50,
+          "admitted": false
+        },
+        "commonsense/object_superclass": {
+          "accuracy": 0.78,
+          "n": 50,
+          "admitted": true
+        },
+        "commonsense/fruit_inside_color": {
+          "accuracy": 0.4231,
+          "n": 26,
+          "admitted": false
+        },
+        "commonsense/task_done_by_tool": {
+          "accuracy": 0.4762,
+          "n": 42,
+          "admitted": false
+        },
+        "commonsense/work_location": {
+          "accuracy": 0.6071,
+          "n": 28,
+          "admitted": true
+        },
+        "s3_admitted": true,
+        "n_relations_passing": 8
+      }
+    }
+  },
+  "bars": {
+    "s1": 0.8,
+    "fv": 0.8,
+    "lre": 0.6,
+    "bind2": 0.7
+  },
+  "peak_rss_gb": 14.37
+}

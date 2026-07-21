@@ -1744,3 +1744,54 @@ laid out this session:
     projection instead of the plain norm-preserving addition — reopens design
     decision #1), or (iii) neutral carriers where p(c) is mid-range.
 No gate re-run until she rules; no threshold or readout change adopted silently.
+
+### 2026-07-21 — M5.0 qualification: full 1.4B on the RTX (D-031 executed) (Claude)
+
+Ran the full 1.4B qualification on the win32 RTX 2000 Ada laptop per D-031
+(Ecaterina's ruling: 1.4B qualification moves off the swap-thrashing 16 GB Mac
+to the RTX). `scripts/m5_0_qualification.py
+pythia-1.4b=configs/m5_0_qual_pythia1p4b_cuda.yaml` via start_run (clean tree,
+committed prereg cf1da2b, post_hoc false):
+results/m5/20260721-124041-qualification (run.json, qualification.json, 25 raw
+cells). Forward-pass only (no lens fit, no AIE); cuda fp32, D-023 pin. Wall
+~88 min (12:40->14:08); GPU peak ~7.9 GB, RSS 14.37 GB, no OOM and no
+swap-thrash (the Mac's 8-10 h ETA was 16 GB RAM swap, absent with the model on
+an 8 GB GPU). Estimate recorded before the run (~15-30 min compute; actual
+longer because the FV n_shot_eval runs ~2.35 s/item on 10-shot prompts — still
+far under the 12 h LAW). This run supersedes the Mac Pass A partial; the FULL
+1.4B qualification is now in one clean run dir for the matrix.
+
+Results (scope: greedy exact-match / Todd n_shot_eval; admission GATES, not
+CLAIMS — no verify line; bars s1/fv 0.80, lre 0.60, bind2 0.70):
+
+- S1: 5/8 admitted — capital-operand 0.917, capital-recall 0.917, opposites
+  1.00, swap-capitals 1.00, word-pairs 0.958; below bar typo-robustness 0.767,
+  context-binding 0.533, multihop-scaled 0.625. (Same five as 410M and as the
+  Mac 1.4B Pass A — Pass A reproduced on cuda.)
+- FV: 2/3 admitted (10-shot exec) — capitalize 0.982, singular-plural 0.977;
+  english-french 0.673 below (same shape as 410M's 0.474). Zero-shot exec
+  near-floor on all three (0.007-0.047), as expected.
+- LRE: 8/12 passing -> **S3 ADMITTED** (>= 8). Passing: country-capital 0.929,
+  food-from-country 0.60, product-by-company 0.62, adj-antonym 0.72,
+  verb-past-tense 0.78, word-first-letter 0.88, object-superclass 0.78,
+  work-location 0.607. Below: landmark-in-country 0.48, word-last-letter 0.04,
+  fruit-inside-color 0.423, task-done-by-tool 0.476. The RTX run confirms the
+  S3 admission the Mac deferred; 1.4B carries the LRE operator battery that 410M
+  could not (410M was 4/12).
+- Binding: bind2 0.65, bind3 0.667 -> S4 NOT admitted (bar 0.70; bind2 matches
+  the Mac Pass A 0.65). The binding hole recorded earlier stands: S4 clears the
+  bar on NEITHER 410M (0.617) nor 1.4B (0.65) at N=60, so S4/H5 still await a
+  stronger substrate (2.8B, D-030) or a binding-battery re-spec — Ecaterina's
+  call; no action without a ruling.
+
+Observation worth recording, not over-read (a per-item raw check would precede
+any interpretation): on the LRE letter tasks the 1.4B accuracy splits sharply,
+word-first-letter 0.88 vs word-last-letter 0.04. Raw cells retained
+(raw_completions/pythia-1.4b_lre_linguistic_word_last_letter.jsonl) for whoever
+picks up the matrix. Not a finding; flagged only.
+
+Net matrix effect: under D-029 scoped admission (1.4B A1/A4 via amended Q5),
+this qualification adds S3 (LRE operators) as a measurable species on 1.4B and
+leaves S4 unmeasurable pending the binding decision. Gates: pytest 176 passed,
+validators 3/3. The Mac session folds this into the species x substrate matrix.
+[no sign-off implied]

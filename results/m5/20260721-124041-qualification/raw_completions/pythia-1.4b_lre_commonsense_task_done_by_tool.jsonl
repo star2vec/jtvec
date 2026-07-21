@@ -1,0 +1,42 @@
+{"substrate": "pythia-1.4b", "subject": "drawing", "object": "pencil and sketchbook", "gen": "pencil\nThe tool used for", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "hitting nails", "object": "hammer", "gen": "hammer\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "sawing wood", "object": "saw", "gen": "saw\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "photography", "object": "camera", "gen": "camera\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "raking leaves", "object": "rake", "gen": "rake\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "boating", "object": "boat", "gen": "boat\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "taking photographs", "object": "camera", "gen": "camera\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "biking", "object": "bicycle", "gen": "bike\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "gardening", "object": "gardening gloves", "gen": "hoe\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "birdwatching", "object": "binoculars", "gen": "binoculars\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "watching movies", "object": "television", "gen": "movie\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "sewing", "object": "needle and thread", "gen": "sewing machine\nThe tool", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "singing", "object": "microphone", "gen": "voice\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "baking", "object": "oven", "gen": "pan\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "stirring food", "object": "spoon", "gen": "spoon\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "ironing clothes", "object": "iron", "gen": "iron\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "cleaning windows", "object": "squeegee", "gen": "window cleaner\nThe tool", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "sanding wood", "object": "sandpaper", "gen": "sandpaper\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "doing makeup", "object": "makeup brushes", "gen": "makeup\nThe tool", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "washing clothes", "object": "washing machine", "gen": "washer\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "drilling holes", "object": "drill", "gen": "drill\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "measuring", "object": "scale", "gen": "ruler\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "washing dishes", "object": "sponge", "gen": "dishwasher", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "skateboarding", "object": "skateboard", "gen": "skateboard\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "painting walls", "object": "paintbrush", "gen": "paintbrush\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "reading", "object": "book", "gen": "book\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "mixing batter", "object": "whisk", "gen": "mixing bowl", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "sweeping floors", "object": "broom", "gen": "broom\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "playing soccer", "object": "soccer ball", "gen": "soccer ball\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "hunting", "object": "gun", "gen": "bow and arrow", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "exercising", "object": "dumbbells", "gen": "gym\nThe tool used", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "vacuuming carpets", "object": "vacuum cleaner", "gen": "vacuum cleaner\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "swimming", "object": "swimsuit", "gen": "swimming\nThe tool", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "digging soil", "object": "shovel", "gen": "shovel\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "polishing shoes", "object": "shoe polish", "gen": "polish\nThe tool", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "cooking", "object": "stove", "gen": "pan\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "writing", "object": "pen and paper", "gen": "pen\nThe tool used", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "measuring ingredients", "object": "cup", "gen": "measuring spoon", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "cutting", "object": "knife", "gen": "knife\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "painting furniture", "object": "paint roller", "gen": "paintbrush\nThe", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "riding a scooter", "object": "scooter", "gen": "scooter\nThe", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "drying clothes", "object": "clothesline", "gen": "dryer\nThe", "hit": false}

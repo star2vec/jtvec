@@ -1,0 +1,50 @@
+{"substrate": "pythia-1.4b", "subject": "SteadyShot", "object": "Sony", "gen": "Sony", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Zero configuration networking", "object": "Apple", "gen": "Microsoft", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Exmor", "object": "Sony", "gen": "Sony\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Android TV", "object": "Google", "gen": "Google\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Fonz", "object": "Sega", "gen": "Apple\nWindows NT", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Sonic Drift 2", "object": "Sega", "gen": "Sega\nS", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "SEAT 133", "object": "Fiat", "gen": "Ford\nWindows NT", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Photo Booth", "object": "Apple", "gen": "Microsoft\nWindows", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "iPod Nano", "object": "Apple", "gen": "Apple\ni", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Yakuza 2", "object": "Sega", "gen": "Konami", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Windows Mobile", "object": "Microsoft", "gen": "Microsoft\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "B-29 Superfortress", "object": "Boeing", "gen": "Boeing\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "iPad", "object": "Apple", "gen": "Apple\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Alfa Romeo 164", "object": "Fiat", "gen": "Alfa Romeo", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Windows Media Player", "object": "Microsoft", "gen": "Microsoft\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "iLife", "object": "Apple", "gen": "Apple\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Vector Markup Language", "object": "Microsoft", "gen": "Microsoft", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Xcode", "object": "Apple", "gen": "Apple", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "iBeacon", "object": "Apple", "gen": "Apple\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Windows 10", "object": "Microsoft", "gen": "Microsoft\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Gear VR", "object": "Samsung", "gen": "Sony", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Blogger", "object": "Google", "gen": "Microsoft\nWindows", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Acura CL", "object": "Honda", "gen": "Honda\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Mac OS X Panther", "object": "Apple", "gen": "Apple\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Datsun Sports", "object": "Nissan", "gen": "Nissan\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Sandy Bridge", "object": "Intel", "gen": "Intel\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "MSX BASIC", "object": "Microsoft", "gen": "Commodore", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Game Boy Advance", "object": "Nintendo", "gen": "Nintendo\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Mac OS X Leopard", "object": "Apple", "gen": "Apple\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Alfa Romeo SZ", "object": "Fiat", "gen": "Alfa Romeo", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Gmail", "object": "Google", "gen": "Google\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Sileighty", "object": "Nissan", "gen": "IBM\nWindows", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Eagle Medallion", "object": "Renault", "gen": "IBM\nWindows NT", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Squeak", "object": "Apple", "gen": "Apple", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Windows NT 3.5", "object": "Microsoft", "gen": "Microsoft\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Chromecast", "object": "Google", "gen": "Google", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "iISO flash shoe", "object": "Sony", "gen": "Apple\ni", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "GW-BASIC", "object": "Microsoft", "gen": "Apple\nWindows", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Lancia Gamma", "object": "Fiat", "gen": "Ferrari\nWindows NT", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Amiibo", "object": "Nintendo", "gen": "Nintendo", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Android Runtime", "object": "Google", "gen": "Google\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Windows Embedded", "object": "Microsoft", "gen": "Microsoft\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Dino", "object": "Ferrari", "gen": "Nintendo\nWindows", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Channel Definition Format", "object": "Microsoft", "gen": "Microsoft", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Infiniti JX", "object": "Nissan", "gen": "Infiniti", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Gain Ground", "object": "Sega", "gen": "Microsoft\nWindows NT", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Wii U", "object": "Nintendo", "gen": "Nintendo", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "File Explorer", "object": "Microsoft", "gen": "Microsoft\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Portable Document Format", "object": "Adobe", "gen": "Adobe\nWindows", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Clang", "object": "Sony", "gen": "Apple", "hit": false}

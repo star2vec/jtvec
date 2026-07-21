@@ -1,0 +1,26 @@
+{"substrate": "pythia-1.4b", "subject": "radishes", "object": "white", "gen": "red\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "plums", "object": "red", "gen": "red\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "cantaloupes", "object": "orange", "gen": "green\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "apples", "object": "white", "gen": "red\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "papayas", "object": "orange", "gen": "yellow\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "lemons", "object": "yellow", "gen": "yellow\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "mangoes", "object": "orange", "gen": "yellow\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "kiwis", "object": "green", "gen": "green\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "grapes", "object": "green", "gen": "red\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "raspberries", "object": "red", "gen": "red\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "dragon fruits", "object": "white", "gen": "red\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "persimmons", "object": "orange", "gen": "yellow\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "zucchinis", "object": "white", "gen": "yellow\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "pomegranates", "object": "red", "gen": "red\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "passion fruits", "object": "yellow", "gen": "red\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "strawberries", "object": "red", "gen": "red\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "cucumbers", "object": "white", "gen": "green\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "coconuts", "object": "white", "gen": "yellow\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "grapefruits", "object": "pink", "gen": "red\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "apricots", "object": "orange", "gen": "red\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "nectarines", "object": "yellow", "gen": "yellow\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "bell peppers", "object": "red", "gen": "red\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "avocados", "object": "green", "gen": "green\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "watermelons", "object": "red", "gen": "yellow\nOn", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "blackberries", "object": "red", "gen": "red\nOn", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "limes", "object": "green", "gen": "green\nOn", "hit": true}

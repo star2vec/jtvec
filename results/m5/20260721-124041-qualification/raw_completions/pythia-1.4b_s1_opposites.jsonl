@@ -1,0 +1,16 @@
+{"substrate": "pythia-1.4b", "name": "opp-hot", "correct": true, "top1": " cold", "expected": "cold"}
+{"substrate": "pythia-1.4b", "name": "opp-big", "correct": true, "top1": " small", "expected": "small"}
+{"substrate": "pythia-1.4b", "name": "opp-day", "correct": true, "top1": " night", "expected": "night"}
+{"substrate": "pythia-1.4b", "name": "opp-up", "correct": true, "top1": " down", "expected": "down"}
+{"substrate": "pythia-1.4b", "name": "opp-black", "correct": true, "top1": " white", "expected": "white"}
+{"substrate": "pythia-1.4b", "name": "opp-old", "correct": true, "top1": " new", "expected": "new"}
+{"substrate": "pythia-1.4b", "name": "opp-good", "correct": true, "top1": " bad", "expected": "bad"}
+{"substrate": "pythia-1.4b", "name": "opp-fast", "correct": true, "top1": " slow", "expected": "slow"}
+{"substrate": "pythia-1.4b", "name": "opp-open", "correct": true, "top1": " closed", "expected": "closed"}
+{"substrate": "pythia-1.4b", "name": "opp-left", "correct": true, "top1": " right", "expected": "right"}
+{"substrate": "pythia-1.4b", "name": "opp-light", "correct": true, "top1": " dark", "expected": "dark"}
+{"substrate": "pythia-1.4b", "name": "opp-high", "correct": true, "top1": " low", "expected": "low"}
+{"substrate": "pythia-1.4b", "name": "opp-hard", "correct": true, "top1": " soft", "expected": "soft"}
+{"substrate": "pythia-1.4b", "name": "opp-rich", "correct": true, "top1": " poor", "expected": "poor"}
+{"substrate": "pythia-1.4b", "name": "opp-strong", "correct": true, "top1": " weak", "expected": "weak"}
+{"substrate": "pythia-1.4b", "name": "opp-wet", "correct": true, "top1": " dry", "expected": "dry"}

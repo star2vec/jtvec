@@ -1,0 +1,20 @@
+{"substrate": "pythia-1.4b", "subject": "Moussaka", "object": "Greece", "gen": "Greece\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Biryani", "object": "India", "gen": "India\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Pavlova", "object": "New Zealand", "gen": "Russia\nPizza", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Tacos", "object": "Mexico", "gen": "Mexico\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Rendang", "object": "Indonesia", "gen": "Indonesia\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Poutine", "object": "Canada", "gen": "Canada\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Falafel", "object": "Middle East", "gen": "Israel\nPita", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Chimichurri", "object": "Argentina", "gen": "Brazil", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Dim Sum", "object": "China", "gen": "China", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Shawarma", "object": "Middle East", "gen": "Israel\nPita", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Borscht", "object": "Ukraine", "gen": "Russia\nP", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Pad Thai", "object": "Thailand", "gen": "Thailand\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Pho", "object": "Vietnam", "gen": "Vietnam\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Hummus", "object": "Lebanon", "gen": "Israel\nP", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Feijoada", "object": "Brazil", "gen": "Brazil\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Sushi", "object": "Japan", "gen": "Japan", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Goulash", "object": "Hungary", "gen": "Hungary\nP", "hit": true}
+{"substrate": "pythia-1.4b", "subject": "Ceviche", "object": "Peru", "gen": "Chile\nP", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Kimchi", "object": "South Korea", "gen": "Korea\n\nSee", "hit": false}
+{"substrate": "pythia-1.4b", "subject": "Fondue", "object": "Switzerland", "gen": "Switzerland", "hit": true}
