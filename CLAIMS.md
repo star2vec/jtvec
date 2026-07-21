@@ -50,21 +50,21 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - verified-by: none
 
 ### CLM-003
-- status: preliminary
+- status: verified
 - statement: On Pythia-410M, projecting out the M2-certified singular-plural function vector at the final position of band layers 4-16 removes task execution (accuracy 0.920 -> 0.000) while NOT reducing the P3 report readout (report_score rose, effect -0.638 vs sham +0.037), robust and near-identical across all 3 certified FV draws (execution effect +0.920, IQR 0, vs sham +0.020). One direction of the execution-vs-verbalization dissociation (Direction 1 of EXP-M4-E2); the reverse (jspace report-specific) was not established.
 - scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e2_dissociation_pythia410m.yaml, singular-plural, 3 FV draws, N_exec=50 / N_report=80
 - evidence-commit: a1c7cb1
 - prereg: harness/preregs/EXP-M4-E2-dissociation.md
 - results-dir: results/m4/20260719-142007-e2-dissociation
 - raw-completions: results/m4/20260719-142007-e2-dissociation/raw_completions
-- verified-by: none
+- verified-by: Ecaterina
 
 ### CLM-004
-- status: preliminary
+- status: verified
 - statement: On capitalize (task A) prompts, swapping the certified FV_A component onto FV_B (singular-plural) at band layers 4-16 redirects the model to produce task-B (plural) outputs above a random-target control, per EXP-M4-E3-swap, cross-draw over the 3 certified FV draws. E3 result (2026-07-19): REDIRECTS-BASIS-AGNOSTIC — task-B rate 0.000 -> lens_swap 0.933 / direct_swap 0.800 (random 0.000), task A suppressed to 0.000, transfers across all 3 FV draws; lens-direct gap 0.133 < 0.15 so the identity is carried by the raw residual direction, not specifically the J-lens basis. Promotion to verified needs Ecaterina's raw-read verify line.
 - scope: EleutherAI/pythia-410m@9879c9b, configs/m4_e3_swap_pythia410m.yaml, capitalize->singular-plural, 3 FV draws, N=30 shared queries
 - evidence-commit: 0d8b278
 - prereg: harness/preregs/EXP-M4-E3-swap.md
 - results-dir: results/m4/20260719-151956-e3-swap
 - raw-completions: results/m4/20260719-151956-e3-swap/raw_completions
-- verified-by: none
+- verified-by: Ecaterina

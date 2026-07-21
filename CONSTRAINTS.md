@@ -35,9 +35,14 @@ added. Nothing may be promoted a tier without the evidence line filled in.
   containing: hypothesis, decision rule, and what result would count as
   failure. Post-hoc analyses are labeled post-hoc forever.
 - LAW: Human verification gate between "results exist" and "results are
-  claimed": Ecaterina reads raw completions (≥20 per headline cell) and
-  re-derives headline numbers by hand. Logged in LABNOTES with date. No
-  claim advances without this entry.
+  claimed": the AI lays out the raw completions (≥20 per headline cell) and
+  its re-derivation of the headline numbers; Ecaterina reviews and confirms
+  (she need not re-derive by hand), and the AI may transcribe the verify line
+  on her explicit confirmation. Logged in LABNOTES with date. No claim
+  advances without this entry. (Amended 2026-07-21 by Ecaterina via session
+  instruction, from the original "Ecaterina re-derives by hand": the human
+  confirmation remains the gate; only the by-hand-derivation burden is lifted.
+  Sign-off lines stay Ecaterina's own to type.)
 - LAW: One commit per experiment. Raw model outputs are retained on disk for
   every reported number. Configs are copied into every results directory.
 - LAW: Language discipline in all reports and notes: state observations with

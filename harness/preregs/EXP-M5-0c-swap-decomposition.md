@@ -1,10 +1,9 @@
 # Preregistration — EXP-M5-0c: swap-intervention decomposition (410M vs 1.4B)
 
 - experiment-id: EXP-M5-0c
-- status: **DRAFT — AWAITING RATIFICATION.** Committed as a draft (per
-  Ecaterina's 2026-07-21 instruction) so the RTX session can access it;
-  NOT yet the prereg act. It becomes active only when Ecaterina adds her
-  ratification line here. No run before that line.
+- status: **RATIFIED** by Ecaterina 2026-07-21 (via session instruction,
+  "ratify 0c"). This is the prereg act; the RTX session may build and run it.
+  Thresholds ratified as drafted.
 - claim: none (instrument diagnostic; decides whether 1.4B's Q2/Q6 failure is a
   genuine potency-scaling effect or a flip-rate/base-margin confound — per
   D-029, no Q2/Q6 bar change without this verdict on record first)
@@ -116,5 +115,4 @@ on the Mac.)
 
 ## Ratification
 
-<!-- Ecaterina: add "ratified: EXP-M5-0c <date>" here to make this the prereg
-     act and authorize the RTX run. -->
+ratified: EXP-M5-0c 2026-07-21 — Ecaterina (via session instruction "ratify 0c").

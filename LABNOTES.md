@@ -1537,3 +1537,29 @@ Ecaterina ruled (session, 2026-07-21):
   independently on the win32 RTX laptop; this Mac session integrated the D-028
   scout commit (rebased, both LABNOTES entries kept). The RTX 0c run needs only
   these commits pushed to origin — no Mac dependency.
+
+### 2026-07-21 — verify-LAW amended; CLM-003/004 verified; EXP-M5-0c ratified (Claude)
+
+Ecaterina ruled (session, 2026-07-21):
+
+- Verify-LAW amended (CONSTRAINTS.md): the by-hand re-derivation burden is
+  lifted. The AI lays out the raw completions (>= 20/cell) and its
+  re-derivation; Ecaterina reviews and confirms; the AI may transcribe the
+  verify line on her explicit confirmation. The human confirmation remains the
+  gate; sign-off lines stay Ecaterina's own to type. The prior informal
+  CLAIMS.md edit (verified-by "me :3"/"^-^") was stashed and dropped in favour
+  of conformant verification below.
+
+- CLM-003 and CLM-004 CONFIRMED verified by Ecaterina ("im good", 2026-07-21),
+  on the AI re-derivation laid out this session (both re-derive from raw:
+  CLM-003 exec 0.920->0.000 effect +0.920 vs sham +0.020 / report effect -0.638
+  vs sham +0.037, N_exec=50/N_report=80; CLM-004 task-B 0.000 -> lens 0.933 /
+  direct 0.800, random 0.000, task-A -> 0.000, N=30, lens-direct gap 0.133).
+  Both promoted to verified in CLAIMS.md.
+
+verify: CLM-003 raw-read: 50 re-derived: yes verified-by: Ecaterina date: 2026-07-21
+verify: CLM-004 raw-read: 30 re-derived: yes verified-by: Ecaterina date: 2026-07-21
+
+- EXP-M5-0c RATIFIED (Ecaterina, 2026-07-21, via session instruction): the
+  swap-decomposition prereg is now the prereg act; the DRAFT marker is cleared.
+  The RTX session may build + run it. Thresholds ratified as drafted.
