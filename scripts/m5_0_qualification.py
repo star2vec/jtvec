@@ -53,11 +53,17 @@ LRE_N_TEST, EVAL_SEED = 50, 999
 
 
 def exec_top1(dataset, n_shots, model, mconfig, tok):
+    """Returns (top1_accuracy as python float, per-item clean ranks list)."""
     from utils.eval_utils import n_shot_eval_no_intervention  # noqa: PLC0415
     set_seed(EVAL_SEED)
     res = n_shot_eval_no_intervention(dataset, n_shots, model, mconfig, tok,
                                       compute_ppl=False, test_split="test")
-    return dict(res["clean_topk"])[1], len(res["clean_rank_list"])
+    ranks = [int(r) for r in res["clean_rank_list"]]
+    return float(dict(res["clean_topk"])[1]), ranks
+
+
+def _json_default(o):
+    return float(o) if hasattr(o, "item") else repr(o)
 
 
 def free(model):
@@ -99,10 +105,13 @@ def qualify(sub: str, cfg_path: Path, ctx) -> dict:
     from utils.prompt_utils import load_dataset  # noqa: PLC0415
     for task in FV_TASKS:
         ds = load_dataset(task, root_data_dir=str(FV_REPO / "dataset_files"), seed=cfg.seed)
-        icl, n = exec_top1(ds, 10, model_h, mconfig, tok_h)
-        zs, _ = exec_top1(ds, 0, model_h, mconfig, tok_h)
+        icl, ranks10 = exec_top1(ds, 10, model_h, mconfig, tok_h)
+        zs, ranks0 = exec_top1(ds, 0, model_h, mconfig, tok_h)
         report["fv"][task] = {"exec_10shot": round(icl, 4), "zero_shot": round(zs, 4),
-                              "n": n, "admitted": icl >= BARS["fv"]}
+                              "n": len(ranks10), "admitted": bool(icl >= BARS["fv"])}
+        ctx.save_raw_completions(f"{sub}_fv_{task}",
+            [{"substrate": sub, "shot": 10, "rank": r} for r in ranks10]
+            + [{"substrate": sub, "shot": 0, "rank": r} for r in ranks0])
         print(f"[{sub}] fv {task}: 10-shot {icl:.1%} / 0-shot {zs:.1%}", flush=True)
     n_lre_pass = 0
     for rel in LRE_RELATIONS:
@@ -133,7 +142,8 @@ def main() -> None:
         reports[sub] = qualify(sub, cfg_path, ctx)
 
     summary = {"reports": reports, "bars": BARS, "peak_rss_gb": round(peak_rss_gb(), 2)}
-    (ctx.results_dir / "qualification.json").write_text(json.dumps(summary, indent=2))
+    (ctx.results_dir / "qualification.json").write_text(
+        json.dumps(summary, indent=2, default=_json_default))
 
     print("\n=== EXP-M5-0 qualification summary ===", flush=True)
     for sub, r in reports.items():
