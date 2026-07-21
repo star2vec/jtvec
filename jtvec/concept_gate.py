@@ -92,6 +92,31 @@ def rung_prefix(stream: list, t: int) -> list:
     return stream[:t]
 
 
+# --- null-grouping (EXP-M5-1c null-check I2) ---------------------------------
+
+
+def scrambled_labels(n: int, roster_size: int, seed: int) -> list[int]:
+    """Null grouping: an independent random label index in [0, roster_size) per
+    context, INDEPENDENT of the context's true answer, so the mean-difference is
+    taken over random groups (no concept to extract). Per-index rng → prefix-
+    stable (the first T labels are a function of index, not of n)."""
+    return [int(np.random.default_rng([seed, 31 + i]).integers(0, roster_size))
+            for i in range(n)]
+
+
+def group_by_label(states_by_layer: dict[int, torch.Tensor], labels: list[int],
+                   target: int) -> tuple[dict[int, torch.Tensor], dict[int, torch.Tensor]] | None:
+    """Split per-layer states into (pos = assigned ``target``, neg = the rest).
+    Returns None if either side is empty (rung too small to form the contrast)."""
+    pos_idx = [i for i, l in enumerate(labels) if l == target]
+    neg_idx = [i for i, l in enumerate(labels) if l != target]
+    if not pos_idx or not neg_idx:
+        return None
+    pos = {l: v[pos_idx] for l, v in states_by_layer.items()}
+    neg = {l: v[neg_idx] for l, v in states_by_layer.items()}
+    return pos, neg
+
+
 # --- direction assembly ------------------------------------------------------
 
 

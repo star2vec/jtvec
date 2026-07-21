@@ -1,0 +1,33 @@
+# EXP-M5-1c null-check on Pythia-410M (governance gate). 410M is the
+# "nothing-to-find" control substrate: M1-certified lens (cached draws 0/1/2 via
+# the m1 draw configs for I1) and the substrate where the original bars were
+# derived. Forward-only (I1 reuses cached lenses; I2 is residual extraction +
+# injection). Standard Config schema; band [4,16]. fp32/MPS.
+experiment: pythia410m_m5_1c_nullcheck
+seed: 0
+device: mps
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+cache_dir: cache/m5/nullcheck_pythia410m
+results_dir: results/m5
