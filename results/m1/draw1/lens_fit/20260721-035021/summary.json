@@ -1,0 +1,37 @@
+{
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "probe_s_per_prompt": null,
+  "peak_rss_gb": 3.28,
+  "variants": {
+    "skip4": {
+      "lens_dir": "C:\\Users\\alin\\Desktop\\jtvec\\cache\\draw1\\lenses\\EleutherAI\\pythia-410m@9879c9b5f8bea9051dcb0e68dff21493d67e9d4f\\skip4_n10",
+      "source_layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "n_prompts": 10,
+      "wall_clock_s": 169.3
+    }
+  }
+}
