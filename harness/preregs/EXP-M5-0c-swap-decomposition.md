@@ -111,7 +111,14 @@ on the Mac.)
 
 ## Deviations
 
-(none yet — draft)
+- Lens sourcing clarification (2026-07-21, text-only): the estimator plan's
+  "cached draws" wording is Mac-centric. The lens caches are gitignored
+  (machine-local, not in the repo — 1.4B is ~736 MB/draw), so the RTX must FIT
+  its own 3 lens draws per substrate fresh (cuda, skip4, seeds 0/1/2) via
+  configs/m5_0c_fit_pythia{410m,1p4b}_draw{0,1,2}_cuda.yaml + scripts/01. The
+  within-RTX 410M-vs-1.4B comparison under the identical statistic is what 0c
+  requires; it does not depend on reusing the Mac's exact lens tensors. No
+  threshold or decision-rule change.
 
 ## Ratification
 

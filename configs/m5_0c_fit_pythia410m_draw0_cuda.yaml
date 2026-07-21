@@ -1,0 +1,32 @@
+# M1 draw 0: exact reproduction target of v1 phase1_report/20260714-051555.
+# Values match configs/pythia410m_phase1_v1reference.yaml except:
+#   - model.revision pinned to the sha v1 actually resolved (report line 2)
+#   - experiment/results_dir/cache_dir namespaced per draw
+experiment: pythia410m_m1_draw0
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+cache_dir: cache/draw0
+results_dir: results/m1/draw0
