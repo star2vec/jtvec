@@ -1894,3 +1894,19 @@ unmodified, held until Ecaterina rules "Q2-replication ratified"); no S4 compute
 and no 2.8B escalation (specification-before-scale, owed to Ecaterina first); the
 ordered null-check is the Mac's and precedes runs. Gates: pytest 176 passed,
 validators 3/3. [no sign-off implied]
+### 2026-07-22 — EXP-M5-1c null-check RATIFIED; building + running (Claude)
+
+Ecaterina ratified the null-check (session, "i ratify it"). Committed as the
+prereg act (harness/preregs/EXP-M5-1c-null-check.md). One text-only conformance
+fix folded in after ratification (D-015 precedent): I2's potency metric was
+written as Δ log p, which contradicts D-033 condition (b) (no log rescue of the
+p-floor); corrected to the resolvable Δp readout the ratified EXP-M5-1b uses
+(alpha sweep {1,2,4,8}, N=200, probability space), so the null-check validates
+the instrument 1b actually runs. EXP-M5-1b's condition-(b) readout was aligned to
+match (resolution by injection strength, not a bespoke neutral-carrier corpus);
+1b stays HELD (uncommitted) until this null-check passes. No null construction or
+threshold changed. Building scripts/m5_1c_null_check.py (I1 max-contrast on
+scrambled-label probes over cached 410M lenses; I2 scrambled-label concept
+direction + extended ladder + alpha-swept Δp) with landing tests, then running
+on 410M (Mac, detached + Monitor + caffeinate). Q2-replication + S4 remain held
+for Ecaterina's rulings. [no sign-off implied]
