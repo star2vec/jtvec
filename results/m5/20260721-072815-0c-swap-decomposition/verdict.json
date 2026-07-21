@@ -1,0 +1,263 @@
+{
+  "experiment": "EXP-M5-0c",
+  "tier": "instrument-diagnostic",
+  "changes_q2_q6_bar": false,
+  "ref_substrate": "pythia410m_m5_0c_swap",
+  "test_substrate": "pythia1p4b_m5_0c_swap",
+  "matched_item_set": [
+    "swap-China-to-Japan",
+    "swap-Cuba-to-Iran",
+    "swap-Egypt-to-Greece",
+    "swap-England-to-Spain",
+    "swap-France-to-Italy",
+    "swap-Germany-to-Russia",
+    "swap-Greece-to-Egypt",
+    "swap-Iran-to-Cuba",
+    "swap-Ireland-to-Poland",
+    "swap-Italy-to-France",
+    "swap-Japan-to-China",
+    "swap-Norway-to-Sweden",
+    "swap-Poland-to-Ireland",
+    "swap-Spain-to-England",
+    "swap-Sweden-to-Norway"
+  ],
+  "n_matched": 15,
+  "controls": {
+    "passed": true,
+    "positive_control_ok": true,
+    "positive_control_value": 9.585545411109925,
+    "negative_control_prob_ok": true,
+    "negative_control_prob_push": {
+      "ref": 0.00880525255818322,
+      "test": 0.00039161196754539877
+    },
+    "negative_control_logit_push": {
+      "ref": 1.592066362698873,
+      "test": 1.0500777705510458
+    },
+    "negative_control_logit_gap_shift": {
+      "ref": 3.7519856309890747,
+      "test": 1.0154138080279034
+    },
+    "band": [
+      -0.03,
+      0.03
+    ],
+    "flag": "prereg negative control reads 'sham gap-shift median within [-0.03,0.03] logit units'. A norm-matched sham is an ACTIVE edit whose logit effects are O(1) (it ablates the source component, suppressing the answer), so no logit-space sham quantity meets a 0.03 band even on the certified 410m. The band matches the M-series Q3 sham, which is \u0394p(swap_answer) under the random direction (~0). Gating on the PROB-space target push; logit readings reported. FLAGGED clarification for Ecaterina (does not affect the sham-controlled decision statistic)."
+  },
+  "verdict": {
+    "label": "H-CONFOUND",
+    "ref_median": 9.585545411109925,
+    "test_median": 9.935335113207502,
+    "delta": -0.34978970209757776,
+    "potency_delta_bar": 0.15,
+    "iqr_non_overlap": false,
+    "ref_iqr": [
+      9.393534955183664,
+      9.755089608033497
+    ],
+    "test_iqr": [
+      9.361499898433687,
+      10.102711770137152
+    ],
+    "test_margin_norm_flip": 1.0,
+    "test_top1_flip": 0.6,
+    "margin_flip_low": false,
+    "margin_flip_high": true,
+    "note": "H-POTENCY: reduced gap-shift at 1.4B (HYPOTHESIS tier, NOT a gate failure). H-CONFOUND: comparable gap-shift, low raw flip but high margin-normalized flip. margin-flip low/high cutoff is a judgment (prereg leaves it qualitative); raw numbers reported."
+  },
+  "matched": {
+    "ref": {
+      "n_draws": 3,
+      "sham_controlled_shift": {
+        "median": 9.585545411109925,
+        "q1": 9.393534955183664,
+        "q3": 9.755089608033497,
+        "iqr": 0.3615546528498328,
+        "min": 9.201524499257406,
+        "max": 9.92463380495707,
+        "per_draw": [
+          9.585545411109925,
+          9.92463380495707,
+          9.201524499257406
+        ]
+      },
+      "sham_gap_shift_median": 3.7519856309890747,
+      "sham_swap_answer_push_median": 1.592066362698873,
+      "dp_swap_answer_sham_median": 0.00880525255818322,
+      "top1_flip_rate_median": 0.8666666666666667,
+      "margin_norm_flip_rate_median": 1.0,
+      "per_draw_flip": [
+        0.8666666666666667,
+        1.0,
+        0.8
+      ],
+      "per_draw_margin_flip": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "test": {
+      "n_draws": 3,
+      "sham_controlled_shift": {
+        "median": 9.935335113207502,
+        "q1": 9.361499898433687,
+        "q3": 10.102711770137152,
+        "iqr": 0.7412118717034648,
+        "min": 8.787664683659871,
+        "max": 10.270088427066803,
+        "per_draw": [
+          9.935335113207502,
+          8.787664683659871,
+          10.270088427066803
+        ]
+      },
+      "sham_gap_shift_median": 1.0154138080279034,
+      "sham_swap_answer_push_median": 1.0500777705510458,
+      "dp_swap_answer_sham_median": 0.00039161196754539877,
+      "top1_flip_rate_median": 0.6,
+      "margin_norm_flip_rate_median": 1.0,
+      "per_draw_flip": [
+        0.6,
+        0.3333333333333333,
+        0.6
+      ],
+      "per_draw_margin_flip": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "matched_per_draw": {
+    "ref": [
+      {
+        "n": 15,
+        "mean_sham_controlled_shift": 9.585545411109925,
+        "median_sham_controlled_shift": 9.388485383987426,
+        "mean_sham_gap_shift": 3.7519856309890747,
+        "mean_sham_swap_answer_push": 1.592066362698873,
+        "mean_dp_swap_answer_sham": 0.00880525255818322,
+        "top1_flip_rate": 0.8666666666666667,
+        "margin_norm_flip_rate": 1.0
+      },
+      {
+        "n": 15,
+        "mean_sham_controlled_shift": 9.92463380495707,
+        "median_sham_controlled_shift": 9.826333141326904,
+        "mean_sham_gap_shift": 3.378697903951009,
+        "mean_sham_swap_answer_push": 1.1515830993652343,
+        "mean_dp_swap_answer_sham": 0.0066089938659627335,
+        "top1_flip_rate": 1.0,
+        "margin_norm_flip_rate": 1.0
+      },
+      {
+        "n": 15,
+        "mean_sham_controlled_shift": 9.201524499257406,
+        "median_sham_controlled_shift": 8.689635467529296,
+        "mean_sham_gap_shift": 4.2500415134429925,
+        "mean_sham_swap_answer_push": 1.6213161309560136,
+        "mean_dp_swap_answer_sham": 0.01722452869749729,
+        "top1_flip_rate": 0.8,
+        "margin_norm_flip_rate": 1.0
+      }
+    ],
+    "test": [
+      {
+        "n": 15,
+        "mean_sham_controlled_shift": 9.935335113207502,
+        "median_sham_controlled_shift": 9.134020328521729,
+        "mean_sham_gap_shift": 1.2892552439371745,
+        "mean_sham_swap_answer_push": 1.4346670659383138,
+        "mean_dp_swap_answer_sham": 0.0005785917445471317,
+        "top1_flip_rate": 0.6,
+        "margin_norm_flip_rate": 1.0
+      },
+      {
+        "n": 15,
+        "mean_sham_controlled_shift": 8.787664683659871,
+        "median_sham_controlled_shift": 8.51703691482544,
+        "mean_sham_gap_shift": 0.8286581436793008,
+        "mean_sham_swap_answer_push": 1.0500777705510458,
+        "mean_dp_swap_answer_sham": 0.00026279905229417775,
+        "top1_flip_rate": 0.3333333333333333,
+        "margin_norm_flip_rate": 1.0
+      },
+      {
+        "n": 15,
+        "mean_sham_controlled_shift": 10.270088427066803,
+        "median_sham_controlled_shift": 10.356889629364014,
+        "mean_sham_gap_shift": 1.0154138080279034,
+        "mean_sham_swap_answer_push": 1.0497579598426818,
+        "mean_dp_swap_answer_sham": 0.00039161196754539877,
+        "top1_flip_rate": 0.6,
+        "margin_norm_flip_rate": 1.0
+      }
+    ]
+  },
+  "full_unmatched": {
+    "ref": {
+      "n_draws": 3,
+      "sham_controlled_shift": {
+        "median": 9.585545411109925,
+        "q1": 9.393534955183664,
+        "q3": 9.755089608033497,
+        "iqr": 0.3615546528498328,
+        "min": 9.201524499257406,
+        "max": 9.92463380495707,
+        "per_draw": [
+          9.585545411109925,
+          9.92463380495707,
+          9.201524499257406
+        ]
+      },
+      "sham_gap_shift_median": 3.7519856309890747,
+      "sham_swap_answer_push_median": 1.592066362698873,
+      "dp_swap_answer_sham_median": 0.00880525255818322,
+      "top1_flip_rate_median": 0.8666666666666667,
+      "margin_norm_flip_rate_median": 1.0,
+      "per_draw_flip": [
+        0.8666666666666667,
+        1.0,
+        0.8
+      ],
+      "per_draw_margin_flip": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "test": {
+      "n_draws": 3,
+      "sham_controlled_shift": {
+        "median": 9.915433864295483,
+        "q1": 9.426036310940981,
+        "q3": 10.077719632163642,
+        "iqr": 0.6516833212226611,
+        "min": 8.93663875758648,
+        "max": 10.240005400031803,
+        "per_draw": [
+          9.915433864295483,
+          8.93663875758648,
+          10.240005400031803
+        ]
+      },
+      "sham_gap_shift_median": 0.9846766851842405,
+      "sham_swap_answer_push_median": 1.0070589326322077,
+      "dp_swap_answer_sham_median": 0.00036805660323477394,
+      "top1_flip_rate_median": 0.5625,
+      "margin_norm_flip_rate_median": 1.0,
+      "per_draw_flip": [
+        0.5625,
+        0.375,
+        0.5625
+      ],
+      "per_draw_margin_flip": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "run_name": "0c-swap-decomposition",
+  "started": "2026-07-21T07:28:15",
+  "git_commit": "6277f7e080eef00d1b7295cc462a09ae8a7f7497",
+  "prereg_path": "harness\\preregs\\EXP-M5-0c-swap-decomposition.md",
+  "prereg_commit": "5ce05a1eba7b2db057a7f33f2d8cc7441d24fc89",
+  "config_sha256": "c6e77e48fc2055fd711e9c25b6258d59e3416f3c34414f9ffe1963ff529b735f",
+  "post_hoc": false,
+  "verdict": "H-CONFOUND",
+  "controls_passed": true,
+  "n_matched": 15,
+  "finished": "2026-07-21T07:29:46"
+}

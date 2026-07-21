@@ -1621,3 +1621,78 @@ without a ruling.
 Next: RTX runs `scripts/m5_0_qualification.py pythia-1.4b=configs/m5_0_qual_pythia1p4b_cuda.yaml`
 after these commits land -> one clean 1.4B qualification run dir (supersedes the
 Mac Pass A partial). The Mac session picks it up and folds it into the matrix.
+
+### 2026-07-21 — EXP-M5-0c swap-decomposition: verdict H-CONFOUND (RTX) (Claude)
+
+Built + ran on the win32 RTX 2000 Ada laptop (nothing here depended on the
+Mac). Build commit 6277f7e (scripts/m5_0c_swap.py + landing test 10/10 +
+RTX-side lens fits). Run through start_run (clean tree, committed prereg
+5ce05a1, post_hoc false):
+results/m5/20260721-072815-0c-swap-decomposition (run.json, both substrates'
+records.json + raw_completions, verdict.json + verdict_table.md).
+
+Lenses fit fresh on the RTX (cuda fp32, skip4, seeds 0/1/2; caches gitignored,
+lens_fit records retained): 410m@9879c9b ~3 min/draw; 1.4b@fedc38a ~66 min/draw
+(~409 s/prompt, peak ~7.9 GB, no OOM). Estimate recorded before the run
+(~7.3 h projected from a 732 s/prompt probe; actual ~3.7 h — the probe carried
+cold-start overhead). Swap eval cheap: 410m ~7 s/draw, 1.4b ~18 s/draw, peak
+6.11 GB.
+
+Verdict = **H-CONFOUND** (controls passed). Estimator = the M1 lens-based causal
+swap (jvec.evals.swap; truncated pinv rcond 0.05, source-position edit, norm
+preservation), 3 lens draws/substrate, median/IQR over draws, identical
+statistic across substrates. Matched item set = items base-correct on both
+(N=15 of 16 swap-capitals; England->Spain drops on the 410m base). On
+swap-capitals only (N=15) — the single certified swap-protocol task; the
+capital-recall-derived second pair was not built this session, so the
+low-N caveat stands.
+
+Numbers (median over 3 draws; scope: swap-capitals, N=15, band [4,16], 10 sham
+seeds):
+- sham-controlled logit-gap-shift: 410m 9.586 [q1 9.394, q3 9.755], per-draw
+  (9.586, 9.925, 9.202); 1.4b 9.935 [9.361, 10.103], per-draw (9.935, 8.788,
+  10.270). Delta (410m - 1.4b) = -0.350 (1.4b slightly HIGHER, not reduced);
+  IQRs overlap. The swap is not weaker at 1.4b.
+- top-1 flip rate (the current Q2 metric): 410m 0.867; 1.4b 0.600 (reproduces
+  the Q2 flip miss).
+- margin-normalized flip: 1.000 on both (the sham-controlled shift exceeds each
+  item's base margin on every matched item at both scales; saturated, so it
+  discriminates only jointly with the raw-flip gap).
+- base margin (logit answer - runner-up) median: 410m 2.86; 1.4b 3.66 — 1.4b
+  holds the original answer at a higher margin, so the same-size shift crosses
+  the argmax less often. This is the H-CONFOUND reading: comparable
+  sham-controlled effect, lower raw top-1 flip, high margin-normalized flip.
+
+Instrument controls: positive PASS (410m sham-controlled gap-shift median
+9.586 >= 0.30). Negative control ambiguity FLAGGED (below); the M-series-
+consistent prob-space reading passes on both substrates (sham Δp(swap_answer)
+410m 0.0088, 1.4b 0.0004, both in [-0.03, 0.03]).
+
+Reading (scoped; instrument diagnostic, HYPOTHESIS tier, NOT a residency
+finding, NOT a gate change): on Pythia-1.4b@fedc38a vs -410m@9879c9b, the
+swap-capitals top-1 flip gap between scales tracks the base-answer margin, not a
+reduced sham-controlled causal effect. Per D-029 this stays a diagnostic on
+record; it does NOT change any Q2/Q6 bar. The margin-normalized flip is the
+prereg's candidate recalibrated Q2 metric; proposing it as such would be a
+separate EXP-M5-0 amendment for Ecaterina, not adopted here.
+
+- D-032 (proposed; negative-control specification, FLAGGED. Renumbered from
+  D-031 on merge — D-031 was concurrently taken by the Mac session's
+  qualification compute-placement ruling above). The prereg's
+  negative control ("sham gap-shift median within [-0.03, 0.03] logit units")
+  is unsatisfiable as written, on the certified 410m too: the norm-matched sham
+  is an ACTIVE edit (it ablates the source component and so suppresses the
+  original answer), giving O(1) logit-space effects (410m sham gap-shift 3.75,
+  logit target-push 1.59) regardless of any target-specific push. Raw replay
+  confirmed the shift is the answer-suppression, not a push toward the swap
+  target. The [-0.03, 0.03] band matches the M-series Q3 sham, which is
+  Δp(swap_answer) under the random direction in PROBABILITY space (~0). Proposal:
+  read the 0c negative control as prob-space Δp(swap_answer) under the sham (what
+  gated here; passes), and treat the logit-space readings as informational.
+  Alternatives for Ecaterina: keep a logit-space band but scale it to the sham's
+  own answer-suppression, or re-derive the band empirically. The
+  sham-controlled decision statistic (real - sham) cancels the shared ablation
+  and is unaffected either way, so the H-CONFOUND verdict does not depend on this
+  ruling. Recorded here; not adopted beyond this run's gating.
+
+Gates before commit: pytest 176 passed, validators 3/3. [no sign-off implied]

@@ -1,0 +1,24 @@
+# EXP-M5-0c swap decomposition, Pythia-410M reference (DRAFT with the 0c prereg;
+# NOT the prereg act). RTX tier. The orchestrator (built RTX-side after
+# ratification) iterates the 3 M1 lens draws (cache/draw{0,1,2}); this config
+# carries the substrate + swap-eval params. Sham = norm-matched random swap.
+experiment: pythia1p4b_m5_0c_swap
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-1.4b
+  revision: fedc38a16eea3bd36a96b906d78d11d2ce18ed79
+  dtype: float32
+draws_cache_dirs: [cache/m5/p14b_draw0, cache/m5/p14b_draw1, cache/m5/p14b_draw2]
+evals:
+  band: [4, 16]
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+  n_random_seeds: 10       # sham arm
+decomposition:
+  gap: logit_swapped_minus_original     # sham-controlled logit-gap-shift
+  margin_normalized_flip: true          # candidate recalibrated Q2 metric
+  identical_statistic_across_substrates: true
+tasks: [swap-capitals]
+cache_dir: cache/m5/0c_1p4b
+results_dir: results/m5
