@@ -141,7 +141,19 @@ extraction + readout: ~30–50 min (EXP-M5-1b-scale). Total ~1 h wall, peak RSS
 
 ## Deviations
 
-(none yet)
+- I2 pipeline-sanity refinement (2026-07-22, text-only, pre-run). The draft's
+  I2 sanity ("genuine-label direction converging on the M5.1 evidence") cannot
+  fire: the genuine direction is exactly what did NOT reach cosine 0.95 in M5.1
+  (converged_at=None) — that is the object under diagnosis, not a usable
+  positive. Implemented instead: (i) DISCRIMINATION sanity — the genuine-label
+  direction's min-pairwise cosine must materially EXCEED the scrambled-label
+  cosine at matched T (the metric distinguishes real from random grouping),
+  else the cosine instrument is void; (ii) INJECTION sanity — injecting a
+  capital's own unembedding direction (scaled to natural norm) must move
+  Δp(capital) resolvably above the band (the injection+readout can detect
+  steering when it exists), else the potency instrument is void. Neither is a
+  pass threshold; both are require_controlled() voiding conditions. No null
+  construction or pass condition changed.
 
 ## Ratification
 
