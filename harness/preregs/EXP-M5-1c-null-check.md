@@ -29,6 +29,18 @@ known-null: it must report NULL where there is nothing to find. It does not
 re-open the amendments' scientific content; it checks that they do not fire on
 noise.
 
+## Hypothesis
+
+No hypothesis about the models is tested — this is a governance gate on the
+instruments. Per instrument it decides between:
+- H-TRUSTWORTHY: the recalibrated instrument reports NULL on the known-null (no
+  advantage / no convergence / no potency on scrambled labels), so the signal it
+  recovered on real data is not a selection artifact.
+- H-NOISE-HARVESTING: the instrument reports signal on the null — its
+  max-over-layers / extend-the-ladder selection manufactures apparent signal
+  from noise, and the amendment it supports is withdrawn.
+Decided per instrument, independently.
+
 ## Instruments under the null-check (two, reported separately)
 
 ### I1 — amended-Q5 max-contrast statistic (EXP-M5-0-amendment-Q5)
