@@ -229,6 +229,39 @@ def convergence_verdict(per_rung: list[ConceptRungStats],
     }
 
 
+# --- EXP-M5-1b condition (a): plateau test + ceiling ------------------------
+
+
+def plateau_below_bar(cos_by_rung: dict[int, float], bar: float,
+                      eps: float = 0.01) -> dict:
+    """D-033 condition (a). Given cosine-per-rung over the extended ladder,
+    decide (without extending again beyond the ceiling):
+
+    - PLATEAUED BELOW BAR iff cos@ceiling < bar AND the last two rung-doublings
+      each added < eps (Δcos collapsed short of the bar) -> a NEGATIVE result on
+      S1 convergence.
+    - ceiling-limited iff cos@ceiling < bar but still climbing (a doubling still
+      adds >= eps) -> no certificate, recorded; the ladder is still not extended.
+    - crossed iff cos@ceiling >= bar.
+    """
+    rungs = sorted(cos_by_rung)
+    if len(rungs) < 3:
+        raise ValueError("plateau test needs >= 3 rungs")
+    ceil = rungs[-1]
+    cos_ceil = cos_by_rung[ceil]
+    d_last = cos_by_rung[rungs[-1]] - cos_by_rung[rungs[-2]]
+    d_prev = cos_by_rung[rungs[-2]] - cos_by_rung[rungs[-3]]
+    crossed = cos_ceil >= bar
+    plateaued = (not crossed) and d_last < eps and d_prev < eps
+    return {
+        "cos_ceiling": round(float(cos_ceil), 4), "ceiling": ceil,
+        "delta_last_two": [round(float(d_prev), 4), round(float(d_last), 4)],
+        "crossed_bar": bool(crossed),
+        "plateaued_below_bar": bool(plateaued),
+        "ceiling_limited": bool((not crossed) and not plateaued),
+    }
+
+
 # --- instrument controls -----------------------------------------------------
 
 

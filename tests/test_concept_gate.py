@@ -24,6 +24,7 @@ from jtvec.concept_gate import (
     min_pairwise_cosine,
     natural_norms,
     negative_control,
+    plateau_below_bar,
     positive_control,
     rung_prefix,
 )
@@ -167,6 +168,25 @@ def test_negative_control_quantization_bound():
     # large N -> base floor 0.02 dominates the quantum
     out = negative_control([0.019], n_eval=1000)
     assert out.passed and "max(0.02, 1/1000)" in out.detail
+
+
+def test_plateau_below_bar_crossed():
+    v = plateau_below_bar({8: 0.6, 16: 0.7, 32: 0.85, 64: 0.92, 128: 0.95, 256: 0.97}, bar=0.95)
+    assert v["crossed_bar"] and not v["plateaued_below_bar"] and not v["ceiling_limited"]
+
+
+def test_plateau_below_bar_plateaued():
+    # last two doublings add 0.005 and 0.003, ceiling 0.908 < 0.95 -> negative result
+    v = plateau_below_bar({8: 0.6, 16: 0.72, 32: 0.83, 64: 0.90, 128: 0.905, 256: 0.908},
+                          bar=0.95, eps=0.01)
+    assert v["plateaued_below_bar"] and not v["crossed_bar"] and not v["ceiling_limited"]
+
+
+def test_plateau_below_bar_ceiling_limited():
+    # still climbing at the ceiling (last doubling +0.05) but under the bar
+    v = plateau_below_bar({8: 0.5, 16: 0.62, 32: 0.72, 64: 0.80, 128: 0.88, 256: 0.93},
+                          bar=0.95, eps=0.01)
+    assert v["ceiling_limited"] and not v["plateaued_below_bar"] and not v["crossed_bar"]
 
 
 def test_certificate_payload_scopes_concept_in_estimator():
