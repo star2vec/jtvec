@@ -1,12 +1,14 @@
 # Preregistration — EXP-M5-6: off-diagonal test of the decodability × potency 2×2 (S5 steering, 410M)
 
 - experiment-id: EXP-M5-6
-- status: **RATIFIED** by Ecaterina 2026-07-22 ("ratify, run it" + confirmed the
-  A1 decode_vector correction). A FRESH experiment, NOT an amendment: the
-  amendment budget does NOT apply. Full apparatus (own prereg, sham twins, ≥ 3
-  draws median/IQR, positive+negative controls, same statistics as S2). Committing
-  this file is the prereg act; runs on the Mac. The A2 potency axis is
-  feasibility-confirmed (sham-controlled ΔS +11.9).
+- status: **CONSTRUCT REFRAME — pending Ecaterina's re-ratification; RUN HELD.**
+  Ratified 2026-07-22 in the original off-diagonal framing; the pre-run smoke then
+  exposed a construct problem (S5 is logit-trivially decodable, so A1 conflates two
+  sub-axes) and Ecaterina ruled the reframe below (A1 decomposes; report both
+  sub-axes; do NOT chase a bar). This file is redrafted to that framing for her
+  re-ratification; NO run until she ratifies the reframe. A FRESH experiment
+  (budget does not apply); full apparatus. A2 potency feasibility-confirmed
+  (ΔS +11.9). Runs on the Mac.
 - claim: none until run (tests H1's double-dissociation; result is a new CLAIMS
   entry at Ecaterina's verify).
 - models: EleutherAI/pythia-410m@9879c9b — the SAME footing as S1/S2 (their
@@ -17,26 +19,42 @@
 
 ## Hypothesis
 
-The anchor dichotomy has S1 = (decodable, not-potent) and S2 = (not-decodable,
-potent) — the DIAGONAL of the (A1 decodability × A2 potency) 2×2. Two diagonal
-corners are explainable by ONE hidden axis (a deflation mode where decodability
-and potency are anti-correlated by a single latent), so the dichotomy is
-currently SUGGESTIVE, not a proven double dissociation. Filling ONE OFF-DIAGONAL
-cell — a direction that is BOTH decodable AND potent, or NEITHER — refutes the
-single-axis explanation and proves the two axes are independent.
+The apparent (A1 decodability × A2 potency) dichotomy — S1 = (dec, ¬pot),
+S2 = (¬dec, pot) — could be ONE hidden DEFLATION axis rather than two independent
+ones. The named deflation axis is OUTPUT-ALIGNMENT: a direction aligned with the
+unembedding is logit-readable (looks decodable) AND moves the output when injected
+(looks potent), so a single latent could produce the diagonal. An off-diagonal
+cell refutes deflation ONLY IF the cell is not itself explained by output-
+alignment; otherwise filling it is circular.
 
-Primary candidate: S5 STEERING vectors — untouched by the taxonomy so far, and
-built to be potent (activation-addition steering). Measured on A1 (J-lens
-decodability) × A2 (injection + ablation potency), on the same footing as S1/S2.
+Construct correction (2026-07-22, from the pre-run smoke; Ecaterina's ruling):
+A1 "decodability" CONFLATES TWO SUB-AXES that output-alignment pulls apart —
+- A1a: the J-lens reads the content AT ALL (E1 C1: jlens label-rank ≤ 20).
+- A1b: the J-lens reads what the LOGIT lens CANNOT (E1 C1 ∧ C3: jlens ≤ 20 AND
+  logit ≥ 200) — "J-lens-privileged" decodability.
+For output-MISaligned directions (S2 FV: jlens 278, logit dark) A1a and A1b
+COINCIDE. For output-ALIGNED directions (S5 steering: jlens ~4 ≈ logit ~6) they
+SEPARATE — S5's decodability is LOGIT-TRIVIAL (the logit lens gets it for free),
+not A1b-privileged, and S5's decodability and its potency are the SAME fact
+(output-alignment). So S5 does NOT refute deflation; it DECOMPOSES A1.
 
-Two branches, decided by this run (fixed below, before running):
-- H-AXES-INDEPENDENT: S5 lands OFF-diagonal — (decodable, potent) or (neither) —
-  → the deflation-mode single-axis explanation is refuted; the two axes are
-  independent; the S1/S2 dichotomy is a genuine DOUBLE DISSOCIATION. Strong.
-- H-AXES-COUPLED: S5 lands ON-diagonal (the S1 corner or the S2 corner) → the
-  single-axis explanation is NOT excluded; axes not shown independent; reported
-  honestly as coupling not ruled out.
-Both publishable.
+Primary candidate: S5 STEERING vectors (built potent via activation-addition,
+output-aligned by construction). This experiment does NOT chase whichever bar
+yields an off-diagonal; it reports S5 on BOTH sub-axes + the raw jlens-vs-logit
+label-ranks, as the case that decomposes A1.
+
+Branches (fixed before running):
+- H-A1-DECOMPOSES (expected from the smoke): S5 is A1a-decodable (C1) but NOT
+  A1b-decodable (fails C3 — logit-trivial). The finding is "A1 decomposes into
+  two sub-axes (reads-at-all vs J-lens-privileged), separated by output-
+  alignment" — NOT a double dissociation (HYPOTHESIS). S5 is NOT labelled
+  off-diagonal; the deflation axis is NOT refuted.
+- H-AXES-INDEPENDENT (would require A1b-privileged AND potent, which output-
+  alignment cannot supply): S5 is A1b-decodable (jlens ≤ 20 AND logit ≥ 200) AND
+  potent → an off-diagonal NOT explained by output-alignment → the double
+  dissociation (HYPOTHESIS) is supported. Pre-registered though not expected.
+- Other cells reported as they fall.
+Both branches publishable.
 
 ## Extractor under test
 
@@ -82,16 +100,25 @@ Potency verdict = POTENT iff the INJECTION arm clears its bar (S5 is built to
 steer via addition); ablation corroborates. (Mirrors S1: injection is the
 load-bearing axis, ablation corroborating.)
 
-## Decision rule (bars [proposed] until ratified)
+## Decision rule (report BOTH sub-axes + raw ranks; never collapse to one)
 
-Classify S5 into the 2×2 by (A1 decodable? A2 potent?), each a ≥3-draw
-median/IQR verdict against its bar with its controls passing:
-- OFF-diagonal = (decodable, potent) OR (¬decodable, ¬potent) → **H-AXES-
-  INDEPENDENT** (double dissociation; single-axis deflation refuted).
-- ON-diagonal = (decodable, ¬potent) [S1 corner] OR (¬decodable, potent) [S2
-  corner] → **H-AXES-COUPLED** (single-axis explanation not excluded).
-The verdict is the cell S5 occupies; no forced call if a control fails
-(INCONCLUSIVE, below).
+Report S5 explicitly on both A1 sub-axes and the raw ranks:
+- A1a-decodable iff median jlens label-rank ≤ 20 (C1).
+- A1b-decodable iff median jlens ≤ 20 AND median logit ≥ 200 (C1 ∧ C3).
+- the raw median jlens and median logit label-ranks reported SIDE BY SIDE, so the
+  reader sees whether S5 is logit-trivially decodable (jlens ≈ logit, both low) or
+  J-lens-privileged (jlens low, logit high).
+- A2-potent iff sham-controlled injection ΔS median ≥ 1.0 with cross-draw transfer.
+
+Verdict:
+- S5 A1a-decodable ∧ ¬A1b-decodable (jlens ≈ logit, logit-trivial) → **A1-DECOMPOSES**:
+  A1 splits into reads-at-all vs J-lens-privileged, separated by output-alignment;
+  S5 is NOT off-diagonal; the double dissociation (HYPOTHESIS) is NOT supported
+  and deflation is NOT refuted. (The expected outcome from the smoke.)
+- S5 A1b-decodable ∧ potent → **AXES-INDEPENDENT**: an off-diagonal not reducible
+  to output-alignment; the double dissociation (HYPOTHESIS) is supported.
+- Control failure on an axis → that axis INCONCLUSIVE, the verdict inconclusive.
+S5 is NEVER labelled "off-diagonal" on the strength of A1a alone.
 
 ## Instruments and controls (full apparatus)
 
@@ -148,7 +175,16 @@ the RTX is free but 410M + the 410M lens cache live on the Mac.)
 - A2 feasibility probe (2026-07-22, pre-ratification, scratchpad): the sentiment
   steering vector moves the sentiment-logit-difference ΔS by sham-controlled
   +11.9 on 410M (+steer +9.1, −steer −2.7, sham −2.8) — the potency axis is
-  testable; the (decodable, potent) corner is reachable.
+  testable; steering is potent.
+- CONSTRUCT REFRAME (2026-07-22, from the wiring smoke; Ecaterina's ruling): the
+  smoke showed S5's A1 = jlens label-rank ~4 ≈ logit ~6 — logit-trivially
+  decodable, output-aligned. Since output-alignment is the named deflation axis,
+  scoring S5 "decodable" by C1-only and calling it off-diagonal would be circular
+  (its decodability and potency are the same fact). The Hypothesis + Decision rule
+  were reframed from "fill an off-diagonal → double dissociation" to "A1
+  decomposes into A1a (reads-at-all) vs A1b (J-lens-privileged), which output-
+  alignment separates." No bar was chosen to yield an outcome; both criteria +
+  raw ranks are reported. Pending Ecaterina's re-ratification before the run.
 
 ## Ratification
 

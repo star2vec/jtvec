@@ -1,0 +1,32 @@
+# EXP-M5-6 off-diagonal test on Pythia-410M (S5 steering on the decodability ×
+# potency 2×2). A1 = E1 decode_vector over the cached 410M lens draws 0/1/2;
+# A2 = injection + ablation sentiment-logit-difference. Standard Config schema,
+# band [4,16], fp32/MPS.
+experiment: pythia410m_m5_6_offdiag
+seed: 0
+device: mps
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f
+  dtype: float32
+calibration:
+  corpus: NeelNanda/pile-10k
+  split: train
+  n_prompts: 10
+  n_heldout: 3
+fit:
+  max_seq_len: 128
+  dim_batch: 8
+  skip_first_variants: [4]
+  source_layers: null
+  target_layer: null
+evals:
+  pass_k: 10
+  band: [4, 16]
+  baseline_threshold: 0.8
+  topk_report: 10
+  n_random_seeds: 10
+  swap_alpha: 1.0
+  swap_rcond: 0.05
+cache_dir: cache/m5/offdiag_pythia410m
+results_dir: results/m5

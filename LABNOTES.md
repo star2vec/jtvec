@@ -2246,3 +2246,19 @@ logit-difference; feasibility probe confirmed the steering vector is potent on
 S5 off-diagonal (decodable+potent OR neither) -> axes independent, double
 dissociation (HYPOTHESIS); on-diagonal -> coupling not excluded. Both publishable. FRESH
 experiment -> budget does NOT apply. Runs on the Mac (~40 min). [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-6 reframe RATIFIED; S1/S2 in the rank table; running (Claude)
+
+Ecaterina ratified the construct reframe ("commit the prereg and run") with two
+output requirements folded in: (1) the jlens-vs-logit rank table includes S1 and
+S2 under the identical decode_vector statistic, not just S5 — so the "sub-axes
+coincide for S2, separate for S5" claim is shown, not asserted; (2) S5's ranks
+are reported PER-DRAW with the spread. Built scripts/m5_6_offdiagonal.py: A1 =
+E1 decode_vector jlens/logit label-rank over 3 lens draws for S5 (steering) + S1
+(Paris concept) computed here, + S2 (singular-plural certified FV) CITED from
+EXP-M4-E1 (results/m4/20260719-021823-e1-decodability; identical decode_vector +
+the SAME lens draws 0/1/2 — the FV tensor cache is not on this Mac). A2 =
+injection + ablation sentiment-logit-diff. Reduced smoke: S5 jlens 4/logit 6
+(logit-trivial; per-draw 2/6, 8/7, 4/4 — nearly-equal holds across all 3 draws),
+S2 436/3203 (dark). Verdict logic never labels S5 off-diagonal on A1a alone.
+Running on the Mac. [no sign-off implied]
