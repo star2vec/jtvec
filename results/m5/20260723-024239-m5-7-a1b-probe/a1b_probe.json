@@ -1,0 +1,74 @@
+{
+  "model": "EleutherAI/pythia-410m@9879c9b",
+  "cap": 5.0,
+  "anchors": {
+    "capital-operand": {
+      "role": "transient latent (held operand)",
+      "jlens_ratio_median": 55.370078740157474,
+      "jlens_hmr_median": 2.54,
+      "logit_hmr_median": 140.64,
+      "random_max_ratio_median": 0.0,
+      "per_draw": [
+        {
+          "lens_draw": 0,
+          "jlens_ratio": 55.370078740157474,
+          "jlens_layer": 14,
+          "jlens_hmr": 2.54,
+          "logit_hmr": 140.64,
+          "random_max_ratio": 0.0
+        },
+        {
+          "lens_draw": 1,
+          "jlens_ratio": 77.27472527472527,
+          "jlens_layer": 14,
+          "jlens_hmr": 1.82,
+          "logit_hmr": 140.64,
+          "random_max_ratio": 0.0
+        },
+        {
+          "lens_draw": 2,
+          "jlens_ratio": 48.49655172413793,
+          "jlens_layer": 14,
+          "jlens_hmr": 2.9,
+          "logit_hmr": 140.64,
+          "random_max_ratio": 0.0
+        }
+      ]
+    },
+    "capital-recall": {
+      "role": "recalled answer token",
+      "jlens_ratio_median": 45.69181034482759,
+      "jlens_hmr_median": 3.97,
+      "logit_hmr_median": 212.01,
+      "random_max_ratio_median": 0.0,
+      "per_draw": [
+        {
+          "lens_draw": 0,
+          "jlens_ratio": 28.37190082644628,
+          "jlens_layer": 16,
+          "jlens_hmr": 2.42,
+          "logit_hmr": 68.66,
+          "random_max_ratio": 0.0
+        },
+        {
+          "lens_draw": 1,
+          "jlens_ratio": 45.69181034482759,
+          "jlens_layer": 15,
+          "jlens_hmr": 4.64,
+          "logit_hmr": 212.01,
+          "random_max_ratio": 0.0
+        },
+        {
+          "lens_draw": 2,
+          "jlens_ratio": 53.40302267002519,
+          "jlens_layer": 15,
+          "jlens_hmr": 3.97,
+          "logit_hmr": 212.01,
+          "random_max_ratio": 0.0
+        }
+      ]
+    }
+  },
+  "peak_rss_gb": 2.79,
+  "wall_clock_s": 427.9
+}

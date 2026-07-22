@@ -1,0 +1,14 @@
+{
+  "run_name": "m5-7-a1b-probe",
+  "started": "2026-07-23T02:42:39",
+  "git_commit": "705953d0462884717bddeb76f6816a8e8c604c56",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-7-a1b-locus.md",
+  "prereg_commit": "705953d0462884717bddeb76f6816a8e8c604c56",
+  "config_sha256": "9e46085a2a24092ee986c035aa737f6b2424df81a5a4155f141f5b7c91f45451",
+  "post_hoc": false,
+  "operand_ratio": 55.370078740157474,
+  "recall_ratio": 45.69181034482759,
+  "wall_clock_s": 427.9,
+  "peak_rss_gb": 2.79,
+  "finished": "2026-07-23T02:49:47"
+}
