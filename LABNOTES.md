@@ -2182,3 +2182,51 @@ no sixth criterion (close-under = fail, full stop). RTX builds its own
 orchestrator against the committed prereg and runs on 1.4B; per-relation + roster
 under the marginalized criterion; certificate + sign-off Ecaterina's. RTX startup
 prompt delivered this session. [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-2b S3 marginalized/cosine criterion RAN (1.4B): 2/8 -> H-S3-HARD (FINAL cycle) (Claude)
+
+Built + ran on the win32 RTX (build commit this session; run through start_run,
+clean tree, committed prereg b2e85a0, post_hoc false):
+results/m5/20260722-145204-m5-2b-operator-criterion (run.json,
+operator_criterion.json + table, 8 raw cells). Estimator UNCHANGED from EXP-M5-2
+(JacobianIclMeanEstimator, h_layer=12 — NOT re-selected, 3 draws); only the
+convergence criterion changed. Positive criterion = a pre-registered RE-ANALYSIS
+of EXP-M5-2's retained raw (top1_by_draw majority vote) + its deterministic
+stored output-state cosine (labeled post-hoc). The D-034 negative control
+(unrelated cross-category relation's operator applied to the target probe) was
+estimated FRESH. Compute ~16 min; GPU peak 15.68 GB (WDDM host-paging; no OOM).
+This is the LAST budgeted amendment cycle — 0 remain after.
+
+Criterion (ratified): certify iff cross-draw output-STATE cosine >= 0.95 AND
+draw-marginalized (per-probe majority-vote top-1 across draws) faithfulness
+>= 0.60 AND the D-034 negative fails (<= 0.10). Roster: >= 6/8 ->
+H-S3-DIRECTION-STABLE else H-S3-HARD. NO sixth criterion (close-but-under = FAIL).
+
+Verdict = **2/8 certified -> H-S3-HARD** (scope: 1.4B, h_layer=12, 3 draws):
+- CERTIFY (2): factual/country_capital_city (cos 0.952, marg-faith 0.750, neg
+  0.000) and factual/food_from_country (cos 0.953, marg-faith 0.733, neg 0.000).
+- FAIL (6), all on the cosine gate primarily: product_by_company (cos 0.920,
+  marg 0.400), adj_antonym (0.920, 0.100), verb_past_tense (0.908, 0.100),
+  word_first_letter (0.930, 0.400), object_superclass (0.914, 0.467),
+  work_location (0.920, 0.316). The direction-space cosine sits at 0.908-0.930
+  on these six — close to but under 0.95, which per the ratified rule is a FAIL,
+  not a bar to relax.
+- The marginalized (majority-vote) faithfulness recovered some over per-draw
+  (e.g. product 0.30/0.43/0.47 -> 0.40; object_superclass 0.80/0.23/0.23 ->
+  0.467) but not to 0.60, and those relations fail cosine regardless.
+- D-034 negative control VALID: the unrelated cross-category donor operator is
+  non-faithful on the certified relations (0.000 on both) and low elsewhere
+  (mostly 0.0-0.05; two linguistic targets 0.167/0.20, which fail on cosine +
+  positive anyway) — unlike the banned label-shuffle (EXP-M5-2 ~0.67). So the
+  instrument's must-fail arm behaves correctly under the D-034 fix.
+
+Disposition (per the prereg, FINAL cycle; budget now 0): S3 is NOT stably
+measurable as a species at 1.4B under the marginalized/cosine criterion. Only
+the two capital/food factual relations clear all gates; the operator's output
+DIRECTION is stable (cosine 0.91-0.95 across all 8) but not to the 0.95 bar on
+6/8, and the discrete/label-faithful reads churn across draws. Per the
+amendment-budget LAW, M6 now runs on whatever is certified and S3 is reported as
+a HOLE in the taxonomy (a taxonomy with holes preferred to recalibrating into
+one). NO certificate and NO sign-off written here — the S3 disposition +
+sign-off are Ecaterina's. Gates: pytest 221 passed, validators 3/3.
+[no sign-off implied]

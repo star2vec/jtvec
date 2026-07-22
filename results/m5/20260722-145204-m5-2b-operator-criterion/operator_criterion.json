@@ -1,0 +1,190 @@
+{
+  "experiment": "EXP-M5-2b",
+  "substrate": "EleutherAI/pythia-1.4b",
+  "revision": "fedc38a16eea3bd36a96b906d78d11d2ce18ed79",
+  "h_layer": 12,
+  "criterion": "output-state cosine>=0.95 AND draw-marginalized(majority-vote) faith>=0.60 AND D-034 negative<=0.10",
+  "reused_m5_2_run": "results/m5/20260722-022138-m5-2-operator-gate",
+  "positive_is_reanalysis_posthoc": true,
+  "bars": {
+    "output_cosine": 0.95,
+    "marginalized_faith": 0.6,
+    "negative": 0.1,
+    "n_relations_certify": 6
+  },
+  "n_relations": 8,
+  "n_certified": 2,
+  "roster_verdict": "H-S3-HARD",
+  "peak_vram_gb": 15.68,
+  "no_sixth_criterion": "close-but-under = FAIL (H-S3-HARD); final budgeted cycle",
+  "per_relation": {
+    "factual/country_capital_city": {
+      "n_probe": 12,
+      "output_state_cosine_reused": 0.9519,
+      "marginalized_faithfulness": 0.75,
+      "per_draw_faithfulness": [
+        0.75,
+        0.75,
+        0.6667
+      ],
+      "raw_top1_agreement": 0.75,
+      "donor_relation": "linguistic/adj_antonym",
+      "negative_unrelated_faith": 0.0,
+      "controls": {
+        "positive_marginalized_faith": 0.75,
+        "positive_ok": true,
+        "negative_unrelated_faith": 0.0,
+        "negative_ok": true
+      },
+      "controlled": true,
+      "certified": true
+    },
+    "factual/food_from_country": {
+      "n_probe": 15,
+      "output_state_cosine_reused": 0.9528,
+      "marginalized_faithfulness": 0.7333,
+      "per_draw_faithfulness": [
+        0.6667,
+        0.7333,
+        0.7333
+      ],
+      "raw_top1_agreement": 0.8,
+      "donor_relation": "linguistic/adj_antonym",
+      "negative_unrelated_faith": 0.0,
+      "controls": {
+        "positive_marginalized_faith": 0.7333,
+        "positive_ok": true,
+        "negative_unrelated_faith": 0.0,
+        "negative_ok": true
+      },
+      "controlled": true,
+      "certified": true
+    },
+    "factual/product_by_company": {
+      "n_probe": 30,
+      "output_state_cosine_reused": 0.92,
+      "marginalized_faithfulness": 0.4,
+      "per_draw_faithfulness": [
+        0.3,
+        0.4333,
+        0.4667
+      ],
+      "raw_top1_agreement": 0.1667,
+      "donor_relation": "linguistic/adj_antonym",
+      "negative_unrelated_faith": 0.0,
+      "controls": {
+        "positive_marginalized_faith": 0.4,
+        "positive_ok": false,
+        "negative_unrelated_faith": 0.0,
+        "negative_ok": true
+      },
+      "controlled": false,
+      "certified": false
+    },
+    "linguistic/adj_antonym": {
+      "n_probe": 30,
+      "output_state_cosine_reused": 0.9204,
+      "marginalized_faithfulness": 0.1,
+      "per_draw_faithfulness": [
+        0.0667,
+        0.0667,
+        0.1
+      ],
+      "raw_top1_agreement": 0.0,
+      "donor_relation": "factual/country_capital_city",
+      "negative_unrelated_faith": 0.0333,
+      "controls": {
+        "positive_marginalized_faith": 0.1,
+        "positive_ok": false,
+        "negative_unrelated_faith": 0.0333,
+        "negative_ok": true
+      },
+      "controlled": false,
+      "certified": false
+    },
+    "linguistic/verb_past_tense": {
+      "n_probe": 30,
+      "output_state_cosine_reused": 0.908,
+      "marginalized_faithfulness": 0.1,
+      "per_draw_faithfulness": [
+        0.0333,
+        0.0667,
+        0.0667
+      ],
+      "raw_top1_agreement": 0.0,
+      "donor_relation": "factual/country_capital_city",
+      "negative_unrelated_faith": 0.1667,
+      "controls": {
+        "positive_marginalized_faith": 0.1,
+        "positive_ok": false,
+        "negative_unrelated_faith": 0.1667,
+        "negative_ok": false
+      },
+      "controlled": false,
+      "certified": false
+    },
+    "linguistic/word_first_letter": {
+      "n_probe": 30,
+      "output_state_cosine_reused": 0.9301,
+      "marginalized_faithfulness": 0.4,
+      "per_draw_faithfulness": [
+        0.3,
+        0.4,
+        0.4667
+      ],
+      "raw_top1_agreement": 0.2,
+      "donor_relation": "factual/country_capital_city",
+      "negative_unrelated_faith": 0.2,
+      "controls": {
+        "positive_marginalized_faith": 0.4,
+        "positive_ok": false,
+        "negative_unrelated_faith": 0.2,
+        "negative_ok": false
+      },
+      "controlled": false,
+      "certified": false
+    },
+    "commonsense/object_superclass": {
+      "n_probe": 30,
+      "output_state_cosine_reused": 0.9144,
+      "marginalized_faithfulness": 0.4667,
+      "per_draw_faithfulness": [
+        0.8,
+        0.2333,
+        0.2333
+      ],
+      "raw_top1_agreement": 0.2,
+      "donor_relation": "factual/country_capital_city",
+      "negative_unrelated_faith": 0.0,
+      "controls": {
+        "positive_marginalized_faith": 0.4667,
+        "positive_ok": false,
+        "negative_unrelated_faith": 0.0,
+        "negative_ok": true
+      },
+      "controlled": false,
+      "certified": false
+    },
+    "commonsense/work_location": {
+      "n_probe": 19,
+      "output_state_cosine_reused": 0.9205,
+      "marginalized_faithfulness": 0.3158,
+      "per_draw_faithfulness": [
+        0.3158,
+        0.2632,
+        0.2105
+      ],
+      "raw_top1_agreement": 0.3684,
+      "donor_relation": "factual/country_capital_city",
+      "negative_unrelated_faith": 0.0526,
+      "controls": {
+        "positive_marginalized_faith": 0.3158,
+        "positive_ok": false,
+        "negative_unrelated_faith": 0.0526,
+        "negative_ok": true
+      },
+      "controlled": false,
+      "certified": false
+    }
+  }
+}

@@ -1,0 +1,43 @@
+# EXP-M5-2b: S3 draw-marginalized / cosine operator criterion (Pythia-1.4B, RTX
+# cuda). Estimator UNCHANGED from EXP-M5-2 (JacobianIclMeanEstimator, L12, 3
+# draws, k_estimate=6). The convergence CRITERION changes (top-1 agreement ->
+# output-state cosine + draw-marginalized majority-vote faithfulness). The
+# positive criterion is a pre-registered RE-ANALYSIS of EXP-M5-2's retained raw
+# (top1_by_draw majority vote) + its deterministic stored output-state cosine;
+# the D-034 negative control (unrelated-relation operator) is estimated fresh.
+experiment: pythia1p4b_m5_2b_operator_criterion
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-1.4b
+  revision: fedc38a16eea3bd36a96b906d78d11d2ce18ed79  # D-023 pin
+  dtype: float32
+evals:
+  band: [4, 16]    # unused; schema compatibility
+operator:
+  h_layer: 12      # NOT re-selected (EXP-M5-2 probe); layer-shopping banned
+  z_layer: null
+  k_estimate: 6
+  seeds: [1, 2, 3]
+  relations:
+    - factual/country_capital_city
+    - factual/food_from_country
+    - factual/product_by_company
+    - linguistic/adj_antonym
+    - linguistic/verb_past_tense
+    - linguistic/word_first_letter
+    - commonsense/object_superclass
+    - commonsense/work_location
+  # D-034 negative control: an UNRELATED relation's operator applied to the
+  # target's probe MUST fail (<= 0.10). Cross-category donors (guaranteed
+  # unrelated): factual targets get the linguistic donor, and vice-versa.
+  donor_for_factual: linguistic/adj_antonym
+  donor_for_other: factual/country_capital_city
+  reuse_m5_2_run: results/m5/20260722-022138-m5-2-operator-gate
+  bars:            # ratified in EXP-M5-2b-operator-criterion.md
+    output_cosine: 0.95        # (i) direction-space convergence
+    marginalized_faith: 0.60   # (ii) draw-marginalized (majority-vote) faithfulness
+    negative: 0.10             # D-034 unrelated-relation operator must fail
+    n_relations_certify: 6     # >= 6/8 -> H-S3-DIRECTION-STABLE else H-S3-HARD
+cache_dir: cache/m5/m5_2b_operator
+results_dir: results/m5
