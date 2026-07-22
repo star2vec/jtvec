@@ -2058,3 +2058,26 @@ NOT an amendment cycle — no recalibration performed):
   layer was NOT re-selected (avoiding the amend-until-it-passes pattern).
 Gates: pytest 211 passed, validators 3/3. [no sign-off implied; certificate is
 Ecaterina's]
+### 2026-07-22 — EXP-M5-1d S1 ablation-potency probe RATIFIED (Ecaterina, 2 adjustments) (Claude)
+
+Ecaterina ratified EXP-M5-1d (the REMOVE arm of the S1 potency dissociation;
+harness/preregs/EXP-M5-1d-ablation-potency.md). Counts as ONE amendment cycle
+(her explicit ruling, not to be reclassified); ONE remains after. Approved
+because a decodable-but-not-potent claim is unpublishable on the injection probe
+alone — the ablation arm is REQUIRED to make it a real add/remove dissociation,
+not to rescue a certificate. Two adjustments folded in:
+- Bar #1 SPLIT into non-adjacent poles to protect the H-INERT headline:
+  ABLATION-POTENT iff sham-controlled accuracy drop g >= 0.15 (E2 exec delta) with
+  cross-draw transfer; ABLATION-INERT iff g <= 0.05 (at the E2 sham-noise floor);
+  0.05 < g < 0.15 = WEAK/AMBIGUOUS, per concept, toward NEITHER pole. Roster:
+  >=6/8 at >=0.15 -> H-POTENT; >=6/8 at <=0.05 -> H-INERT; else MIXED.
+- Bar #3 positive control (unembed-direction project-out, >=0.30) locked to the
+  IDENTICAL accuracy-drop statistic + same >=3-draw median/IQR marginalization as
+  the test, so control and test cannot diverge on method; control fail ->
+  INCONCLUSIVE, not H-INERT.
+E2 machinery (exp3.ProjectOutHook, e2_dissociation.effect_drawset/DissociationRule),
+3 draws, sham twin, same statistic. Mechanism positive control on record = the
+null-check +0.80 "Paris" injection. NO certificate under either branch; H-POTENT
+opens the certificate path gated on Ecaterina's sign-off. Building
+scripts/m5_1d_ablation_potency.py; run 410M (Mac). S3/M5.2 continues on the RTX
+independently. [no sign-off implied]
