@@ -2297,7 +2297,7 @@ unilaterally. [no sign-off implied]
 
 ### 2026-07-23 — Ruling (a) FULL ACCOUNTING: H1 anchor retired + reframed (Ecaterina) (Claude)
 
-Ecaterina ruled (a), full accounting (not a patch), after EXP-M5-6 showed S1's
+Ecaterina ruled (a), full accounting (not a patch), after EXP-M5-6 found S1's
 concept direction is also lens-dark to decode_vector (jlens 192, like S2's 436).
 Executed:
 - CLM-005 SCOPED: "S1 decodable" -> "S1 draw-stable / convergent (the 1b sense)";
