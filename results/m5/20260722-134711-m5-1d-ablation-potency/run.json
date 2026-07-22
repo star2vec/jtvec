@@ -1,0 +1,20 @@
+{
+  "run_name": "m5-1d-ablation-potency",
+  "started": "2026-07-22T13:47:11",
+  "git_commit": "57fbae51fb0c4352c832f00c00cfba8c670f8247",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-1d-ablation-potency.md",
+  "prereg_commit": "57fbae51fb0c4352c832f00c00cfba8c670f8247",
+  "config_sha256": "60b14666ceca84362ef6890a00d8e15241a27e97564665fc01803523f0a16715",
+  "post_hoc": false,
+  "roster_verdict": "MIXED",
+  "counts": {
+    "potent": 0,
+    "inert": 1,
+    "weak": 3,
+    "inconclusive": 4
+  },
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 341.4,
+  "peak_rss_gb": 2.4,
+  "finished": "2026-07-22T13:52:52"
+}

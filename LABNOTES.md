@@ -2105,3 +2105,39 @@ Ecaterina ruled (session, 2026-07-22):
   at 1.4B, no further probes. COUNTS AGAINST BUDGET — after 1d (1 cycle) this is
   the LAST cycle (0 remain after). Do not run until Ecaterina ratifies; S3/M5.2
   stays idle on the RTX. [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-1d S1 ablation-potency RAN (410M, Δlogit): MIXED, 4/8 inconclusive (Claude)
+
+results/m5/20260722-134711-m5-1d-ablation-potency (410M, prereg 57fbae5, Option-B
+Δlogit; wall 341 s, peak 2.4 GB). Band-layer project-out of d(c), sham-controlled
+Δlogit-drop, 3 draws. Roster verdict MIXED (per prereg, no forced call).
+
+Per concept (clean logit | sham-ctrl Δlogit-drop g | pos-ctrl g | class):
+- Paris 18.65 | +0.537 | +2.03 ok | weak-ambiguous
+- London 15.89 | +0.370 | +2.10 ok | weak-ambiguous
+- Rome 17.26 | -0.263 | +1.47 ok | ablation-INERT
+- Berlin 17.04 | +0.344 | +1.69 ok | weak-ambiguous
+- Madrid 19.17 | +0.786 | +0.37 FAIL | INCONCLUSIVE
+- Vienna 18.81 | -0.446 | +0.78 FAIL | INCONCLUSIVE
+- Athens 15.53 | -0.752 | +0.36 FAIL | INCONCLUSIVE
+- Cairo 16.64 | -0.164 | +0.28 FAIL | INCONCLUSIVE
+
+Counts: 0 potent, 1 inert, 3 weak, 4 inconclusive. The 4 inconclusive are where
+the ablation POSITIVE control failed (unembed-direction band project-out did not
+drop logit(c) >= 1.0), so removal is untestable there — NOT recorded as inert
+(the prereg guard). The pos-ctrl pass/fail split (first-4 pass +1.5..2.1 /
+last-4 fail +0.28..0.78) is concept-specific, NOT tokenization (all 8 capitals
+are single-token, checked): band-layer rank-1 ablation of a known-carrier
+direction bites some capitals and not others.
+
+Honest read (condition c; no verdict pre-named, the run decided): on the 4
+concepts where BOTH potency probes are conclusive (Paris/London/Rome/Berlin),
+S1 is add-inert (1b: 0/4 potent) AND remove-not-potent (1d: 1 inert + 3 weak,
+0 potent) -> a decodable-but-not-output-potent profile on those 4. But it is
+only 4/8: the clean >=6/8 "decodable-but-inert" (add/remove-inert) HEADLINE is
+NOT established, because the remove arm is inconclusive on half the roster and
+weak (not clean-inert) on most of the measurable rest. S1 potency therefore
+lands MIXED/partial, NOT a clean pole. No S1 certificate. Disposition FLAGGED
+for Ecaterina; NO further S1 probe proposed (budget: 1 cycle left, earmarked for
+EXP-M5-2b; and no clean H-INERT to invoke the two-nulls-suffice rule against).
+[no sign-off implied]

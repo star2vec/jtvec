@@ -1,0 +1,214 @@
+{
+  "reports": {
+    "Paris": {
+      "concept": "Paris",
+      "n_eval": 30,
+      "clean_logit": 18.6497,
+      "ablated_logit_by_draw": {
+        "1": 18.3382,
+        "2": 17.9653,
+        "3": 18.1544
+      },
+      "sham_logit_by_draw": {
+        "1": 18.8954,
+        "2": 18.5402,
+        "3": 18.6914
+      },
+      "effect_median": 0.4952,
+      "sham_median": -0.0417,
+      "sham_ctrl_logit_drop_g": 0.537,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 16.6646,
+      "pos_control_g": 2.0268,
+      "control_ok": true,
+      "specificity_other_logit_drop": -0.0002,
+      "classification": "weak-ambiguous"
+    },
+    "London": {
+      "concept": "London",
+      "n_eval": 30,
+      "clean_logit": 15.8914,
+      "ablated_logit_by_draw": {
+        "1": 15.7319,
+        "2": 15.526,
+        "3": 15.5614
+      },
+      "sham_logit_by_draw": {
+        "1": 15.9513,
+        "2": 15.9318,
+        "3": 15.8631
+      },
+      "effect_median": 0.3301,
+      "sham_median": -0.0404,
+      "sham_ctrl_logit_drop_g": 0.3704,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 13.8349,
+      "pos_control_g": 2.0969,
+      "control_ok": true,
+      "specificity_other_logit_drop": -0.042,
+      "classification": "weak-ambiguous"
+    },
+    "Rome": {
+      "concept": "Rome",
+      "n_eval": 30,
+      "clean_logit": 17.2629,
+      "ablated_logit_by_draw": {
+        "1": 17.5832,
+        "2": 17.6617,
+        "3": 17.6412
+      },
+      "sham_logit_by_draw": {
+        "1": 17.3833,
+        "2": 17.0583,
+        "3": 17.3786
+      },
+      "effect_median": -0.3782,
+      "sham_median": -0.1157,
+      "sham_ctrl_logit_drop_g": -0.2625,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 15.9132,
+      "pos_control_g": 1.4655,
+      "control_ok": true,
+      "specificity_other_logit_drop": 0.1604,
+      "classification": "ablation-inert"
+    },
+    "Berlin": {
+      "concept": "Berlin",
+      "n_eval": 30,
+      "clean_logit": 17.0433,
+      "ablated_logit_by_draw": {
+        "1": 16.9575,
+        "2": 16.6211,
+        "3": 16.7494
+      },
+      "sham_logit_by_draw": {
+        "1": 17.0939,
+        "2": 17.1589,
+        "3": 16.9618
+      },
+      "effect_median": 0.2939,
+      "sham_median": -0.0506,
+      "sham_ctrl_logit_drop_g": 0.3445,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 15.4089,
+      "pos_control_g": 1.6849,
+      "control_ok": true,
+      "specificity_other_logit_drop": 0.2585,
+      "classification": "weak-ambiguous"
+    },
+    "Madrid": {
+      "concept": "Madrid",
+      "n_eval": 30,
+      "clean_logit": 19.1744,
+      "ablated_logit_by_draw": {
+        "1": 19.294,
+        "2": 18.3283,
+        "3": 18.4882
+      },
+      "sham_logit_by_draw": {
+        "1": 19.288,
+        "2": 19.118,
+        "3": 19.2741
+      },
+      "effect_median": 0.6862,
+      "sham_median": -0.0997,
+      "sham_ctrl_logit_drop_g": 0.7859,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 18.9045,
+      "pos_control_g": 0.3696,
+      "control_ok": false,
+      "specificity_other_logit_drop": -0.1334,
+      "classification": "inconclusive"
+    },
+    "Vienna": {
+      "concept": "Vienna",
+      "n_eval": 30,
+      "clean_logit": 18.8124,
+      "ablated_logit_by_draw": {
+        "1": 19.1869,
+        "2": 19.0161,
+        "3": 19.1722
+      },
+      "sham_logit_by_draw": {
+        "1": 18.7314,
+        "2": 18.6276,
+        "3": 18.7265
+      },
+      "effect_median": -0.3598,
+      "sham_median": 0.0859,
+      "sham_ctrl_logit_drop_g": -0.4457,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 17.9463,
+      "pos_control_g": 0.7802,
+      "control_ok": false,
+      "specificity_other_logit_drop": 0.6665,
+      "classification": "inconclusive"
+    },
+    "Athens": {
+      "concept": "Athens",
+      "n_eval": 30,
+      "clean_logit": 15.5291,
+      "ablated_logit_by_draw": {
+        "1": 16.1864,
+        "2": 16.7892,
+        "3": 16.2242
+      },
+      "sham_logit_by_draw": {
+        "1": 15.5488,
+        "2": 15.2635,
+        "3": 15.472
+      },
+      "effect_median": -0.6952,
+      "sham_median": 0.0571,
+      "sham_ctrl_logit_drop_g": -0.7522,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 15.1164,
+      "pos_control_g": 0.3556,
+      "control_ok": false,
+      "specificity_other_logit_drop": 0.5373,
+      "classification": "inconclusive"
+    },
+    "Cairo": {
+      "concept": "Cairo",
+      "n_eval": 30,
+      "clean_logit": 16.6412,
+      "ablated_logit_by_draw": {
+        "1": 16.5371,
+        "2": 16.7943,
+        "3": 16.8446
+      },
+      "sham_logit_by_draw": {
+        "1": 16.7801,
+        "2": 16.5216,
+        "3": 16.6303
+      },
+      "effect_median": -0.1531,
+      "sham_median": 0.0109,
+      "sham_ctrl_logit_drop_g": -0.164,
+      "cross_draw_transfer": false,
+      "pos_control_unembed_logit": 16.3529,
+      "pos_control_g": 0.2774,
+      "control_ok": false,
+      "specificity_other_logit_drop": 0.5573,
+      "classification": "inconclusive"
+    }
+  },
+  "roster_verdict": "MIXED",
+  "model": "EleutherAI/pythia-410m@9879c9b",
+  "counts": {
+    "potent": 0,
+    "inert": 1,
+    "weak": 3,
+    "inconclusive": 4
+  },
+  "bars": {
+    "potent": 1.0,
+    "inert": 0.3,
+    "pos_control": 1.0,
+    "roster": 6
+  },
+  "mechanism_positive_control": "null-check unembed('Paris') residual-add injection \u0394p=+0.80 (results/m5/20260722-012727-m5-1c-nullcheck); ADD mechanism works, so 1b injection-null is real",
+  "certificate": "NONE under either branch; H-POTENT opens the cert path gated on Ecaterina's sign-off",
+  "peak_rss_gb": 2.4,
+  "wall_clock_s": 341.4
+}

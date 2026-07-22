@@ -1,0 +1,5 @@
+{"draw": 1, "clean_logit": 15.8914, "ablated_logit": 15.7319, "sham_logit": 15.9513}
+{"draw": 2, "clean_logit": 15.8914, "ablated_logit": 15.526, "sham_logit": 15.9318}
+{"draw": 3, "clean_logit": 15.8914, "ablated_logit": 15.5614, "sham_logit": 15.8631}
+{"arm": "pos_unembed", "logit": 13.8349}
+{"arm": "specificity_other", "other": "Rome", "logit_drop": -0.042}
