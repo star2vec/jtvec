@@ -83,6 +83,44 @@ Machine: Mac (410M, cached lenses). The transient 410M row of the unified table
 is then the IN-RUN measurement (with the M1 gate's VERIFIED 2.5/61.5 retained as
 the cross-check).
 
+## Hypothesis
+
+Transient computational intermediates are J-lens-privileged (the J-lens ranks the
+held content far better than the logit lens); extracted STATIC direction vectors
+are not (they are lens-dark or only logit-trivially readable). The confirmatory
+probe places the transient 410M row on the same substrate + lens draws as the
+static S1/S2/S5 rows. Object types (residual state vs pulled-out direction) are
+intrinsically different — the openly-stated ceiling.
+
+## Decision rule
+
+The probe reports, over the 3 cached 410M lens draws (median/IQR), the held
+capital-operand LATENT operand's jlens HMR vs logit HMR and the max-contrast
+ratio (cap 5.0). A J-lens advantage is confirmed iff median jlens HMR << logit
+HMR (max-contrast ratio ≥ 5.0 with every random arm < 5.0 — the EXP-M5-0b
+statistic). No new claim bar: the rescope of CLM-006's A1b sub-statement rests on
+the assembled table (transient rows privileged; static rows not), not on this
+single probe; the probe removes the cross-experiment objection.
+
+## Estimator plan
+
+The vendored probe_task (jvec.evals.probe): jlens = unembed(J_l·h), logit =
+unembed(h), random-matrix arm, HMR of the probed token per layer; max-contrast
+(jtvec.lens_diagnostic.task_arm_ratios) at cap 5.0. Anchors: capital-operand
+(held latent operand) + capital-recall (recalled answer, reported alongside).
+Cached 410M lens draws 0/1/2; median over draws (the DrawSet nuisance axis is the
+lens draw). Deterministic given a lens.
+
+## Sample plan
+
+Behavioural-filtered correct items of capital-operand + capital-recall (N per
+anchor recorded); ≥3 lens draws; raw per-item ranks retained per (anchor, draw).
+
+## Resource estimate (Mac tier, 410M, MPS fp32)
+
+Forward + lens-readout on cached lenses, 2 anchors × 3 lens draws. Projected
+~10–15 min wall, peak ~2.5 GB. Under the 12 h LAW. Detached + Monitor.
+
 ## What counts as failure / honesty
 
 - The transient vs static contrast is the claim; it is HYPOTHESIS-tier except the
