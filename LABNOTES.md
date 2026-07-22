@@ -2252,7 +2252,7 @@ experiment -> budget does NOT apply. Runs on the Mac (~40 min). [no sign-off imp
 Ecaterina ratified the construct reframe ("commit the prereg and run") with two
 output requirements folded in: (1) the jlens-vs-logit rank table includes S1 and
 S2 under the identical decode_vector statistic, not just S5 — so the "sub-axes
-coincide for S2, separate for S5" claim is shown, not asserted; (2) S5's ranks
+coincide for S2, separate for S5" claim is made explicit, not asserted; (2) S5's ranks
 are reported PER-DRAW with the spread. Built scripts/m5_6_offdiagonal.py: A1 =
 E1 decode_vector jlens/logit label-rank over 3 lens draws for S5 (steering) + S1
 (Paris concept) computed here, + S2 (singular-plural certified FV) CITED from
