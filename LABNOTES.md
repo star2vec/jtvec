@@ -2230,3 +2230,19 @@ a HOLE in the taxonomy (a taxonomy with holes preferred to recalibrating into
 one). NO certificate and NO sign-off written here — the S3 disposition +
 sign-off are Ecaterina's. Gates: pytest 221 passed, validators 3/3.
 [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-6 off-diagonal test RATIFIED (fresh experiment, no budget) (Claude)
+
+Ecaterina ratified EXP-M5-6 ("ratify, run it"): the off-diagonal test of the
+(decodability x potency) 2x2 via S5 sentiment steering vectors, to test the
+double dissociation (HYPOTHESIS) behind the S1/S2 anchor dichotomy — two diagonal
+corners are consistent with one hidden deflation axis, and an off-diagonal cell
+would separate the two axes. A1 = E1 decode_vector (jlens vs logit LABEL-RANK; C1 median
+<=20 AND C3 logit >=200 — the SAME instrument that gave S2 NOT-DECODABLE;
+corrected pre-run from the max-contrast ratio I first mis-specified, Ecaterina
+confirmed). A2 = injection (1b machinery) + ablation (1d), readout = sentiment-
+logit-difference; feasibility probe confirmed the steering vector is potent on
+410M (sham-controlled dS +11.9). 3 draws, sham twins, full controls. Branches:
+S5 off-diagonal (decodable+potent OR neither) -> axes independent, double
+dissociation (HYPOTHESIS); on-diagonal -> coupling not excluded. Both publishable. FRESH
+experiment -> budget does NOT apply. Runs on the Mac (~40 min). [no sign-off implied]
