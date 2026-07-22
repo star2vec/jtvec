@@ -294,6 +294,25 @@ def negative_control(random_dps: list[float], n_eval: int, base: float = 0.02
     )
 
 
+def classify_ablation(g: float, transfer: bool, control_ok: bool,
+                      potent_bar: float = 0.15, inert_bar: float = 0.05) -> str:
+    """EXP-M5-1d split-band per-concept classification (Ecaterina 2026-07-22).
+
+    g = sham-controlled accuracy drop (effect.median - sham.median). The poles
+    are non-adjacent: potent needs g >= potent_bar WITH cross-draw transfer;
+    inert needs g <= inert_bar (at-floor, not merely below potent_bar); the
+    0.05..0.15 gap is weak/ambiguous, toward neither pole. A failed ablation
+    positive control makes the concept INCONCLUSIVE, never inert.
+    """
+    if not control_ok:
+        return "inconclusive"
+    if g >= potent_bar and transfer:
+        return "ablation-potent"
+    if g <= inert_bar:
+        return "ablation-inert"
+    return "weak-ambiguous"
+
+
 def certificate_payload(*, concept: str, model: str, converged_at: int,
                         n_draws: int, evidence_run: str, issued: str) -> dict:
     """JSON-serialisable S1 certificate inputs, concept-scoped in the estimator

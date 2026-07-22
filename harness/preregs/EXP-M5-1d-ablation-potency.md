@@ -53,31 +53,36 @@ Reuse jvec.evals.exp3.ProjectOutHook (`h[:,-1] -= P h[:,-1]`, P onto span(dir))
 at the final position of each band layer, and jtvec.e2_dissociation.effect_drawset
 / DissociationRule — the SAME statistic as EXP-M4-E2 (D-017):
 - per concept c, per draw k: ablate d(c) at band-layer final positions; measure
-  greedy top-1 accuracy on held-out capital-recall prompts whose answer is c
-  (exact-match, D-012). effect(k) = clean_acc − ablated_acc (positive = ablation
-  HURT). effect DrawSet over the 3 draws.
+  logit(c) = the final-position logit of c's primary surface token (D-012 form),
+  mean over held-out capital-recall prompts whose answer is c. effect(k) =
+  clean_logit − ablated_logit (positive = ablation REDUCED the answer's logit).
+  effect DrawSet over the 3 draws. [Option B, Ecaterina 2026-07-22: argmax-
+  accuracy → Δlogit; see Deviations — band-layer ablation cannot move a logit-17.9
+  argmax but DOES drop the logit sensitively.]
 - sham twin per (concept, draw): a norm-matched random-direction project-out
-  (exp3 sham_fv), identical layers/positions; sham DrawSet.
-- "hurts" iff (effect.median − sham.median) ≥ delta AND cross-draw transfer
-  (EVERY draw clears sham.median + delta) — the E2 transfer check.
+  (exp3 sham_fv), identical layers/positions; sham DrawSet (same logit statistic).
+- "reduces" iff (effect.median − sham.median) ≥ delta AND cross-draw transfer
+  (EVERY draw clears sham.median + delta) — the E2 transfer check, in logit units.
 
 ## Decision rule — A2 bars STATED NOW (not after); split NON-ADJACENT branches
 
-Per-concept, let g = sham-controlled accuracy drop = effect.median − sham.median
-over the 3 draws. The poles are SPLIT and non-adjacent (Ecaterina 2026-07-22, to
-protect the H-INERT headline):
+Per-concept, let g = sham-controlled logit-drop = effect.median − sham.median
+over the 3 draws, in LOGIT units. Poles SPLIT and non-adjacent (Ecaterina
+2026-07-22), numbers set from the pre-run diagnostic (band-only unembed ablation
+drops logit(Paris) −1.8, band-through-end −17.7, random-direction sham +0.3):
 
-- **ABLATION-POTENT** iff **g ≥ 0.15** (E2 execution delta / M3 fv-ablation bar,
-  `min_exec_drop`) WITH cross-draw transfer (EVERY draw clears sham.median + 0.15).
-- **ABLATION-INERT** iff **g ≤ 0.05** (at the E2 sham-noise floor ~0.02) — NOT
-  merely "below 0.15". "Decodable but inert" is the strong headline claim and is
-  defensible only if inert means AT-FLOOR.
-- **WEAK/AMBIGUOUS** iff **0.05 < g < 0.15** — reported per concept as such,
-  counted toward NEITHER pole.
+- **ABLATION-POTENT** iff **g ≥ 1.0 logit** WITH cross-draw transfer (EVERY draw
+  clears sham.median + 1.0) — cleanly above the sham floor (~0.3), ~half the
+  unembed positive control's ~+2.1.
+- **ABLATION-INERT** iff **g ≤ 0.3 logit** — at the random-sham floor. "Decodable
+  but inert" is the strong headline and is defensible only if inert means
+  AT-FLOOR, not merely below the potent bar.
+- **WEAK/AMBIGUOUS** iff **0.3 < g < 1.0 logit** — reported per concept, counted
+  toward NEITHER pole.
 
-Roster verdict (re-derived on the split thresholds):
-- **H-POTENT** iff ≥ 6/8 concepts are ablation-potent (g ≥ 0.15, transfer).
-- **H-INERT** iff ≥ 6/8 concepts are ablation-inert (g ≤ 0.05).
+Roster verdict (re-derived on the split logit thresholds):
+- **H-POTENT** iff ≥ 6/8 concepts are ablation-potent (g ≥ 1.0, transfer).
+- **H-INERT** iff ≥ 6/8 concepts are ablation-inert (g ≤ 0.3).
 - else **MIXED** → reported per concept, no forced call.
 
 ### Branch stopping rules (fixed before running)
@@ -101,13 +106,15 @@ Roster verdict (re-derived on the split thresholds):
   cited from results/m5/20260722-012727-m5-1c-nullcheck. This proves the ADD
   mechanism works, so 1b's injection-null is a real property, not a dead knob.
 - ABLATION positive control (this run): project out the **unembedding direction
-  of c** at the band-layer final positions must degrade c-accuracy by ≥ 0.30
-  above sham — a direction known to carry the answer — computed with the IDENTICAL
-  accuracy-drop statistic and the SAME ≥3-draw median/IQR marginalization as the
-  A2 test bars (so the control and the test cannot diverge on method; Ecaterina
-  2026-07-22). If it does NOT clear 0.30, band-layer ablation is too weak to
-  matter and the result is INCONCLUSIVE (neither branch), NOT H-INERT.
-  require_controlled() gates the verdict.
+  of c** at the band-layer final positions must produce a sham-controlled
+  logit-drop **g_pos ≥ 1.0 logit** — a direction known to carry the answer,
+  clearly separated from the random sham (~0.3); computed with the IDENTICAL
+  logit-drop statistic and the SAME ≥3-draw median/IQR marginalization as the A2
+  test bars (control and test cannot diverge on method; Ecaterina 2026-07-22).
+  Pre-run diagnostic reference: band-only unembed ablation gave ~+1.8 raw drop vs
+  sham ~−0.3, i.e. g_pos ~ +2.1 — clears 1.0. If g_pos does NOT clear 1.0,
+  band-layer ablation is too weak to matter and the result is INCONCLUSIVE
+  (neither branch), NOT H-INERT. require_controlled() gates the verdict.
 - Negative control / specificity: ablating d(c) on prompts whose answer is NOT c
   must not degrade those beyond sham (the direction is c-specific).
 - Sham twin in every reported row (sham LAW).
@@ -143,7 +150,20 @@ concepts × 3 draws × ~5 conditions × N≈30 ≈ 3.6k short generations → pr
 
 ## Deviations
 
-(none yet)
+- Option B (2026-07-22, Ecaterina — a PRE-RUN deviation, NOT a new amendment
+  cycle): the measure switches from argmax-accuracy to sham-controlled Δlogit(c),
+  band-layer ablation UNCHANGED. A pre-run diagnostic (single Paris prompt) showed
+  band-layer rank-1 project-out drops logit(Paris) by −1.8 from 17.9 but does NOT
+  flip the argmax (layers 17–23 rebuild it); band-through-end drops −17.7 and
+  flips; a random-direction sham gives +0.3. So argmax-accuracy is insensitive by
+  construction on a logit-17.9 prediction, while −1.8 vs sham +0.3 is a sensitive,
+  sham-separated signal. Ruled: this fixes an instrument that cannot bite, it does
+  not rescue a floor (accuracy was genuinely dead, not merely low), so it is a
+  pre-run deviation within this one cycle. All bars re-expressed in logit units
+  (potent ≥1.0 w/ transfer; inert ≤0.3 at the sham floor; 0.3–1.0 ambiguous;
+  positive control ≥1.0), roster 6/8 re-derived; everything else (≥3 draws,
+  median/IQR, sham twins, no-third-knob under H-INERT, no certificate this run)
+  unchanged.
 
 ## Ratification
 

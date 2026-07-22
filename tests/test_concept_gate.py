@@ -189,6 +189,16 @@ def test_plateau_below_bar_ceiling_limited():
     assert v["ceiling_limited"] and not v["plateaued_below_bar"] and not v["crossed_bar"]
 
 
+def test_classify_ablation_split_bands():
+    from jtvec.concept_gate import classify_ablation
+    assert classify_ablation(0.40, transfer=True, control_ok=True) == "ablation-potent"
+    assert classify_ablation(0.40, transfer=False, control_ok=True) == "weak-ambiguous"  # no transfer
+    assert classify_ablation(0.02, transfer=False, control_ok=True) == "ablation-inert"
+    assert classify_ablation(0.10, transfer=False, control_ok=True) == "weak-ambiguous"  # in the gap
+    assert classify_ablation(0.40, transfer=True, control_ok=False) == "inconclusive"  # control fail
+    assert classify_ablation(0.02, transfer=False, control_ok=False) == "inconclusive"  # never inert on fail
+
+
 def test_certificate_payload_scopes_concept_in_estimator():
     p = certificate_payload(concept="Paris", model="EleutherAI/pythia-410m@9879c9b",
                             converged_at=16, n_draws=3,
