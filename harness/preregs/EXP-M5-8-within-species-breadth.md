@@ -19,6 +19,34 @@ not "this representation type". This experiment extends each species to multiple
 instances under the IDENTICAL instruments and asks whether the profile reproduces
 within type, or the species is internally heterogeneous.
 
+## Hypothesis
+
+No claim about the models until run. The experiment tests whether each species'
+n=1 profile is TYPE-GENERAL — reproduces across the named instances under the
+identical instruments — or an n=1 artifact (internally heterogeneous). Per
+species, the reference profile and its reproduction bar are in the Decision
+rule; branches (PROFILE-REPRODUCES / HETEROGENEOUS) are fixed there.
+
+## Estimator plan
+
+The extractors are the certified n=1 estimators, UNCHANGED: S1 mean-difference
+concept directions; S2 the M2-certified JacobianIclMeanEstimator Todd FVs
+(cached tensors, no fresh extraction); S5 mean-difference steering vectors. The
+per-axis statistics are identical to the n=1 runs (Axes section): draw-stability
+= jtvec.concept_gate.min_pairwise_cosine over the 3 per-draw unit directions;
+lens-readout/output-alignment = jvec.evals.fvprobe.decode_vector jlens/logit
+label-rank over the cached lens draws; potency = injection (n_shot_eval + vector)
+and ablation (project-out), sham-controlled. >= 3 draws per axis; cross-draw
+summaries are DrawSet median/IQR. Deterministic given the fixed draws/instances.
+
+## Sample plan
+
+Instances are NAMED and FIXED in the Instances section (S1 n=5, S2 n=3, S5 n=4);
+ALL are reported, none added or dropped after seeing results (anti-harvesting).
+Held-out probe sets per the n=1 runs; >= 20 records per headline cell (achieved N
+reported where a pool is smaller). Lens draws: the 3 cached draws; extraction/FV
+draws: the 3 per species as specified in Axes.
+
 ## Instances — NAMED NOW, ALL reported (anti-harvesting; Ecaterina 2026-07-23)
 
 The instance lists are FIXED and NAMED in this prereg before the run. ALL named
@@ -106,7 +134,7 @@ Branches, fixed before running:
 - Control failure → that instance-axis inconclusive.
 - Post-hoc analyses of stored tensors labelled post-hoc forever.
 
-## Machine split + resource estimate
+## Resource estimate + machine split
 
 - S1 (5 concepts) + S5 (2–3 steering): **the Mac** (410M, MPS fp32) — reuses the
   1b/1d/M5-6 machinery + the cached 410M lens draws. Projected ~2–3 h wall, peak
@@ -124,7 +152,16 @@ Branches, fixed before running:
 
 ## Deviations
 
-(none yet)
+- Section-heading conformance fix (2026-07-23, text-only; D-015 precedent).
+  start_run's check_prereg_sections requires the literal headings
+  `## Hypothesis`, `## Estimator plan`, `## Sample plan`, `## Resource estimate`;
+  the ratified draft carried that content under `## Why` / `## Axes` /
+  `## Instances` / `## Machine split + resource estimate`. Added the three
+  missing headings (restating content already specified elsewhere) and renamed
+  the resource heading to contain `## Resource estimate`. NO threshold, instance
+  list, or decision-rule change; not an amendment (fresh experiment, budget n/a).
+  Applies to the shared prereg, so it also unblocks the Mac's S1/S5 runs. Flagged
+  for Ecaterina.
 
 ## Ratification
 
