@@ -2170,3 +2170,15 @@ Ecaterina ruled (session, 2026-07-22):
   relation operator / random-token must-fail) in place; report per-relation +
   roster under the marginalized criterion. Draft for her ratification; runs on
   the RTX once she approves; S3/M5.2 idle meanwhile. [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-2b RATIFIED (final budget cycle); RTX to build+run (Claude)
+
+Ecaterina ratified EXP-M5-2b ("ratify"). Prereg committed as the prereg act
+(harness/preregs/EXP-M5-2b-operator-criterion.md). THE LAST budgeted amendment
+cycle — 0 remain after; then M6 runs on the certified set. S3 draw-marginalized /
+cosine operator criterion (the argmax->direction-space fix) vs the M5.2 top-1
+agreement; D-034 fixed negative control (cross-relation / random-token must-fail);
+no sixth criterion (close-under = fail, full stop). RTX builds its own
+orchestrator against the committed prereg and runs on 1.4B; per-relation + roster
+under the marginalized criterion; certificate + sign-off Ecaterina's. RTX startup
+prompt delivered this session. [no sign-off implied]
