@@ -64,6 +64,43 @@ member of the species." No instance is added or dropped after seeing results.
   politeness (polite/rude), excitement (exciting/boring)** — mean-difference
   steering, same construction as the M5-6 sentiment vector. LOAD-BEARING (below).
 
+## Hypothesis
+
+Each species' n=1 profile is TYPE-GENERAL, not a single-vector artifact: the
+per-species (draw-stability, lens-readout, potency, output-alignment) pattern
+reproduces across the NAMED instances of that species. The honest alternative,
+tested and reported as such, is that a species is internally HETEROGENEOUS (its
+instances straddle the profile) — which withdraws that species' claim from a
+type claim to a per-vector claim. HYPOTHESIS tier.
+
+## Estimator plan
+
+Per instance, the four axes computed with the n=1 instruments (§Axes): draw-
+stability = jtvec.concept_gate.min_pairwise_cosine over the 3 per-draw
+identity_direction units; lens-readout = decode_vector jlens label-rank median
+over the 3 cached lens draws; potency = S1 injection alpha-sweep Δp (m5_1b) +
+project-out Δp, S5 injection+ablation ΔS (m5_6), both sham-controlled with the
+positive/negative controls of the n=1 runs; output-alignment = the logit-lens
+label-rank (logit arm of decode_vector). S1 directions extracted at n=256 (the
+m5_1b converged regime where all five concepts cross the 0.95 cosine bar); S5
+directions from 12-of-16 seed-varied subsamples per draw (so the 3 draws
+genuinely differ); S2 (RTX) from the M2-certified FV draw tensors.
+
+## Sample plan
+
+S1: 5 concepts × 3 extraction draws × 3 lens draws; potency over N_eval=200
+carriers (the m5_1b N). S5: 4 attributes × 3 draws × 3 lens draws; potency ΔS
+over 10 neutral carriers (the m5_6 N). S2 (RTX): 3 certified FVs × 3 draws × 3
+lens draws. Raw per-instance cells retained per (instance, axis).
+
+## Resource estimate (Mac tier, 410M, MPS fp32)
+
+S1 extraction ≈ 256×2×3×5 ≈ 7.7k forwards; S1 potency ≈ 6.2k/concept × 5 ≈ 31k;
+S5 ≈ 1k; lens-readout reuses the cached draws (matmuls). At the m5_1b measured
+~106 ms/forward this is ≈ 70 min of forwards + lens/overhead → projected
+~1.5–2 h wall, peak ~2.8 GB (well under the m5_1b 8-concept-full-ladder 2.0 h).
+Under the 12 h LAW. Detached + Monitor. S2 on the RTX (~1–2 h).
+
 ## Axes (identical instruments to the n=1 runs; ≥3 lens draws; sham twins)
 
 Per instance, all four:
