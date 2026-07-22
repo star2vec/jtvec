@@ -1,0 +1,18 @@
+{
+  "run_name": "m5-1b-concept-diagnostic",
+  "started": "2026-07-22T02:31:37",
+  "git_commit": "8ab4f58f0e2dcaabbf0e54d84f643f1fc7a48ca9",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-1b-concept-diagnostic.md",
+  "prereg_commit": "8ab4f58f0e2dcaabbf0e54d84f643f1fc7a48ca9",
+  "config_sha256": "64728c0a7ab09111ec3faaeb7d2f74ae3f4a7f660d7d43519cf5018df1a07c22",
+  "post_hoc": false,
+  "outcome_tally": {
+    "ceiling-limited/unmeasurable-potency": 3,
+    "crossed/unmeasurable-potency": 4,
+    "ceiling-limited/sub-bar": 1
+  },
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 7113.4,
+  "peak_rss_gb": 2.57,
+  "finished": "2026-07-22T04:30:10"
+}

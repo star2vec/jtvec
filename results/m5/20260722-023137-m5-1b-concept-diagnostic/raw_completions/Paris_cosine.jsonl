@@ -1,0 +1,6 @@
+{"rung": 8, "min_pairwise_cosine": 0.614, "effect_iqr": 0.00481}
+{"rung": 16, "min_pairwise_cosine": 0.6585, "effect_iqr": 0.00574}
+{"rung": 32, "min_pairwise_cosine": 0.763, "effect_iqr": 0.00096}
+{"rung": 64, "min_pairwise_cosine": 0.9051, "effect_iqr": 0.00205}
+{"rung": 128, "min_pairwise_cosine": 0.9453, "effect_iqr": 0.00106}
+{"rung": 256, "min_pairwise_cosine": 0.9737, "effect_iqr": 0.00048}

@@ -1,0 +1,4 @@
+{"alpha": 1.0, "sham_ctrl_dp_median": 0.00016, "iqr": 4e-05}
+{"alpha": 2.0, "sham_ctrl_dp_median": 0.00092, "iqr": 0.00019}
+{"alpha": 4.0, "sham_ctrl_dp_median": 0.00202, "iqr": 0.00042}
+{"alpha": 8.0, "sham_ctrl_dp_median": 0.0023, "iqr": 0.00036}

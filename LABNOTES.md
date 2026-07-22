@@ -1959,3 +1959,43 @@ extraction, extended ladder) remains the decider; no S1 convergence claimed here
 
 1b runner built + green (scripts/m5_1b_concept_diagnostic.py, plateau helper,
 206 tests) and HELD uncommitted, ready to fire on Ecaterina's go. [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-1b S1 concept diagnostic RAN (410M): convergence recovers, potency UNMEASURABLE (Claude)
+
+results/m5/20260722-023137-m5-1b-concept-diagnostic (410M, prereg committed
+8ab4f58; wall 7113 s, peak 2.57 GB, no swap). Extended ladder {8..256}, alpha
+sweep {1,2,4,8}, N_eval=200, 3 draws, 8-capital roster. Issues NO certificate
+(diagnostic). Per condition (c) no verdict was pre-named; the run decided.
+
+Convergence (D-033 condition a): ALL 8 cross the 0.95 cosine bar at T=256 (cos256
+0.974-0.985); 0/8 plateaued below the bar. cos128 sits on a knife-edge (0.943-
+0.968): 4/8 clear 0.95 at 128 with 256 as witness (converged_at=128: London,
+Vienna, Athens, Cairo) and 4/8 land at ~0.944 at 128, crossing only at the firm
+ceiling 256 without a within-ceiling witness (Paris, Rome, Berlin, Madrid; the
+'ceiling-limited' label is imprecise — they crossed at 256). Reading: the M5.1
+convergence FAIL (cos 0.90-0.94 at T=64) was a too-short ladder, as D-033
+conjectured; the direction is draw-stable and recovers at the extended ladder.
+
+Potency (D-033 condition b): 0/8 potent (none clear +0.10); 7/8 unmeasurable
+(best sham-controlled Δp +0.000..+0.003, at/below the 0.005 quantization band,
+even at 8x injection); 1/8 sub-bar (Madrid +0.006 @a1). Per condition (b) this is
+DECLARED: S1 concept potency is UNMEASURABLE at 410M via this readout (norm-
+preserving residual activation-addition on off-target carriers) — a resolution
+statement, NOT 'the direction is impotent'. Negative control: 7/8 ok, Paris FAIL
+(floor-noise trips the tight 0.005 band when every effect sits at the floor).
+
+Net: the S1 concept direction is stable/convergent (ladder-recoverable) but its
+downstream potency is below the resolution floor of this injection+readout. An S1
+certificate needs BOTH; it cannot be issued as-is. The prereg's recorded fallback
+for a floored potency is the M1 lens-coordinate injection (swap machinery, Δp
++0.60 in M1) rather than the plain residual addition — i.e. the unmeasurability
+may indict the injection method (design decision #1), a distinct question from
+substrate. Decision FLAGGED for Ecaterina (amendment budget: 2 cycles left;
+'escalate counts as a cycle'; 'specification before scale'):
+(A) lens-coordinate injection probe (design amendment, 1 cycle) — tests
+    injection-method vs genuine potency-darkness;
+(B) escalate S1 potency to 1.4B (substrate, 1 cycle);
+(C) accept 'S1 convergent-but-potency-unmeasurable at 410M' as the result and
+    publish the hole (0 cycles; in-spirit with the standing 'taxonomy with holes'
+    preference) — but leaves injection-vs-substrate unresolved.
+No cycle spent, no amendment adopted, pending her ruling. [no sign-off implied]

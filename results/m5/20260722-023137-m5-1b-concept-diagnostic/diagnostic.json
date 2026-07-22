@@ -1,0 +1,335 @@
+{
+  "reports": {
+    "Paris": {
+      "concept": "Paris",
+      "convergence": "ceiling-limited",
+      "converged_at": null,
+      "cosine_by_rung": {
+        "8": 0.614,
+        "16": 0.6585,
+        "32": 0.763,
+        "64": 0.9051,
+        "128": 0.9453,
+        "256": 0.9737
+      },
+      "plateau": {
+        "cos_ceiling": 0.9737,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.0402,
+          0.0284
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "unmeasurable-potency",
+      "best_alpha": 8.0,
+      "best_sham_ctrl_dp": 0.00263,
+      "monotone_dose_response": false,
+      "gain_by_alpha": {
+        "1.0": 0.00242,
+        "2.0": 0.00175,
+        "4.0": 0.00189,
+        "8.0": 0.00263
+      },
+      "negative_control": {
+        "passed": false,
+        "detail": "max |\u0394p| 0.0052 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    },
+    "London": {
+      "concept": "London",
+      "convergence": "crossed",
+      "converged_at": 128,
+      "cosine_by_rung": {
+        "8": 0.74,
+        "16": 0.7821,
+        "32": 0.8577,
+        "64": 0.9416,
+        "128": 0.9684,
+        "256": 0.9848
+      },
+      "plateau": {
+        "cos_ceiling": 0.9848,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.0268,
+          0.0163
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "unmeasurable-potency",
+      "best_alpha": 8.0,
+      "best_sham_ctrl_dp": 0.00081,
+      "monotone_dose_response": false,
+      "gain_by_alpha": {
+        "1.0": 0.00035,
+        "2.0": 0.0002,
+        "4.0": 0.00032,
+        "8.0": 0.00081
+      },
+      "negative_control": {
+        "passed": true,
+        "detail": "max |\u0394p| 0.0019 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    },
+    "Rome": {
+      "concept": "Rome",
+      "convergence": "ceiling-limited",
+      "converged_at": null,
+      "cosine_by_rung": {
+        "8": 0.6216,
+        "16": 0.695,
+        "32": 0.7852,
+        "64": 0.9096,
+        "128": 0.9438,
+        "256": 0.9739
+      },
+      "plateau": {
+        "cos_ceiling": 0.9739,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.0343,
+          0.0301
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "unmeasurable-potency",
+      "best_alpha": 8.0,
+      "best_sham_ctrl_dp": 0.0023,
+      "monotone_dose_response": true,
+      "gain_by_alpha": {
+        "1.0": 0.00016,
+        "2.0": 0.00092,
+        "4.0": 0.00202,
+        "8.0": 0.0023
+      },
+      "negative_control": {
+        "passed": true,
+        "detail": "max |\u0394p| 0.0007 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    },
+    "Berlin": {
+      "concept": "Berlin",
+      "convergence": "ceiling-limited",
+      "converged_at": null,
+      "cosine_by_rung": {
+        "8": 0.6326,
+        "16": 0.6835,
+        "32": 0.7858,
+        "64": 0.9068,
+        "128": 0.9471,
+        "256": 0.9759
+      },
+      "plateau": {
+        "cos_ceiling": 0.9759,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.0403,
+          0.0288
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "unmeasurable-potency",
+      "best_alpha": 8.0,
+      "best_sham_ctrl_dp": 0.00025,
+      "monotone_dose_response": true,
+      "gain_by_alpha": {
+        "1.0": 7e-05,
+        "2.0": 0.0001,
+        "4.0": 0.00019,
+        "8.0": 0.00025
+      },
+      "negative_control": {
+        "passed": true,
+        "detail": "max |\u0394p| 0.0011 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    },
+    "Madrid": {
+      "concept": "Madrid",
+      "convergence": "ceiling-limited",
+      "converged_at": null,
+      "cosine_by_rung": {
+        "8": 0.5891,
+        "16": 0.6183,
+        "32": 0.7314,
+        "64": 0.898,
+        "128": 0.9431,
+        "256": 0.9738
+      },
+      "plateau": {
+        "cos_ceiling": 0.9738,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.0451,
+          0.0306
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "sub-bar",
+      "best_alpha": 1.0,
+      "best_sham_ctrl_dp": 0.00585,
+      "monotone_dose_response": false,
+      "gain_by_alpha": {
+        "1.0": 0.00585,
+        "2.0": 0.00516,
+        "4.0": 0.00107,
+        "8.0": 0.0009
+      },
+      "negative_control": {
+        "passed": true,
+        "detail": "max |\u0394p| 0.0001 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    },
+    "Vienna": {
+      "concept": "Vienna",
+      "convergence": "crossed",
+      "converged_at": 128,
+      "cosine_by_rung": {
+        "8": 0.6987,
+        "16": 0.7606,
+        "32": 0.8344,
+        "64": 0.9342,
+        "128": 0.9614,
+        "256": 0.9832
+      },
+      "plateau": {
+        "cos_ceiling": 0.9832,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.0271,
+          0.0218
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "unmeasurable-potency",
+      "best_alpha": 2.0,
+      "best_sham_ctrl_dp": 0.0,
+      "monotone_dose_response": false,
+      "gain_by_alpha": {
+        "1.0": 0.0,
+        "2.0": 0.0,
+        "4.0": 0.0,
+        "8.0": 0.0
+      },
+      "negative_control": {
+        "passed": true,
+        "detail": "max |\u0394p| 0.0001 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    },
+    "Athens": {
+      "concept": "Athens",
+      "convergence": "crossed",
+      "converged_at": 128,
+      "cosine_by_rung": {
+        "8": 0.6932,
+        "16": 0.7528,
+        "32": 0.8333,
+        "64": 0.9274,
+        "128": 0.9571,
+        "256": 0.9825
+      },
+      "plateau": {
+        "cos_ceiling": 0.9825,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.0297,
+          0.0254
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "unmeasurable-potency",
+      "best_alpha": 1.0,
+      "best_sham_ctrl_dp": 0.0001,
+      "monotone_dose_response": false,
+      "gain_by_alpha": {
+        "1.0": 0.0001,
+        "2.0": 8e-05,
+        "4.0": 5e-05,
+        "8.0": 2e-05
+      },
+      "negative_control": {
+        "passed": true,
+        "detail": "max |\u0394p| 0.0000 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    },
+    "Cairo": {
+      "concept": "Cairo",
+      "convergence": "crossed",
+      "converged_at": 128,
+      "cosine_by_rung": {
+        "8": 0.7019,
+        "16": 0.7643,
+        "32": 0.8452,
+        "64": 0.9303,
+        "128": 0.9603,
+        "256": 0.9849
+      },
+      "plateau": {
+        "cos_ceiling": 0.9849,
+        "ceiling": 256,
+        "delta_last_two": [
+          0.03,
+          0.0247
+        ],
+        "crossed_bar": true,
+        "plateaued_below_bar": false,
+        "ceiling_limited": false
+      },
+      "potency": "unmeasurable-potency",
+      "best_alpha": 2.0,
+      "best_sham_ctrl_dp": 0.00027,
+      "monotone_dose_response": false,
+      "gain_by_alpha": {
+        "1.0": 8e-05,
+        "2.0": 0.00027,
+        "4.0": 0.00017,
+        "8.0": 3e-05
+      },
+      "negative_control": {
+        "passed": true,
+        "detail": "max |\u0394p| 0.0002 vs bound 0.0050 = max(0.005, 1/200)"
+      }
+    }
+  },
+  "outcome_tally": {
+    "ceiling-limited/unmeasurable-potency": 3,
+    "crossed/unmeasurable-potency": 4,
+    "ceiling-limited/sub-bar": 1
+  },
+  "model": "EleutherAI/pythia-410m@9879c9b",
+  "rungs": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "alphas": [
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "n_eval": 200,
+  "cos_bar": 0.95,
+  "pos_min_gain": 0.1,
+  "potency_band": 0.005,
+  "peak_rss_gb": 2.57,
+  "wall_clock_s": 7113.4,
+  "note": "diagnostic \u2014 issues no certificate; a certificate is a later ratified EXP-M5-1 amendment + re-run"
+}
