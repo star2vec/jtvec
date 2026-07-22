@@ -2141,3 +2141,32 @@ lands MIXED/partial, NOT a clean pole. No S1 certificate. Disposition FLAGGED
 for Ecaterina; NO further S1 probe proposed (budget: 1 cycle left, earmarked for
 EXP-M5-2b; and no clean H-INERT to invoke the two-nulls-suffice rule against).
 [no sign-off implied]
+
+### 2026-07-22 — S1 disposition ACCEPTED (H1 anchor dichotomy recorded); EXP-M5-2b = final cycle (Claude)
+
+Ecaterina ruled (session, 2026-07-22):
+
+- S1 DISPOSITION ACCEPTED. S1 is reported as: draw-stable, decodable (EXP-M5-1b
+  convergence — all 8 cross 0.95 at the extended ladder), injection-inert (1b
+  0/8 potent; the EXP-M5-1c null-check +0.80 confirms the injection knob is live,
+  so the null is real), ablation corroborating non-potency where measurable
+  (EXP-M5-1d: 0 potent, 1 inert, 3 weak, 4 inconclusive — the 1d messiness
+  reported honestly in the result, NOT hidden). The claim rests on the CLEAN
+  injection axis; ablation is corroborating, not load-bearing, so 8/8 was never
+  required. NO further S1 probe. Recorded as CLM-005 (hypothesis) + the H1
+  annotation in CONSTRAINTS: S1 = (decodable, not-potent) vs S2 = (not-decodable,
+  potent) is the H1 anchor dichotomy, from clean (1b/1c) + verified (CLM-003/004)
+  evidence. H1 stays HYPOTHESIS-tier (S1 legs diagnostic, S2-not-decodable
+  hypothesis; S2-potency verified) pending Ecaterina's verify/sign-off.
+
+- FINAL budgeted cycle -> EXP-M5-2b (S3 draw-marginalized / cosine operator
+  criterion), NOT the 4 inconclusive S1 concepts (marginal cleanup on a
+  non-load-bearing arm). Conditions folded into the 2b prereg (still UNCOMMITTED,
+  awaiting her ratification): both branches fixed (certifies -> S3 admitted + the
+  cross-species stable-in-direction/unstable-in-argmax story; fails even
+  marginalized -> S3 genuinely hard-to-measure at 1.4B, no further probes); NO
+  SIXTH CRITERION — close-but-under is a FAIL, not a new bar; whatever 2b returns
+  is the S3 disposition, full stop; D-034's fixed negative control (unrelated-
+  relation operator / random-token must-fail) in place; report per-relation +
+  roster under the marginalized criterion. Draft for her ratification; runs on
+  the RTX once she approves; S3/M5.2 idle meanwhile. [no sign-off implied]

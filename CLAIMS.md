@@ -68,3 +68,13 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - results-dir: results/m4/20260719-151956-e3-swap
 - raw-completions: results/m4/20260719-151956-e3-swap/raw_completions
 - verified-by: Ecaterina
+
+### CLM-005
+- status: hypothesis
+- statement: On Pythia-410M, S1 concept mean-difference directions are draw-stable and decodable yet injection-inert, the "decodable pole" of the H1 anchor dichotomy. EXP-M5-1b: all 8 roster capitals cross the 0.95 cross-draw cosine bar at the extended ladder to 256 (4/8 with a within-ceiling witness at 128; 0/8 plateau below) — draw-stable/decodable; but 0/8 clear the +0.10 sham-controlled Δp potency bar even at 8x injection — injection-inert. The EXP-M5-1c null-check confirms the injection mechanism is live (unembed('Paris') residual-add Δp +0.80; scrambled-label null ~0), so the injection-null is a real property, not a dead knob. EXP-M5-1d (band-layer project-out, sham-controlled Δlogit) corroborates non-potency where measurable: 0/8 potent (1 inert, 3 weak, 4 inconclusive — the ablation positive control failed on 4 concepts, reported honestly). The claim rests on the clean injection axis; ablation is corroborating, not load-bearing. With S2's evidence (CLM-001 E1 NOT-DECODABLE; CLM-003/004 S2 potent, verified), S1=(decodable, not-potent) vs S2=(not-decodable, potent) is the H1 dichotomy. Status stays hypothesis per the discipline (the S1 legs are diagnostic-tier; only S2 potency is verified) pending Ecaterina's verify line.
+- scope: EleutherAI/pythia-410m@9879c9b, EXP-M5-1b/1c/1d, 8-capital roster, 3 draws
+- evidence-commit: none
+- prereg: harness/preregs/EXP-M5-1b-concept-diagnostic.md
+- results-dir: results/m5/20260721-132124-m5-1b-concept-diagnostic
+- raw-completions: results/m5/20260721-132124-m5-1b-concept-diagnostic/raw_completions
+- verified-by: none
