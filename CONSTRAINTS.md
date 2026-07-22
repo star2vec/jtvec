@@ -156,13 +156,21 @@ added. Nothing may be promoted a tier without the evidence line filled in.
   of the matrix at preregistered bars. Anchor result; both poles already
   have supporting certified evidence (M1 +0.60 lens-coord swaps; E1/E3
   negatives).
-  (2026-07-22 SUPPORTED, still HYPOTHESIS-tier: S1 = (decodable [EXP-M5-1b
-  convergence, all 8 cross 0.95], injection-inert [1b 0/8 potent, EXP-M5-1c
-  null-check +0.80 confirms the knob], ablation-corroborated non-potency
-  [EXP-M5-1d]) vs S2 = (not-decodable [E1/CLM-001], potent [E2/E3, CLM-003/004
-  VERIFIED]). See CLM-005. The S2-potency legs are verified; the S1 legs are
-  diagnostic-tier and S2-not-decodable is hypothesis — so H1 stays HYPOTHESIS,
-  awaiting Ecaterina's verify/sign-off. Recorded per her 2026-07-22 ruling.)
+  (2026-07-22 REFRAMED, Ecaterina ruling (a) after EXP-M5-6: the original
+  (decodability × potency) 2×2 is RETIRED as the anchor — it compared S1 and S2
+  on DIFFERENT senses of "decodable" (S1 = EXP-M5-1b convergence; S2 =
+  decode_vector), and under the SAME instrument (decode_vector) BOTH S1 and S2
+  are lens-DARK (jlens label-rank 192 / 436). The instrument-CONSISTENT anchor
+  is DRAW-STABILITY × POTENCY: S1 = (draw-stable [EXP-M5-1b, all 8 cross 0.95],
+  injection-inert [1b 0/8; EXP-M5-1c null-check +0.80 confirms the knob; 1d
+  corroborates]) vs S2 = (draw-UNSTABLE [VERIFIED M2, cosine 0.43-0.61], potent
+  [E2/E3, CLM-003/004 VERIFIED]). Additional axes recorded under the same
+  decode_vector (EXP-M5-6): lens-readout — S1 dark, S2 dark, S5 logit-trivial;
+  logit-privilege (A1b) — empty (no representation is J-lens-privileged);
+  output-alignment — S5. CENTRAL FINDING: "A1 decodability" conflated THREE
+  measurements (draw-stability, lens-readout, logit-privilege) — CLM-006, the
+  paper's spine. Still HYPOTHESIS-tier (S1 legs diagnostic; S2 potency verified).
+  NO instrument hunted to restore the old 2×2 (harvesting; budget 0). CLM-005/006.)
 - HYPOTHESIS (H2, axis coupling): A1 and A3 agree per species. A
   dissociation (decodable-but-basis-agnostic or dark-but-basis-mediated) in
   any species is a headline refinement: verbalizable != workspace-functional.

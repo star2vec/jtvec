@@ -101,17 +101,25 @@ qualification, supersedes Mac Pass A): 1.4B S3 ADMITTED (LRE 8/12: capital-city
 .62, from-country .60, work-location .607), S1 5/8, FV 2/3 (cap .98/sp .98/en-fr
 .67), bind2 0.65. So S3 admits ONLY at 1.4B (410M 4/12); M5.2 has its substrate.
 FLAG open: binding (S4) clears 0.70 on NEITHER model at N=60 -> S4/H5 needs a
-stronger substrate or a battery re-spec (Ecaterina to rule). EXP-M5-1 (S1 concept gate) BUILT (code+tests, commit 310ca88) and RAN on
-410M (results/m5/20260721-132124-m5-1-concept): S1 certificate NOT issued —
-instrument-control failure (pos control 0/8). Raw replay (diagnostic-first, D-027
-shape): NOT signal absence but two miscalibrations — (1) cosine ladder too short
-(direction cosine rises monotonically to 0.90-0.94 at T=64, approaching 0.95;
-extend to 128+), (2) potency readout at the floor (off-target carriers, mean
-p_base 0.00056, so the +0.10 absolute-Δp bar + the IQR criterion are both
-uninformative). D-033 FLAGGED: EXP-M5-1 amendment / EXP-M5-1b diagnostic
-(ladder extension + readout recalibration) drafted UNCOMMITTED, awaiting ruling;
-no gate re-run until then. EXP-M5-0c RAN on the RTX (H-CONFOUND: 1.4b's Q2 flip
-miss tracks a higher base-answer margin, not a reduced sham-controlled effect —
-diagnostic, HYPOTHESIS tier, no Q2/Q6 change; D-032 the RTX's proposed 0c
-negative-control fix, awaiting ruling). RTX queue: the 1.4B qualification Pass B.
-Standing: D-002 accepted knowingly.
+stronger substrate or a battery re-spec. ===== CURRENT STATE 2026-07-22 (M5 phase
+closed; amendment budget = 0; both machines idle) =====
+Species dispositions (410M unless noted): S1 concept = DRAW-STABLE (EXP-M5-1b, all
+8 cross 0.95) + injection-inert (1b 0/8; EXP-M5-1c null-check +0.80 confirms the
+knob; 1d ablation corroborates, MIXED/4-inconclusive). S2 FV = draw-UNSTABLE
+(VERIFIED M2) + potent (E2/E3, CLM-003/004 VERIFIED). S3 operators = H-S3-HARD
+(EXP-M5-2/2b on 1.4B: 2/8 certify [country-capital, food]; species not stably
+measurable; D-034 neg-control fix RULED+committed). S4 binding = UNMEASURABLE
+(broken generator: majority-class >= model; specification ruling stands). S5
+steering = logit-trivially decodable (EXP-M5-6: jlens 2 = logit 2) + potent (+13),
+output-aligned.
+H1 REFRAMED (ruling (a), 2026-07-22): the (decodability × potency) 2×2 anchor is
+RETIRED — it compared S1 (convergence sense) vs S2 (decode_vector sense) on
+different "decodable" senses; under the same decode_vector BOTH S1 (jlens 192) and
+S2 (436) are lens-dark. Instrument-consistent anchor = DRAW-STABILITY × POTENCY
+(S1 stable+inert vs S2 unstable+potent). CENTRAL FINDING (CLM-006, the paper's
+spine): "A1 decodability" conflated THREE measurements — draw-stability,
+lens-readout (reads-at-all), logit-privilege (A1b, empty). CLM-005 scoped to the
+convergence sense. No instrument hunted to restore the old 2×2 (harvesting;
+budget 0). Governance closed: D-032 (0c neg-ctrl) + D-034 (S3 neg-ctrl) RULED;
+Q2-replication (EXP-M5-0d) + S4 re-spec remain HELD with no compute (budget 0).
+NEXT: write-up vs any further work — Ecaterina to decide. Standing: D-002 accepted.

@@ -2294,3 +2294,28 @@ weakens the H1 anchor dichotomy as stated in CLM-005 / the CONSTRAINTS H1
 annotation; the decodability axis must be pinned to ONE instrument. Ecaterina to
 rule on scoping CLM-005's "decodable" and re-examining H1. No claim modified
 unilaterally. [no sign-off implied]
+
+### 2026-07-23 — Ruling (a) FULL ACCOUNTING: H1 anchor retired + reframed (Ecaterina) (Claude)
+
+Ecaterina ruled (a), full accounting (not a patch), after EXP-M5-6 showed S1's
+concept direction is also lens-dark to decode_vector (jlens 192, like S2's 436).
+Executed:
+- CLM-005 SCOPED: "S1 decodable" -> "S1 draw-stable / convergent (the 1b sense)";
+  recorded explicitly that S1 was never lens-readout-decodable (dark to
+  decode_vector).
+- The (decodability × potency) 2×2 RETIRED as the H1 anchor — it compared S1 and
+  S2 on different senses of "decodable"; under the same instrument (decode_vector)
+  both are lens-dark. Replaced with the instrument-consistent dissociation:
+  DRAW-STABILITY × POTENCY (S1 = draw-stable + inert; S2 = draw-unstable [VERIFIED
+  M2] + potent [CLM-003/004]), with lens-readout (S1 dark, S2 dark, S5
+  logit-trivial) and output-alignment (S5) as additional recorded axes.
+- CLM-006 ADDED (the paper's spine): "A1 decodability" silently conflated THREE
+  measurements — draw-stability, lens-readout (reads-at-all), logit-privilege
+  (A1b) — which coincide for some representation types (S2) and separate for
+  others (S5, S1).
+- NO instrument hunted to restore the old 2×2 (harvesting; budget 0). Same-
+  instrument comparison stands.
+- Updated: CLAIMS.md (CLM-005 scope, CLM-006), CONSTRAINTS.md (H1 annotation),
+  CLAUDE.md (state line). Validators 3/3.
+Next: the one-paragraph statement of what the paper now claims -> then Ecaterina
+decides write-up vs further work. [no sign-off implied]
