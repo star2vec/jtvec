@@ -1,0 +1,12 @@
+{"relation": "factual/country_capital_city", "subject": "China", "object": "Beijing", "top1_by_draw": [" Beijing", " Beijing", " Beijing"]}
+{"relation": "factual/country_capital_city", "subject": "United States", "object": "Washington D.C.", "top1_by_draw": [" Washington", " Washington", " Washington"]}
+{"relation": "factual/country_capital_city", "subject": "India", "object": "New Delhi", "top1_by_draw": [" New", " New", " Delhi"]}
+{"relation": "factual/country_capital_city", "subject": "Colombia", "object": "Bogot\\u00e1", "top1_by_draw": [" Bog", " Bog", " Bog"]}
+{"relation": "factual/country_capital_city", "subject": "Peru", "object": "Lima", "top1_by_draw": [" L", " L", " L"]}
+{"relation": "factual/country_capital_city", "subject": "Germany", "object": "Berlin", "top1_by_draw": ["\n", " S", "\n"]}
+{"relation": "factual/country_capital_city", "subject": "Turkey", "object": "Ankara", "top1_by_draw": [" Istanbul", " Istanbul", " Istanbul"]}
+{"relation": "factual/country_capital_city", "subject": "Saudi Arabia", "object": "Riyadh", "top1_by_draw": [" S", " S", "\n"]}
+{"relation": "factual/country_capital_city", "subject": "France", "object": "Paris", "top1_by_draw": [" Paris", " Paris", " Paris"]}
+{"relation": "factual/country_capital_city", "subject": "Argentina", "object": "Buenos Aires", "top1_by_draw": [" Buenos", " Buenos", " Buenos"]}
+{"relation": "factual/country_capital_city", "subject": "Mexico", "object": "Mexico City", "top1_by_draw": [" Mexico", " Mexico", " Mexico"]}
+{"relation": "factual/country_capital_city", "subject": "Egypt", "object": "Cairo", "top1_by_draw": [" Cairo", " Cairo", " Cairo"]}

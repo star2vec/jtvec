@@ -1,0 +1,30 @@
+{"relation": "factual/product_by_company", "subject": "Outlook Express", "object": "Microsoft", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Acura RDX", "object": "Honda", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Mac OS 9", "object": "Apple", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "REXX", "object": "IBM", "top1_by_draw": [" Microsoft", " Microsoft", " Nintendo"]}
+{"relation": "factual/product_by_company", "subject": "Windows Driver Frameworks", "object": "Microsoft", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Color TV-Game", "object": "Nintendo", "top1_by_draw": [" Microsoft", " Nintendo", " Nintendo"]}
+{"relation": "factual/product_by_company", "subject": "PowerFlite", "object": "Chrysler", "top1_by_draw": [" Microsoft", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Hierarchical File System", "object": "Apple", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "PowerShell", "object": "Microsoft", "top1_by_draw": [" Microsoft", " Microsoft", " Microsoft"]}
+{"relation": "factual/product_by_company", "subject": "MessagePad", "object": "Apple", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "SteadyShot", "object": "Sony", "top1_by_draw": [" Microsoft", " Apple", " Sony"]}
+{"relation": "factual/product_by_company", "subject": "Zero configuration networking", "object": "Apple", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Exmor", "object": "Sony", "top1_by_draw": [" Microsoft", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Android TV", "object": "Google", "top1_by_draw": [" Microsoft", " Apple", " Sony"]}
+{"relation": "factual/product_by_company", "subject": "Fonz", "object": "Sega", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Sonic Drift 2", "object": "Sega", "top1_by_draw": [" Microsoft", " Apple", " Sony"]}
+{"relation": "factual/product_by_company", "subject": "SEAT 133", "object": "Fiat", "top1_by_draw": [" Microsoft", " Microsoft", " Sony"]}
+{"relation": "factual/product_by_company", "subject": "Photo Booth", "object": "Apple", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "iPod Nano", "object": "Apple", "top1_by_draw": [" Microsoft", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Yakuza 2", "object": "Sega", "top1_by_draw": [" Microsoft", " Microsoft", " Nintendo"]}
+{"relation": "factual/product_by_company", "subject": "Windows Mobile", "object": "Microsoft", "top1_by_draw": [" Nokia", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "B-29 Superfortress", "object": "Boeing", "top1_by_draw": [" Microsoft", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "iPad", "object": "Apple", "top1_by_draw": [" Apple", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Alfa Romeo 164", "object": "Fiat", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Windows Media Player", "object": "Microsoft", "top1_by_draw": [" Microsoft", " Microsoft", " Sony"]}
+{"relation": "factual/product_by_company", "subject": "iLife", "object": "Apple", "top1_by_draw": [" Microsoft", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Vector Markup Language", "object": "Microsoft", "top1_by_draw": [" Microsoft", " Microsoft", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Xcode", "object": "Apple", "top1_by_draw": [" Apple", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "iBeacon", "object": "Apple", "top1_by_draw": [" Apple", " Apple", " Apple"]}
+{"relation": "factual/product_by_company", "subject": "Windows 10", "object": "Microsoft", "top1_by_draw": [" Microsoft", " Microsoft", " Microsoft"]}

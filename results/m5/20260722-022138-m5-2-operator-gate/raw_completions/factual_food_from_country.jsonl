@@ -1,0 +1,15 @@
+{"relation": "factual/food_from_country", "subject": "Baguette", "object": "France", "top1_by_draw": [" France", " France", " France"]}
+{"relation": "factual/food_from_country", "subject": "Fish and Chips", "object": "United Kingdom", "top1_by_draw": [" Middle", " Russia", " the"]}
+{"relation": "factual/food_from_country", "subject": "Masala Dosa", "object": "India", "top1_by_draw": [" India", " India", " India"]}
+{"relation": "factual/food_from_country", "subject": "Gyro", "object": "Greece", "top1_by_draw": [" Greece", " Greece", " Greece"]}
+{"relation": "factual/food_from_country", "subject": "Paella", "object": "Spain", "top1_by_draw": [" Spain", " Spain", " Spain"]}
+{"relation": "factual/food_from_country", "subject": "Pizza", "object": "Italy", "top1_by_draw": [" Italy", " Italy", " Italy"]}
+{"relation": "factual/food_from_country", "subject": "Baklava", "object": "Turkey", "top1_by_draw": [" Greece", " Turkey", " Turkey"]}
+{"relation": "factual/food_from_country", "subject": "Wiener Schnitzel", "object": "Austria", "top1_by_draw": [" Germany", " Germany", " Germany"]}
+{"relation": "factual/food_from_country", "subject": "Miso Soup", "object": "Japan", "top1_by_draw": [" Greece", " Russia", " China"]}
+{"relation": "factual/food_from_country", "subject": "Pierogi", "object": "Poland", "top1_by_draw": [" Poland", " Poland", " Poland"]}
+{"relation": "factual/food_from_country", "subject": "Moussaka", "object": "Greece", "top1_by_draw": [" Greece", " Greece", " Greece"]}
+{"relation": "factual/food_from_country", "subject": "Biryani", "object": "India", "top1_by_draw": [" India", " India", " India"]}
+{"relation": "factual/food_from_country", "subject": "Pavlova", "object": "New Zealand", "top1_by_draw": [" Russia", " Russia", " Russia"]}
+{"relation": "factual/food_from_country", "subject": "Tacos", "object": "Mexico", "top1_by_draw": [" Mexico", " Mexico", " Mexico"]}
+{"relation": "factual/food_from_country", "subject": "Rendang", "object": "Indonesia", "top1_by_draw": [" Indonesia", " Indonesia", " Indonesia"]}

@@ -1,0 +1,286 @@
+{
+  "experiment": "EXP-M5-2",
+  "substrate": "EleutherAI/pythia-1.4b",
+  "revision": "fedc38a16eea3bd36a96b906d78d11d2ce18ed79",
+  "h_layer": 12,
+  "z_layer": null,
+  "k_estimate": 6,
+  "n_draws": 3,
+  "bars": {
+    "agreement": 0.9,
+    "output_cosine": 0.95,
+    "faithfulness_pos": 0.6,
+    "shuffled_neg": 0.1,
+    "n_relations_certify": 6
+  },
+  "n_relations": 8,
+  "n_converged": 0,
+  "s3_certified_set": false,
+  "peak_vram_gb": 14.83,
+  "per_relation": {
+    "factual/country_capital_city": {
+      "relation": "factual/country_capital_city",
+      "n_probe": 12,
+      "k_estimate": 6,
+      "n_pool": 12,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 907.6,
+      "top1_agreement": 0.75,
+      "output_state_cosine": 0.9519,
+      "raw_w_cosine_descriptive": 0.921,
+      "controls": {
+        "positive_faithfulness_median": 0.75,
+        "positive_ok": true,
+        "negative_shuffled_faithfulness_median": 0.6667,
+        "negative_ok": false,
+        "positive_per_draw": [
+          0.75,
+          0.75,
+          0.6667
+        ],
+        "negative_per_draw": [
+          0.6667,
+          0.6667,
+          0.6667
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    },
+    "factual/food_from_country": {
+      "relation": "factual/food_from_country",
+      "n_probe": 15,
+      "k_estimate": 6,
+      "n_pool": 15,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 1064.8,
+      "top1_agreement": 0.8,
+      "output_state_cosine": 0.9528,
+      "raw_w_cosine_descriptive": 0.9016,
+      "controls": {
+        "positive_faithfulness_median": 0.7333,
+        "positive_ok": true,
+        "negative_shuffled_faithfulness_median": 0.7333,
+        "negative_ok": false,
+        "positive_per_draw": [
+          0.6667,
+          0.7333,
+          0.7333
+        ],
+        "negative_per_draw": [
+          0.6667,
+          0.7333,
+          0.7333
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    },
+    "factual/product_by_company": {
+      "relation": "factual/product_by_company",
+      "n_probe": 30,
+      "k_estimate": 6,
+      "n_pool": 492,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 1732.1,
+      "top1_agreement": 0.1667,
+      "output_state_cosine": 0.92,
+      "raw_w_cosine_descriptive": 0.7574,
+      "controls": {
+        "positive_faithfulness_median": 0.4333,
+        "positive_ok": false,
+        "negative_shuffled_faithfulness_median": 0.3667,
+        "negative_ok": false,
+        "positive_per_draw": [
+          0.3,
+          0.4333,
+          0.4667
+        ],
+        "negative_per_draw": [
+          0.3,
+          0.3667,
+          0.4667
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    },
+    "linguistic/adj_antonym": {
+      "relation": "linguistic/adj_antonym",
+      "n_probe": 30,
+      "k_estimate": 6,
+      "n_pool": 70,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 761.4,
+      "top1_agreement": 0.0,
+      "output_state_cosine": 0.9204,
+      "raw_w_cosine_descriptive": 0.7869,
+      "controls": {
+        "positive_faithfulness_median": 0.0667,
+        "positive_ok": false,
+        "negative_shuffled_faithfulness_median": 0.0,
+        "negative_ok": true,
+        "positive_per_draw": [
+          0.0667,
+          0.0667,
+          0.1
+        ],
+        "negative_per_draw": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    },
+    "linguistic/verb_past_tense": {
+      "relation": "linguistic/verb_past_tense",
+      "n_probe": 30,
+      "k_estimate": 6,
+      "n_pool": 46,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 791.1,
+      "top1_agreement": 0.0,
+      "output_state_cosine": 0.908,
+      "raw_w_cosine_descriptive": 0.824,
+      "controls": {
+        "positive_faithfulness_median": 0.0667,
+        "positive_ok": false,
+        "negative_shuffled_faithfulness_median": 0.0,
+        "negative_ok": true,
+        "positive_per_draw": [
+          0.0333,
+          0.0667,
+          0.0667
+        ],
+        "negative_per_draw": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    },
+    "linguistic/word_first_letter": {
+      "relation": "linguistic/word_first_letter",
+      "n_probe": 30,
+      "k_estimate": 6,
+      "n_pool": 211,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 2136.2,
+      "top1_agreement": 0.2,
+      "output_state_cosine": 0.9301,
+      "raw_w_cosine_descriptive": 0.8235,
+      "controls": {
+        "positive_faithfulness_median": 0.4,
+        "positive_ok": false,
+        "negative_shuffled_faithfulness_median": 0.1667,
+        "negative_ok": false,
+        "positive_per_draw": [
+          0.3,
+          0.4,
+          0.4667
+        ],
+        "negative_per_draw": [
+          0.1333,
+          0.1667,
+          0.3667
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    },
+    "commonsense/object_superclass": {
+      "relation": "commonsense/object_superclass",
+      "n_probe": 30,
+      "k_estimate": 6,
+      "n_pool": 46,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 4961.4,
+      "top1_agreement": 0.2,
+      "output_state_cosine": 0.9144,
+      "raw_w_cosine_descriptive": 0.8519,
+      "controls": {
+        "positive_faithfulness_median": 0.2333,
+        "positive_ok": false,
+        "negative_shuffled_faithfulness_median": 0.1667,
+        "negative_ok": false,
+        "positive_per_draw": [
+          0.8,
+          0.2333,
+          0.2333
+        ],
+        "negative_per_draw": [
+          0.7,
+          0.1333,
+          0.1667
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    },
+    "commonsense/work_location": {
+      "relation": "commonsense/work_location",
+      "n_probe": 19,
+      "k_estimate": 6,
+      "n_pool": 19,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "wall_s": 2119.7,
+      "top1_agreement": 0.3684,
+      "output_state_cosine": 0.9205,
+      "raw_w_cosine_descriptive": 0.8606,
+      "controls": {
+        "positive_faithfulness_median": 0.2632,
+        "positive_ok": false,
+        "negative_shuffled_faithfulness_median": 0.2632,
+        "negative_ok": false,
+        "positive_per_draw": [
+          0.3158,
+          0.2632,
+          0.2105
+        ],
+        "negative_per_draw": [
+          0.3158,
+          0.2632,
+          0.2105
+        ]
+      },
+      "controlled": false,
+      "converged": false
+    }
+  }
+}

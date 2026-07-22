@@ -1,0 +1,13 @@
+{
+  "run_name": "m5-2-operator-gate",
+  "started": "2026-07-22T02:21:38",
+  "git_commit": "e5e50242b5fcd41dafd06fa54749fe9d4328bfab",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M5-2-operator-gate.md",
+  "prereg_commit": "14a1a31d35fe3803b1607e37f0dec01b686e623f",
+  "config_sha256": "195fafda88534f4255ca6c3abe9216cb44b19edcb82568dc1bc9b92f370356aa",
+  "post_hoc": false,
+  "n_converged": 0,
+  "s3_certified_set": false,
+  "peak_vram_gb": 14.83,
+  "finished": "2026-07-22T06:23:00"
+}

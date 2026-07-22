@@ -1999,3 +1999,62 @@ substrate. Decision FLAGGED for Ecaterina (amendment budget: 2 cycles left;
     publish the hole (0 cycles; in-spirit with the standing 'taxonomy with holes'
     preference) — but leaves injection-vs-substrate unresolved.
 No cycle spent, no amendment adopted, pending her ruling. [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-2 S3 operator gate RAN (1.4B): 0/8 converged, NO certificate; neg-control design flagged (Claude)
+
+Built + ran on the win32 RTX (build commit this session; run through start_run,
+clean tree, committed prereg 14a1a31, post_hoc false):
+results/m5/20260722-022138-m5-2-operator-gate (run.json, operator_gate.json +
+table, 8 raw cells, POSTHOC_replay.md). Vendored JacobianIclMeanEstimator
+(third_party/relations @1b9ec3c, called as a library, UNMODIFIED) wrapped for
+pythia-1.4b@fedc38a (cuda fp32) via a revision-pinned ModelAndTokenizer + a
+minimal data.Relation. h_layer=12 fixed by a one-time draw-independent probe on
+country_capital_city (faithfulness over {4,6,8,12}={0.250,0.333,0.667,0.750};
+L12 maximal, LANDING >= 0.60 passed; recorded, not re-picked). k_estimate=6,
+3 draws (seeds 1/2/3), fixed held-out probe per relation (pool floored so draws
+differ). Compute ~4 h wall; GPU peak 14.83 GB via WDDM host-paging on the 8 GB
+card (fragmentation worsened late-run; no OOM). dep added: dataclasses-json
+(relations `src` requirement; torch/transformers pins unchanged).
+
+Verdict (functional gate, scope: 1.4B, h_layer=12, 3 draws): **0/8 relations
+converged; S3 species set NOT certified** (bar >= 6 of 8). Two distinct
+failure modes, none a convergence:
+- factual relations FAIL the NEGATIVE control (shuffled-relation operator ~ as
+  faithful as the real one): country_capital real 0.75 / shuffled 0.667; food
+  0.733 / 0.733; product 0.433 / 0.367. (Positive control + cosine otherwise
+  near-passing there: agreement 0.75-0.80, cosine 0.95.)
+- linguistic/commonsense relations FAIL the POSITIVE control (real held-out
+  faithfulness < 0.60 at L12): adj_antonym 0.067, verb_past 0.067,
+  word_first_letter 0.40, object_superclass 0.233, work_location 0.263; low
+  top-1 agreement (0.0-0.37).
+- Recorded observation (not over-read): output-state cosine is HIGH on ALL 8
+  (0.908-0.953) — the operator output DIRECTION is draw-stable even where the
+  discrete top-1 and the label-faithfulness are not.
+
+Raw replay (post-hoc, per surprise->replay; POSTHOC_replay.md): on
+country_capital the shuffled-label operator predicts the SAME true capitals as
+the real one (China->Beijing, US->Washington for both). logit-lens@L12 predicts
+" is" for every subject, so h@L12 does NOT pre-encode the object (this corrects
+an on-the-fly guess). Mechanism: JacobianIclMeanEstimator derives (W,b) from the
+model's dz/dh, which reflects the model's OWN country->capital computation and is
+insensitive to permuting the ICL exemplars' object labels — so the shuffled
+operator still maps to true capitals. I.e. the ratified negative control does
+not create a null for a Jacobian-based estimator; "shuffled ~ real" is expected
+and does not by itself establish the operator as invalid.
+
+Disposition (per the ratified prereg, control failure -> instrument-failure
+report, NOT a certificate; no S3 certificate issued). Flagged for Ecaterina
+(propose, not adopt; nothing re-run, no layer re-pick, no threshold/spec change;
+NOT an amendment cycle — no recalibration performed):
+- D-034 (proposed) — the EXP-M5-2 negative control needs a construction that
+  actually nulls the RELATIONAL signal in the Jacobian, since permuting ICL
+  exemplar labels does not (the estimator is model-derived, label-agnostic).
+  Options for her: estimate the operator on non-relational / random-token
+  prompts, or apply an UNRELATED relation's operator to these subjects, as the
+  "must-fail" arm. This is a control-validity question the instruments LAW
+  raises; it is hers to rule, and any change is a spec amendment she authorizes.
+- Separately, the L12 positive-control failure on the linguistic/commonsense
+  relations is a distinct matter (operator weak on those at this layer); the
+  layer was NOT re-selected (avoiding the amend-until-it-passes pattern).
+Gates: pytest 211 passed, validators 3/3. [no sign-off implied; certificate is
+Ecaterina's]
