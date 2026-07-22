@@ -2319,3 +2319,28 @@ Executed:
   CLAUDE.md (state line). Validators 3/3.
 Next: the one-paragraph statement of what the paper now claims -> then Ecaterina
 decides write-up vs further work. [no sign-off implied]
+
+### 2026-07-23 — EXP-M5-7 (A1b rescope) + EXP-M5-8 (within-species breadth) RATIFIED (Ecaterina) (Claude)
+
+Ecaterina ratified both, with adjustments folded in:
+- EXP-M5-7 (A1b locus rescope): rescope confirmed; the optional 410M confirmatory
+  probe is RUN (not skipped) — a reviewer attacks the cross-experiment gap first,
+  so the ~15-min probe puts the transient 410M row under identical lens draws
+  0/1/2, same substrate/run as S1/S2/S5. The object-type ceiling (direction vs
+  residual state — nothing unifies object types) is stated openly, not hidden.
+  Runs on the Mac; then CLM-006's A1b sub-statement is rescoped to the
+  transient-vs-static locus on her verify.
+- EXP-M5-8 (within-species breadth): ratified with three changes. (1) S5 ruled
+  LOAD-BEARING -> raised to >=3/4 (from >=2/3); the output-alignment + logit-
+  trivial-readability half reproduces by construction, potency is behaviour-
+  dependent on 410M and reported per-instance (heterogeneous-on-potency reported,
+  never curated). (2) Anti-harvesting: instances NAMED now, ALL reported, none
+  reclassified out — S1 {Paris, London, Rome, Berlin, Madrid}; S2 {capitalize,
+  singular-plural, english-french} (the only 3 M2-certified FVs, so n=3 at >=2/3,
+  not >=3/4); S5 {sentiment, formality, politeness, excitement}. (3) Draw-
+  stability computed by ONE identical method (min_pairwise_cosine over 3 draws)
+  on both machines — S1/S5 fresh (Mac), S2 from cached FV draw tensors (RTX) —
+  NOT M2's internal metric, so no extraction confound re-enters.
+Machine split: S1/S5 + the M5-7 probe on the Mac; S2 breadth on the RTX (the M2
+FV cache is on the win32 machine). Both FRESH experiments; budget does not apply.
+Committing is the prereg act. [no sign-off implied]
