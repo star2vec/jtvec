@@ -1,0 +1,19 @@
+{
+  "run_name": "m5-6-offdiagonal",
+  "started": "2026-07-22T22:31:01",
+  "git_commit": "9d5041db2a41e3a2ba9fc92a2e98406bf72d74ba",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-6-offdiagonal.md",
+  "prereg_commit": "9d5041db2a41e3a2ba9fc92a2e98406bf72d74ba",
+  "config_sha256": "39595ee027a2e497d5c664ce697b1a373c855e178185f200a6f32aed677df489",
+  "post_hoc": false,
+  "verdict": "A1-DECOMPOSES (S5 is logit-trivially decodable [A1a] but NOT J-lens-privileged [A1b]; A1 splits into reads-at-all vs J-lens-privileged via output-alignment; NOT off-diagonal, deflation NOT refuted)",
+  "cell": "A1a=y A1b=n (jlens 2 / logit 2); potent=y",
+  "a1a_decodable": true,
+  "a1b_decodable": false,
+  "logit_trivial": true,
+  "potent": true,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 58.4,
+  "peak_rss_gb": 2.32,
+  "finished": "2026-07-22T22:31:59"
+}

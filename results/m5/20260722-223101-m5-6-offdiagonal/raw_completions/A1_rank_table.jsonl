@@ -1,0 +1,20 @@
+{"species": "S5-steering", "draw": 1, "lens": 0, "jlens": 3, "logit": 2}
+{"species": "S5-steering", "draw": 1, "lens": 1, "jlens": 2, "logit": 2}
+{"species": "S5-steering", "draw": 1, "lens": 2, "jlens": 1, "logit": 2}
+{"species": "S5-steering", "draw": 2, "lens": 0, "jlens": 3, "logit": 2}
+{"species": "S5-steering", "draw": 2, "lens": 1, "jlens": 2, "logit": 2}
+{"species": "S5-steering", "draw": 2, "lens": 2, "jlens": 1, "logit": 2}
+{"species": "S5-steering", "draw": 3, "lens": 0, "jlens": 3, "logit": 2}
+{"species": "S5-steering", "draw": 3, "lens": 1, "jlens": 2, "logit": 2}
+{"species": "S5-steering", "draw": 3, "lens": 2, "jlens": 1, "logit": 2}
+{"species": "S1-concept(Paris)", "draw": 1, "lens": 0, "jlens": 108, "logit": 999}
+{"species": "S1-concept(Paris)", "draw": 1, "lens": 1, "jlens": 1360, "logit": 999}
+{"species": "S1-concept(Paris)", "draw": 1, "lens": 2, "jlens": 192, "logit": 999}
+{"species": "S1-concept(Paris)", "draw": 2, "lens": 0, "jlens": 86, "logit": 183}
+{"species": "S1-concept(Paris)", "draw": 2, "lens": 1, "jlens": 241, "logit": 183}
+{"species": "S1-concept(Paris)", "draw": 2, "lens": 2, "jlens": 63, "logit": 183}
+{"species": "S1-concept(Paris)", "draw": 3, "lens": 0, "jlens": 169, "logit": 1037}
+{"species": "S1-concept(Paris)", "draw": 3, "lens": 1, "jlens": 1879, "logit": 1037}
+{"species": "S1-concept(Paris)", "draw": 3, "lens": 2, "jlens": 213, "logit": 1037}
+{"arm": "a1_pos_jlens_median", "rank": 1}
+{"arm": "a1_neg_jlens_median", "rank": 7518}

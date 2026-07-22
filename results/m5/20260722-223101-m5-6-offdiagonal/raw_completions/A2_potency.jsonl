@@ -1,0 +1,5 @@
+{"draw": 1, "inj_dS": 10.9144, "inj_sham": -2.1522, "abl_dS": 0.2631, "abl_sham": 0.0132}
+{"draw": 2, "inj_dS": 10.9144, "inj_sham": -7.0123, "abl_dS": 0.2631, "abl_sham": -0.0029}
+{"draw": 3, "inj_dS": 10.9143, "inj_sham": -2.1592, "abl_dS": 0.2631, "abl_sham": 0.0424}
+{"arm": "a2_pos_unembed", "dS": 17.411}
+{"arm": "a2_neg_random_absmax", "dS": 2.3338}

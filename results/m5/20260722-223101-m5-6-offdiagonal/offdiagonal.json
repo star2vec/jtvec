@@ -1,0 +1,81 @@
+{
+  "model": "EleutherAI/pythia-410m@9879c9b",
+  "verdict": "A1-DECOMPOSES (S5 is logit-trivially decodable [A1a] but NOT J-lens-privileged [A1b]; A1 splits into reads-at-all vs J-lens-privileged via output-alignment; NOT off-diagonal, deflation NOT refuted)",
+  "cell": "A1a=y A1b=n (jlens 2 / logit 2); potent=y",
+  "rank_table": {
+    "S5-steering": {
+      "per_draw": {
+        "1": {
+          "jlens": 2,
+          "logit": 2
+        },
+        "2": {
+          "jlens": 2,
+          "logit": 2
+        },
+        "3": {
+          "jlens": 2,
+          "logit": 2
+        }
+      },
+      "jlens_median": 2,
+      "logit_median": 2
+    },
+    "S1-concept(Paris)": {
+      "per_draw": {
+        "1": {
+          "jlens": 192,
+          "logit": 999
+        },
+        "2": {
+          "jlens": 86,
+          "logit": 183
+        },
+        "3": {
+          "jlens": 213,
+          "logit": 1037
+        }
+      },
+      "jlens_median": 192,
+      "logit_median": 999
+    },
+    "S2-FV(sing-plur, cited E1)": {
+      "jlens_median": 436,
+      "logit_median": 3203,
+      "per_draw": {
+        "cited": "EXP-M4-E1 \u2014 identical decode_vector + lens draws 0/1/2"
+      },
+      "cited_from": "results/m4/20260719-021823-e1-decodability"
+    }
+  },
+  "A1": {
+    "a1a_reads_at_all": true,
+    "a1b_jlens_privileged": false,
+    "logit_trivial": true,
+    "jlens_label_rank_median": 2,
+    "logit_label_rank_median": 2,
+    "C1_max": 20.0,
+    "C3_min": 200.0,
+    "control_ok": true,
+    "pos_jlens_median": 1,
+    "neg_jlens_median": 7518
+  },
+  "A2": {
+    "potent": true,
+    "injection_dS_median": 13.0736,
+    "injection_transfer": true,
+    "ablation_dS_median": 0.25,
+    "pos_control_dS": 17.411,
+    "neg_control_absmax": 2.3338,
+    "control_ok": true,
+    "bar": 1.0,
+    "inj_by_draw": {
+      "1": 13.0666,
+      "2": 17.9266,
+      "3": 13.0736
+    }
+  },
+  "reference": "S1 = (decodable, not-potent); S2 = (not-decodable, potent) \u2014 the diagonal",
+  "peak_rss_gb": 2.32,
+  "wall_clock_s": 58.4
+}

@@ -2262,3 +2262,35 @@ injection + ablation sentiment-logit-diff. Reduced smoke: S5 jlens 4/logit 6
 (logit-trivial; per-draw 2/6, 8/7, 4/4 — nearly-equal holds across all 3 draws),
 S2 436/3203 (dark). Verdict logic never labels S5 off-diagonal on A1a alone.
 Running on the Mac. [no sign-off implied]
+
+### 2026-07-22 — EXP-M5-6 RAN (410M): A1-DECOMPOSES; and S1 is dark to decode_vector too (Claude)
+
+results/m5/20260722-223101-m5-6-offdiagonal (410M, prereg 9d5041d; wall 58 s,
+peak 2.32 GB). VERDICT A1-DECOMPOSES.
+
+- A2 potency: S5 injection sham-controlled dS +13.07 (transfer), ablation +0.25,
+  pos-ctrl +17.4 -> POTENT. Confirmed.
+- A1 rank table (identical E1 decode_vector, jlens/logit label-rank, lens draws
+  0/1/2):
+    S5-steering              jlens 2  / logit 2     (per-draw 2/2, 2/2, 2/2)
+    S1-concept(Paris)        jlens 192/ logit 999   (per-draw 192/999, 86/183, 213/1037)
+    S2-FV(sing-plur)         jlens 436/ logit 3203  (cited EXP-M4-E1)
+  Controls: A1 pos (sentiment-unembed) jlens 1; A1 neg (random) jlens 7518.
+- S5 is A1a-decodable (jlens 2 <= 20) but NOT A1b-privileged (logit 2 < 200):
+  logit-TRIVIALLY decodable, jlens EXACTLY = logit across all 3 draws. Its
+  decodability and its potency are the SAME fact (output-alignment = the named
+  deflation axis), so S5 does NOT refute deflation and is NOT off-diagonal. A1
+  decomposes into reads-at-all (A1a) vs J-lens-privileged (A1b), separated by
+  output-alignment. The double dissociation (HYPOTHESIS) is NOT supported by S5.
+
+BIGGER FINDING the table surfaced (FLAGGED for Ecaterina): S1's concept direction
+is ALSO DARK to decode_vector (jlens 192, like S2's 436). So under the IDENTICAL
+instrument that read S2, S1 and S2 are BOTH dark; only S5 reads (logit-trivially).
+S1's CLM-005 "decodable" was the 1b CONVERGENCE (draw-stability) sense, NOT the
+decode_vector label-rank sense. So H1's decodability axis is INSTRUMENT-DEPENDENT:
+the clean "S1 decodable vs S2 not-decodable" held only because S1 (convergence)
+and S2 (decode_vector) were measured on DIFFERENT decodability senses. This
+weakens the H1 anchor dichotomy as stated in CLM-005 / the CONSTRAINTS H1
+annotation; the decodability axis must be pinned to ONE instrument. Ecaterina to
+rule on scoping CLM-005's "decodable" and re-examining H1. No claim modified
+unilaterally. [no sign-off implied]
