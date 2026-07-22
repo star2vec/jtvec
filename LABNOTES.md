@@ -2081,3 +2081,27 @@ null-check +0.80 "Paris" injection. NO certificate under either branch; H-POTENT
 opens the certificate path gated on Ecaterina's sign-off. Building
 scripts/m5_1d_ablation_potency.py; run 410M (Mac). S3/M5.2 continues on the RTX
 independently. [no sign-off implied]
+
+
+### 2026-07-22 — D-034 RULED (S3 neg-control fix) + EXP-M5-2b drafted (final budget cycle) (Claude)
+
+Ecaterina ruled (session, 2026-07-22):
+- D-034 RULED: the EXP-M5-2 negative control must-fail arm becomes an UNRELATED
+  relation's operator applied to this relation's probe (and/or a random-token-
+  prompt operator), NOT shuffled ICL labels — label-shuffling cannot null the
+  model-derived, label-agnostic Jacobian (M5.2 evidence: country_capital shuffled
+  0.667 ~ real 0.75; food 0.733 = real). Committed as the S3 negative-control fix
+  (harness/preregs/EXP-M5-2-operator-gate.md, Instruments + Deviations). Does not
+  itself re-run S3.
+- Before recording S3 as not-measurable-at-1.4B: its failure is argmax
+  draw-instability DESPITE high output-state cosine (0.90-0.95) — the SAME
+  phenomenon as v1 FV draw-instability and EXP-M5-1d's argmax-insensitivity (one
+  instrument problem across three species). EXP-M5-2b DRAFTED
+  (harness/preregs/EXP-M5-2b-operator-criterion.md, UNCOMMITTED): does S3 certify
+  under a draw-marginalized / cosine-based operator criterion instead of top-1
+  agreement (the same argmax->direction-space fix approved for 1d)? Branches
+  prereg'd: certifies -> S3 ADMITTED + the cross-species "stable-in-direction,
+  unstable-in-argmax" story; fails even marginalized -> genuinely hard-to-measure
+  at 1.4B, no further probes. COUNTS AGAINST BUDGET — after 1d (1 cycle) this is
+  the LAST cycle (0 remain after). Do not run until Ecaterina ratifies; S3/M5.2
+  stays idle on the RTX. [no sign-off implied]

@@ -76,11 +76,17 @@ mirroring the LRE ≥8-of-12 admission logic scaled to this 8-relation set).
 - Positive control: operator faithfulness on HELD-OUT subjects ≥ the M5.0 bar
   (0.60) — the operator actually predicts the relation on unseen subjects, not
   just its estimation set. require_controlled() gates the verdict.
-- Negative control: a SHUFFLED-RELATION operator — estimated on mismatched
-  subject→object pairs (labels permuted within the relation) — MUST FAIL
-  faithfulness (≤ [proposed 0.10] on held-out subjects). If the shuffled
-  operator is faithful, the estimator is fitting something other than the
-  relation and the instrument is withdrawn.
+- Negative control (D-034 RULED, Ecaterina 2026-07-22 — REPLACES the original
+  shuffled-ICL-label control): the must-fail arm is an UNRELATED relation's
+  operator applied to THIS relation's probe subjects (and/or an operator
+  estimated on random-token prompts). It MUST FAIL faithfulness (≤ 0.10 on
+  held-out subjects). Rationale: the M5.2 run showed shuffling ICL exemplar
+  LABELS does not null the relational signal — the JacobianIclMeanEstimator is
+  model-derived and label-agnostic, so a label-shuffled operator stayed faithful
+  (country_capital 0.667 ≈ real 0.75; food 0.733 = real). Applying a genuinely
+  DIFFERENT relation's map is the construction that actually removes the target
+  relation. If the cross-relation operator is faithful on this relation's probe,
+  the estimator is not relation-specific and the instrument is withdrawn.
 - Sham twin (for the LATER S3 interventions, recorded now): a norm-matched
   random affine perturbation (δW, δb) matched to (W, b) norms; every future
   intervention effect appears with this sham.
@@ -134,7 +140,12 @@ deliverable; M6's S3 rows do not start before it.
 
 ## Deviations
 
-(none yet)
+- D-034 RULED (Ecaterina 2026-07-22) — negative-control redefinition (above): the
+  must-fail arm is a cross-relation (unrelated-relation) operator applied to the
+  probe, and/or a random-token-prompt operator — NOT shuffled ICL labels, which
+  the M5.2 run (results/m5/20260722-022138-m5-2-operator-gate) proved do not null
+  the model-derived Jacobian's relational signal. A spec fix to the S3 negative
+  control; any S3 re-run uses this control. Does not itself re-run S3.
 
 ## Ratification
 
