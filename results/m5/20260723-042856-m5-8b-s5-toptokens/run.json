@@ -1,0 +1,13 @@
+{
+  "run_name": "m5-8b-s5-toptokens",
+  "started": "2026-07-23T04:28:56",
+  "git_commit": "97bd3215371c5e64cd6b10aa748475660ee1d2e3",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-8b-s5-toptokens.md",
+  "prereg_commit": "97bd3215371c5e64cd6b10aa748475660ee1d2e3",
+  "config_sha256": "8a70922b69eec24092da1a09f0ccb33b67c69c893849a53a074b7a89b482a76f",
+  "post_hoc": false,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 18.1,
+  "peak_rss_gb": 1.97,
+  "finished": "2026-07-23T04:29:14"
+}

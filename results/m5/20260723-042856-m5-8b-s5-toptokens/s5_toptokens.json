@@ -1,0 +1,511 @@
+{
+  "model": "EleutherAI/pythia-410m@9879c9b",
+  "topk": 15,
+  "rep_layers": [
+    5,
+    10,
+    15
+  ],
+  "results": {
+    "sentiment": {
+      "per_layer": {
+        "5": {
+          "logit_top": [
+            "nicely",
+            "compliment",
+            "and",
+            "complimentary",
+            "\u2013",
+            "complementary",
+            "safe",
+            "pleasing",
+            "ya",
+            "complement",
+            "lik",
+            "excell",
+            "improved",
+            "sch",
+            "agree"
+          ],
+          "jlens_top": [
+            "celebrates",
+            "celebrating",
+            "nership",
+            "celebrate",
+            "marvel",
+            "celebrated",
+            "Gift",
+            "Celebr",
+            "gifts",
+            "cele",
+            "celebrations",
+            "beautifully",
+            "voyage",
+            "celebration",
+            "gift"
+          ]
+        },
+        "10": {
+          "logit_top": [
+            "nicely",
+            "particip",
+            "thanks",
+            "dez",
+            "wonderful",
+            "gov",
+            "excell",
+            "ital",
+            "feat",
+            "ith",
+            "praise",
+            "pleasing",
+            "excellence",
+            "complimentary",
+            "pleased"
+          ],
+          "jlens_top": [
+            "nership",
+            "wonderful",
+            "marvel",
+            "showc",
+            "quo",
+            "gift",
+            "amazing",
+            "bonus",
+            "complimentary",
+            "CEPT",
+            "congrat",
+            "partnership",
+            "facilit",
+            "enrich",
+            "splendid"
+          ]
+        },
+        "15": {
+          "logit_top": [
+            "versatile",
+            "versatility",
+            "appreciated",
+            "informative",
+            "appreciate",
+            "Excellent",
+            "goodness",
+            "pleased",
+            "excell",
+            "excellent",
+            "excellence",
+            "wonderful",
+            "splendid",
+            "marvel",
+            "pleasant"
+          ],
+          "jlens_top": [
+            "wonderful",
+            "marvel",
+            "beautifully",
+            "Excellent",
+            "excellent",
+            "Excellent",
+            "superb",
+            "versatile",
+            "wonderfully",
+            "splendid",
+            "appreciated",
+            "pleased",
+            "delightful",
+            "innovative",
+            "spacious"
+          ]
+        }
+      },
+      "authored_pos_w": [
+        "good",
+        "great",
+        "wonderful",
+        "amazing",
+        "excellent",
+        "nice"
+      ],
+      "authored_pos_w_in_top20_logit": [
+        "amazing",
+        "excellent",
+        "good",
+        "nice",
+        "wonderful"
+      ]
+    },
+    "formality": {
+      "per_layer": {
+        "5": {
+          "logit_top": [
+            "agu",
+            "uge",
+            "sight",
+            "acknow",
+            "omo",
+            "refe",
+            "inform",
+            "LP",
+            "ounce",
+            "arity",
+            "uel",
+            "\u00e9r",
+            "anim",
+            "isse",
+            "=."
+          ],
+          "jlens_top": [
+            "iduc",
+            "Cardinal",
+            "\u00e9n\u00e9",
+            "Institutional",
+            "Trustees",
+            "fiduciary",
+            "Instit",
+            "[*",
+            "Protocol",
+            "igraph",
+            "Facility",
+            "Clause",
+            "Memorandum",
+            "Administrative",
+            "Service"
+          ]
+        },
+        "10": {
+          "logit_top": [
+            "isan",
+            "\u00d0\u00b5\u00d0",
+            "ibase",
+            "above",
+            "cern",
+            "isse",
+            "iven",
+            "\u00fcl",
+            "uge",
+            "ivat",
+            "issen",
+            "inquire",
+            "ilder",
+            "ipel",
+            "\u00fcr"
+          ],
+          "jlens_top": [
+            "Pursuant",
+            "pursuant",
+            ",\u2014",
+            "Memorandum",
+            "entrusted",
+            "undertaking",
+            "\u00e9n\u00e9",
+            "\u2014",
+            "Protocol",
+            "accorded",
+            "Provincial",
+            "assistance",
+            "Municip",
+            "Petitioners",
+            "memorandum"
+          ]
+        },
+        "15": {
+          "logit_top": [
+            "cknowled",
+            ":</",
+            "cknow",
+            "\u2013\u2013",
+            "answ",
+            "advertis",
+            "inquire",
+            "bsite",
+            "atheros",
+            "enqu",
+            "fprintf",
+            ":--",
+            "lapt",
+            "entrusted",
+            "acknow"
+          ],
+          "jlens_top": [
+            "Pursuant",
+            "pursuant",
+            "Securities",
+            "Administrative",
+            "Petitioners",
+            "Advisory",
+            "Superintendent",
+            "disclosures",
+            "inquiries",
+            "receipt",
+            "iduc",
+            "Institutional",
+            "advisory",
+            "Representative",
+            "Certificate"
+          ]
+        }
+      },
+      "authored_pos_w": [
+        "therefore",
+        "furthermore",
+        "regarding",
+        "accordingly",
+        "moreover",
+        "hereby"
+      ],
+      "authored_pos_w_in_top20_logit": []
+    },
+    "politeness": {
+      "per_layer": {
+        "5": {
+          "logit_top": [
+            "eed",
+            "please",
+            "?\u2019",
+            "referee",
+            "samples",
+            "ane",
+            "\ufffd\ufffd",
+            "gi",
+            "enable",
+            "authors",
+            "\\]](",
+            "sample",
+            "reate",
+            "record",
+            "handling"
+          ],
+          "jlens_top": [
+            "chez",
+            "Rousseau",
+            "VERTIS",
+            "conjug",
+            "Fran\u00e7ois",
+            "automorphism",
+            "ologous",
+            "favourable",
+            "estock",
+            "\u017e",
+            "\ufffd",
+            "\u00e9e",
+            "economists",
+            "generous",
+            "ORS"
+          ]
+        },
+        "10": {
+          "logit_top": [
+            "resem",
+            "authors",
+            "resemblance",
+            "referee",
+            "vez",
+            "haus",
+            "comment",
+            "hosts",
+            "comment",
+            "iness",
+            "unusually",
+            "\u00fcnd",
+            "hani",
+            "yn",
+            "Representatives"
+          ],
+          "jlens_top": [
+            "ylene",
+            "donation",
+            "assistance",
+            "participants",
+            "recipients",
+            "hus",
+            "\u00fcnd",
+            "Petition",
+            "assisting",
+            "participant",
+            "Assistance",
+            "organis",
+            "petitioners",
+            "Petitioners",
+            "URL"
+          ]
+        },
+        "15": {
+          "logit_top": [
+            "authors",
+            "orden",
+            "comment",
+            "representative",
+            "iek",
+            "please",
+            "kindly",
+            "oro",
+            "ylene",
+            "unusually",
+            "me",
+            "hov",
+            "rike",
+            "uru",
+            "erc"
+          ],
+          "jlens_top": [
+            "please",
+            "phot",
+            "donation",
+            "viewing",
+            "kindly",
+            "similar",
+            "assistance",
+            "assisting",
+            "hov",
+            "}?",
+            "HEL",
+            "recent",
+            "?",
+            "request",
+            "permission"
+          ]
+        }
+      },
+      "authored_pos_w": [
+        "please",
+        "kindly",
+        "thank",
+        "appreciate",
+        "grateful",
+        "sorry"
+      ],
+      "authored_pos_w_in_top20_logit": [
+        "kindly",
+        "please",
+        "thank"
+      ]
+    },
+    "excitement": {
+      "per_layer": {
+        "5": {
+          "logit_top": [
+            "!_",
+            "atz",
+            "\"_",
+            "accord",
+            "atti",
+            "!'",
+            "ause",
+            "!\u2019",
+            "amaz",
+            "describ",
+            "estine",
+            "ocks",
+            "appl",
+            "EXT",
+            "pred"
+          ],
+          "jlens_top": [
+            "!",
+            "!!",
+            "!!!",
+            "!),",
+            "!)",
+            "!!!!",
+            "!).",
+            "!'",
+            "!",
+            "!!!!!!!!",
+            "?!",
+            ",",
+            "!,",
+            "IMP",
+            "!_"
+          ]
+        },
+        "10": {
+          "logit_top": [
+            "\"_",
+            "assurance",
+            "surprises",
+            "hope",
+            "doll",
+            "feat",
+            "freedom",
+            "iy",
+            "poder",
+            "amount",
+            "surprise",
+            "leverage",
+            "custody",
+            "physical",
+            "esis"
+          ],
+          "jlens_top": [
+            "!!",
+            "!!!",
+            "!",
+            "!!!!",
+            "\ufffd",
+            "!!",
+            "!),",
+            "!!!!!!!!",
+            "!",
+            "\uff01",
+            "\ud83d\ude42",
+            "!'",
+            "?!",
+            "\ufffd",
+            "!,"
+          ]
+        },
+        "15": {
+          "logit_top": [
+            "!!",
+            "!!!",
+            "!",
+            "\uff01",
+            "!!!!",
+            "!\u201d",
+            "!'",
+            "!_",
+            "!\"",
+            ")!",
+            "!\u2019",
+            "!,",
+            "!!!!!!!!",
+            "hope",
+            "!("
+          ],
+          "jlens_top": [
+            "!!",
+            "!!!",
+            "!",
+            "!!!!",
+            "!'",
+            "!(",
+            "\uff01",
+            "!!!!!!!!",
+            "!_",
+            "!",
+            "!!",
+            ")!",
+            "!.",
+            "!\"",
+            "!,"
+          ]
+        }
+      },
+      "authored_pos_w": [
+        "thrilling",
+        "exciting",
+        "amazing",
+        "incredible",
+        "awesome",
+        "wow"
+      ],
+      "authored_pos_w_in_top20_logit": [
+        "amazing",
+        "incredible"
+      ]
+    }
+  },
+  "note": "alignment is Ecaterina's read of the raw top tokens; the authored-word flag is a convenience only, not decisive",
+  "peak_rss_gb": 1.97,
+  "wall_clock_s": 18.1
+}
