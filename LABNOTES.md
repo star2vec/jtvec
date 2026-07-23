@@ -2502,3 +2502,22 @@ Gates before commit: uv run pytest -q + validators. NO sign-off / NO verify
 (Ecaterina's). Verify lines owed: CLM-005 (rescoped to potency-sole-separator),
 CLM-006 (4th sense + A1b transient/static + draw-stability correction), CLM-007
 (within-species breadth reproduction).
+
+---
+
+## 2026-07-23 (later) — Ecaterina rulings: D-035 CLEARS; CLM-006 split; push (Claude)
+
+(a) D-035 CLEARS (Ecaterina): the S2 draw-stable correction stands, the H1 rescope
+holds, POTENCY is the sole S1/S2 separator; v1's VERIFIED FV-instability entry
+stays scoped to the sweep endpoint (not demoted). The unexplained residue — FV
+re-extraction occasionally degenerate, cause never bounded, all draw-stability
+figures conditional on healthy extractions — is now carried in the PAPER, not just
+here: DRAFT_LIMITATIONS.md §L1 (language-linted, folds into DRAFT.md §Limitations).
+(b) Pushed to origin (RTX back in sync).
+(c) CLM-006 SPLIT (Ecaterina, for independent verification): CLM-006 narrowed to
+the FRAMING / spine claim (one axis-name over four instruments); its sub-findings
+are now independently verifiable — CLM-005 (potency sole separator), CLM-008 (A1b
+locus: transient privileged, static not; EXP-M5-7), CLM-009 (readout-vocabulary
+false negative: formality; EXP-M5-8b). CLM-005 + CLM-007 to be signed as-is.
+Verify lines now owed: CLM-005, CLM-006, CLM-007, CLM-008, CLM-009. Gates: pytest
+227, validators 3/3.
