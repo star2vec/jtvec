@@ -56,7 +56,16 @@ def lens_dark(jlens_label_rank: float, bar: float) -> bool:
 
 
 def cleared(effect_median: float, sham_median: float, delta: float) -> bool:
-    return (effect_median - sham_median) >= delta
+    return bool((effect_median - sham_median) >= delta)
+
+
+def _json_default(o):
+    """Coerce numpy scalars (n_shot_eval returns them) to native for json.dumps."""
+    if hasattr(o, "item"):
+        return o.item()
+    if isinstance(o, (bool,)):
+        return bool(o)
+    raise TypeError(f"not JSON serializable: {type(o).__name__}")
 
 
 def potent(inj_gain_med: float, inj_sham_med: float,
@@ -296,9 +305,9 @@ def gate(cfg_path: str):
                 "(prereg-mandated identical method); the prereg's expected 0.43-0.61 range was the v1 "
                 "cross-code-path number, not the M2 same-pipeline certified tensors — flagged.",
     }
-    (ctx.results_dir / "s2_breadth.json").write_text(json.dumps(summary, indent=2))
+    (ctx.results_dir / "s2_breadth.json").write_text(json.dumps(summary, indent=2, default=_json_default))
     _write_table(ctx.results_dir, summary)
-    ctx.finalize(n_match=sum(matches), roster_verdict=verdict, peak_vram_gb=peak)
+    ctx.finalize(n_match=int(sum(bool(x) for x in matches)), roster_verdict=verdict, peak_vram_gb=peak)
     print(f"\n=== EXP-M5-8 S2: {sum(matches)}/{len(s2['fvs'])} match profile -> {verdict} "
           f"(bar {s2['bars']['n_certify']}/3) ===\nrun dir: {ctx.results_dir}", flush=True)
 
