@@ -1,0 +1,10 @@
+{"instance": "S1:London", "axis": "lens", "cell": 0, "jlens": 1386, "logit": 70}
+{"instance": "S1:London", "axis": "lens", "cell": 1, "jlens": 760, "logit": 69}
+{"instance": "S1:London", "axis": "lens", "cell": 2, "jlens": 706, "logit": 78}
+{"instance": "S1:London", "axis": "lens", "cell": 3, "jlens": 896, "logit": 70}
+{"instance": "S1:London", "axis": "lens", "cell": 4, "jlens": 1730, "logit": 69}
+{"instance": "S1:London", "axis": "lens", "cell": 5, "jlens": 1204, "logit": 78}
+{"instance": "S1:London", "axis": "lens", "cell": 6, "jlens": 1184, "logit": 70}
+{"instance": "S1:London", "axis": "lens", "cell": 7, "jlens": 1223, "logit": 69}
+{"instance": "S1:London", "axis": "lens", "cell": 8, "jlens": 1015, "logit": 78}
+{"instance": "S1:London", "potency": {"potent": false, "inj_best_dp": 0.00081, "inj_best_alpha": 8.0, "inj_monotone": false, "inj_potent": false, "abl_dp_median": 0.00159, "abl_potent": false, "gain_by_alpha": {"1.0": 0.00034, "2.0": 0.00019, "4.0": 0.0002, "8.0": 0.00081}}}

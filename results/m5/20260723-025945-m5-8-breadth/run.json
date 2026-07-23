@@ -1,0 +1,16 @@
+{
+  "run_name": "m5-8-breadth",
+  "started": "2026-07-23T02:59:45",
+  "git_commit": "3f8a90e654bdcca141fdbfb6b0f6031b9108a73b",
+  "prereg_path": "/Users/ecaterina/Developer/jtvec/harness/preregs/EXP-M5-8-within-species-breadth.md",
+  "prereg_commit": "3f8a90e654bdcca141fdbfb6b0f6031b9108a73b",
+  "config_sha256": "8a70922b69eec24092da1a09f0ccb33b67c69c893849a53a074b7a89b482a76f",
+  "post_hoc": false,
+  "s1_verdict": "PROFILE-REPRODUCES (5/5)",
+  "s5_verdict": "HETEROGENEOUS (1/4)",
+  "a1_control_ok": true,
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "wall_clock_s": 4221.6,
+  "peak_rss_gb": 1.79,
+  "finished": "2026-07-23T04:10:06"
+}

@@ -1,0 +1,10 @@
+{"instance": "S5:sentiment", "axis": "lens", "cell": 0, "jlens": 2, "logit": 7}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 1, "jlens": 2, "logit": 6}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 2, "jlens": 4, "logit": 15}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 3, "jlens": 3, "logit": 7}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 4, "jlens": 3, "logit": 6}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 5, "jlens": 13, "logit": 15}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 6, "jlens": 2, "logit": 7}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 7, "jlens": 2, "logit": 6}
+{"instance": "S5:sentiment", "axis": "lens", "cell": 8, "jlens": 2, "logit": 15}
+{"instance": "S5:sentiment", "potency": {"potent": true, "inj_dS_median": 11.2601, "transfer": true, "abl_dS_median": 0.6117, "pos_ctrl_dS": 17.3832, "control_ok": true, "inj_by_draw": {"1": 11.4373, "2": 11.0615, "3": 11.2601}}}

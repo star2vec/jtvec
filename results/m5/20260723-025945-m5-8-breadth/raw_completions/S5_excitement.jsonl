@@ -1,0 +1,10 @@
+{"instance": "S5:excitement", "axis": "lens", "cell": 0, "jlens": 41, "logit": 90}
+{"instance": "S5:excitement", "axis": "lens", "cell": 1, "jlens": 36, "logit": 19}
+{"instance": "S5:excitement", "axis": "lens", "cell": 2, "jlens": 30, "logit": 24}
+{"instance": "S5:excitement", "axis": "lens", "cell": 3, "jlens": 31, "logit": 90}
+{"instance": "S5:excitement", "axis": "lens", "cell": 4, "jlens": 29, "logit": 19}
+{"instance": "S5:excitement", "axis": "lens", "cell": 5, "jlens": 26, "logit": 24}
+{"instance": "S5:excitement", "axis": "lens", "cell": 6, "jlens": 28, "logit": 90}
+{"instance": "S5:excitement", "axis": "lens", "cell": 7, "jlens": 23, "logit": 19}
+{"instance": "S5:excitement", "axis": "lens", "cell": 8, "jlens": 22, "logit": 24}
+{"instance": "S5:excitement", "potency": {"potent": true, "inj_dS_median": 7.1475, "transfer": true, "abl_dS_median": 1.1368, "pos_ctrl_dS": 14.9481, "control_ok": true, "inj_by_draw": {"1": 4.4487, "2": 7.1475, "3": 9.4487}}}

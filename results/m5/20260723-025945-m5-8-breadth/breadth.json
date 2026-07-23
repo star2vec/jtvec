@@ -1,0 +1,263 @@
+{
+  "model": "EleutherAI/pythia-410m@9879c9b",
+  "a1_control_ok": true,
+  "a1_pos_median": 1,
+  "a1_neg_median": 663,
+  "bars": {
+    "cos": 0.95,
+    "jlens_max": 20.0,
+    "logit_min": 200.0,
+    "out_align_max": 20.0,
+    "s1_gain": 0.1,
+    "s5_dS": 1.0
+  },
+  "per_instance": {
+    "S1:Paris": {
+      "species": "S1",
+      "draw_stability_cos": 0.9737,
+      "draw_stable": true,
+      "jlens_label_rank": 219,
+      "logit_label_rank": 939,
+      "lens_dark": true,
+      "output_aligned": false,
+      "logit_trivial": false,
+      "potent": false,
+      "potency": {
+        "potent": false,
+        "inj_best_dp": 0.00263,
+        "inj_best_alpha": 8.0,
+        "inj_monotone": false,
+        "inj_potent": false,
+        "abl_dp_median": -0.00018,
+        "abl_potent": false,
+        "gain_by_alpha": {
+          "1.0": 0.00242,
+          "2.0": 0.0017,
+          "4.0": 0.00189,
+          "8.0": 0.00263
+        }
+      },
+      "profile_match": true
+    },
+    "S1:London": {
+      "species": "S1",
+      "draw_stability_cos": 0.9848,
+      "draw_stable": true,
+      "jlens_label_rank": 1184,
+      "logit_label_rank": 70,
+      "lens_dark": true,
+      "output_aligned": false,
+      "logit_trivial": false,
+      "potent": false,
+      "potency": {
+        "potent": false,
+        "inj_best_dp": 0.00081,
+        "inj_best_alpha": 8.0,
+        "inj_monotone": false,
+        "inj_potent": false,
+        "abl_dp_median": 0.00159,
+        "abl_potent": false,
+        "gain_by_alpha": {
+          "1.0": 0.00034,
+          "2.0": 0.00019,
+          "4.0": 0.0002,
+          "8.0": 0.00081
+        }
+      },
+      "profile_match": true
+    },
+    "S1:Rome": {
+      "species": "S1",
+      "draw_stability_cos": 0.9739,
+      "draw_stable": true,
+      "jlens_label_rank": 197,
+      "logit_label_rank": 3162,
+      "lens_dark": true,
+      "output_aligned": false,
+      "logit_trivial": false,
+      "potent": false,
+      "potency": {
+        "potent": false,
+        "inj_best_dp": 0.0023,
+        "inj_best_alpha": 8.0,
+        "inj_monotone": true,
+        "inj_potent": false,
+        "abl_dp_median": 0.0001,
+        "abl_potent": false,
+        "gain_by_alpha": {
+          "1.0": 0.00016,
+          "2.0": 0.00094,
+          "4.0": 0.00202,
+          "8.0": 0.0023
+        }
+      },
+      "profile_match": true
+    },
+    "S1:Berlin": {
+      "species": "S1",
+      "draw_stability_cos": 0.9759,
+      "draw_stable": true,
+      "jlens_label_rank": 2433,
+      "logit_label_rank": 3581,
+      "lens_dark": true,
+      "output_aligned": false,
+      "logit_trivial": false,
+      "potent": false,
+      "potency": {
+        "potent": false,
+        "inj_best_dp": 0.00023,
+        "inj_best_alpha": 8.0,
+        "inj_monotone": true,
+        "inj_potent": false,
+        "abl_dp_median": 0.00015,
+        "abl_potent": false,
+        "gain_by_alpha": {
+          "1.0": 0.00011,
+          "2.0": 0.00014,
+          "4.0": 0.0002,
+          "8.0": 0.00023
+        }
+      },
+      "profile_match": true
+    },
+    "S1:Madrid": {
+      "species": "S1",
+      "draw_stability_cos": 0.9738,
+      "draw_stable": true,
+      "jlens_label_rank": 145,
+      "logit_label_rank": 2306,
+      "lens_dark": true,
+      "output_aligned": false,
+      "logit_trivial": false,
+      "potent": false,
+      "potency": {
+        "potent": false,
+        "inj_best_dp": 0.00585,
+        "inj_best_alpha": 1.0,
+        "inj_monotone": false,
+        "inj_potent": false,
+        "abl_dp_median": -8e-05,
+        "abl_potent": false,
+        "gain_by_alpha": {
+          "1.0": 0.00585,
+          "2.0": 0.00516,
+          "4.0": 0.00107,
+          "8.0": 0.00091
+        }
+      },
+      "profile_match": true
+    },
+    "S5:sentiment": {
+      "species": "S5",
+      "draw_stability_cos": 0.9148,
+      "draw_stable": false,
+      "jlens_label_rank": 2,
+      "logit_label_rank": 7,
+      "lens_dark": false,
+      "output_aligned": true,
+      "logit_trivial": true,
+      "potent": true,
+      "potency": {
+        "potent": true,
+        "inj_dS_median": 11.2601,
+        "transfer": true,
+        "abl_dS_median": 0.6117,
+        "pos_ctrl_dS": 17.3832,
+        "control_ok": true,
+        "inj_by_draw": {
+          "1": 11.4373,
+          "2": 11.0615,
+          "3": 11.2601
+        }
+      },
+      "profile_match": true
+    },
+    "S5:formality": {
+      "species": "S5",
+      "draw_stability_cos": 0.9072,
+      "draw_stable": false,
+      "jlens_label_rank": 30,
+      "logit_label_rank": 347,
+      "lens_dark": true,
+      "output_aligned": false,
+      "logit_trivial": false,
+      "potent": true,
+      "potency": {
+        "potent": true,
+        "inj_dS_median": 12.0629,
+        "transfer": true,
+        "abl_dS_median": 0.9801,
+        "pos_ctrl_dS": 23.8793,
+        "control_ok": true,
+        "inj_by_draw": {
+          "1": 10.6387,
+          "2": 14.0997,
+          "3": 12.0629
+        }
+      },
+      "profile_match": false
+    },
+    "S5:politeness": {
+      "species": "S5",
+      "draw_stability_cos": 0.9446,
+      "draw_stable": false,
+      "jlens_label_rank": 87,
+      "logit_label_rank": 20,
+      "lens_dark": true,
+      "output_aligned": true,
+      "logit_trivial": false,
+      "potent": true,
+      "potency": {
+        "potent": true,
+        "inj_dS_median": 3.338,
+        "transfer": true,
+        "abl_dS_median": 0.4054,
+        "pos_ctrl_dS": 16.9753,
+        "control_ok": true,
+        "inj_by_draw": {
+          "1": 2.917,
+          "2": 3.6564,
+          "3": 3.338
+        }
+      },
+      "profile_match": false
+    },
+    "S5:excitement": {
+      "species": "S5",
+      "draw_stability_cos": 0.9263,
+      "draw_stable": false,
+      "jlens_label_rank": 29,
+      "logit_label_rank": 24,
+      "lens_dark": true,
+      "output_aligned": false,
+      "logit_trivial": false,
+      "potent": true,
+      "potency": {
+        "potent": true,
+        "inj_dS_median": 7.1475,
+        "transfer": true,
+        "abl_dS_median": 1.1368,
+        "pos_ctrl_dS": 14.9481,
+        "control_ok": true,
+        "inj_by_draw": {
+          "1": 4.4487,
+          "2": 7.1475,
+          "3": 9.4487
+        }
+      },
+      "profile_match": false
+    }
+  },
+  "S1": {
+    "verdict": "PROFILE-REPRODUCES (5/5)",
+    "match": 5,
+    "n": 5
+  },
+  "S5": {
+    "verdict": "HETEROGENEOUS (1/4)",
+    "match": 1,
+    "n": 4
+  },
+  "peak_rss_gb": 1.79,
+  "wall_clock_s": 4221.6
+}

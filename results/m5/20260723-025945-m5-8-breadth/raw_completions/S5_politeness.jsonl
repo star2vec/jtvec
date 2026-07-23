@@ -1,0 +1,10 @@
+{"instance": "S5:politeness", "axis": "lens", "cell": 0, "jlens": 149, "logit": 20}
+{"instance": "S5:politeness", "axis": "lens", "cell": 1, "jlens": 90, "logit": 7}
+{"instance": "S5:politeness", "axis": "lens", "cell": 2, "jlens": 75, "logit": 20}
+{"instance": "S5:politeness", "axis": "lens", "cell": 3, "jlens": 206, "logit": 20}
+{"instance": "S5:politeness", "axis": "lens", "cell": 4, "jlens": 120, "logit": 7}
+{"instance": "S5:politeness", "axis": "lens", "cell": 5, "jlens": 87, "logit": 20}
+{"instance": "S5:politeness", "axis": "lens", "cell": 6, "jlens": 74, "logit": 20}
+{"instance": "S5:politeness", "axis": "lens", "cell": 7, "jlens": 51, "logit": 7}
+{"instance": "S5:politeness", "axis": "lens", "cell": 8, "jlens": 30, "logit": 20}
+{"instance": "S5:politeness", "potency": {"potent": true, "inj_dS_median": 3.338, "transfer": true, "abl_dS_median": 0.4054, "pos_ctrl_dS": 16.9753, "control_ok": true, "inj_by_draw": {"1": 2.917, "2": 3.6564, "3": 3.338}}}

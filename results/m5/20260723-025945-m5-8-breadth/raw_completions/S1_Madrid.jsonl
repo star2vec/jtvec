@@ -1,0 +1,10 @@
+{"instance": "S1:Madrid", "axis": "lens", "cell": 0, "jlens": 421, "logit": 2306}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 1, "jlens": 267, "logit": 2252}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 2, "jlens": 446, "logit": 2578}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 3, "jlens": 157, "logit": 2306}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 4, "jlens": 84, "logit": 2252}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 5, "jlens": 145, "logit": 2578}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 6, "jlens": 86, "logit": 2306}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 7, "jlens": 46, "logit": 2252}
+{"instance": "S1:Madrid", "axis": "lens", "cell": 8, "jlens": 65, "logit": 2578}
+{"instance": "S1:Madrid", "potency": {"potent": false, "inj_best_dp": 0.00585, "inj_best_alpha": 1.0, "inj_monotone": false, "inj_potent": false, "abl_dp_median": -8e-05, "abl_potent": false, "gain_by_alpha": {"1.0": 0.00585, "2.0": 0.00516, "4.0": 0.00107, "8.0": 0.00091}}}

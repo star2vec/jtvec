@@ -1,0 +1,10 @@
+{"instance": "S5:formality", "axis": "lens", "cell": 0, "jlens": 30, "logit": 634}
+{"instance": "S5:formality", "axis": "lens", "cell": 1, "jlens": 74, "logit": 186}
+{"instance": "S5:formality", "axis": "lens", "cell": 2, "jlens": 42, "logit": 347}
+{"instance": "S5:formality", "axis": "lens", "cell": 3, "jlens": 9, "logit": 634}
+{"instance": "S5:formality", "axis": "lens", "cell": 4, "jlens": 31, "logit": 186}
+{"instance": "S5:formality", "axis": "lens", "cell": 5, "jlens": 14, "logit": 347}
+{"instance": "S5:formality", "axis": "lens", "cell": 6, "jlens": 21, "logit": 634}
+{"instance": "S5:formality", "axis": "lens", "cell": 7, "jlens": 45, "logit": 186}
+{"instance": "S5:formality", "axis": "lens", "cell": 8, "jlens": 27, "logit": 347}
+{"instance": "S5:formality", "potency": {"potent": true, "inj_dS_median": 12.0629, "transfer": true, "abl_dS_median": 0.9801, "pos_ctrl_dS": 23.8793, "control_ok": true, "inj_by_draw": {"1": 10.6387, "2": 14.0997, "3": 12.0629}}}
