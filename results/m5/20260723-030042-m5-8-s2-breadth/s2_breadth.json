@@ -1,0 +1,293 @@
+{
+  "experiment": "EXP-M5-8",
+  "arm": "S2",
+  "substrate": "EleutherAI/pythia-410m",
+  "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "profile_reference": "draw-UNSTABLE AND lens-dark AND potent",
+  "bars": {
+    "stability": 0.95,
+    "lens_dark": 20,
+    "potency_delta": 0.15,
+    "n_certify": 2
+  },
+  "n_fvs": 3,
+  "n_match": 0,
+  "roster_verdict": "HETEROGENEOUS",
+  "peak_vram_gb": 1.64,
+  "per_fv": {
+    "capitalize": {
+      "draw_stability": {
+        "min_pairwise_cosine": 0.9971,
+        "fv_norms": [
+          16.308,
+          16.153,
+          16.216
+        ],
+        "n_draws": 3
+      },
+      "injection": {
+        "gain_median": 0.3882,
+        "gain_values": [
+          0.3941176470588236,
+          0.38823529411764707,
+          0.38823529411764707
+        ],
+        "sham_median": -0.0059,
+        "sham_values": [
+          0.0058823529411764705,
+          -0.0058823529411764705,
+          -0.0058823529411764705
+        ],
+        "cleared": true,
+        "zero_shot_top1": 0.0059,
+        "gains": {
+          "1": 0.3941,
+          "2": 0.3882,
+          "3": 0.3882
+        },
+        "sham_gains": {
+          "1": 0.0059,
+          "2": -0.0059,
+          "3": -0.0059
+        }
+      },
+      "lens_readout": {
+        "jlens_label_rank_median": 282,
+        "jlens_per_lensdraw": [
+          282,
+          559,
+          66
+        ],
+        "random_jlens_label_rank_median": 3824
+      },
+      "output_alignment": {
+        "logit_label_rank_median": 6515,
+        "logit_per_lensdraw": [
+          6515,
+          6515,
+          6515
+        ]
+      },
+      "ablation": {
+        "effect_median": 0.94,
+        "effect_values": [
+          0.94,
+          0.94,
+          0.94
+        ],
+        "sham_median": 0.0,
+        "sham_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cleared": true,
+        "clean_exec": 0.94,
+        "effects": {
+          "1": 0.94,
+          "2": 0.94,
+          "3": 0.94
+        },
+        "sham_effects": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "potency": {
+        "injection_potent": true,
+        "ablation_potent": true,
+        "potent": true
+      },
+      "profile": {
+        "draw_unstable": false,
+        "lens_dark": true,
+        "potent": true,
+        "match": false
+      }
+    },
+    "singular-plural": {
+      "draw_stability": {
+        "min_pairwise_cosine": 0.9939,
+        "fv_norms": [
+          16.953,
+          16.955,
+          16.487
+        ],
+        "n_draws": 3
+      },
+      "injection": {
+        "gain_median": 0.2093,
+        "gain_values": [
+          0.20930232558139533,
+          0.20930232558139533,
+          0.18604651162790697
+        ],
+        "sham_median": 0.0,
+        "sham_values": [
+          0.046511627906976744,
+          -0.023255813953488372,
+          0.0
+        ],
+        "cleared": true,
+        "zero_shot_top1": 0.0233,
+        "gains": {
+          "1": 0.2093,
+          "2": 0.2093,
+          "3": 0.186
+        },
+        "sham_gains": {
+          "1": 0.0465,
+          "2": -0.0233,
+          "3": 0.0
+        }
+      },
+      "lens_readout": {
+        "jlens_label_rank_median": 436,
+        "jlens_per_lensdraw": [
+          212,
+          541,
+          436
+        ],
+        "random_jlens_label_rank_median": 753
+      },
+      "output_alignment": {
+        "logit_label_rank_median": 3203,
+        "logit_per_lensdraw": [
+          3203,
+          3203,
+          3203
+        ]
+      },
+      "ablation": {
+        "effect_median": 0.94,
+        "effect_values": [
+          0.94,
+          0.94,
+          0.94
+        ],
+        "sham_median": 0.0,
+        "sham_values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cleared": true,
+        "clean_exec": 0.94,
+        "effects": {
+          "1": 0.94,
+          "2": 0.94,
+          "3": 0.94
+        },
+        "sham_effects": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "potency": {
+        "injection_potent": true,
+        "ablation_potent": true,
+        "potent": true
+      },
+      "profile": {
+        "draw_unstable": false,
+        "lens_dark": true,
+        "potent": true,
+        "match": false
+      }
+    },
+    "english-french": {
+      "draw_stability": {
+        "min_pairwise_cosine": 0.9833,
+        "fv_norms": [
+          14.855,
+          14.446,
+          14.419
+        ],
+        "n_draws": 3
+      },
+      "injection": {
+        "gain_median": 0.1307,
+        "gain_values": [
+          0.12563323201621074,
+          0.13069908814589665,
+          0.13576494427558256
+        ],
+        "sham_median": -0.0051,
+        "sham_values": [
+          0.0020263424518743665,
+          -0.0060790273556231,
+          -0.005065856129685917
+        ],
+        "cleared": false,
+        "zero_shot_top1": 0.0071,
+        "gains": {
+          "1": 0.1256,
+          "2": 0.1307,
+          "3": 0.1358
+        },
+        "sham_gains": {
+          "1": 0.002,
+          "2": -0.0061,
+          "3": -0.0051
+        }
+      },
+      "lens_readout": {
+        "jlens_label_rank_median": 56,
+        "jlens_per_lensdraw": [
+          56,
+          30,
+          65
+        ],
+        "random_jlens_label_rank_median": 911
+      },
+      "output_alignment": {
+        "logit_label_rank_median": 129,
+        "logit_per_lensdraw": [
+          129,
+          129,
+          129
+        ]
+      },
+      "ablation": {
+        "effect_median": 0.38,
+        "effect_values": [
+          0.38,
+          0.38,
+          0.38
+        ],
+        "sham_median": -0.02,
+        "sham_values": [
+          -0.020000000000000018,
+          -0.020000000000000018,
+          0.0
+        ],
+        "cleared": true,
+        "clean_exec": 0.38,
+        "effects": {
+          "1": 0.38,
+          "2": 0.38,
+          "3": 0.38
+        },
+        "sham_effects": {
+          "1": -0.02,
+          "2": -0.02,
+          "3": 0.0
+        }
+      },
+      "potency": {
+        "injection_potent": false,
+        "ablation_potent": true,
+        "potent": true
+      },
+      "profile": {
+        "draw_unstable": false,
+        "lens_dark": true,
+        "potent": true,
+        "match": false
+      }
+    }
+  },
+  "note": "draw-stability is min_pairwise_cosine over the cached certified fv_todd tensors (prereg-mandated identical method); the prereg's expected 0.43-0.61 range was the v1 cross-code-path number, not the M2 same-pipeline certified tensors \u2014 flagged."
+}

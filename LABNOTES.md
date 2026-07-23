@@ -2344,3 +2344,60 @@ Ecaterina ratified both, with adjustments folded in:
 Machine split: S1/S5 + the M5-7 probe on the Mac; S2 breadth on the RTX (the M2
 FV cache is on the win32 machine). Both FRESH experiments; budget does not apply.
 Committing is the prereg act. [no sign-off implied]
+
+### 2026-07-23 — EXP-M5-8 S2 arm RAN (410M, RTX): reference profile does NOT reproduce; S2 FVs are draw-STABLE (Claude)
+
+Built + ran the S2 arm on the win32 RTX (the M2 FV cache lives here). Build +
+prereg-conformance fix + a numpy-JSON fix committed this session; run through
+start_run (clean tree, committed prereg, post_hoc false):
+results/m5/20260723-030042-m5-8-s2-breadth (run.json, s2_breadth.json + table,
+6 raw cells). The 3 M2-certified FVs (capitalize, singular-plural,
+english-french), all reported. Four axes under the n=1 instruments: draw-stability
+= jtvec.concept_gate.min_pairwise_cosine over the cached certified fv_todd draw
+tensors (the prereg-mandated identical statistic); lens-readout/output-alignment
+= decode_vector jlens/logit label-rank over the 3 cached 410M lens draws; potency
+= injection (n_shot_eval + FV@edit_layer vs sham_twin) AND ablation (exp3
+project-out-FV vs sham_fv, held-out execution drop), 3 draws, sham twins.
+Compute ~6 min; GPU peak ~2 GB (410M). scripts/m5_8_s2_breadth.py.
+
+Roster verdict = 0/3 match the reference profile -> HETEROGENEOUS (bar >= 2/3).
+Per FV (scope: 410M, 3 draws):
+
+| FV | draw min-cos | jlens rank | inj gain/sham | abl drop/sham | potent | match |
+|---|---|---|---|---|---|---|
+| capitalize | 0.997 | 282 | +0.388/-0.006 | +0.940/0.000 | yes | no |
+| singular-plural | 0.994 | 436 | +0.209/0.000 | +0.940/0.000 | yes | no |
+| english-french | 0.983 | 56 | +0.131/-0.005 | +0.380/-0.020 | yes | no |
+
+Substance (the honest reading, NOT the bare label): all 3 FVs are MUTUALLY
+CONSISTENT — draw-STABLE (min-cos 0.983-0.997, all >> the 0.95 bar), lens-dark
+(jlens label-rank 56-436 >> 20), and potent (ablation cuts execution 0.38-0.94
+beyond sham on all 3; injection clears +0.15 on capitalize/singular-plural,
+english-french injection +0.131 is sub-bar but its ablation clears). They fail
+the reference profile ONLY on its draw-UNSTABLE leg. So the FVs do NOT cluster
+off-profile heterogeneously; they cluster HOMOGENEOUSLY on a draw-STABLE +
+lens-dark + potent profile — the reference profile's draw-unstable premise is
+what does not reproduce.
+
+Why the draw-unstable premise fails (raw check, flagged): the prereg's expected
+"M2 0.43-0.61 range" is the v1 VERIFIED cross-code-path / low-trial instability
+number, NOT the M2 same-pipeline certified tensors. Under the prereg's mandated
+identical method (min_pairwise_cosine over the 3 cached fv_todd draws) the
+certified FVs are draw-stable (0.98-0.997), matching M2's own stability.json
+(0.991-0.997 at the certified rung). This RESOLVES the CLAUDE.md open note
+"v1 cross-code-path FV instability vs same-pipeline stability (M2 run-1)" in
+favour of SAME-PIPELINE STABILITY.
+
+Proposed for Ecaterina (propose, not adopt; nothing re-run, no bar/method
+changed): the S2 reference profile's draw-stability leg should be re-stated from
+"draw-UNSTABLE" to "draw-STABLE" (the certified-tensor same-pipeline fact); under
+that corrected profile S2 REPRODUCES 3/3 (draw-stable + lens-dark + potent). The
+"argmax churn / draw-instability" characterisation belongs to the v1
+cross-code-path extraction, not the certified FVs — a S2-profile correction, her
+ruling. Also flagged: english-french potency is one-armed (ablation only) — mild
+within-potency heterogeneity, reported not curated.
+
+Conformance: the shared EXP-M5-8 prereg was missing start_run's required section
+headings; added them (text-only, D-015 precedent, commit 1dc588e) — also unblocks
+the Mac's S1/S5 runs. NO certificate / NO sign-off (Ecaterina's). Gates: pytest
+227 passed, validators 3/3. [no sign-off implied]

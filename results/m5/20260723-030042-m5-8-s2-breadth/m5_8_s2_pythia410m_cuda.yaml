@@ -1,0 +1,32 @@
+# EXP-M5-8 S2 arm (within-species breadth) — Pythia-410M on the RTX (the M2 FV
+# cache lives here). The 3 M2-certified FVs, all reported. Standard schema +
+# an `s2:` block (read via tolerant loader; strict Config ignores it).
+experiment: pythia410m_m5_8_s2_breadth
+seed: 0
+device: cuda
+model:
+  name: EleutherAI/pythia-410m
+  revision: 9879c9b5f8bea9051dcb0e68dff21493d67e9d4f  # 410M-certified FVs
+  dtype: float32
+calibration: {corpus: NeelNanda/pile-10k, split: train, n_prompts: 10, n_heldout: 3}
+fit: {max_seq_len: 128, dim_batch: 8, skip_first_variants: [4]}
+evals:
+  band: [4, 16]
+fv:
+  tasks: [capitalize, singular-plural, english-french]
+  n_shots: 10
+  edit_layer: 8
+  n_top_heads: 10
+s2:
+  fvs: [capitalize, singular-plural, english-french]  # the 3 M2-certified FVs; ALL reported
+  m2_draws: [1, 2, 3]      # cache/m2/draw{k} fv_todd tensors (draw-stability)
+  lens_draws: [0, 1, 2]    # cache/draw{k} 410M lens draws (lens-readout)
+  m_top: 10                # jspace/sham hook rank (ablation sham shape)
+  n_exec: 50               # held-out execution queries (ablation)
+  bars:                    # identical to the n=1 runs
+    stability: 0.95        # draw-UNSTABLE match iff min_pairwise_cosine < 0.95 (S1 bar)
+    lens_dark: 20          # lens-dark iff jlens label-rank > 20 (S1/M5-6 A1 bar)
+    potency_delta: 0.15    # injection gain / ablation drop must clear sham by this (M3/E2 bar)
+    n_certify: 2           # S2 reproduces iff >= 2/3 FVs match the profile
+cache_dir: cache/m5/m5_8_s2
+results_dir: results/m5

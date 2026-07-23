@@ -1,0 +1,13 @@
+{
+  "run_name": "m5-8-s2-breadth",
+  "started": "2026-07-23T03:00:42",
+  "git_commit": "10bf840ade9d8a50d20a78a51b77ce692498066a",
+  "prereg_path": "C:\\Users\\alin\\Desktop\\jtvec\\harness\\preregs\\EXP-M5-8-within-species-breadth.md",
+  "prereg_commit": "1dc588e664d95fe2e81cd6b9b40831e0b043869e",
+  "config_sha256": "2db274df88ef01c16cbe7f4e5cd7c3dde0141cdfa6cb0e14ab51285e26ed5a75",
+  "post_hoc": false,
+  "n_match": 0,
+  "roster_verdict": "HETEROGENEOUS",
+  "peak_vram_gb": 1.64,
+  "finished": "2026-07-23T03:06:06"
+}
