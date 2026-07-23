@@ -171,6 +171,24 @@ added. Nothing may be promoted a tier without the evidence line filled in.
   measurements (draw-stability, lens-readout, logit-privilege) — CLM-006, the
   paper's spine. Still HYPOTHESIS-tier (S1 legs diagnostic; S2 potency verified).
   NO instrument hunted to restore the old 2×2 (harvesting; budget 0). CLM-005/006.)
+  (2026-07-23 UPDATE, Ecaterina, EXP-M5-8 breadth + D-035/D-037: the
+  DRAW-STABILITY × POTENCY anchor is itself RETIRED. Under the IDENTICAL
+  min_pairwise_cosine both S1 (0.974-0.985) and S2 (0.983-0.997) are draw-STABLE
+  and both lens-dark — the prior "S2 draw-unstable 0.43-0.61" was the v1
+  degenerate-endpoint cross-code-path number (D-035), NOT the M2 same-pipeline
+  certified tensors (v1 VERIFIED entry not demoted, scoped to the sweep endpoint;
+  unexplained residue — why that one draw collapsed was never bounded). POTENCY is
+  the SOLE surviving S1/S2 separator (S1 inert, S2 potent [CLM-003/004 VERIFIED]).
+  "A1 decodability" now conflates FOUR senses, not three: + READOUT-VOCABULARY
+  ADEQUACY — a concrete instance of the label-rank instrument returning a FALSE
+  NEGATIVE (formality scored not-aligned while pointing at formal register;
+  corrected by the EXP-M5-8b top-token read, D-037). A1b (logit-privilege) is NOT
+  empty: STATIC directions are not J-lens-privileged but TRANSIENT computational
+  intermediates ARE (EXP-M5-7, 410M held-operand ~55x). All three species profiles
+  reproduce within type (EXP-M5-8: S1 5/5, S2 3/3, S5 4/4 output-aligned; CLM-007).
+  Still HYPOTHESIS-tier; verify lines owed for CLM-005/006/007. The S2
+  draw-stability correction rests on D-035; reverts if the diff does not clear
+  Ecaterina's bar.)
 - HYPOTHESIS (H2, axis coupling): A1 and A3 agree per species. A
   dissociation (decodable-but-basis-agnostic or dark-but-basis-mediated) in
   any species is a headline refinement: verbalizable != workspace-functional.

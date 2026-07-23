@@ -123,3 +123,29 @@ convergence sense. No instrument hunted to restore the old 2×2 (harvesting;
 budget 0). Governance closed: D-032 (0c neg-ctrl) + D-034 (S3 neg-ctrl) RULED;
 Q2-replication (EXP-M5-0d) + S4 re-spec remain HELD with no compute (budget 0).
 NEXT: write-up vs any further work — Ecaterina to decide. Standing: D-002 accepted.
+===== CURRENT STATE 2026-07-23 (M5.7 + M5.8 breadth DONE; S2 draw-stability
+CORRECTED; verify lines owed; NOT pushed) =====
+EXP-M5-7 RAN (results/m5/20260723-024239): transient held states J-lens-privileged
+on 410M (operand jlens 2.54/logit 141 ~55x; recall 46x; reproduces M1 2.5/61.5) ->
+A1b sub-statement rescoped (STATIC directions NOT privileged, TRANSIENT ARE).
+EXP-M5-8 within-species breadth RAN (Mac S1/S5 results/m5/20260723-025945; RTX S2
+results/m5/20260723-030042): S1 5/5 type-general (draw-stable 0.974-0.985 @n=256,
+lens-dark, inert); S2 3/3 draw-STABLE (0.983-0.997) + lens-dark + potent; S5 4/4
+potent, output-alignment label-rank 1/4 -> EXP-M5-8b top-token diagnostic
+(results/m5/20260723-042856) RETIRED the 1/4 as a readout-vocab FALSE NEGATIVE
+(all 4 point at their field) -> S5 output-alignment TYPE-GENERAL.
+CORRECTION (supersedes the 2026-07-22 S2 disposition): S2 is draw-STABLE, not
+draw-unstable. D-035: the "0.43-0.61 draw-unstable (VERIFIED M2)" was the v1
+cross-code-path DEGENERATE-endpoint number (+38.8%->+1.8% collapse), NOT the M2
+same-pipeline certified tensors (min_pairwise_cosine 0.991-0.997 = RTX 0.9971); v1
+VERIFIED entry NOT demoted, scoped to the sweep endpoint; unexplained residue (why
+that one draw collapsed, never bounded — the v1 controlled-draw script never ran).
+H1 anchor rescoped Option A: draw-stability × potency RETIRED; both S1 and S2
+draw-stable + lens-dark; POTENCY is the SOLE S1/S2 separator (S1 inert, S2 potent).
+CLM-006 now conflates FOUR senses (+ readout-vocabulary adequacy, D-037).
+Claims edited + flagged for verify: CLM-005 (potency-sole-separator), CLM-006 (4
+senses + A1b transient + draw-stability correction), CLM-007 (breadth
+reproduction). D-036: Mac+RTX EXP-M5-8 merge reconciled (commit 22ef845). Gates:
+pytest 227, validators 3/3. NOT pushed to origin (awaiting Ecaterina). NEXT:
+Ecaterina's verify lines (CLM-005/006/007) + go/no-go on push; the S2 rescope
+reverts if D-035 does not clear her bar; then write-up. Standing: D-002 accepted.

@@ -2401,3 +2401,104 @@ Conformance: the shared EXP-M5-8 prereg was missing start_run's required section
 headings; added them (text-only, D-015 precedent, commit 1dc588e) — also unblocks
 the Mac's S1/S5 runs. NO certificate / NO sign-off (Ecaterina's). Gates: pytest
 227 passed, validators 3/3. [no sign-off implied]
+
+---
+
+## 2026-07-23 — M5.7 probe + M5.8 Mac arm + S2 diff + S5 top-token adjudication (Claude)
+
+EXP-M5-7 (A1b-locus confirmatory probe, 410M; ratified prereg): ran through
+start_run, results/m5/20260723-024239-m5-7-a1b-probe. Transient held states are
+J-lens-privileged on 410M under the SAME cached lens draws 0/1/2 as the static
+S1/S2/S5 rows: capital-operand (held latent) jlens HMR 2.54 vs logit 140.6
+(max-contrast 55x, random 0.0); capital-recall (answer) jlens 3.97 vs logit 212
+(46x) — reproduces the M1 gate's VERIFIED 2.5/61.5. The transient 410M row of the
+A1b-locus table is now in-run; object-type ceiling (residual state vs pulled-out
+direction) stated in the prereg; clean output-null stays M5-0b's 1.4B fresh-answer
+~0.9x. Rescopes CLM-006's A1b sub-statement (static directions NOT J-lens-
+privileged; transient states ARE). Flagged for Ecaterina's verify.
+
+EXP-M5-8 Mac arm (S1 + S5, 410M): results/m5/20260723-025945-m5-8-breadth,
+scripts/m5_8_breadth.py; one identical 4-axis apparatus per named instance, 3
+extraction draws, 3 cached lens draws, A1 controls ok (pos 1 / neg 663).
+- S1 (5 concepts Paris/London/Rome/Berlin/Madrid): all draw-stable (min-cos
+  0.974-0.985 at n=256, m5_1b's converged regime), all lens-dark (jlens 145-2433),
+  all inert (0/5 potent) -> PROFILE-REPRODUCES 5/5. S1 concept profile is
+  type-general at 410M, not an n=1 artifact.
+- S5 (4 attrs sentiment/formality/politeness/excitement): all 4 POTENT (inj ΔS
+  +3.3..+12.1, transfer, pos-ctrl ok); label-rank output-alignment matched only
+  sentiment (jlens 2/logit 7); formality 30/347, politeness 87/20, excitement
+  29/24 -> label-rank 1/4 as-measured. Flagged pre-run: the 3 authored readout-word
+  sets are the softest part — see EXP-M5-8b.
+
+EXP-M5-8b (S5 top-token diagnostic, ordered by Ecaterina; prereg + start_run):
+results/m5/20260723-042856-m5-8b-s5-toptokens, scripts/m5_8b_s5_toptokens.py.
+Non-confounded read of what each S5 vector POINTS AT (top unembed tokens, not the
+words I picked). All four are output-aligned to their attribute field: sentiment
+-> excellent/wonderful/splendid/pleased; formality -> Pursuant/Memorandum/
+Administrative/Certificate (legal register, in the J-lens); politeness ->
+please/kindly/request/permission/assistance; excitement -> !/!!/!!! + amazing/
+incredible. D-037 (Ecaterina's fixed branch, applied): all four attribute-aligned
+-> the label-rank 1/4 is RETIRED as an instrument-validity artifact; S5
+output-alignment is TYPE-GENERAL. Scope carried honestly: formality cleanest in
+the J-lens (raw logit lens noisier), excitement aligns via exclamation
+punctuation, politeness in-field with some noise tokens.
+
+D-035 (S2 draw-stability diff — owed from Ecaterina's ruling; RESOLVED with an
+honest unexplained residue). The 0.43-0.61 (v1 VERIFIED) and 0.983-0.997
+(EXP-M5-8 S2 / M2 same-pipeline) measure the SAME construct (within-pipeline draw
+variance — the v1 script docstring says identical weights/code/seed value/trial
+counts, only RNG stream position differs) but different SITUATIONS. The v1
+0.43-0.61 compared a healthy Phase-2 FV against ONE DEGENERATE endpoint
+re-extraction (capitalize induction collapsed +38.8% -> +1.8%) — a near-failed FV
+points at ~noise, so its cosine to a healthy FV is low almost by construction. M2
+(seeds 1/2/3) and EXP-M5-8 S2 compared three UNIFORMLY HEALTHY draws (all steer
+~+39%, matching v1's own Phase-2 +38.8%) -> cosine >=0.959, and the RTX
+reproduced M2's stability.json to the digit (0.9971). Discrepancy source = one
+degenerate draw, not disagreement among healthy FVs. UNEXPLAINED RESIDUE, stated
+plainly: WHY that one endpoint draw degenerated while M2's three did not is not
+resolved — the v1 controlled fresh-draw script (design_input/15_fv_stability_v1
+_untracked.py) that would bound it was written as the blocking response but NEVER
+RAN (no results/fv_stability in the v1 tree; the project pivoted to v2). The
+estimator's failure tail (rare-tail vs sweep-harness artifact) is an open,
+never-bounded question. Ruling consequence: for the H1 anchor's instrument-
+consistent comparison (S1 and S2 both cleanly extracted, same min_pairwise_cosine)
+the breadth/M2 number is correct -> S2 is draw-STABLE. The v1 VERIFIED entry is
+NOT demoted; it stays scoped to the sweep-endpoint re-extraction (a real collapse
+event). Flagged for Ecaterina's verify.
+
+D-036 (merge reconciliation — owed). The RTX pushed 4 commits (S2 build + prereg
+heading-fix 1dc588e + numpy-JSON fix + S2 result c2e5157); the Mac had 6 local
+commits (M5-7 x3, M5-8 orchestrator/prereg/result). Rebased the Mac's 6 onto
+origin/main; only conflict = the shared EXP-M5-8 prereg: BOTH machines had added
+the same required start_run sections at different offsets (RTX after ## Why; Mac
+after ## Instances) so the rebase kept both (duplicates). Reconciled to the
+RTX/origin placement (canonical, one of each heading); dropped the Mac duplicate
+block, whose only Mac-specific text (n=256, alpha-sweep, m5_1b timing) was a
+RUNTIME choice never actually pre-registered and lives in the committed Mac run
+report + orchestrator -> nothing lost, prereg no longer overclaims what it
+pre-registered. Ratified content (Instances, Axes, Decision rule + bars,
+anti-harvesting, machine split, Ratification) byte-identical to ratification.
+Commit 22ef845; LABNOTES had no local Mac edits so the RTX entry above is
+preserved. Gates: pytest 227, validators 3/3.
+
+D-037 (methodological consequence — Ecaterina, the more important output; folded
+into CLM-006 + the spine). "Decodability" conflates a FOURTH sense beyond
+draw-stability / lens-readout / logit-privilege: READOUT-VOCABULARY ADEQUACY. The
+label-rank instrument returned a FALSE NEGATIVE on record — EXP-M5-8 scored
+formality NOT output-aligned (jlens 30 / logit 347) while the independent
+top-token read (EXP-M5-8b) finds it pointing squarely at formal register. Unlike
+the other three senses, this is a concrete instance of the instrument itself being
+wrong, checked by an independent test. Recorded as a failure mode, not a caveat.
+
+H1 anchor rescope (Ecaterina Option A, resting on D-035). The DRAW-STABILITY x
+POTENCY dissociation is RETIRED: under the identical min_pairwise_cosine both S1
+(0.974-0.985) and S2 (0.983-0.997) are draw-STABLE and both lens-dark; POTENCY is
+the SOLE surviving S1/S2 separator (S1 inert, S2 potent [CLM-003/004 VERIFIED]) —
+the narrower, instrument-supported anchor. CLM-005/006 + CONSTRAINTS H1 + CLAUDE
+state updated; ALL flagged for Ecaterina's verify. The S2 rescope rests on D-035;
+if the diff does not clear her bar, the draw-stability leg reverts.
+
+Gates before commit: uv run pytest -q + validators. NO sign-off / NO verify
+(Ecaterina's). Verify lines owed: CLM-005 (rescoped to potency-sole-separator),
+CLM-006 (4th sense + A1b transient/static + draw-stability correction), CLM-007
+(within-species breadth reproduction).
