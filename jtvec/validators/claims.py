@@ -28,6 +28,7 @@ REQUIRED_FIELDS = (
     "prereg",
     "results-dir",
     "raw-completions",
+    "headline-cells",
     "verified-by",
 )
 MIN_RAW_PER_CELL = 20
@@ -102,13 +103,35 @@ def check_claims(repo_root: Path) -> list[str]:
                     f"{where}: verified without Ecaterina's LABNOTES line "
                     f"('verify: {claim_id} ... verified-by: Ecaterina ... date: YYYY-MM-DD')"
                 )
-            counts = count_raw_per_cell(repo_root / fields["results-dir"])
-            if not counts:
-                violations.append(f"{where}: verified but no raw completion cells found")
-            for cell, n in counts.items():
-                if n < MIN_RAW_PER_CELL:
-                    violations.append(
-                        f"{where}: cell '{cell}' has {n} raw completions "
-                        f"(< {MIN_RAW_PER_CELL})"
-                    )
+            violations.extend(_headline_cell_violations(repo_root, fields, where))
     return violations
+
+
+def _headline_cell_violations(repo_root: Path, fields: dict[str, str], where: str) -> list[str]:
+    """The >= MIN_RAW_PER_CELL gate applies to DECLARED HEADLINE cells only
+    (CONSTRAINTS LAW: '>= 20 per headline cell'; D-038 aligns this from the prior
+    every-cell over-enforcement). The `headline-cells` field names them, citing the
+    prereg decision rule. Draw-based diagnostic claims declare `draw-based`: the
+    completions gate is inapplicable to them (D-038 scoped option 3) — they promote
+    under the run-time stochastic-estimator LAWs (>= 3 draws, median/IQR,
+    sham/control), so here only results-dir + the verify line gate them.
+    """
+    spec = fields["headline-cells"].split(";", 1)[0].strip()
+    if spec.lower().startswith("draw-based"):
+        return []  # estimator category — no completions gate
+    declared = [s.strip() for s in spec.split(",") if s.strip()]
+    if not declared:
+        return [f"{where}: verified completion-claim declares no headline-cells"]
+    counts = count_raw_per_cell(repo_root / fields["results-dir"])
+    if not counts:
+        return [f"{where}: verified but no raw completion cells found"]
+    out: list[str] = []
+    for stem in declared:
+        if stem not in counts:
+            out.append(f"{where}: declared headline cell '{stem}' not found in raw_completions/")
+        elif counts[stem] < MIN_RAW_PER_CELL:
+            out.append(
+                f"{where}: headline cell '{stem}' has {counts[stem]} raw completions "
+                f"(< {MIN_RAW_PER_CELL})"
+            )
+    return out

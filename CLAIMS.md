@@ -10,7 +10,13 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
   - `evidence-commit` is a real commit hash;
   - `results-dir` passes the results-directory check (config copy, run
     record, raw completions on disk);
-  - every raw-completion cell holds >= 20 records;
+  - each DECLARED headline cell (the `headline-cells` field, citing the prereg
+    decision rule that defines them) holds >= 20 records — the CONSTRAINTS LAW
+    is "per headline cell", not per every cell (D-038). Draw-based diagnostic
+    claims declare `headline-cells: draw-based` and are EXEMPT from the
+    completions gate: they promote under the stochastic-estimator LAWs (>= 3
+    draws, median/IQR, prereg'd sham/control arms, per-draw raw on disk),
+    enforced at run time and attested by the verify line;
   - LABNOTES.md contains Ecaterina's verification line for this claim, of the
     exact form:
     `verify: CLM-NNN raw-read: <n> re-derived: yes verified-by: Ecaterina date: YYYY-MM-DD`
@@ -25,6 +31,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: none
 - results-dir: none
 - raw-completions: none
+- headline-cells: <cell stems backing the headline numbers>; <prereg decision rule that defines them>   (or "draw-based; <rule>" for stochastic-estimator claims)
 - verified-by: none
 
 ## Claims
@@ -37,6 +44,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M4-E1-decodability.md
 - results-dir: results/m4/20260719-021823-e1-decodability
 - raw-completions: results/m4/20260719-021823-e1-decodability/raw_completions
+- headline-cells: decode_capitalize, decode_singular-plural, decode_english-french; EXP-M4-E1 C1 label-rank decision rule
 - verified-by: none
 
 ### CLM-002
@@ -47,6 +55,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M4-E2-dissociation.md
 - results-dir: results/m4/20260719-142007-e2-dissociation
 - raw-completions: results/m4/20260719-142007-e2-dissociation/raw_completions
+- headline-cells: exec_fv_draw1, exec_fv_draw2, exec_fv_draw3, report_fv_draw1, report_fv_draw2, report_fv_draw3; EXP-M4-E2 D-017 dissociation decision rule
 - verified-by: none
 
 ### CLM-003
@@ -57,6 +66,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M4-E2-dissociation.md
 - results-dir: results/m4/20260719-142007-e2-dissociation
 - raw-completions: results/m4/20260719-142007-e2-dissociation/raw_completions
+- headline-cells: exec_none, exec_fv_draw1, exec_fv_draw2, exec_fv_draw3, exec_sham_fv_draw1, exec_sham_fv_draw2, exec_sham_fv_draw3, report_none, report_fv_draw1, report_fv_draw2, report_fv_draw3, report_sham_fv_draw1, report_sham_fv_draw2, report_sham_fv_draw3; EXP-M4-E2 decision rule (D-017): fv-ablation execution + report effects vs sham
 - verified-by: Ecaterina
 
 ### CLM-004
@@ -67,6 +77,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M4-E3-swap.md
 - results-dir: results/m4/20260719-151956-e3-swap
 - raw-completions: results/m4/20260719-151956-e3-swap/raw_completions
+- headline-cells: swap_none, swap_lens_draw1, swap_lens_draw2, swap_lens_draw3, swap_direct_draw1, swap_direct_draw2, swap_direct_draw3, swap_random_draw1, swap_random_draw2, swap_random_draw3; EXP-M4-E3 SwapRedirectionRule (D-018): task-B rate by condition vs random
 - verified-by: Ecaterina
 
 ### CLM-005
@@ -75,8 +86,9 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - scope: EleutherAI/pythia-410m@9879c9b, EXP-M5-1b/1c/1d + EXP-M5-8 (S1 5-concept breadth) + D-035 (S2 diff), 8-capital roster / 5-concept breadth, 3 draws
 - evidence-commit: none
 - prereg: harness/preregs/EXP-M5-1b-concept-diagnostic.md
-- results-dir: results/m5/20260721-132124-m5-1b-concept-diagnostic
-- raw-completions: results/m5/20260721-132124-m5-1b-concept-diagnostic/raw_completions
+- results-dir: results/m5/20260722-023137-m5-1b-concept-diagnostic
+- raw-completions: results/m5/20260722-023137-m5-1b-concept-diagnostic/raw_completions
+- headline-cells: draw-based; EXP-M5-1b decision rule: convergence (min_pairwise_cosine, 3 draws) + potency alpha-sweep sham-controlled Δp (3 draws, median/IQR)
 - verified-by: none
 
 ### CLM-006
@@ -87,6 +99,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M5-6-offdiagonal.md
 - results-dir: results/m5/20260722-223101-m5-6-offdiagonal
 - raw-completions: results/m5/20260722-223101-m5-6-offdiagonal/raw_completions
+- headline-cells: A1_rank_table; EXP-M5-6 A1 decode_vector rank-table decision rule (the discordance headline)
 - verified-by: none
 
 ### CLM-007
@@ -97,6 +110,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M5-8-within-species-breadth.md
 - results-dir: results/m5/20260723-025945-m5-8-breadth
 - raw-completions: results/m5/20260723-025945-m5-8-breadth/raw_completions
+- headline-cells: draw-based; EXP-M5-8 decision rule: per-instance draw-stability (min_pairwise_cosine, 3 draws) + potency (3 draws, sham) + lens-readout (3 lens draws); reproduction counts
 - verified-by: none
 
 ### CLM-008
@@ -107,6 +121,7 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M5-7-a1b-locus.md
 - results-dir: results/m5/20260723-024239-m5-7-a1b-probe
 - raw-completions: results/m5/20260723-024239-m5-7-a1b-probe/raw_completions
+- headline-cells: capital-operand_draw0, capital-operand_draw1, capital-operand_draw2, capital-recall_draw0, capital-recall_draw1, capital-recall_draw2; EXP-M5-7 decision rule: max-contrast jlens vs logit HMR over 3 lens draws
 - verified-by: none
 
 ### CLM-009
@@ -117,4 +132,5 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - prereg: harness/preregs/EXP-M5-8b-s5-toptokens.md
 - results-dir: results/m5/20260723-042856-m5-8b-s5-toptokens
 - raw-completions: results/m5/20260723-042856-m5-8b-s5-toptokens/raw_completions
+- headline-cells: draw-based; EXP-M5-8b decision rule: per-vector top-k unembed-token read (3-draw mean direction); formality false-negative vs label-rank
 - verified-by: none

@@ -36,6 +36,7 @@ def claim_entry(claim_id="CLM-001", status="verified", **overrides):
         "prereg": "prereg.md",
         "results-dir": "results/run1",
         "raw-completions": "results/run1/raw_completions",
+        "headline-cells": "headline; test decision rule",
         "verified-by": "LABNOTES 2026-07-17",
     }
     fields.update(overrides)
@@ -78,6 +79,42 @@ def test_verified_claim_with_too_few_raw_completions_blocked(tmp_path):
     )
     violations = check_claims(tmp_path)
     assert any("raw completions" in v for v in violations)
+
+
+def test_verified_completion_claim_gates_only_declared_headline_cells(tmp_path):
+    # a small non-headline companion cell must NOT block a verified completion claim
+    rd = make_results_dir(tmp_path, n_raw=25)  # writes headline.jsonl (25)
+    (rd / "raw_completions" / "companion.jsonl").write_text('{"x":1}\n{"x":2}\n')  # 2 records
+    (tmp_path / "CLAIMS.md").write_text(CLAIMS_HEADER + claim_entry())  # declares "headline"
+    (tmp_path / "LABNOTES.md").write_text(
+        "verify: CLM-001 raw-read: 25 re-derived: yes "
+        "verified-by: Ecaterina date: 2026-07-17\n"
+    )
+    assert check_claims(tmp_path) == []
+
+
+def test_verified_missing_declared_headline_cell_blocked(tmp_path):
+    make_results_dir(tmp_path, n_raw=25)
+    (tmp_path / "CLAIMS.md").write_text(
+        CLAIMS_HEADER + claim_entry(**{"headline-cells": "not_a_cell; rule"})
+    )
+    (tmp_path / "LABNOTES.md").write_text(
+        "verify: CLM-001 verified-by: Ecaterina date: 2026-07-17\n"
+    )
+    assert any("not found in raw_completions" in v for v in check_claims(tmp_path))
+
+
+def test_verified_drawbased_claim_skips_completions_gate(tmp_path):
+    # draw-based estimator category: <20 cells do not block promotion
+    make_results_dir(tmp_path, n_raw=3)
+    (tmp_path / "CLAIMS.md").write_text(
+        CLAIMS_HEADER + claim_entry(**{"headline-cells": "draw-based; estimator rule"})
+    )
+    (tmp_path / "LABNOTES.md").write_text(
+        "verify: CLM-001 raw-read: 3 re-derived: yes "
+        "verified-by: Ecaterina date: 2026-07-17\n"
+    )
+    assert check_claims(tmp_path) == []
 
 
 def test_hypothesis_status_claim_needs_no_evidence(tmp_path):

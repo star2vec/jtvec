@@ -2521,3 +2521,54 @@ locus: transient privileged, static not; EXP-M5-7), CLM-009 (readout-vocabulary
 false negative: formality; EXP-M5-8b). CLM-005 + CLM-007 to be signed as-is.
 Verify lines now owed: CLM-005, CLM-006, CLM-007, CLM-008, CLM-009. Gates: pytest
 227, validators 3/3.
+
+---
+
+## 2026-07-24 — D-038: claims.py aligned to the LAW (headline cells; estimator category) (Ecaterina ruled, Claude recording)
+
+Ecaterina caught a LAW-vs-implementation gap during the wrap-up re-read: the
+CONSTRAINTS human-verification-gate LAW says "the AI lays out the raw completions
+(>= 20 per HEADLINE cell)", but CLAIMS.md's rule summary and jtvec/validators/
+claims.py enforced ">= 20 over EVERY cell in the results dir". The validator was
+STRICTER than the LAW it implements. Both the "per headline cell" LAW text and the
+stochastic-estimator LAWs (>= 3 draws, median/IQR, positive+negative controls,
+sham twins) PREDATE this dispute — this ruling aligns a drifted mechanical
+enforcement to LAWs that already existed; it invents no new rule to rescue claims.
+
+D-038 RULED (Ecaterina, 2026-07-24), option 1 + scoped option 3:
+- (a) The LAW governs: >= 20 applies to HEADLINE cells only. claims.py is aligned
+  to check DECLARED headline cells (not every cell).
+- (b) Headline cells are DECLARED, not inferred: a new `headline-cells:` field per
+  CLM entry, populated by citing the prereg decision rule that defines them. No
+  filename convention. Field format: `<cell1>, <cell2>, ...; <prereg rule>` for
+  completion-based claims; `draw-based; <prereg rule>` for the estimator category.
+  The validator checks the declared cells at `verified` (>= 20 each); other cells
+  in the dir are not gated.
+- (c) Draw-based diagnostic claims (CLM-005, CLM-007, CLM-009) are a SEPARATE
+  category: the completions gate is INAPPLICABLE. They promote under the existing
+  stochastic-estimator LAWs instead — >= 3 draws, median/IQR, prereg'd
+  sham/control arms, raw per-draw artifacts on disk — which are enforced at RUN
+  time (start_run / DrawSet / require_controlled) and attested by the human verify
+  line; at claim promotion the validator requires results-dir OK + verify line +
+  commit, and does NOT apply the >= 20-completions gate to them.
+- (d) This entry logged BEFORE the code change, per the ruling.
+
+Category + headline-cell assignment (recorded here, applied in CLAIMS.md):
+- completion-based (declared cells checked >= 20): CLM-001 (E1 decode_*), CLM-002
+  (E2 exec/report fv cells), CLM-003 (E2, 14 exec/report fv+sham cells, all >= 50),
+  CLM-004 (E3, 10 swap-condition cells, all 30), CLM-006 (EXP-M5-6 A1_rank_table,
+  20), CLM-008 (EXP-M5-7, 6 probe cells, all 31).
+- draw-based (estimator category, completions gate inapplicable): CLM-005, CLM-007,
+  CLM-009.
+- Also fixed: CLM-005's results-dir pointed to a NON-EXISTENT path
+  (`...20260721-132124-m5-1b-concept-diagnostic`); corrected to the real run dir
+  `results/m5/20260722-023137-m5-1b-concept-diagnostic` (unambiguous path error;
+  needed for check_results_dir at any non-hypothesis tier).
+
+Effect on the wrap-up: under the aligned validator, CLM-006 and the proposed E1
+negative (CLM-010) clear on their HEADLINE cells (A1_rank_table 20; decode_* 36)
+where the every-cell rule had blocked them on companion/potency cells; CLM-005/007/
+009 promote under the estimator category; CLM-008 + the proposed M2 claim (CLM-011)
+clear on completion cells either way. No claim status changed in this entry;
+promotions await Ecaterina's per-claim verify lines. Gates re-run after the code
+change below.
