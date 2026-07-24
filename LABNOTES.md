@@ -2572,3 +2572,19 @@ where the every-cell rule had blocked them on companion/potency cells; CLM-005/0
 clear on completion cells either way. No claim status changed in this entry;
 promotions await Ecaterina's per-claim verify lines. Gates re-run after the code
 change below.
+
+---
+
+## 2026-07-24 — verify: CLM-008 (Ecaterina confirmed) (Claude transcribing)
+
+Packet #1 laid out: independent raw re-derivation from
+results/m5/20260723-024239-m5-7-a1b-probe/raw_completions/ (31 records/cell × 6
+headline cells capital-{operand,recall}_draw{0,1,2}). Recomputed HMR = harmonic
+mean of per-item ranks per band layer, then max-contrast (largest logit/jlens HMR
+among band layers with jlens HMR <= 5.0), median over 3 lens draws. Matched the
+claim + report.md: operand jlens 2.54 / logit 140.64 / max-contrast 55.37; recall
+3.97 / 212.01 / 45.66 (report 45.69 — 0.03 rounding-order, immaterial); all 10
+random arms 0.0. Ecaterina confirmed ("confirm"). Promoted to verified,
+evidence-commit 5e5a38a (the EXP-M5-7 result commit).
+
+verify: CLM-008 raw-read: 31 re-derived: yes verified-by: Ecaterina date: 2026-07-24

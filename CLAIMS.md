@@ -114,10 +114,10 @@ Machine-validated by `jtvec/validators/claims.py` on every CI run. Rules
 - verified-by: none
 
 ### CLM-008
-- status: hypothesis
+- status: verified
 - statement: On Pythia-410M, the J-lens's logit-privilege (A1b: reading what the logit lens cannot) is NOT a property of extracted STATIC direction vectors but of TRANSIENT computational intermediates (split from CLM-006, 2026-07-23). Static directions are not privileged — under decode_vector: S1 concept jlens/logit label-rank 192/999, S2 FV 436/3203, S5 steering logit-trivial (jlens ≈ logit); none clear the A1b criterion. Transient held states ARE privileged: EXP-M5-7 (410M, cached lens draws 0/1/2) held-operand jlens HMR 2.54 vs logit 140.6 (~55x, random arm 0.0) and recalled-answer 3.97 vs 212 (~46x), reproducing the M1 gate's VERIFIED 2.5/61.5; EXP-M5-0b (1.4B) operand 6.98x / bridge 15.5x with the matched OUTPUT token ~0.9x (no advantage). The privilege lives in mid-computation state, not pulled-out directions. Object-type ceiling (stated, not hidden): a residual state and a static direction are different objects; the compatible statistic is the target token's rank under jlens-transport vs logit unembed. HYPOTHESIS tier except the M1 leg (VERIFIED); pending Ecaterina's verify line.
 - scope: EleutherAI/pythia-410m@9879c9b (+ Pythia-1.4B@fedc38a for M5-0b), EXP-M5-7 + EXP-M5-6 + EXP-M5-0b + M1 (VERIFIED), cached lens draws 0/1/2
-- evidence-commit: none
+- evidence-commit: 5e5a38a
 - prereg: harness/preregs/EXP-M5-7-a1b-locus.md
 - results-dir: results/m5/20260723-024239-m5-7-a1b-probe
 - raw-completions: results/m5/20260723-024239-m5-7-a1b-probe/raw_completions
